@@ -1,0 +1,4719 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Faluche — archive du folklore faluchard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1b1512; --bordeaux:#7B2D26; --bordeaux-deep:#581c18; --gold:#a9842f;
+  --paper:#f4f1ec; --paper2:#fbfaf7; --rule:#ddd3c5; --muted:#6e6053; --text:#23201d;
+  --r1:#b23a33; --r2:#6e4e8e; --r3:#2e7d5b; --r4:#c9a227; --r5:#2f5c8e; --r6:#c9702a; --r7:#bf6a9c;
+  --serif:'Spectral',Georgia,'Times New Roman',serif;
+  --sans:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+a{color:var(--bordeaux);text-decoration-color:var(--rule);text-underline-offset:2px}
+.ribbon{height:6px;display:flex}
+.ribbon span{flex:1}
+.ribbon i:nth-child(1){background:var(--r1)}
+.ribbon span:nth-child(1){background:var(--r1)}.ribbon span:nth-child(2){background:var(--r2)}.ribbon span:nth-child(3){background:var(--r3)}.ribbon span:nth-child(4){background:var(--r4)}.ribbon span:nth-child(5){background:var(--r5)}.ribbon span:nth-child(6){background:var(--r6)}.ribbon span:nth-child(7){background:var(--r7)}
+
+/* HERO */
+header.hero{background:linear-gradient(160deg,#241a16,#0f0b09);color:#efe7da;position:relative;overflow:hidden}
+.hero-in{max-width:1180px;margin:0 auto;padding:54px 28px 40px;display:flex;gap:34px;align-items:center}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,6vw,68px);line-height:.98;margin:0 0 8px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.sub{font-size:18px;color:#cdbfae;margin:0 0 22px;max-width:46ch}
+.hero .meta{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+.falu{flex:0 0 150px}
+.search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:11px 14px;max-width:420px}
+.search input{flex:1;background:none;border:0;color:#fff;font-size:15px;font-family:var(--sans);outline:none}
+.search input::placeholder{color:#b6a895}
+.search svg{flex:0 0 18px;opacity:.7}
+#count{font-size:12.5px;color:var(--gold);margin-top:8px;min-height:1em}
+
+/* LAYOUT */
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:230px 1fr;gap:40px;align-items:start}
+nav.toc{position:sticky;top:18px;padding:26px 0;align-self:start}
+nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:s}
+nav.toc li{counter-increment:s}
+nav.toc a{display:block;padding:7px 12px 7px 0;color:var(--muted);text-decoration:none;font-size:14px;border-left:2px solid transparent;padding-left:14px;transition:.15s}
+nav.toc a::before{content:counter(s,decimal-leading-zero);color:var(--gold);font-family:var(--serif);font-size:12px;margin-right:9px}
+nav.toc a:hover{color:var(--bordeaux)}
+nav.toc a.active{color:var(--bordeaux);border-left-color:var(--bordeaux);font-weight:600}
+main{padding:30px 0 80px;min-width:0}
+
+/* SECTIONS */
+article.section{margin:0 0 46px;scroll-margin-top:18px}
+article.section>h2{font-family:var(--serif);font-weight:700;font-size:30px;color:var(--bordeaux);margin:0 0 4px;letter-spacing:-.01em}
+article.section>.eyebrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;display:flex;align-items:center;gap:8px}
+article.section>.eyebrow::after{content:"";height:1px;flex:1;background:var(--rule)}
+h3.sub{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);margin:26px 0 8px}
+p{margin:0 0 12px}
+ul{margin:0 0 14px;padding-left:20px}
+li{margin:3px 0}
+.note{background:var(--paper2);border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:6px;padding:11px 15px;font-size:14.5px;color:var(--muted);margin:0 0 16px}
+code{background:#eee7dc;padding:1px 5px;border-radius:4px;font-size:13px}
+
+/* KV */
+dl.kv{margin:0 0 16px;border-top:1px solid var(--rule)}
+.kv-row{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:16px;padding:9px 4px;border-bottom:1px solid var(--rule)}
+.kv-row dt{font-weight:600;color:var(--bordeaux-deep)}
+.kv-row dd{margin:0;color:var(--text)}
+@media(max-width:560px){.kv-row{grid-template-columns:1fr;gap:2px}}
+
+/* TABLES */
+.tablewrap{overflow-x:auto;margin:0 0 18px;border:1px solid var(--rule);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+thead th{background:var(--bordeaux);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:13px;position:sticky;top:0}
+tbody td{padding:8px 11px;border-top:1px solid var(--rule);vertical-align:top}
+tbody tr:nth-child(even){background:var(--paper2)}
+td.c0{font-weight:600;color:var(--bordeaux-deep);white-space:nowrap}
+.tablewrap.wide table{min-width:760px}
+
+/* ACCORDION */
+.accordion{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--paper2)}
+details.acc{border-bottom:1px solid var(--rule)}
+details.acc:last-child{border-bottom:0}
+details.acc>summary{list-style:none;cursor:pointer;padding:12px 16px;display:flex;flex-direction:column;gap:2px}
+details.acc>summary::-webkit-details-marker{display:none}
+details.acc>summary:hover{background:#f0ebe2}
+.acc-t{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--bordeaux);position:relative;padding-left:20px}
+.acc-t::before{content:"▸";position:absolute;left:0;color:var(--gold);transition:.15s;font-size:13px;top:3px}
+details.acc[open] .acc-t::before{transform:rotate(90deg)}
+.acc-s{font-size:13.5px;color:var(--muted);padding-left:20px}
+.acc-body{padding:4px 18px 18px}
+.acc-body h3.sub{font-size:16px;margin:14px 0 5px}
+
+.hidden{display:none!important}
+footer{background:var(--ink);color:#b6a895;font-size:13px;text-align:center;padding:26px 20px}
+footer .ribbon{margin:-26px -20px 20px}
+
+@media(max-width:880px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  nav.toc{position:static;padding:14px 0;border-bottom:1px solid var(--rule);overflow-x:auto}
+  nav.toc ol{display:flex;gap:4px}
+  nav.toc a{white-space:nowrap;border-left:0;border-bottom:2px solid transparent;padding:6px 10px}
+  nav.toc a.active{border-left:0;border-bottom-color:var(--bordeaux)}
+  .hero-in{flex-direction:column;align-items:flex-start;gap:18px;padding:38px 22px 30px}
+  .falu{flex:none}
+}
+</style>
+</head>
+<body>
+<div class="ribbon"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<header class="hero">
+  <div class="hero-in">
+    <div class="falu" aria-hidden="true">
+      <svg viewBox="0 0 150 120" width="150" height="120" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="75" cy="92" rx="60" ry="15" fill="#000" opacity=".35"/>
+        <path d="M18 80 Q75 18 132 80 Q120 70 75 70 Q30 70 18 80Z" fill="#15100e"/>
+        <path d="M18 80 Q75 64 132 80 Q132 92 75 96 Q18 92 18 80Z" fill="#241a16"/>
+        <rect x="18" y="79" width="114" height="7" rx="3" fill="#7B2D26"/>
+        <circle cx="98" cy="55" r="4.4" fill="#a9842f"/>
+        <circle cx="82" cy="48" r="3.4" fill="#c9a227"/>
+        <circle cx="62" cy="47" r="3" fill="#2e7d5b"/>
+        <path d="M112 36 l3 7 8 .6 -6 5.2 2 7.8 -7-4.3 -7 4.3 2-7.8 -6-5.2 8-.6z" fill="#c9a227"/>
+      </svg>
+    </div>
+    <div>
+      <p class="meta" id="meta"></p>
+      <h1 id="title"></h1>
+      <p class="sub" id="subtitle"></p>
+      <label class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#cdbfae" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="q" type="search" placeholder="Rechercher (ville, insigne, terme…)" autocomplete="off" aria-label="Rechercher dans l'archive">
+      </label>
+      <div id="count" aria-live="polite"></div>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="Sommaire"><ol id="nav"></ol></nav>
+  <main id="main"></main>
+</div>
+
+<footer>
+  <div class="ribbon"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div id="foot"></div>
+</footer>
+
+<script>window.FALUCHE_DATA = {
+  "title": "La Faluche",
+  "subtitle": "Archive du folklore faluchard — histoire, insignes, villes, lexique",
+  "updated": "Compilation 2026",
+  "sections": [
+    {
+      "id": "apropos",
+      "title": "À propos",
+      "blocks": [
+        {
+          "t": "p",
+          "html": "Cette archive rassemble l'ensemble du travail documentaire mené sur la faluche : récit historique, édition diachronique, catalogue d'insignes, particularités des villes et lexique. Elle est conçue pour être hébergée sur GitHub Pages et facilement modifiable — tout le contenu se trouve dans le fichier <code>data.js</code>."
+        },
+        {
+          "t": "note",
+          "html": "La faluche est vivante : insignes, codes et usages varient d'une ville à l'autre et évoluent. Les informations ci-dessous donnent le sens le plus répandu, sourcé autant que possible."
+        }
+      ]
+    },
+    {
+      "id": "histoire",
+      "title": "Histoire",
+      "blocks": [
+        {
+          "t": "h3",
+          "text": "Le monde étudiant de la fin du XIXe siècle"
+        },
+        {
+          "t": "p",
+          "html": "Au sortir de la défaite de 1870, un sursaut traverse la jeunesse universitaire. Les lois de 1883-1884 autorisent les associations : les Associations générales d'étudiants (AGE) se structurent ville par ville. La plus médiatisée est l'« A » de Paris (vers 1884-1885). En 1884, un article injurieux du <em>Cri du peuple</em> provoque des manifestations d'où naît l'« A » ; ses premiers présidents sont Boureau puis Delcambre, sous le patronage du recteur Gérard et du professeur Lavisse."
+        },
+        {
+          "t": "h3",
+          "text": "Bologne 1888 : le mythe et la réalité"
+        },
+        {
+          "t": "p",
+          "html": "En juin 1888, l'Université de Bologne fête ses huit cents ans ; une délégation française (six Parisiens, deux Marseillais) y représente l'« A ». On lui offre l'<em>orsina</em>, petit bonnet de velours, porté le seul temps du voyage. Contrairement à la légende du code, le béret n'a pas été rapporté de Bologne : Guy Daniel a fixé la date de 1888, mais Segura (2012) et « Scatman » ont montré que l'orsina n'a fait qu'inspirer l'idée — le béret est une invention française."
+        },
+        {
+          "t": "p",
+          "html": "Le récit de Lavisse est éloquent : arrivée le dimanche 10 juin 1888, les Français en simple chapeau face aux Allemands à plumets et rapières, accueil délirant (drapeau embrassé, chevaux dételés), le roi Humbert Ier saluant la bannière française. Ces fêtes masquaient une manœuvre politique de Crispi (anniversaire de la libération de 1859, statue de Victor-Emmanuel)."
+        },
+        {
+          "t": "h3",
+          "text": "La naissance française du béret (1888-1889)"
+        },
+        {
+          "t": "p",
+          "html": "Le béret de 1888 « restaure » un ancien béret rouge de l'étudiant bohème (années 1830-1870). Le 20 décembre 1888, l'« A » officialise au théâtre Beaumarchais un béret violet à liseré de faculté ; première apparition au Quartier latin le 15 janvier 1889. Après la « bérétomanie » et l'arrêté préfectoral du 9 février, le modèle définitif est fixé le 31 mars 1889 (velours noir, ruban bleu-rouge de Paris, écusson et palmes), jour de l'inauguration de la Tour Eiffel."
+        },
+        {
+          "t": "h3",
+          "text": "La diffusion en province (1889-1891)"
+        },
+        {
+          "t": "p",
+          "html": "Aix officialise sa coiffe le 16 février 1889 ; Montpellier choisit début 1889 la toque à crevés (hommage à Rabelais), conservée jusqu'à aujourd'hui ; Lyon (lion brodé), Toulouse, Nancy, Bordeaux suivent. Les insignes et l'étoile annuelle viennent de Gand (Belgique), vers 1900. Le mot « faluche » (galette, en patois lillois) s'impose dans les années 1930."
+        },
+        {
+          "t": "h3",
+          "text": "L'âge d'or international : Corda Fratres et l'UNEF"
+        },
+        {
+          "t": "p",
+          "html": "Dès le 10 août 1889, une conférence à Paris lance une fédération internationale des étudiants, qui devient la <em>Corda Fratres</em> (1898), forte de dizaines de milliers de membres sur cinq continents (français langue officielle ; 2e congrès à Paris en 1900, présidé en faluche ; 5e à Bordeaux en 1907). La même année 1907, Bordeaux, Dijon, Lille et Lyon fondent l'UNAGEF à Lille (ancêtre de l'UNEF) ; Paris les rejoint en 1909. Structure associative, le droit syndical (1884) étant réservé aux salariés."
+        },
+        {
+          "t": "h3",
+          "text": "Strasbourg et l'Alsace (1909)"
+        },
+        {
+          "t": "p",
+          "html": "L'Alsace étant allemande, des pharmaciens alsaciens (H2S) rapportent en 1909 la faluche de Nancy, en signe de francophilie — d'où les passants strasbourgeois. À la Libération de 1918, ce sont eux qui réaffichent les premiers la faluche."
+        },
+        {
+          "t": "h3",
+          "text": "Les deux guerres mondiales"
+        },
+        {
+          "t": "p",
+          "html": "1914-1918 décime la jeunesse étudiante ; la faluche hérite des insignes militaires de spécialité. Après la crise de 1929, elle renaît au cinquantenaire (avril 1938, semaine de liesse au Quartier latin). Le 11 novembre 1940, étudiants et lycéens manifestent à Paris ; l'Université de Strasbourg, repliée à Clermont-Ferrand, subit la rafle du 25 novembre 1943 (≈130 déportés)."
+        },
+        {
+          "t": "h3",
+          "text": "Charte de Grenoble, Mai 68 et renouveau"
+        },
+        {
+          "t": "p",
+          "html": "La Charte de Grenoble (24 avril 1946) définit l'étudiant comme « un jeune travailleur intellectuel » ; le premier code écrit paraît la même année (AFGES). Mai 68 rejette la faluche, qui ne survit que dans les filières corporatistes et devient une « tradition » (article 0 : apolitique, asyndicale, aconfessionnelle). Le renouveau vient des Basochards de Poitiers et des canulars de « Didier Ier » (1976-79), puis de la fusion des codes à Lille (1976), du centenaire de Reims (1988) et des États Généraux de Dijon (1989)."
+        },
+        {
+          "t": "h3",
+          "text": "Le code : de l'oral à l'écrit"
+        },
+        {
+          "t": "p",
+          "html": "Longtemps oral, le code est transcrit dans les années 1960 (code toulousain du <em>Midi Étudiant</em>, mars 1966 ; code lillois du <em>MIL</em>, 1975-76), puis fondu en une synthèse nationale le 8 mars 1976 (base toulousaine). Certaines formules ont traversé les décennies : l'interdiction de « transformer la faluche en comptoir de quincaillerie » (1966) est devenue « une succursale de Monoprix » (article III, 2023), et l'article IV est resté identique. La rédaction actuelle (135e, Belfort 2023) compte une trentaine de filières, intègre la réforme PASS/LAS et réduit le bac à un simple Ɣ."
+        }
+      ]
+    },
+    {
+      "id": "diachronie",
+      "title": "Chronologie & code",
+      "blocks": [
+        {
+          "t": "h3",
+          "text": "Chronologie (1883-2023)"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Date",
+            "Événement",
+            "Source"
+          ],
+          "rows": [
+            [
+              "1883-1884",
+              "Lois sur les associations ; structuration des AGE.",
+              "Guy Daniel"
+            ],
+            [
+              "1884",
+              "Article du Cri du peuple ; naissance de l'« A » de Paris.",
+              "Guy Daniel"
+            ],
+            [
+              "10-12 juin 1888",
+              "Fêtes du VIIIe centenaire de Bologne ; délégation française.",
+              "Lavisse 1890"
+            ],
+            [
+              "25 juin 1888",
+              "Retour à Paris en monôme ; harangue de Corbin.",
+              "Lavisse 1890"
+            ],
+            [
+              "20 déc. 1888",
+              "Officialisation du béret au théâtre Beaumarchais (violet).",
+              "Archivistes ; presse"
+            ],
+            [
+              "31 mars 1889",
+              "Modèle définitif (velours noir, ruban de Paris, écusson + palmes).",
+              "Archivistes"
+            ],
+            [
+              "1889-1890",
+              "Aix (16 fév.), Montpellier (crevés), Lyon (lion), Montpellier VIe centenaire.",
+              "Codes ; Segura"
+            ],
+            [
+              "10 août 1889",
+              "Conférence lançant une fédération internationale des étudiants.",
+              "faluche.info"
+            ],
+            [
+              "1898",
+              "Fondation de la Corda Fratres.",
+              "faluche.info"
+            ],
+            [
+              "1907",
+              "Fondation de l'UNAGEF à Lille ; 5e congrès Corda Fratres à Bordeaux.",
+              "faluche.info"
+            ],
+            [
+              "1909",
+              "Paris rejoint l'UNAGEF ; la faluche arrive en Alsace.",
+              "faluche.info ; codes"
+            ],
+            [
+              "1921-1922",
+              "Ordre du Vénéré Bitard (Poitiers) ; Grandgousiers de Lille.",
+              "Codes de ville"
+            ],
+            [
+              "juil. 1933",
+              "Demi-millénaire de Poitiers ; le « poireau » désigne une décoration, non le potager.",
+              "Segura (corr.)"
+            ],
+            [
+              "avril 1938",
+              "Cinquantenaire : semaine de liesse au Quartier latin.",
+              "Archivistes"
+            ],
+            [
+              "11 nov. 1940",
+              "Manifestation étudiante à Paris.",
+              "Archivistes"
+            ],
+            [
+              "25 nov. 1943",
+              "Rafle de Strasbourg repliée à Clermont-Ferrand (≈130 déportés).",
+              "Archivistes"
+            ],
+            [
+              "24 avril 1946",
+              "Charte de Grenoble ; premier code écrit (AFGES).",
+              "Archivistes"
+            ],
+            [
+              "mai 1968",
+              "La faluche, d'uniforme à tradition ; article 0.",
+              "Archivistes"
+            ],
+            [
+              "mars 1966",
+              "Code toulousain (Midi Étudiant), premier code structuré.",
+              "Segura"
+            ],
+            [
+              "fin années 1960",
+              "Code carabin toulousain : article IX = potager.",
+              "Segura"
+            ],
+            [
+              "8 mars 1976",
+              "Synthèse nationale à Lille (base toulousaine).",
+              "Guy Daniel"
+            ],
+            [
+              "déc. 1986",
+              "Code de Toulouse : notion de GM, intégration de Montpellier.",
+              "Guy Daniel"
+            ],
+            [
+              "1988 (100e)",
+              "Centenaire à Reims ; réapparition chez les pharmaciens parisiens.",
+              "Fayemendy ; Dillemann"
+            ],
+            [
+              "1989 (101e)",
+              "États Généraux de Dijon : officialisation des GM.",
+              "Archivistes"
+            ],
+            [
+              "1998 / 2009",
+              "Codes de Lille (110e) puis Strasbourg (121e) ; nouvelles filières, mammouth/singe.",
+              "Fayemendy"
+            ],
+            [
+              "2023 (135e)",
+              "Rédaction actuelle (Belfort) : bac Ɣ, moivre, PASS/LAS, « Monoprix ».",
+              "Code 135"
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Concordance du code"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Élément",
+            "Apparition",
+            "Évolutions / disparition",
+            "Source"
+          ],
+          "rows": [
+            [
+              "Modèle du béret",
+              "1888-1889",
+              "Violet à liseré → velours noir (1889) → stabilisé après 1945 (crevés, passants conservés).",
+              "Archivistes"
+            ],
+            [
+              "Couleurs de discipline",
+              "1888",
+              "Liseré par faculté → velours/satin (1976) → ~30 filières (2023).",
+              "Guy Daniel ; code 135"
+            ],
+            [
+              "Étoile",
+              "vers 1900",
+              "Empruntée à Gand → dorée/argentée ; moivre (récent).",
+              "Guy Daniel"
+            ],
+            [
+              "Baccalauréat",
+              "1967",
+              "Lettres A-T → Ɣ pour le bac général (2023).",
+              "Segura ; code 135"
+            ],
+            [
+              "Potager (art. IX)",
+              "fin 1960s",
+              "« Pas de capote, pas de carotte » ; retiré dans plusieurs villes.",
+              "Segura ; code 135"
+            ],
+            [
+              "Bouteille de Bordeaux",
+              "1966",
+              "« Cuite » — n'est un blâme que si danger.",
+              "Insignes Décernables"
+            ],
+            [
+              "Lime « insulte au GM »",
+              "code national",
+              "Retirée ; reclassée en insigne sexuel.",
+              "code 135"
+            ],
+            [
+              "Article III",
+              "1966",
+              "« comptoir de quincaillerie » → « succursale de Monoprix ».",
+              "Segura ; code 135"
+            ],
+            [
+              "Article IV",
+              "1966",
+              "« assez larges… assez strictes… » — inchangé.",
+              "Segura ; code 135"
+            ],
+            [
+              "Grand Maître",
+              "1986",
+              "Notion codifiée (Toulouse) → officialisée (Dijon, 1989).",
+              "Guy Daniel"
+            ],
+            [
+              "Pachy/singe/mammouth",
+              "vers 2009",
+              "Insignes de comportement ; mammouth national = prérogatives de GM.",
+              "Fayemendy"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "insignes",
+      "title": "Insignes",
+      "blocks": [
+        {
+          "t": "h3",
+          "text": "Couleurs & emblèmes de discipline"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Discipline",
+            "Circulaire",
+            "Emblème"
+          ],
+          "rows": [
+            [
+              "Médecine",
+              "Velours rouge",
+              "Bâton d'Asclépios (dit « caducée »)"
+            ],
+            [
+              "Chirurgie dentaire",
+              "Velours violet",
+              "Molaire"
+            ],
+            [
+              "Pharmacie",
+              "Velours vert",
+              "Coupe d'Hygie (« caducée » de pharmacie)"
+            ],
+            [
+              "Préparateur en pharmacie",
+              "Velours vert",
+              "Mortier & pilon"
+            ],
+            [
+              "Études courtes de santé",
+              "Velours blanc",
+              "Squelette"
+            ],
+            [
+              "Ostéopathie",
+              "Velours bleu roy",
+              "Sphénoïde"
+            ],
+            [
+              "Paramédical / Kiné",
+              "Velours rose",
+              "Ciseaux / caducée de Mercure"
+            ],
+            [
+              "Infirmier",
+              "Velours rose",
+              "Caducée infirmier"
+            ],
+            [
+              "Prépas santé",
+              "Velours marron",
+              "PASS : tête de mort sur fémurs ; LAS : emblème majoritaire"
+            ],
+            [
+              "Sage-femme",
+              "Velours fuchsia",
+              "Ânkh"
+            ],
+            [
+              "Vétérinaire",
+              "Velours bordeaux",
+              "Tête de cheval"
+            ],
+            [
+              "Droit",
+              "Satin rouge",
+              "Glaive & balance"
+            ],
+            [
+              "Sciences",
+              "Satin violet",
+              "Palmes de chêne & laurier + initiales"
+            ],
+            [
+              "Sciences politiques",
+              "Satin bleu & rouge",
+              "Parapluie"
+            ],
+            [
+              "Sciences éco, gestion, IAE",
+              "Satin orange",
+              "Caducée de Mercure"
+            ],
+            [
+              "AES",
+              "Satin vert clair",
+              "« AES »"
+            ],
+            [
+              "Lettres, langues, SHS",
+              "Satin jaune",
+              "Livre ouvert & plume"
+            ],
+            [
+              "Histoire",
+              "Satin jaune",
+              "Casque de Périclès"
+            ],
+            [
+              "Géographie",
+              "Satin jaune",
+              "Globe"
+            ],
+            [
+              "Archéologie",
+              "Satin jaune",
+              "Tête de sphinx"
+            ],
+            [
+              "Sociologie",
+              "Satin jaune",
+              "Grenouille"
+            ],
+            [
+              "Philosophie / Psychologie",
+              "Satin jaune",
+              "φ / ψ"
+            ],
+            [
+              "Architecture / Beaux-arts",
+              "Satin bleu",
+              "Équerre & compas / palette & pinceau"
+            ],
+            [
+              "Arts du spectacle / Audiovisuel",
+              "Satin bleu",
+              "Masque / clap"
+            ],
+            [
+              "Musique",
+              "Satin argenté",
+              "Lyre"
+            ],
+            [
+              "Œnologie",
+              "Satin saumon",
+              "Grappe de raisin"
+            ],
+            [
+              "Écoles de commerce",
+              "Satin rouge & vert",
+              "Caducée de Mercure"
+            ],
+            [
+              "Écoles d'ingénieurs",
+              "Satin bleu & noir",
+              "Étoile & foudre"
+            ],
+            [
+              "Filières sportives",
+              "Satin vert foncé",
+              "Coq"
+            ],
+            [
+              "MEEF (enseignement)",
+              "Satin gris",
+              "Plume"
+            ],
+            [
+              "BUT, DUT, BTS",
+              "Satin blanc",
+              "« BUT » / « BTS »"
+            ]
+          ],
+          "wide": true
+        },
+        {
+          "t": "h3",
+          "text": "Les trois « caducées »"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Bâton d'Asclépios (médecine)",
+              "un seul serpent (la couleuvre d'Esculape) sur un bâton d'olivier, souvent surmonté du miroir de la prudence et de palmes. Vrai symbole médical français (sceau de Montpellier, 1605). Ce n'est pas un « caducée » au sens strict."
+            ],
+            [
+              "Caducée d'Hermès/Mercure (commerce, éco, kiné)",
+              "le seul vrai caducée : deux serpents affrontés + un vol (ailes). Aux États-Unis, il représente — à tort — la médecine."
+            ],
+            [
+              "Coupe d'Hygie (pharmacie)",
+              "une coupe où s'enroule un serpent. Hygie, fille d'Asclépios, déesse de la santé (d'où « hygiène »). Attribut officiel des pharmaciens depuis 1942."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Cursus, années & examens"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Baccalauréat",
+              "Ɣ (bac général), lettre/initiales (autres), « i » (international)."
+            ],
+            [
+              "Étoile",
+              "une par année : dorée (réussie), argentée (redoublée) ; première étoile sur moivre bleu (public) ou blanc (privé)."
+            ],
+            [
+              "Zéro",
+              "année blanche, sabbatique ou de césure."
+            ],
+            [
+              "Palmes",
+              "simple (fin de cycle), double croisée de lauriers (diplôme), large (major)."
+            ],
+            [
+              "Tête de vache",
+              "échec en 1re session rattrapé en septembre."
+            ],
+            [
+              "Tête de mort (ruban)",
+              "abandon ou réorientation."
+            ],
+            [
+              "Quille",
+              "service militaire ou civique ; Abeille : cursus exemplaire."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Velours : passions & armes personnelles"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Chameau",
+              "endroit = célibataire ; envers = cœur pris."
+            ],
+            [
+              "Cochon",
+              "endroit = non intégré ; envers = intégré."
+            ],
+            [
+              "Pendu",
+              "marié ou pacsé."
+            ],
+            [
+              "Feuille de vigne",
+              "perte de la virginité ; Nounours : gros dormeur."
+            ],
+            [
+              "Chope / fourchette / grappe",
+              "amour de la bière / de la table / du bon vin."
+            ],
+            [
+              "Sphinx",
+              "polyglotte ; Casque de Périclès : amour de l'Histoire."
+            ],
+            [
+              "Lyre / plume / palette / masque",
+              "arts musicaux / littéraires / plastiques / de la scène."
+            ],
+            [
+              "Épi de blé",
+              "radin ; croisé d'une faucille : chanceux aux examens."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Décernés par le Grand Maître"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Anneaux olympiques",
+              "compétitions sportives."
+            ],
+            [
+              "Bacchus",
+              "« dignité dans l'ivresse » ; difficile à obtenir, facile à perdre."
+            ],
+            [
+              "Bouteille de Bordeaux",
+              "une « cuite » — pas un blâme ; le devient si danger."
+            ],
+            [
+              "Cor de chasse / Poule",
+              "« choppe » régulièrement / drague mais respecte."
+            ],
+            [
+              "Pachyderme",
+              "humour ou comportement lourds."
+            ],
+            [
+              "Sous-troué",
+              "nuit au poste, sans condamnation."
+            ],
+            [
+              "Volant",
+              "raccompagnateur sobre (coupé si l'on a bu)."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Les blâmes"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Bouteille de champagne",
+              "coma éthylique (+ abstinence, Bacchus troué)."
+            ],
+            [
+              "Singe",
+              "a trop insisté pour un insigne → gel de faluche."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Insignes à prérequis"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Clé de sol",
+              "chante bien / anime les soirées (examen en cantum)."
+            ],
+            [
+              "Mammouth",
+              "maîtrise du folklore (rare) ; le mammouth national a des prérogatives de GM."
+            ],
+            [
+              "Hache",
+              "« fait de guerre » (emprunt d'un panneau, avec rachat)."
+            ],
+            [
+              "Fourchette sur ruban bleu",
+              "après un repas complet jugé."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Insignes sexuels (décernés par le partenaire)"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Épée",
+              "fin amant ; Flèche : éjaculateur précoce."
+            ],
+            [
+              "Lime",
+              "acte laborieux et difficile."
+            ],
+            [
+              "Pensée",
+              "aussi appelée « orchidée » (la « fontaine » a existé au code 117)."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Le potager"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Carotte",
+              "rapport sexuel."
+            ],
+            [
+              "Poireau",
+              "fellation (inversé à Bourg-en-Bresse ; asperge = poireau à Limoges)."
+            ],
+            [
+              "Navet",
+              "rapport anal ; deux légumes croisés : dépucelage."
+            ]
+          ]
+        },
+        {
+          "t": "note",
+          "html": "Règles : insigne noirci en cas d'exhibition ; pas de potager pour un couple officiel ; « pas de capote, pas de carotte »."
+        },
+        {
+          "t": "h3",
+          "text": "Insignes autrefois décernés"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Chauve-souris / Ciseaux",
+              "nuit blanche associative / faluche bien cousue."
+            ],
+            [
+              "Cocotte en papier",
+              "(blâme) grand sécheur de cours."
+            ],
+            [
+              "Comète",
+              "tombé avant minuit ; Cupidon : fiancé (remplaçait le chameau)."
+            ],
+            [
+              "Fraise",
+              "femme enceinte (totem d'immunité) ; Globe : globe-trotteur."
+            ],
+            [
+              "Parapluie",
+              "(blâme) a vomi sur ou dans sa faluche."
+            ],
+            [
+              "Tête de sphinx",
+              "polyglotte ; I/X/W : dagobit simple/double/multiple ; Zéro : a vomi avant minuit."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Un même insigne, plusieurs sens"
+        },
+        {
+          "t": "table",
+          "head": [
+            "Insigne",
+            "Sens national",
+            "Variantes"
+          ],
+          "rows": [
+            [
+              "Cochon",
+              "Intégration : endroit = non intégré, envers = intégré",
+              "Bizutage ; parrain/baptisé (Paris PSA) ; « ne mange pas de porc » (Albi)."
+            ],
+            [
+              "Tête de vache",
+              "Échec en 1re session rattrapé",
+              "Autrefois « échec de juin » ; « parent » (Grenoble, Lyon)."
+            ],
+            [
+              "Bouteille de Bordeaux",
+              "Une « cuite » — pas un blâme",
+              "Blâme si danger ; blâme (Lyon) ; une seule (Strasbourg) ; non décernée (Clermont)."
+            ],
+            [
+              "Lime",
+              "Insigne sexuel : acte laborieux",
+              "Ancien « insulte au GM » (retiré) ; praticien de l'amour (Assas) ; insulte à une croix (Tours)."
+            ],
+            [
+              "Parapluie",
+              "Emblème de Sciences politiques",
+              "Ancien blâme : a vomi sur sa faluche."
+            ],
+            [
+              "Grenouille",
+              "Emblème de Sociologie",
+              "Insigne d'élu : argent (faculté), or (université)."
+            ],
+            [
+              "Chouette",
+              "Oiseau de nuit / emblème prépa",
+              "Décernée par le GM au noctambule assidu."
+            ],
+            [
+              "Pendu",
+              "Marié ou pacsé",
+              "Divorce ; « puceau officiel » (Lille, droit)."
+            ],
+            [
+              "Poireau / carotte",
+              "Potager : fellation / rapport",
+              "Inversés (Bourg-en-Bresse)."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "villes",
+      "title": "Les villes",
+      "blocks": [
+        {
+          "t": "p",
+          "html": "Matrice comparative des divergences locales, suivie du détail par ville (cliquez pour déplier). « National » = conforme à la pratique nationale."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Ville",
+            "Matière",
+            "Forme & couture",
+            "Gouvernance",
+            "Potager",
+            "Particularités"
+          ],
+          "rows": [
+            [
+              "Aix-en-Provence",
+              "National",
+              "Tresse à 3 brins (lignée grenobloise)",
+              "2 GM de ville (croix satin rouge)",
+              "National",
+              "3 reliques ; serment sur le drapeau de Provence"
+            ],
+            [
+              "Albi",
+              "National",
+              "1 mois pour la couture",
+              "1re croix 2016 (filiation Toulouse)",
+              "National",
+              "Clés papales ; cochon à l'envers = ne mange pas de porc"
+            ],
+            [
+              "Amiens",
+              "Tout velours (tisserande)",
+              "Circulaire rigide (médecine)",
+              "Le Bourreau",
+              "National",
+              "Évêque du Nord ; sage-femme velours « fiolet »"
+            ],
+            [
+              "Angers",
+              "Velours",
+              "Rappel de filière F/O",
+              "GM = mammouth argenté",
+              "National",
+              "Cocotte en papier = sécheur ; jouet (Cholet) satin marron"
+            ],
+            [
+              "Avignon",
+              "National",
+              "Rien ne pend",
+              "2 GM de ville",
+              "National",
+              "Clé des remparts ; amours rabelaisiens obligatoires"
+            ],
+            [
+              "Belfort",
+              "National",
+              "—",
+              "Filiation bisontine",
+              "National",
+              "135e congrès (2023) ; « Chamroublanc »"
+            ],
+            [
+              "Besançon",
+              "Matière conservée à vie",
+              "Rubans d'asso « en lunes »",
+              "GM = mammouth argenté (inventeur)",
+              "National",
+              "Betterave (depuis 1993)"
+            ],
+            [
+              "Bordeaux",
+              "National",
+              "Insignes brodés ; pas de pompon",
+              "Adoubement à l'épée ; GM → soleil",
+              "National",
+              "Devise sur le circulaire"
+            ],
+            [
+              "Bourg-en-Bresse",
+              "National",
+              "Couture lyonnaise ; rien ne pend sauf antivol",
+              "Patte de poulet bleue",
+              "Inversé (poireau/carotte)",
+              "« Que des pattes de poulet »"
+            ],
+            [
+              "Brest",
+              "National",
+              "—",
+              "National (port)",
+              "National",
+              "Pompon rouge ; pas d'enterrement ; mascotte Brestoune"
+            ],
+            [
+              "Caen",
+              "National",
+              "Rien au-dessus du circulaire",
+              "National",
+              "Absent (ni Bacchus)",
+              "Enterrement = ruban marron côté cœur"
+            ],
+            [
+              "Chambéry",
+              "National",
+              "Couture en Y (AJES)",
+              "2 co-GM (Savoie)",
+              "National",
+              "Initiales brodées rouge ; baptême au Vin de Savoie"
+            ],
+            [
+              "Clermont-Ferrand",
+              "Velours (sauf élu)",
+              "—",
+              "Croix paramed en satin",
+              "National",
+              "Pompon rose = grand voyageur ; bordeaux non décernée"
+            ],
+            [
+              "Créteil",
+              "Ruban de ville en velours",
+              "Faluche déjà cousue",
+              "Grand Esclavagiste (croix sur cuir)",
+              "National",
+              "Ave à chaque repas ; épi+faucille = triche"
+            ],
+            [
+              "Dijon",
+              "Velours (tisserande, 1989)",
+              "—",
+              "2 GM droit + 2 GM sciences",
+              "Spécifique (patate, asperge, fraise)",
+              "Évêque de l'Est ; pas de pachyderme"
+            ],
+            [
+              "Grenoble",
+              "National",
+              "GC sans croix qui pend",
+              "Croix satin rouge ; aucun ordre",
+              "National (chameau… non décernés)",
+              "Initiales brodées (blanc) ; pas de serment ; tête de vache = parent"
+            ],
+            [
+              "La Rochelle",
+              "National",
+              "—",
+              "Sans croix",
+              "National",
+              "Née en 2009 ; « Rochelais et on t'emmerde ! »"
+            ],
+            [
+              "Le Havre",
+              "Ruban de ville en velours",
+              "Couture INSA Lyon ; pompon rouge",
+              "Sans croix (assemblée)",
+              "National",
+              "Indépendante de Rouen (2022) ; serment dans l'eau de mer"
+            ],
+            [
+              "Lille",
+              "Circulaire rigide",
+              "« Rien ne pend »",
+              "GM/GC ; Bacchus collégial",
+              "National",
+              "Code fondateur (1976) ; Grandgousiers ; « faliban »"
+            ],
+            [
+              "Limoges",
+              "National",
+              "Brettes ; croix toujours à gauche",
+              "Grands Alchimistes ; article 0/0 bis",
+              "National (asperge = fellation)",
+              "« Jus de faluche »"
+            ],
+            [
+              "Lyon",
+              "National",
+              "Couture lyonnaise",
+              "GM pharma = soleil ; Corpo Lyon 3",
+              "Inversé (Corpo Lyon 3)",
+              "Taureau = parent ; bordeaux = blâme ; santards ; INSA"
+            ],
+            [
+              "Marseille",
+              "National",
+              "Velours large ; rubans parallèles",
+              "Grand Délateur & Grande Épave",
+              "National",
+              "Cochon toujours à l'endroit ; baptême public possible"
+            ],
+            [
+              "Metz",
+              "National",
+              "—",
+              "Croix récente",
+              "National",
+              "Faluche récente"
+            ],
+            [
+              "Montpellier",
+              "Tout satin",
+              "4 crevés (1889) ; velours large",
+              "Article 0 ; GA (« La Mixture »)",
+              "National",
+              "4 quartiers ; pas d'écusson ; code partagé avec Nîmes"
+            ],
+            [
+              "Nancy",
+              "National",
+              "Couture inversée ; faluche cousue avant",
+              "Grand Archiviste (2013)",
+              "National",
+              "Berceau du volant ; 105e congrès (1993)"
+            ],
+            [
+              "Nantes",
+              "National (« lilloise »)",
+              "Couture inversée",
+              "Grand Maître Peluche",
+              "Absent",
+              "Pompon rouge ; ruban de ville aux couleurs d'Agen"
+            ],
+            [
+              "Nice",
+              "Tout velours",
+              "Couture niçoise",
+              "Chevaliers Niçois (1997)",
+              "National",
+              "Vét./dentaire inversés ; Bitman ; Seringue d'or"
+            ],
+            [
+              "Nîmes",
+              "Tout satin (montpelliéraine)",
+              "4 crevés + écusson de Nîmes",
+              "GM interfilière + Directeur de Zoo",
+              "National",
+              "Suit le code de Montpellier"
+            ],
+            [
+              "Orléans",
+              "Pas de velours",
+              "Écusson au centre",
+              "3 Capes (modèle bitard)",
+              "National",
+              "Relancée en 1997 ; 108e congrès (1996)"
+            ],
+            [
+              "Paris — généralités",
+              "Velours (sauf élu)",
+              "National",
+              "Croix interfilière",
+              "National",
+              "Berceau (1888) ; Descartes 2004 ; pins Chartreuse"
+            ],
+            [
+              "Paris — Assas",
+              "National",
+              "Faluche « en croix »",
+              "Chargé des Traditions (pas de croix)",
+              "National",
+              "Code antérieur au national ; lime = praticien de l'amour"
+            ],
+            [
+              "Paris — Kremlin-Bicêtre",
+              "Satin (unique à Paris)",
+              "« Bande perso » centrale",
+              "Gardien des traditions (mammouth)",
+              "National",
+              "Cochon : WEI / intronisé ; hymne « Bicêtre »"
+            ],
+            [
+              "Paris — Bichat & Lariboisière",
+              "Velours / satin",
+              "Rubans posés de droite à gauche",
+              "GM Bichat (2004) ; Gardiens de Bichat",
+              "National",
+              "Marque de fusion ; Lariboisière « La Fécale »"
+            ],
+            [
+              "Paris — IPP",
+              "Velours bleu marine & noir",
+              "—",
+              "Croix IPP (fusion 2017)",
+              "National",
+              "Fork parodique ; Le Prophète"
+            ],
+            [
+              "Pau",
+              "Tout satin ou tout velours",
+              "Rien ne pend ; pas de fillot 6 mois",
+              "1 GM + 2 GC (Pau & Biarritz)",
+              "National",
+              "Adoubement à l'épée ; Grand Satyre (Henri IV)"
+            ],
+            [
+              "Perpignan",
+              "National",
+              "5 passants ; circulaire mou",
+              "Article 0 ; Grand Alchimiste",
+              "National",
+              "Bigatanes ; barde ; dromadaire = erreur de jeunesse"
+            ],
+            [
+              "Poitiers",
+              "National",
+              "Rubans bicolores tressés",
+              "Évêque du Sud ; GC sans croix",
+              "National",
+              "Ordre du Bitard ; Basoche ; nounours = gros dormeur"
+            ],
+            [
+              "Reims",
+              "Velours (centenaire 1988)",
+              "—",
+              "GAB (croix « à jeu »)",
+              "National",
+              "Ville royale (fleur de lys) ; baptême au champagne"
+            ],
+            [
+              "Rennes",
+              "National",
+              "Couture proche de Grenoble",
+              "GM en toge ; article 0",
+              "National",
+              "« Putsch » 2008 ; voilier = paresse"
+            ],
+            [
+              "Rouen",
+              "Velours (tisserande)",
+              "Pas de pompon (assumé)",
+              "Grand Délateur (croix fixe) ; la Meute",
+              "National",
+              "Code réunifié 2012 ; faux = accident de voiture"
+            ],
+            [
+              "Saint-Étienne",
+              "National",
+              "Tresses kiné ; pas d'initiales",
+              "GM/GC/GD choisis (non élus)",
+              "National",
+              "Berceau du Bitman ; hymne « le Furan » ; comète = astronomie"
+            ],
+            [
+              "Strasbourg",
+              "National (pas de ruban de ville)",
+              "6 passants ; circulaire mou",
+              "TVA (pas de GM)",
+              "National",
+              "Faluche alsacienne (1909) ; mémoire WWII ; lyre = clé de sol"
+            ],
+            [
+              "Toulon",
+              "National",
+              "—",
+              "Sans croix (assemblée)",
+              "National",
+              "Pompon rouge ; baptêmes thème pirates"
+            ],
+            [
+              "Toulouse",
+              "National",
+              "Croix à droite (sc. soc. & médecine)",
+              "Croix Excalibur/Narzil/Anduril",
+              "National",
+              "Co-rédactrice du code (1966) ; cri occitan ; ferrets"
+            ],
+            [
+              "Tours",
+              "Velours (sauf élus)",
+              "Circulaire souple ; « berluche »",
+              "Grand Sulfateur ; Sainte Marthe",
+              "National",
+              "Médecine velours amarante ; loutre = charcuterie"
+            ],
+            [
+              "Troyes",
+              "Velours (héritée de Reims)",
+              "Rubans perpendiculaires",
+              "Croix interfilières uniquement",
+              "Absent",
+              "Pas de mammouth, ni hache, ni Honoris Causæ"
+            ],
+            [
+              "Valence",
+              "National",
+              "Rien ne pend (sauf liste)",
+              "« Bitards » (filiation Poitiers)",
+              "« Jardin secret »",
+              "Baptême = « faluchage » ; néo ; Grand Siffloteur"
+            ],
+            [
+              "Valenciennes",
+              "National",
+              "—",
+              "Le Bourreau ; assemblée-jury",
+              "National",
+              "Hymne « Le P'tit Quinquin » ; Évêque du Nord"
+            ],
+            [
+              "Vichy",
+              "National",
+              "Rubans d'asso tressés ; pas d'initiales",
+              "Grand Maréchal (croix à l'aigle)",
+              "National",
+              "Baptisée par les kinés de Clermont ; insignes régionaux"
+            ]
+          ],
+          "wide": true
+        },
+        {
+          "t": "h3",
+          "text": "Détail par ville"
+        },
+        {
+          "t": "accordion",
+          "items": [
+            {
+              "title": "Aix-en-Provence",
+              "sub": "Forte tradition provençale, héritage grenoblois et trois reliques propres à la ville.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Le premier GM aixois a été intronisé par les Droit Grenoble, d'où le ruban de croix en satin rouge encore porté aujourd'hui.",
+                    "La tresse de parrainage à 3 brins est d'origine grenobloise (lignée Valence → Grenoble → Aix)."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Deux GM de ville",
+                      "leur ruban est en satin rouge, en hommage aux Droit Grenoble."
+                    ],
+                    [
+                      "Insigne de ville sur la croix",
+                      "GM et GC ajoutent sur leur ruban de discipline un insigne aux couleurs d'Aix."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Reliques & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Trois reliques",
+                      "le St Godet (jamais vidé, jamais reposé), la S'Aixcaliburne (gardée par les GM, pour les serments) et le St Gode (détenu par le GM)."
+                    ],
+                    [
+                      "Serment",
+                      "chaque impétrant est baptisé sur le drapeau de Provence."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Cri de guerre propre à la ville et chaîne portée pour la sécurité."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "IMPGT",
+                      "(management public et gouvernance territoriale) satin rouge avec les initiales."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Albi",
+              "sub": "Faluche jeune (première croix en 2016), lien fort avec Toulouse, identité de cité épiscopale.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Première croix",
+                      "Ssarenza, intronisée le 30 janvier 2016 par le GM Sciences Toulouse ; croix de ville émaillée depuis le 26 novembre 2016."
+                    ],
+                    [
+                      "Filiation toulousaine",
+                      "la faluche albigeoise est née dans le sillage de Toulouse."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Symboles de ville"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grimoire de ville",
+                      "et sabre de mineur gravé du nom des croix (issu de la famille du premier albigeois)."
+                    ],
+                    [
+                      "Clés papales",
+                      "clefs croisées au-dessus du ruban de ville d'étude (cité épiscopale)."
+                    ],
+                    [
+                      "Cri",
+                      "« ALBI ! » petit doigt levé ; cochon à l'envers = ne mange pas de porc."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Pas de PEP ; un mois pour réaliser toute la couture."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Impétrants",
+                      "appelés « piou »."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "En partie ouvert aux impétrants ; présentation par l'impétrant et sec en l'honneur de l'assemblée."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Amiens",
+              "sub": "Ville tisserande : tous les rubans sont en velours. Siège de l'Évêque du Nord et de traditions médecine fortes.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Tradition tisserande",
+                      "tous les rubans sont en velours ; cette particularité a ensuite été étendue à Dijon et Reims."
+                    ],
+                    [
+                      "Évêché du Nord",
+                      "Amiens est l'un des trois évêchés faluchards (avec le Sud à Poitiers et l'Est)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Personnages & ordres"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Évêque du Nord",
+                      "officialise les mariages ; E dans une palme sciences sur ruban violet ; peut officier sans GM."
+                    ],
+                    [
+                      "Le Bourreau",
+                      "fait respecter l'ordre ; ruban (billot) avec hache, bouteille de bordeaux et année de mandat."
+                    ],
+                    [
+                      "Le Monôme",
+                      "cortège festif jusqu'à la place Marie sans Chemise."
+                    ],
+                    [
+                      "Honoris Causa",
+                      "faluche velours noir/amarante, circulaire satin blanc « Honoris Causa », pour non-étudiants méritants."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Médecine",
+                      "velours bordeaux (« rouge sale »), circulaire rigide, faluche cousue avant le baptême."
+                    ],
+                    [
+                      "Sage-femme",
+                      "velours « fiolet » (entre fuchsia et violet), suite à une mauvaise commande conservée par tradition."
+                    ],
+                    [
+                      "IUT/BTS",
+                      "satin rose ; architecture : satin jaune (bleu au national)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Angers",
+              "sub": "Rappel de filière central et plusieurs insignes locaux ; les velours cousent tout en velours.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Particularités de port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rappel de filière",
+                      "ruban séparant la faluche en deux (frontal-occipital) à la couleur de la discipline."
+                    ],
+                    [
+                      "Velours",
+                      "cousent l'ensemble de leurs rubans en velours ; GM = mammouth argenté."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Insignes locaux"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Volant",
+                      "conducteur de fin de soirée (un morceau coupé par accident)."
+                    ],
+                    [
+                      "Cocotte en papier",
+                      "grand sécheur de cours ; grappe à l'envers : amour de l'alcool."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Jouet (Cholet)",
+                      "satin marron, emblème nounours ; ISSBA (ingé) : satin blanc velours vert."
+                    ],
+                    [
+                      "Géographie",
+                      "satin violet et jaune (anciennement à la fac de sciences)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Avignon",
+              "sub": "Faluchards « avignonnais des papes », gouvernance par deux GM de ville, amours rabelaisiens obligatoires.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Deux GM de ville",
+                      "ruban rouge et jaune avec pins de la ville ; régissent toute la communauté (GM de ville, non de filière)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités de port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Clé des remparts",
+                      "portée à l'occipital sur un anneau par les baptisés."
+                    ],
+                    [
+                      "I, X, W à l'occipital",
+                      "baptême seul, à deux, ou à trois et plus (sans rapport avec le Dagobi)."
+                    ],
+                    [
+                      "Devise",
+                      "« Partiren pas soulet » (provençal : nous ne partirons pas seuls)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Rien ne pend, sauf : ruban d'élu, croix de GM, sécurité, clé, ordre selon le GM, circulaire si nécessaire."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Insignes & amours rabelaisiens"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Cigale",
+                      "d'origine provençale."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Amours rabelaisiens obligatoires : lyre, plume, grappe de raisin, fourchette (hommage à Rabelais)."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Belfort",
+              "sub": "A accueilli le 135e anniversaire de la Faluche ; rattachement bisontin.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "135e anniversaire",
+                      "Belfort a accueilli ce congrès-anniversaire national."
+                    ],
+                    [
+                      "Filiation bisontine",
+                      "les premiers baptêmes ont été officiés par les croix de Besançon, d'où le ruban d'académie aux couleurs de Besançon (rouge, jaune, noir)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Trois bouchons de baptême",
+                      "« Chamroublanc » (champagne, rouge, blanc mélangés)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Partie baptême identique au code de Besançon."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "IUT",
+                      "satin rose (teinte entre Besançon et Strasbourg)."
+                    ],
+                    [
+                      "ESTA",
+                      "commerce et ingénieur (40 % ingénieur, 60 % commerce)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Besançon",
+              "sub": "Inventeur du mammouth argenté pour les GM ; uniformité de matière et rubans cousus en lunes.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Mammouth argenté",
+                      "Besançon est la première ville à l'avoir créé pour distinguer les GM."
+                    ],
+                    [
+                      "Betterave",
+                      "y remplace la moule depuis le congrès de Nancy (105e, 1993)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaire & rubans"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Uniformité de matière",
+                      "la matière du circulaire de baptême est conservée même en cas de changement de filière."
+                    ],
+                    [
+                      "Rubans d'asso",
+                      "cousus en lunes à l'arrière ; patte d'oie pour CA et bureau."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Initiales en petites lettres (pas d'initiales pour les satins), surnom en grandes lettres."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pharmacie",
+                      "ne porte pas le ruban de ville d'étude ; IUT : satin rose."
+                    ],
+                    [
+                      "AES",
+                      "caducée mercure (au lieu de « AES ») ; éduc spé : satin blanc liseré jaune."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Bordeaux",
+              "sub": "Devise et insignes brodés sur le circulaire ; pas de pompon. Baptêmes à l'épée transmise de GM en GM.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Circulaire"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pas de pompon",
+                      "réservé aux villes des ports de la Royale."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Devise placée sur le circulaire, sous le surnom ; insignes brodés sur le circulaire."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & baptême"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "GM",
+                      "passe de la croix au soleil (décerné par le successeur) sur le ruban de croix."
+                    ],
+                    [
+                      "Adoubement à l'épée",
+                      "transmise de GM en GM (en pharmacie comme en sciences avec le « Super Palmito »)."
+                    ],
+                    [
+                      "Médecine",
+                      "faluchés avant le baptême (faluche cousue), présence du Bourreau."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Sage-femme",
+                      "velours amarante, croix d'Ankh dans palmes des sciences."
+                    ],
+                    [
+                      "AES",
+                      "satin rouge et jaune (blanc au national)."
+                    ],
+                    [
+                      "Pharmacie",
+                      "rubans corpo en V, date du concours sur circulaire, rubans velours bordeaux-marine, côtés inversés."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Bourg-en-Bresse",
+              "sub": "Suit la couture lyonnaise ; GM porteur d'une patte de poulet bleue (Corpo Lyon 3).",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Patte de poulet bleue",
+                      "portée par le GM (Corpo Lyon 3) depuis 1995, en plus de la croix."
+                    ],
+                    [
+                      "Couture lyonnaise",
+                      "écusson de Bourg-en-Bresse au centre, comme à Lyon."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Membres du bureau",
+                      "demi-ruban central/occipital (« à Bourg, pas de patte d'oie, que des pattes de poulet »)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Pas de surnom mais une mention ; rien ne pend sauf l'antivol."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Insignes & filières"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Poireau / carotte",
+                      "significations inversées par rapport au national (poireau : copulation ; carotte : fellation)."
+                    ],
+                    [
+                      "ADEC",
+                      "hymne « Volaillaise », en référence à la volaille de Bresse ; agricole : satin moiré vert liseré amarante."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Brest",
+              "sub": "Ville portuaire de la Royale : pompon rouge obligatoire. « Faluchard un jour, faluchard toujours. »",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Port d'attache de la Royale",
+                      "la marine militaire y était présente, d'où le pompon rouge obligatoire."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités de ville"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pas d'enterrement",
+                      "« faluchard un jour, faluchard toujours » (sauf demande expresse)."
+                    ],
+                    [
+                      "Mascotte Brestoune",
+                      "sa défense est intrinsèque à la vie du faluchard ; sa perte est un déshonneur."
+                    ],
+                    [
+                      "En congrès",
+                      "« De toutes manières, je suis Brestois » : réponse attendue à toute remarque sur le code."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaire particulier"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "IAE",
+                      "écossais orange et blanc (différent du national)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Caen",
+              "sub": "Enterrement marqué par un ruban marron côté cœur ; ni potager ni Bacchus (dignité permanente).",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Particularités de ville"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Enterrement",
+                      "ruban marron côté cœur, après le dernier insigne du circulaire."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Pas de potager ni de Bacchus : tout faluchard doit rester digne en permanence.",
+                    "Rien ne passe au-dessus du circulaire ; ruban de ville d'étude à 90°."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Ordres & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Compagnie du Drakkar / Vikings",
+                      "ruban de velours jaune or enroulé autour d'un ruban frontal-occipital, drapeau normand à l'occipital."
+                    ],
+                    [
+                      "Épées croisées",
+                      "amateur de bon whisky ; triples fourchettes croisées : mange comme un porc."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Théologie",
+                      "velours noir (blanc et rouge au national) ; étiopathie : velours bleu ciel."
+                    ],
+                    [
+                      "Psychologie",
+                      "satin jaune et violet ; pharmacie : GA et grande délatrice."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Chambéry",
+              "sub": "Lettres brodées rouge (baptisés par Grenoble) ; identité savoyarde, deux co-GM.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Initiales brodées en rouge",
+                      "héritage des baptêmes par Médecine Grenoble (avant l'existence de croix locales) ; le rouge les distingue du blanc grenoblois."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Traditions savoyardes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Deux co-GM",
+                      "croix émaillée sur rubans rappelant le drapeau de Savoie."
+                    ],
+                    [
+                      "Baptême",
+                      "au Vin de Savoie ; serment sur le drapeau de Savoie ; grolle circulant pendant les baptêmes."
+                    ],
+                    [
+                      "Éléphant",
+                      "amour de la table savoyarde (raclette, fondue) ; dauphin : isérois exilé en Savoie."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Filière AJES (droit)"
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Corpo droit créée par la Corpo Lyon 3 : couture en Y, écusson de Chambéry au milieu.",
+                    "Verre de Génépi en fin de baptême ; pins Opinel sur ruban Chambéry."
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Clermont-Ferrand",
+              "sub": "Rubans en velours (sauf élu) ; pins Michelin toléré, croix paramed en satin.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rubans en velours",
+                      "en reconnaissance aux velours ayant fait perdurer la faluche chez les satins (sauf ruban d'élu, toujours satin)."
+                    ],
+                    [
+                      "Mémoire strasbourgeoise",
+                      "Clermont a accueilli l'Université de Strasbourg repliée pendant la Seconde Guerre mondiale ; un monument honore ces étudiants."
+                    ],
+                    [
+                      "Croix paramed",
+                      "en satin, car le 1er GM (Big José) fut baptisé à Montpellier."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Insignes locaux"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pompon rose",
+                      "grand voyageur (exode rural, vient de la campagne lointaine)."
+                    ],
+                    [
+                      "Pins Michelin / Bibendum",
+                      "toléré (seule entreprise du CAC40 sans siège à Paris à l'époque)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "La bouteille de bordeaux n'est pas décernée (« sinon tout le monde la mériterait »)."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires particuliers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Sciences-Éco",
+                      "glaive et balance sur satin orange (rattachée au droit)."
+                    ],
+                    [
+                      "Biomédical",
+                      "satin violet velours vert ; musicologie : clé de sol sur satin doré."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Créteil",
+              "sub": "Baptême faluche déjà cousue ; ruban de ville d'étude en velours par amour des carabins.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Baptême & port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Ave",
+                      "entonné à chaque repas de filière par le dernier baptisé ; sécurité = chaîne métallique (sauf ergothérapie)."
+                    ],
+                    [
+                      "Ruban de ville d'étude",
+                      "en velours, par amour des carabins."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Baptême faluche déjà cousue ; les impétrants connaissent la date 48 h avant (liste de 48 gages)."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Ordre"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grand Esclavagiste (IF Créteil)",
+                      "grand d'ordre représenté par une croix sur ruban de cuir (n'est pas une croix de filière)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Œnologie",
+                      "satin vert saumon (erreur de copier-coller conservée)."
+                    ],
+                    [
+                      "Épi de blé croisé faucille",
+                      "triche aux examens (≠ signification nationale)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Dijon",
+              "sub": "Ville tisserande de Bourgogne : rubans en velours (États Généraux 1989). Siège de l'Évêque de l'Est.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rubans en velours",
+                      "privilège lié à l'organisation des États Généraux de la Faluche en 1989 (101e) ; faluche bourguignonne issue d'Amiens."
+                    ],
+                    [
+                      "Évêché de l'Est",
+                      "rattaché à Dijon."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Insignes locaux"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Emblème régional",
+                      "taste-vin et escargot ; coq sans tête : grande gueule ne sachant pas l'ouvrir."
+                    ],
+                    [
+                      "Potager spécifique",
+                      "patate (fist), asperge (faciale), fraise (femme enceinte)."
+                    ],
+                    [
+                      "Chérubin",
+                      "« est encore un enfant, doit faire ses preuves » (retourné quand jugé « grand »)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Pas de pachyderme : « Dijon est lourd par définition », l'écusson suffit."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & circulaires"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "2 GM en droit, 2 GM en sciences",
+                      "(soleil/lune) ; croix à droite pour bio, géo, corpo."
+                    ],
+                    [
+                      "Médecine",
+                      "velours bordeaux, grand bourreau (croix non émaillée), faluche inversée."
+                    ],
+                    [
+                      "Sciences-Éco",
+                      "écureuil sur satin rouge barré de noir ; AES : chouette sur satin vert."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Grenoble",
+              "sub": "À l'origine des lettres brodées ; satin rouge pour les croix, lien fort avec la Chartreuse. Aucun ordre reconnu, pas de serment.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Lettres brodées",
+                      "Grenoble est à l'origine des initiales brodées (en blanc, « parce que c'est plus joli ») ; Chambéry les a reprises en rouge pour s'en distinguer."
+                    ],
+                    [
+                      "Croix sur satin rouge",
+                      "les premières croix ont été intronisées par Droit Grenoble (« Chartreusekiller »)."
+                    ],
+                    [
+                      "Tresse de parrainage",
+                      "à 3 brins, issue de Valence ; Grenoble l'a ensuite transmise à Aix-en-Provence."
+                    ],
+                    [
+                      "Évêché de l'Est méridional",
+                      "rattaché à Grenoble."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaire & couture"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "GC",
+                      "ruban biseauté aux couleurs de la filière, sans croix qui en pend (≠ national)."
+                    ],
+                    [
+                      "Couture",
+                      "le ruban de première ville d'étude part du frontal, les suivantes dans son prolongement."
+                    ],
+                    [
+                      "Pins Chartreuse",
+                      "siège sur le ruban de ville (rubans rouge et jaune)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pas de serment",
+                      "un grenoblois n'est donc pas tenu d'enlever sa faluche lors d'un serment extérieur."
+                    ],
+                    [
+                      "Sexum d'intro",
+                      "le sexe doit tremper dans un verre de Chartreuse ; champagne partagé seulement avec GM, GC et PM."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Ordres & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Aucun ordre",
+                      "Grenoble ne reconnaît officiellement aucun ordre ; ils ne figurent pas sur la faluche."
+                    ],
+                    [
+                      "Insignes non décernés",
+                      "chameau, rose, feuille de vigne, cochon, squelette ; tête de vache = parent."
+                    ],
+                    [
+                      "Élu",
+                      "refus du glaive et balance sur le ruban d'élu ; la grenouille englobe tous les conseils."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "La Rochelle",
+              "sub": "Jeune faluche (née en 2009), sans croix, suivant le code national.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Naissance",
+                      "le 9 mai 2009 avec le baptême de Barnabé."
+                    ],
+                    [
+                      "Sans croix",
+                      "la faluche rochelaise applique le code national."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Communauté",
+                      "le « Groupe des Faluchards Rochelais » (Rochelais, pas Rochelois)."
+                    ],
+                    [
+                      "Devise",
+                      "« Rochelais et on t'emmerde ! » ; baptême pendant l'anniversaire de la faluche rochelaise."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Le Havre",
+              "sub": "Faluche indépendante de Rouen depuis octobre 2022 ; code de synthèse (national + marseillais + rouennais), identité portuaire.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Indépendance",
+                      "faisait partie de la faluche de Rouen jusqu'en octobre 2022 ; désormais indépendante, sur un système d'assemblée."
+                    ],
+                    [
+                      "Ruban de ville en velours",
+                      "en hommage à Rouen (ville tisserande) qui a participé à la création de la faluche havraise."
+                    ],
+                    [
+                      "Couture INSA Lyon",
+                      "héritée de Rouen ; pompon rouge récupéré de Rouen."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Serment",
+                      "se fait dans l'eau de mer ; croix portée à droite (active ou non)."
+                    ],
+                    [
+                      "Bouteille de champagne à l'endroit",
+                      "« cuite au champagne » (héritée de Reims)."
+                    ],
+                    [
+                      "Certificat",
+                      "tout insigne décerné est accompagné d'un certificat daté et signé par 3 faluchards (hérité de Lille)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaire particulier"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Urbanisme",
+                      "satin jaune, emblème équerre & compas sur un globe."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Lille",
+              "sub": "Faluche-modèle : le code lillois (avec le toulousain) a servi de base au code national de 1976. Circulaire rigide ; « de la faluche lilloise, rien ne pend ».",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Code fondateur",
+                      "le code lillois et le code toulousain ont servi de base à la synthèse nationale du 8 mars 1976."
+                    ],
+                    [
+                      "Étymologie",
+                      "« faluche » viendrait du vieux lillois, signifiant « galette »."
+                    ],
+                    [
+                      "Grandgousiers de Lille",
+                      "confrérie née en 1922 (univers de Rabelais), reconnaissable à son bigophone et gouvernée par un « Soviet »."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Principe « rien ne pend »"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Légende",
+                      "un étudiant en médecine aurait accroché une colonne vertébrale humaine ; depuis, rien ne pend de la faluche lilloise."
+                    ],
+                    [
+                      "Exceptions",
+                      "circulaire, croix de GM/GC, bouchon de bizut (1 an puis cousu), ruban d'élu, sécurité, grelot + tresse, pendu, et en droit : puceau officiel, prêtresse des mœurs, grande coupeuse."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaire & décernements"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Insignes & surnoms",
+                      "décernés sur certificat signé dans la faluche par 3 anciens ou un GM (tradition reprise nationalement)."
+                    ],
+                    [
+                      "Hache & Bacchus",
+                      "hache plus décernée (abus) ; Bacchus hérité de l'Ordre des Gousiers, remis par la collégialité."
+                    ]
+                  ]
+                },
+                {
+                  "t": "list",
+                  "items": [
+                    "Initiales en petites lettres, surnom en grandes lettres."
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Filières & catho"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Droit",
+                      "seul un homme peut être GM, compensé par la Grande Coupeuse (forcément une femme) ; Puceau Officiel (ruban rouge 69 cm) surveillé par la Prêtresse des Mœurs."
+                    ],
+                    [
+                      "Catho médecine",
+                      "velours gros grain amarante (toge doctorale), 7 Grands Bizuteurs (moivre orange)."
+                    ],
+                    [
+                      "Catho musicologie",
+                      "circulaire satin doré (≠ argenté au national)."
+                    ],
+                    [
+                      "Faliban",
+                      "faluchard psychorigide sur le code et les traditions."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Limoges",
+              "sub": "Croix toujours à gauche, cordelettes (« brettes ») cousues autour des rubans, et figure du Grand Alchimiste.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Croix depuis 1987",
+                      "une grande faluche-mascotte (velours) retrace l'historique des croix limougeaudes depuis 1987."
+                    ],
+                    [
+                      "Satinisation",
+                      "cérémonie créée par La Barge (depuis 2006) pour les carabins et potards proches de la communauté satine."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Article 0 / 0 bis",
+                      "« Le GM a toujours raison » ; quand il a tort, se référer à l'article 0."
+                    ],
+                    [
+                      "Croix à gauche",
+                      "« GM un jour, GM toujours »."
+                    ],
+                    [
+                      "Brettes",
+                      "cordelettes tressées cousues autour des rubans : dorées (GM), argentées (GC), cuivrées (GA), blanches (croix d'honneur)."
+                    ],
+                    [
+                      "Grands Alchimistes",
+                      "deux GA (faluche satin) préparent le « jus de faluche » ; un GA n'a pas de croix."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Couture & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Couture limouchaude",
+                      "le ruban de ville de naissance est perpendiculaire au ruban de province."
+                    ],
+                    [
+                      "Droit",
+                      "satin rouge vermillon ; ingénieur : noir et bleu roy inversés."
+                    ],
+                    [
+                      "Asperge (potager)",
+                      "amour de la fellation ; fourchette à l'envers : bon cuisinier mais sale."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Lyon",
+              "sub": "Couture lyonnaise spécifique (écusson au centre), surnom facultatif, et de nombreux codes de filière (dont Corpo Lyon 3, INSA, santards).",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Particularités générales"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Surnom",
+                      "sa présence sur le circulaire n'est pas obligatoire."
+                    ],
+                    [
+                      "Insignes",
+                      "taureau = parent ; fourchettes croisées = « bouffe comme un porc » ; bouteille de bordeaux = blâme."
+                    ],
+                    [
+                      "Insignes locaux",
+                      "« V d'or » (vent pris d'une personne chauffée), « B d'or » (Blum d'or : a fait quelque chose de sale)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix par filière"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pharmacie",
+                      "le GM porte un soleil en frontal (pas de croix), le GC une lune ; moivre de couleur selon la voie."
+                    ],
+                    [
+                      "Dentaire",
+                      "velours bordeaux, ni velours rouge ni caducée (PCEM1 intégré) ; initiales de la fac de médecine d'origine."
+                    ],
+                    [
+                      "Médecine",
+                      "faluche militaire (santards, ruban tricolore) et faluche Lyon Sud (satin violet AMEUSO)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Faluches associatives & écoles"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Corpo Lyon 3",
+                      "faluche associative : pas de GC, GM prête serment au président, circulaire satin rouge, pachyderme honorifique, potager inversé, rien ne pend."
+                    ],
+                    [
+                      "INSA",
+                      "code distinct : nœud de cérémonie, vélo (24h de l'INSA), ancre (Insaïades)."
+                    ],
+                    [
+                      "Santards (ESSA)",
+                      "écusson au milieu, ruban tricolore F/O, velours amarante ; pas d'obligation de connaître le code."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Autres filières"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Sciences-Éco",
+                      "la lime signifie aussi « insulte au GM »."
+                    ],
+                    [
+                      "Sage-femme",
+                      "pas de velours rouge ; écusson de Lyon au centre (Bourg-en-Bresse et Saint-Étienne sur le côté)."
+                    ],
+                    [
+                      "Vétérinaire",
+                      "circulaire violet ; double palme pour la réussite au concours."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Marseille",
+              "sub": "Faluche réputée pour son velours très large (« don pour l'exagération ») et ses rubans cousus en parallèle. Pas d'initiales, surnom en grandes lettres.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Identité & circulaire"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Velours large",
+                      "plus large que toutes les autres faluches de France (mais plus petite qu'à Montpellier), circulaire souple."
+                    ],
+                    [
+                      "Circulaire",
+                      "pas d'initiales, surnom en grandes lettres ; pins Ricard autorisé sur le ruban de ville d'étude."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Couture & rubans"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rubans en parallèle",
+                      "cousus comme « les autoroutes du Sud » (parallèles, ne se croisent pas, angle de 120°)."
+                    ],
+                    [
+                      "Croix",
+                      "pendent toujours à droite (active ou non), sauf en pharmacie."
+                    ],
+                    [
+                      "Pharmacie",
+                      "le ruban de ville d'étude est remplacé par celui de la Provence (seule fac de pharma de Provence)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & ordres"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grand Délateur (médecine)",
+                      "ruban en pointe + lettres GD, sanctionne les entraves au code."
+                    ],
+                    [
+                      "Grande Épave (médecine)",
+                      "bouchon de champagne + voilier retourné ; décerne les bouteilles."
+                    ],
+                    [
+                      "Demi-croix",
+                      "Huriken et Surcouf, les deux seules demi-croix, forment ensemble une croix de GC de Toulouse."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & divers"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Baptême",
+                      "ouvert à tous (peut être entièrement public) ; cochon toujours à l'endroit."
+                    ],
+                    [
+                      "Médecine",
+                      "action humanitaire ou de santé publique requise avant/après le baptême."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Metz",
+              "sub": "Faluche récente suivant le code national.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Croix récente",
+                      "création récente d'une croix ; la faluche messine applique le code national."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Montpellier",
+              "sub": "Faluche montpelliéraine emblématique : quatre crevés aux couleurs de la filière, velours plus large, et tout en satin. Code partagé avec Nîmes.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Quatre crevés",
+                      "aux couleurs de la filière (origine 1889, décidée par l'AGEM), reliés par un bouton au sommet ; réservés aux étudiants de Montpellier en hommage à Rabelais."
+                    ],
+                    [
+                      "Université la plus ancienne",
+                      "droit et médecine y furent créés à la fin du XIIe siècle ; la toque y a précédé la faluche."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Structure de la faluche"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Quartiers",
+                      "les crevés délimitent quatre quartiers (personnel, associatif, origine, échanges) ; pas de côté personnel séparé."
+                    ],
+                    [
+                      "Tout en satin",
+                      "pas de circulaire en velours (dentaire violet, paramed rose, sage-femme fuchsia, pharma vert…)."
+                    ],
+                    [
+                      "Écusson",
+                      "un montpelliérain n'a pas d'écusson de Montpellier (les crevés le représentent)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Article 0",
+                      "« Le Grand-Maître a toujours raison »."
+                    ],
+                    [
+                      "Noms de croix",
+                      "Droit : La Nicolette ; Lettres : L'Alambicine ; Pharma : La Tulipe ; Sciences : La Stoufinette ; Dentaire : La Yves."
+                    ],
+                    [
+                      "Grand Alchimiste (GA)",
+                      "large ruban rouge et blanc + GA ; prépare « La Mixture » (remplace le champagne) ; grimoire de recettes."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & honneurs"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Faluches Rouges",
+                      "en médecine, deux faluches spéciales responsables de l'intégration."
+                    ],
+                    [
+                      "Épées de baptême",
+                      "propres à chaque filière (Droit : L'Akourduze ; Sciences : la Skypette + la Petite Tripette)."
+                    ],
+                    [
+                      "Honoris Causæ",
+                      "L'Ours (tenancier du Corto) et Dick le Dealer."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nancy",
+              "sub": "Berceau du volant (dentaire), partie personnelle et officielle inversées dans plusieurs filières, et figure récente du Grand Archiviste.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Berceau du volant",
+                      "le dentaire nancéien est à l'origine de cet insigne."
+                    ],
+                    [
+                      "Grand Archiviste",
+                      "créé en 2013-2014, il retrouve et conserve les traces historiques de la faluche."
+                    ],
+                    [
+                      "Congrès 1993",
+                      "Nancy a accueilli le 105e anniversaire de la Faluche."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités de port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Couture inversée",
+                      "en pharmacie et en médecine, parties personnelle et officielle inversées."
+                    ],
+                    [
+                      "Impétrant",
+                      "coud sa faluche avant le baptême."
+                    ],
+                    [
+                      "Croix GM sage-femme",
+                      "ancienne croix de GC médecine, émaillée au Tipp-Ex."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Médecine & circulaires"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Médecine",
+                      "écusson de ville sur ruban blanc et vert (fac à Vandœuvre) ; pas d'initiales, pas de P1."
+                    ],
+                    [
+                      "IAE",
+                      "caducée de Mercure sur satin rouge et orange ; Sciences-Éco : la bourse."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nantes",
+              "sub": "Ville portuaire de la Royale (pompon rouge), couture inversée, et absence de potager. Présence d'un Grand Maître Peluche.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Code nantais",
+                      "code remis à jour par Droopy (Sciences) à partir de celui de son grand-parrain Q ; faluche dite « lilloise »."
+                    ],
+                    [
+                      "Pompon rouge",
+                      "port d'attache de la Royale ; ce n'est pas un pins et il ne s'échange pas."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités de ville"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Ruban de ville",
+                      "aux couleurs de l'Agen et non de Nantes."
+                    ],
+                    [
+                      "Couture inversée",
+                      "côté personnel et côté officiel inversés ; mention du bac sur le circulaire."
+                    ],
+                    [
+                      "Serment",
+                      "les Nantais ne portent pas la faluche au cœur ; le faire signifie désapprouver le baptême."
+                    ],
+                    [
+                      "Pas de potager",
+                      "absent du code nantais."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & filières"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "GMP (Grand Maître Peluche)",
+                      "ruban velours marron + écusson d'ours ; baptise les peluches (créé par les Sciences)."
+                    ],
+                    [
+                      "Sciences-Éco",
+                      "caducée Mercure + glaive et balance (accueil par la Corpo Droit après l'incendie de leur local)."
+                    ],
+                    [
+                      "Dentaire",
+                      "molaire sur velours bordeaux liseré rouge ; clé de sol à l'envers = chante faux."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nice",
+              "sub": "Tous les rubans en velours, gouvernance issue de l'Ordre des Chevaliers Niçois, et inversion vétérinaire / dentaire.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Chevaliers Niçois",
+                      "ordre fondé en 1997 (12 membres, kilt rouge) ; les croix niçoises en sont issues et obéissent à la Table Des Lois."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Matière & circulaires"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rubans en velours",
+                      "tous les rubans sont en velours."
+                    ],
+                    [
+                      "Vétérinaire / Dentaire",
+                      "inversés : vétérinaire en velours violet, dentaire en velours bordeaux."
+                    ],
+                    [
+                      "Orthophonie",
+                      "lyre sur velours rose ; Université de la mer : ancre sur satin bleu marine."
+                    ],
+                    [
+                      "Couture niçoise",
+                      "ruban de ville d'études accompagné du ruban de province d'études en frontal-occipital."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Traditions & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Bitman",
+                      "porte une énorme bonbonne et doit boire tout ce qu'il sert ; PM : un choisi, un tiré parmi les extés."
+                    ],
+                    [
+                      "Seringue d'or",
+                      "cérémonie annuelle décernant des titres."
+                    ],
+                    [
+                      "« M »",
+                      "Mendestro (« Menstrue d'or ») ; épingle à nourrice = insulte à un chevalier."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Nîmes",
+              "sub": "Affiliée à la Faluche montpelliéraine : même faluche à quatre crevés, mais écusson de Nîmes. Présence d'un Directeur de Zoo.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Identité"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Faluche montpelliéraine",
+                      "Nîmes porte la même faluche à quatre crevés et suit le code de Montpellier."
+                    ],
+                    [
+                      "Écusson",
+                      "l'écusson de Nîmes est porté en ville d'étude pour se différencier de Montpellier."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & honneurs"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Quatre croix",
+                      "un GM interfilière et un Directeur de Zoo (DZ)."
+                    ],
+                    [
+                      "Directeur de Zoo",
+                      "faluche « animale » (velours zébré, 2 crevés verts et 2 rouges, croix DZ rouge) ; rôle de GC."
+                    ],
+                    [
+                      "Faluches d'honneur",
+                      "trois : Dick le Dealer, la grande coco, et le directeur du zoo."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Orléans",
+              "sub": "Faluche relancée en 1997, gouvernée par des Capes (inspirées des Bitards) plutôt que par des croix. Écusson au centre.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Renaissance en 1997",
+                      "faluche relancée par SNUP (étudiant Sciences) qui crée l'association La FOUF."
+                    ],
+                    [
+                      "Création des Capes (2005)",
+                      "3 Capes cousues à défaut de croix, sur le modèle des dignitaires Bitards de Poitiers, pour contrebalancer les abus."
+                    ],
+                    [
+                      "Congrès 1996",
+                      "Orléans a accueilli le 108e anniversaire de la Faluche."
+                    ],
+                    [
+                      "Écusson au centre",
+                      "placé au centre car Orléans a été intronisée par Paris."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Capes",
+                      "3 capés qui choisissent leur successeur ; gardiens du serment et des traditions."
+                    ],
+                    [
+                      "Pas de velours",
+                      "aucune filière n'est en velours ; ruban de ville aux couleurs du drapeau orléanais."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Paris — généralités",
+              "sub": "Paris suit le code national, mais chaque filière et sous-faculté possède ses particularités. Histoire mouvementée de la croix interfilière.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Berceau de la faluche",
+                      "le béret a été officialisé par l'Association Générale des étudiants de Paris le 20 décembre 1888."
+                    ],
+                    [
+                      "Croix interfilière",
+                      "AFIF (croix IF nationale, 1er GM CPE) → ALF (2005, créée par 2 kinés, 1res croix « Rose ») → Interfilière parisienne (2007), intronisée par les GM parisiens."
+                    ],
+                    [
+                      "Congrès",
+                      "Paris a accueilli les 107e (1995), 114e (2002) et 124e (2012) anniversaires."
+                    ],
+                    [
+                      "Paris Descartes (2004)",
+                      "fusion de Necker, Cochin-Port-Royal et Broussais-Hôtel-Dieu ; premier GM Kicock, intronisé en avril 2004 ; en 2021 est créée l'« université de la Faluche » de l'Université Paris."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Port & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rubans en velours",
+                      "pour de nombreuses filières (sauf le ruban d'élu), pour l'uniformité avec le circulaire."
+                    ],
+                    [
+                      "Pins Chartreuse",
+                      "sur le ruban de Paris = « est parisien » ; Cantum parfait : lyre entourée de palmes."
+                    ],
+                    [
+                      "Impétrant",
+                      "doit assister à au moins 3 évènements faluchards après présentation aux croix."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Sous-facultés de santé"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Médecine PSA",
+                      "rubans d'asso jusqu'au bout ; cochon endroit = parrain, envers = baptisé ; 2 écussons seulement."
+                    ],
+                    [
+                      "Médecine PO",
+                      "écusson de région d'études, lettres PO autour du caducée."
+                    ],
+                    [
+                      "Pharma PD",
+                      "lettres P et D de part et d'autre du caducée ; moivre sous l'étoile de 2e année ; vert plus clair."
+                    ],
+                    [
+                      "Dentaire",
+                      "tous les rubans en velours ; ruban CEOP porté en patte d'oie (V)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Paris — Assas",
+              "sub": "Faluche associative très particulière, organisée comme celle de la Corpo Lyon 3, suivant un code parisien antérieur au code national.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Code ancien",
+                      "quand la faluche s'éteint dans les années 1970, la Corpo Assas reste la seule à la porter ; elle suit donc un code antérieur au national."
+                    ],
+                    [
+                      "Chargé des Traditions",
+                      "depuis l'AG de 1996, c'est le Président de la Corpo (équivalent du GM), sans croix."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Structure & port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Faluche en croix",
+                      "divisée en 4, les rubans formant une croix équidistante avec l'écusson de Paris au centre (comme la Corpo Lyon 3)."
+                    ],
+                    [
+                      "Faluche associative",
+                      "il faut faire partie de la Corpo pour porter la faluche."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Médecine",
+                      "caducée sur velours « grenat » ; dentaire : molaire sur velours rouge et violet."
+                    ],
+                    [
+                      "AES / Sciences-Éco",
+                      "balance et caducée de Mercure sur satin rouge et noir."
+                    ],
+                    [
+                      "Insignes",
+                      "chauve-souris = taxeur ; lime = grand praticien de l'amour (décernée)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Paris — Kremlin-Bicêtre",
+              "sub": "Sous-faculté de médecine au code très libre, reconnaissable à sa « bande perso » et à ses rubans en satin (cas unique à Paris).",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Faluche FUCK",
+                      "la faculté du Kremlin-Bicêtre revendique un fort esprit de groupe et une lignée de croix documentée depuis la fin des années 1990."
+                    ],
+                    [
+                      "Retour au code national",
+                      "longtemps désinvolte vis-à-vis du code, KB a réaffirmé son appartenance à la faluche nationale (poly code + paillardes créé en 2008)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Port & couture"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Bande perso",
+                      "ruban fronto-occipital central, de matière et couleur au choix, séparant étude et personnel (cas unique en France)."
+                    ],
+                    [
+                      "Rubans en satin",
+                      "contrairement aux autres facs parisiennes (en velours) ; pas d'initiales."
+                    ],
+                    [
+                      "Croix de GM",
+                      "une croix de GC « blanchie » au Tipp-Ex ; pas d'écusson de ville d'étude (introuvable)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Gardien des traditions",
+                      "mammouth sur ruban velours rouge (pas de croix) ; Punisher = sanctions."
+                    ],
+                    [
+                      "Cochon",
+                      "endroit = a fait le WEI, envers = a été intronisé ; hymne « Bicêtre » obligatoire."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Paris — Bichat & Lariboisière",
+              "sub": "Deux sous-facultés de médecine ayant fusionné, marquant cette union d'un ordre commémoratif.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Fondation de Bichat",
+                      "Ben107, déjà baptisé dans un autre cursus, arrive en P1 vers 2000 et baptise une dizaine de faluchards ; en 2004 il laisse sa croix à Mister B, premier GM de Bichat (« un groupe fermé de gens ouverts »)."
+                    ],
+                    [
+                      "Fusion",
+                      "Bichat et Lariboisière ont fusionné ; les croix de Lariboisière ont pris fin avec cette fusion."
+                    ],
+                    [
+                      "Les Gardiens de Bichat",
+                      "ordre créé pour marquer le deuil de la fusion."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Bichat"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Marque de deuil",
+                      "velours noir (ou blanc pour les membres de l'ordre) avec 2 chats, sous l'étoile de l'année de fusion."
+                    ],
+                    [
+                      "Port",
+                      "rubans en velours, placés progressivement de la droite vers la gauche (≠ national) ; baptême privé ; croix de GM à 3 mailles blanches."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Lariboisière (« La Fécale »)"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Circulaire",
+                      "la P1 est placée avant le caducée, avec la tête de mort ; rubans en satin ; nom et prénom indiqués."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Paris — IPP (ingénieurs)",
+              "sub": "« Ingénieurs Puceaux Parisiens » : fork humoristique du code national (2017), né de la fusion des croix d'École de Paris et d'Île-de-France.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Fork de 2017",
+                      "les faluchards ingénieurs créent un « fork » parodique du code national."
+                    ],
+                    [
+                      "Croix IPP",
+                      "symbole de l'union des élèves ingénieurs de Paris et d'Île-de-France, née de la fusion de leurs croix."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Circulaire",
+                      "velours bleu marine et noir pour les ingénieurs."
+                    ],
+                    [
+                      "Baptême",
+                      "commence par le jeu du petit train."
+                    ],
+                    [
+                      "Le Prophète",
+                      "veille à la « philosophie IPP » ; distingué par une tête de mort sur feuille de vigne."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Pau",
+              "sub": "Un GM de ville épaulé de deux GC (un palois, un biarrote), adoubement à l'épée et forte identité béarnaise.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Épée gravée",
+                      "gravée du nom des anciens et actuels GM palois, transmise et utilisée pour l'adoubement (« Je te fais digne faluchard palois »)."
+                    ],
+                    [
+                      "Grand Satyre",
+                      "gardien des histoires et traditions d'Henri IV (natif de Pau)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Un GM de ville",
+                      "assisté de 2 GC (un de Pau, un de Biarritz) ; la croix de GM de Biarritz est aussi celle de Pau."
+                    ],
+                    [
+                      "Article 0 / 0 bis",
+                      "« Le GM a toujours raison » ; tête de vache sur le ruban de croix du GC actif."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Baptême",
+                      "au Jurançon ; parchemin avec serment remis après ; mascotte Grosnours portée par les impétrants."
+                    ],
+                    [
+                      "Uniformité",
+                      "tous les rubans en satin ou tous en velours (sauf rubans d'asso)."
+                    ],
+                    [
+                      "Rien ne pend",
+                      "et pas de fillot pendant les 6 mois suivant le baptême (sauf élu, bouchon, sécu) ; initiales avant le surnom."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Perpignan",
+              "sub": "Faluche à cinq passants (héritage strasbourgeois) ornée des « bigatanes », et code dirigé par l'article 0.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Baptisés par Strasbourg",
+                      "les premiers faluchards perpignanais l'ont été par Strasbourg, d'où les passants ; le 6e passant aurait été « perdu » lors du voyage."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Cinq passants",
+                      "circulaire mou ; bigatanes (espadrilles catalanes miniatures) pendant à l'arrière."
+                    ],
+                    [
+                      "Article 0",
+                      "« Le Grand Maître a toujours raison »."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & circulaires"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grand Alchimiste",
+                      "lettres « GA » et taste-vin ; élu au conseil de discipline : ruban or + balance par mandat."
+                    ],
+                    [
+                      "Médecine",
+                      "caducée médecine même pour les PCEM1 ; sciences humaines : satin jaune et violet."
+                    ],
+                    [
+                      "Insignes",
+                      "barde (lyre + « B ») ; dromadaire = erreur de jeunesse."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Poitiers",
+              "sub": "Berceau de l'Ordre du Vénéré Bitard et de l'Évêché du Sud ; tous les rubans bicolores sont tressés.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Ordre du Vénéré Bitard (L.S.T.)",
+                      "officialisé en 1921-1922 (univers de Rabelais) ; le Bitard est un demi-Dieu des escholiers de Poitiers (animal mythique de la forêt de Ligugé)."
+                    ],
+                    [
+                      "Royaume de Basoche",
+                      "autorisé en 1302 par Philippe le Bel, interdit à la Révolution, recréé en 1961 (réservé aux étudiants en droit)."
+                    ],
+                    [
+                      "Sage-femme",
+                      "filière née en 1764 à l'invitation de Mme Ducoudray ; changement de couleur fuchsia → rouge en 1995."
+                    ],
+                    [
+                      "Rubans tressés",
+                      "tous les rubans bicolores sont tressés en l'honneur de Golus."
+                    ],
+                    [
+                      "Congrès",
+                      "Poitiers a accueilli les 104e (1992), 106e (1994) et 113e (2001) anniversaires."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & croix"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Trois folklores",
+                      "Basochards, Bitards et Faluchards coexistent (sans lien entre eux) ; pas d'initiales."
+                    ],
+                    [
+                      "Évêque du Sud",
+                      "rattaché à Poitiers ; GC de médecine et de sciences sans croix (chevron/ruban + palme + GC)."
+                    ],
+                    [
+                      "Nounours",
+                      "= gros dormeur (insigne créé à Poitiers ; historiquement « s'est endormi pendant l'acte »)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Ordre du Bitard"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Capes & faluche",
+                      "faluche noire à chevron + écusson de Poitiers ; capes de couleur selon le grade (novice, chabousse, chevalier, commandeur…)."
+                    ],
+                    [
+                      "Semaine bitarde",
+                      "chaque printemps, Poitiers est renommée « Bitardbourg » (recherche de la statue dans la forêt de Ligugé)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Reims",
+              "sub": "Ville royale et organisatrice du centenaire : rubans en velours, baptême au champagne, et tradition de gardien des traditions pour tous.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Centenaire de 1988",
+                      "Reims a accueilli le 100e anniversaire (premier congrès) ; rubans en velours obtenus en récompense de cette organisation (sauf les sciences, non participantes)."
+                    ],
+                    [
+                      "Ville royale",
+                      "lieu du sacre des rois de France ; fleur de lys placée sur le ruban de ville ; Reims a aussi accueilli les 110e (1998) et 120e (2008)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Baptême au champagne",
+                      "commence par un sec de champagne ; la faluche est baptisée au champagne."
+                    ],
+                    [
+                      "Moivre",
+                      "placé sous l'étoile de l'année de baptême ; partie « décernement » propre."
+                    ],
+                    [
+                      "Pas de mammouth",
+                      "tout faluchard rémois est censé être gardien des traditions ; GAB = croix « à jeu »."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Rennes",
+              "sub": "Article 0 affirmé, croix en toge pour certaines filières, et couture velours proche de la grenobloise.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Putsch de 2008",
+                      "en pharmacie, une molaire est gravée à l'arrière de la croix : les dentaires ont ressuscité la filière, et la croix a été dérobée lors d'un « putsch » en 2008."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Gouvernance & port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Article 0",
+                      "« Le GM a toujours raison » ; les GM de dentaire et de sciences officient en toge."
+                    ],
+                    [
+                      "Couture velours",
+                      "proche de la couture grenobloise ; voilier sur ruban d'asso = paresse."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & filières"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Dentaire",
+                      "noms des anciens GM gravés à la fraise sur la croix ; velours bordeaux."
+                    ],
+                    [
+                      "Sage-femme",
+                      "velours rouge avec liseré de dentelle blanche (baptisées par les médecines)."
+                    ],
+                    [
+                      "Sciences",
+                      "croix transmise par un « putsch » (faux, mais inscrit au code) ; GM en toge."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Rouen",
+              "sub": "Ville tisserande (rubans en velours) et portuaire sans pompon. Berceau du Grand Délateur comme croix fixe et de l'ordre de la Meute.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grand Délateur",
+                      "créé à Rouen comme croix fixe (prépare et administre les sanctions des baptêmes)."
+                    ],
+                    [
+                      "La Meute",
+                      "filiation née à Poitiers (Bong et ses fillots), arrivée à Rouen par Mylood ; carotte sur capsule blanche + foulard de couleur transmis de génération en génération."
+                    ],
+                    [
+                      "Faluchage de masse",
+                      "arrêté en 2009 ; code réunifié de Rouen établi en 2012 ; 127e anniversaire à Rouen en 2015."
+                    ],
+                    [
+                      "Pas de pompon",
+                      "bien que ville portuaire, les anciens trouvaient cela inesthétique (choix assumé comme arbitraire)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rubans en velours",
+                      "tradition tisserande ; ancienne couture nationale (rubans de ville d'étude partant du frontal)."
+                    ],
+                    [
+                      "Grand buveur de bière",
+                      "3 rubans de satin noir verticaux à côté du surnom sur le circulaire."
+                    ],
+                    [
+                      "Médecine",
+                      "parties personnelle et officielle inversées ; caducée sur le velours ; thésard : cochon sur le circulaire."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Filières & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Droit / Pôle Pasteur",
+                      "ruban de ville d'étude bleu ciel et blanc en mémoire de Jeanne d'Arc (mal défendue par les avocats de Rouen) ; repris en velours par carabins et pharmaciens."
+                    ],
+                    [
+                      "Croix interfilière",
+                      "ruban aux couleurs des ingés, ses créateurs ; Grand Alchimiste en pharmacie."
+                    ],
+                    [
+                      "Faux",
+                      "= accident de voiture avec hospitalisation."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Saint-Étienne",
+              "sub": "Croix non élues mais choisies, hymne « le Furan », et berceau du Bitman.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Berceau du Bitman",
+                      "le Bitman (récipient en forme de bite rempli de vin, distinction du faluchard le plus actif) est une tradition stéphanoise, reprise ensuite à Nice et Marseille."
+                    ],
+                    [
+                      "Croix kiné",
+                      "issue des codes toulousain et lyonnais ; lignée de croix kiné documentée depuis 1993."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "GM non élu",
+                      "chaque GM choisit son successeur (en consultant les anciens) ; idem GC et GD."
+                    ],
+                    [
+                      "Grand Délateur",
+                      "commun à toute la ville ; croix toujours portée à droite (choix personnel)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Traditions & filières"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Hymne",
+                      "« le Furan », obligatoire pour le baptême ; surnom en grandes lettres, pas d'initiales."
+                    ],
+                    [
+                      "La Molaire (médecine)",
+                      "épreuve d'intro : boire une bouteille de vin, goulot coincé entre la molaire et la joue."
+                    ],
+                    [
+                      "Tresses",
+                      "tresse kiné (velours bleu, jaune, rose) et tresse satin équivalente ; insignes : comète = astronomie, M d'or = misère."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Strasbourg",
+              "sub": "Faluche alsacienne à six passants, gouvernée non par des GM mais par les Très Vénérables Anciens (TVA). Forte mémoire de la Seconde Guerre mondiale.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Arrivée en Alsace (1909)",
+                      "rapportée par les étudiants en pharmacie (H2S) lors du 3e congrès de l'UNEF à Nancy, en signe de ralliement aux idées françaises (l'Alsace étant alors allemande)."
+                    ],
+                    [
+                      "Seconde Guerre mondiale",
+                      "l'Université de Strasbourg est repliée à Clermont-Ferrand ; rafles de 1943 (37 puis ~130 étudiants déportés). Le ruban du souvenir rouge et blanc commémore ce repli."
+                    ],
+                    [
+                      "Congrès 2009",
+                      "Strasbourg a accueilli le 121e anniversaire ; code alsacien réédité en 2006 puis 2023."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Faluche alsacienne",
+                      "circulaire mou à 6 passants ; rubans d'asso en « V » à l'arrière ; pas de ruban de ville ni de région (seuls les écussons)."
+                    ],
+                    [
+                      "TVA",
+                      "Très Vénérables Anciens (plus de 2 ans) : remplacent les GM, officient à 3 pour les décernements et baptêmes, à 5 pour la cooptation ; chouette à l'arrière."
+                    ],
+                    [
+                      "Évêque de l'Est Septentrional",
+                      "présent à Strasbourg (mariages)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Port & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Circulaire",
+                      "pas de moivre, pas d'initiales ; année de baptême à l'arrière ; surnom sur le velours (sauf médecine, velours amarante)."
+                    ],
+                    [
+                      "Serment",
+                      "non récité, car considéré comme acquis ; baptême à un breuvage d'Alsace (4 bouteilles)."
+                    ],
+                    [
+                      "Lyre",
+                      "équivalent alsacien de la clé de sol ; origine des 6 passants : diverses légendes (côtés d'un bock, cépages, régions d'Alsace…)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Toulon",
+              "sub": "Ville portuaire de la Royale, sans croix mais gouvernée par une assemblée, avec des baptêmes sur le thème des pirates.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Port de la Royale",
+                      "la marine y est présente depuis le XVIe siècle, d'où le pompon rouge."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Ruban de ville",
+                      "bleu roy et jaune ; impétrant = « minot »."
+                    ],
+                    [
+                      "Pas de croix",
+                      "une assemblée de faluchards vote le jury et les officiants en début de baptême."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Baptême & traditions"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Thème pirates",
+                      "tous les baptêmes se déroulent sur ce thème ; faluche baptisée au Pastis ou Ricard."
+                    ],
+                    [
+                      "Dagobit",
+                      "non reconnu à Toulon ; agricole : satin moiré vert bordé d'amarante."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Toulouse",
+              "sub": "Co-rédactrice du premier code national, cri occitan, et nombreuses particularités de filière (dont les ferrets des pharmaciens).",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Université de 1229",
+                      "fondée par le comte Raymond VII ; l'AGET (association étudiante) est créée en 1886."
+                    ],
+                    [
+                      "Code fondateur",
+                      "le code toulousain (avec le lillois) a servi de base au code national ; Toulouse a accueilli les 106e (1994) et 116e (2004) anniversaires et un code dès 1966."
+                    ],
+                    [
+                      "Ordre de la Tétine Sublime",
+                      "né en 1948 sous l'impulsion de Jacques Moron, président de l'AGE de Toulouse."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Cri de ville",
+                      "« Per Tolosa, totjorn mai ! » (« Pour Toulouse, toujours plus ! »)."
+                    ],
+                    [
+                      "Blason",
+                      "comporte trois « erreurs » historiques ; article 8 bis ajouté pour expliquer le dagobit."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & filières"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Croix à droite",
+                      "en sciences sociales et en médecine, la croix reste à droite même après la passation (tête de mort une fois passée)."
+                    ],
+                    [
+                      "AES",
+                      "première croix AES de l'histoire de la faluche."
+                    ],
+                    [
+                      "Pharmacie",
+                      "1 ou 3 rubans de velours avec ferrets (fourragère) à l'arrière ; les faluchards décernent à leur GM."
+                    ],
+                    [
+                      "Médecine",
+                      "pas d'initiales ; coq retourné après minuit ; croix Excalibur (GM), Narzil et Anduril (GC)."
+                    ],
+                    [
+                      "Dentaire",
+                      "pas de ponctuation dans le code (touche cassée) ; sphinx à l'envers = substances illicites."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Tours",
+              "sub": "Ancienne ville tisserande (velours sauf élus), médecine en velours amarante, et quatre à cinq croix dont le Grand Sulfateur et Sainte Marthe.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Origine charitable",
+                      "selon le code tourangeau, des faluchards parisiens des années 1930 créèrent une distribution de soupe populaire pour les chômeurs."
+                    ],
+                    [
+                      "Grand Sulfateur",
+                      "4e croix née en 1999 : CARLOS, ayant « couché » des croix de PSA, revint avec leur croix de GM (ruban rouge et noir, couleurs de PSA)."
+                    ],
+                    [
+                      "Sainte Marthe",
+                      "une martre empaillée intronisée GC à vie, pour empêcher la disparition de la faluche maïeutique."
+                    ],
+                    [
+                      "Berluche",
+                      "la faluche peut être portée penchée comme un béret depuis le crit DT 2015."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & port"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Circulaire",
+                      "souple (mou) ; médecine en velours amarante ; toutes les bandes en velours sauf élus (ville tisserande)."
+                    ],
+                    [
+                      "Rappel de filière",
+                      "bande de velours amarante de 15 mm du front à l'occiput ; pas d'article 0."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix, ordres & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grand Évangélisateur",
+                      "s'occupe des adoptions ; ordres OGFT et OOS."
+                    ],
+                    [
+                      "Faluchage de masse",
+                      "+ BZH (Bizuths d'Honneur, ruban tressé noir et rose pâle)."
+                    ],
+                    [
+                      "Insignes",
+                      "loutre = amour de la charcuterie (≠ chirurgie au national) ; lime = insulte à une croix ; ciseaux = faluche bien cousue (décerné)."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Troyes",
+              "sub": "Ville tisserande descendante de Reims : rubans en velours, croix uniquement interfilières, et plusieurs absences héritées de Reims.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Descendante de Reims",
+                      "ville tisserande dont les rubans sont en velours et qui hérite de plusieurs traditions rémoises."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & croix"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Croix",
+                      "uniquement des croix interfilières de ville ; rubans de ville/naissance perpendiculaires au circulaire."
+                    ],
+                    [
+                      "Baptême",
+                      "réalisé faluche déjà cousue ; moivre sur l'étoile de l'année de baptême."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Particularités d'absence"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Pas de mammouth",
+                      "comme à Reims, tout faluchard est censé être gardien des traditions."
+                    ],
+                    [
+                      "Pas de hache",
+                      "supprimée (incitation au vandalisme) ; pas d'Honoris Causæ ni de potager."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Valence",
+              "sub": "Gouvernance par les « Bitards » (héritage de Poitiers), baptême appelé « faluchage », et respect strict du code national.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Bitards valentinois",
+                      "les GM et GC, intronisés à l'origine par les Bitards de Poitiers ; ils ont gardé ce titre honorifique en remerciement (« B » + numéro en chiffres romains sur la croix)."
+                    ],
+                    [
+                      "Ordre du Grand Siffloteur",
+                      "« la FES » : sifflet sur ruban rouge et blanc transmis de Bitard en Bitard pour faire régner l'ordre en faluchage."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Vocabulaire & baptême"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Faluchage / néo",
+                      "le baptême s'appelle « faluchage » (le baptême en est la dernière partie) ; l'impétrant est un « néo »."
+                    ],
+                    [
+                      "Parrains/marraines",
+                      "désignés par les Bitards et découverts pendant le faluchage ; le néo boit une potion à recette secrète."
+                    ],
+                    [
+                      "GC",
+                      "pas de croix mais un ruban taillé en biseau ; passage de croix non obligatoire."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Port & circulaires"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Rien ne pend",
+                      "sauf sécu, croix de Bitard, ruban de GC, sifflet, tresse, grelot, quille et pendu ; jardin secret = potager."
+                    ],
+                    [
+                      "IUT / BTS",
+                      "IUT satin blanc (+ puce informatique), BTS satin rouge-blanc-rouge (couleurs de Valence) ; villes d'études de l'occipital au frontal."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Valenciennes",
+              "sub": "Figure du Bourreau, hymne propre (« Le P'tit Quinquin ») et rattachement à l'Évêché du Nord.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Hymne « Le P'tit Quinquin »",
+                      "appris par chaque impétrant, en hommage à KinKin, premier GM de Valenciennes (baptisé en 2006, décédé le 24 janvier 2007)."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Croix & baptême"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Le Bourreau",
+                      "fait respecter l'ordre ; insigne hache + bouteille + année sur ruban de la discipline."
+                    ],
+                    [
+                      "Baptême",
+                      "l'assemblée tient lieu de jury ; Évêque du Nord rattaché à Amiens."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Circulaires & insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Agro-alimentaire",
+                      "fourchette et épi de blé ; ancre/voilier = amour de la mer."
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Vichy",
+              "sub": "Jeune faluche (baptisée par les kinés de Clermont), GM appelé « Grand Maréchal » et rubans d'association tressés.",
+              "blocks": [
+                {
+                  "t": "h3",
+                  "text": "Histoire & origines"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Origine",
+                      "les premiers faluchards vichyssois ont été baptisés par les kinés de Clermont-Ferrand."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Identité & gouvernance"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Grand Maréchal",
+                      "le GM porte ce nom ; sa croix est surmontée d'un aigle et se porte à droite."
+                    ],
+                    [
+                      "Rubans d'association",
+                      "tressés ; pas d'initiales sur le circulaire."
+                    ]
+                  ]
+                },
+                {
+                  "t": "h3",
+                  "text": "Insignes"
+                },
+                {
+                  "t": "kv",
+                  "items": [
+                    [
+                      "Insignes régionaux",
+                      "tolérés en partie personnelle pour souligner l'origine (non reconnus par le code national)."
+                    ],
+                    [
+                      "Amours reconnus",
+                      "aviation (aigle), mer (ancre), sports collectifs (ballon de foot), informatique (étoile et foudre), charcuterie (loutre), montagne (ski)."
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "folklore",
+      "title": "Figures & folklore",
+      "blocks": [
+        {
+          "t": "h3",
+          "text": "François Rabelais (vers 1494-1553)"
+        },
+        {
+          "t": "p",
+          "html": "Moine, médecin (Montpellier 1530, Hôtel-Dieu de Lyon), humaniste, auteur de <em>Pantagruel</em> et <em>Gargantua</em> sous l'anagramme Alcofribas Nasier. Il incarne l'esprit faluchard : savoir, convivialité, vin et paillardise. De lui vient « le quart d'heure de Rabelais »."
+        },
+        {
+          "t": "h3",
+          "text": "Bacchus (Dionysos)"
+        },
+        {
+          "t": "p",
+          "html": "Fils de Jupiter et de Sémélé, dieu du vin et des festivités. Son insigne récompense la « dignité dans l'ivresse »."
+        },
+        {
+          "t": "h3",
+          "text": "Gambrinus"
+        },
+        {
+          "t": "p",
+          "html": "Roi mythique de Flandre, patron des amateurs de bière, invoqué dans le serment du faluchard aux côtés de Rabelais et Bacchus."
+        },
+        {
+          "t": "h3",
+          "text": "L'origine du potager"
+        },
+        {
+          "t": "p",
+          "html": "La tradition relie le potager aux « logeuses » : la soupe à base de pommes de terre (absentes du potager), les autres légumes apportés par les étudiants, qui codaient leurs aventures par un légume. On a longtemps cité un passage de la revue <em>Scapin</em> (1933) comme plus ancienne trace, mais Segura l'a corrigé : le « poireau » y désigne une décoration (palmes académiques), non l'insigne intime. La codification du potager est plus tardive (code carabin toulousain, fin des années 1960)."
+        }
+      ]
+    },
+    {
+      "id": "lexique",
+      "title": "Lexique",
+      "blocks": [
+        {
+          "t": "kv",
+          "items": [
+            [
+              "AGE / AGEP",
+              "Association générale des étudiants (de Paris), à l'origine du port de la faluche."
+            ],
+            [
+              "Article 0",
+              "« Le Grand Maître a toujours raison » (et, quand il a tort, voir l'article 0)."
+            ],
+            [
+              "Baptême",
+              "Cérémonie d'intronisation du faluchard (formes variables selon les villes)."
+            ],
+            [
+              "Bitard",
+              "Animal mythique des escholiers de Poitiers ; membre de l'Ordre du Vénéré Bitard."
+            ],
+            [
+              "Cantum",
+              "Moment de chant, en particulier de paillardes."
+            ],
+            [
+              "Carabin",
+              "Étudiant en médecine."
+            ],
+            [
+              "Circulaire",
+              "Ruban à la couleur de la discipline faisant le tour du bandeau ; porte le cursus."
+            ],
+            [
+              "Crit",
+              "Critérium : rencontre festive et compétitive entre villes."
+            ],
+            [
+              "Croix",
+              "Médaille du dignitaire (GM, GC) ; par métonymie, le dignitaire."
+            ],
+            [
+              "Dagobit",
+              "Rite collectif festif, variable selon les villes."
+            ],
+            [
+              "Enterrement",
+              "Cérémonie de fin de vie étudiante falucharde."
+            ],
+            [
+              "Extés",
+              "Personnes présentes sans être faluchardes."
+            ],
+            [
+              "Faliban",
+              "Faluchard psychorigide sur le code (mot-valise faluchard + taliban)."
+            ],
+            [
+              "Faluché / Faluchard",
+              "Le faluché a reçu la faluche ; le faluchard en vit l'esprit et le code."
+            ],
+            [
+              "Fillot",
+              "Faluchard parrainé par un aîné."
+            ],
+            [
+              "GC / GM",
+              "Grand Chambellan / Grand Maître (dignitaires)."
+            ],
+            [
+              "Grand Alchimiste",
+              "Prépare le breuvage rituel (« La Mixture », « jus de faluche »)."
+            ],
+            [
+              "Honoris causæ",
+              "Faluche d'honneur remise à un non-étudiant méritant."
+            ],
+            [
+              "Impétrant",
+              "Candidat au baptême (« piou » à Albi, « néo » à Valence, « minot » à Toulon)."
+            ],
+            [
+              "Marrain / parrain",
+              "Aînés accompagnant le filleul (jargon : « marrain », « parraine »)."
+            ],
+            [
+              "Moivre",
+              "Petit ruban sous la première étoile : bleu (public), blanc (privé)."
+            ],
+            [
+              "Moldus",
+              "Non-faluchards (emprunt à Harry Potter)."
+            ],
+            [
+              "Monôme",
+              "Cortège festif d'étudiants à travers la ville."
+            ],
+            [
+              "Ordre",
+              "Confrérie festive (Bitard, Basoche, Chevaliers Niçois, Tétine Sublime…)."
+            ],
+            [
+              "Padawan",
+              "Jeune faluchard en apprentissage."
+            ],
+            [
+              "Penne",
+              "Coiffe estudiantine belge, cousine de la faluche."
+            ],
+            [
+              "Potager",
+              "Doublure de la faluche où se placent les insignes-légumes."
+            ],
+            [
+              "Sec",
+              "Boire son verre d'un trait (cul-sec)."
+            ],
+            [
+              "Serment",
+              "Engagement invoquant Rabelais, Bacchus et Gambrinus."
+            ],
+            [
+              "TVA",
+              "À Strasbourg, Très Vénérables Anciens : remplacent les GM."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Sources",
+      "blocks": [
+        {
+          "t": "list",
+          "items": [
+            "<strong>Primaires</strong> : Ernest Lavisse, <em>Études et étudiants</em> (1890 ; BnF/Gallica, ARK bpt6k5740418v) ; presse de 1888-1889 ; revue <em>Scapin</em> (Poitiers) ; Georges Dillemann, « Réapparition de la faluche » (Revue d'histoire de la pharmacie, 1988 ; Persée).",
+            "<strong>Travaux savants</strong> : Guy Daniel (thèse, 1990) ; Manuel Segura (mémoire 1994 ; étude 2012) ; Isabelle Fayemendy (mémoire, 2009-2010).",
+            "<strong>Corpus communautaire</strong> : codes nationaux (1966-2023), présentation des Grands Archivistes, « Les Insignes Décernables », étude de Rémy Pamart sur les caducées, faluche.info, codes de ville."
+          ]
+        },
+        {
+          "t": "note",
+          "html": "Compilation à but documentaire. Les usages varient selon les communautés et les époques."
+        }
+      ]
+    }
+  ]
+};
+</script>
+<script>
+(function(){
+  var D = window.FALUCHE_DATA || {sections:[]};
+  function esc(s){return s;}
+  function block(b, inAcc){
+    var sc = inAcc ? "" : " searchable";
+    switch(b.t){
+      case "p":    return '<p class="'+sc.trim()+'">'+b.html+'</p>';
+      case "h3":   return '<h3 class="sub">'+b.text+'</h3>';
+      case "note": return '<div class="note'+sc+'">'+b.html+'</div>';
+      case "list": return '<ul>'+b.items.map(function(i){return '<li class="'+sc.trim()+'">'+i+'</li>';}).join('')+'</ul>';
+      case "kv":   return '<dl class="kv">'+b.items.map(function(p){return '<div class="kv-row'+sc+'"><dt>'+p[0]+'</dt><dd>'+p[1]+'</dd></div>';}).join('')+'</dl>';
+      case "table":return '<div class="tablewrap'+(b.wide?' wide':'')+'"><table><thead><tr>'+b.head.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr></thead><tbody>'+
+                   b.rows.map(function(r){return '<tr class="'+sc.trim()+'">'+r.map(function(c,k){return '<td'+(k===0?' class="c0"':'')+'>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
+      case "accordion": return '<div class="accordion">'+b.items.map(function(it){
+                   return '<details class="acc searchable"><summary><span class="acc-t">'+it.title+'</span>'+(it.sub?'<span class="acc-s">'+it.sub+'</span>':'')+'</summary><div class="acc-body">'+it.blocks.map(function(bb){return block(bb,true);}).join('')+'</div></details>';}).join('')+'</div>';
+      default: return '';
+    }
+  }
+  // header
+  document.getElementById('title').innerHTML = D.title || '';
+  document.getElementById('subtitle').textContent = D.subtitle || '';
+  document.getElementById('meta').textContent = D.updated || '';
+  document.title = (D.title||'')+' — archive';
+  // nav + sections
+  var nav = document.getElementById('nav'), main = document.getElementById('main');
+  D.sections.forEach(function(s){
+    nav.insertAdjacentHTML('beforeend','<li><a href="#'+s.id+'">'+s.title+'</a></li>');
+    var html = '<article class="section" id="'+s.id+'"><div class="eyebrow">Section</div><h2>'+s.title+'</h2>'+
+               (s.intro?'<p class="searchable">'+s.intro+'</p>':'')+ s.blocks.map(function(b){return block(b,false);}).join('') +'</article>';
+    main.insertAdjacentHTML('beforeend', html);
+  });
+  document.getElementById('foot').innerHTML = (D.title||'')+' · archive documentaire · '+(D.updated||'')+' — contenu éditable dans le bloc de données en tête de fichier.';
+
+  // search
+  var q = document.getElementById('q'), count = document.getElementById('count');
+  function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  function run(){
+    var v = norm(q.value.trim()); var total=0;
+    document.querySelectorAll('article.section').forEach(function(sec){
+      var hit=false;
+      sec.querySelectorAll('.searchable').forEach(function(n){
+        var m = v==='' || norm(n.textContent).indexOf(v)>-1;
+        n.classList.toggle('hidden', !m);
+        if(m){hit=true; total++;}
+        if(n.classList.contains('acc')){ n.open = (v!=='' && m); }
+      });
+      sec.classList.toggle('hidden', v!=='' && !hit);
+      var link = document.querySelector('nav.toc a[href="#'+sec.id+'"]');
+      if(link) link.parentElement.classList.toggle('hidden', v!=='' && !hit);
+    });
+    count.textContent = v==='' ? '' : (total ? total+' résultat'+(total>1?'s':'') : 'Aucun résultat');
+  }
+  q.addEventListener('input', run);
+
+  // scrollspy
+  var links = [].slice.call(document.querySelectorAll('nav.toc a'));
+  var obs = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){
+      links.forEach(function(l){l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id);});
+    }});
+  },{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('article.section').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
