@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1b1512; --bordeaux:#7B2D26; --bordeaux-deep:#581c18; --gold:#a9842f;
+  --ink:#160a09; --bordeaux:#7B2D26; --bordeaux-deep:#581c18; --gold:#a9842f;
   --paper:#f4f1ec; --paper2:#fbfaf7; --rule:#ddd3c5; --muted:#6e6053; --text:#23201d;
   --r1:#b23a33; --r2:#6e4e8e; --r3:#2e7d5b; --r4:#c9a227; --r5:#2f5c8e; --r6:#c9702a; --r7:#bf6a9c;
   --serif:'Spectral',Georgia,'Times New Roman',serif;
@@ -19,82 +19,93 @@
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
-a{color:var(--bordeaux);text-decoration-color:var(--rule);text-underline-offset:2px}
+a{color:var(--bordeaux);text-underline-offset:2px}
 .ribbon{height:6px;display:flex}
 .ribbon span{flex:1}
-.ribbon i:nth-child(1){background:var(--r1)}
 .ribbon span:nth-child(1){background:var(--r1)}.ribbon span:nth-child(2){background:var(--r2)}.ribbon span:nth-child(3){background:var(--r3)}.ribbon span:nth-child(4){background:var(--r4)}.ribbon span:nth-child(5){background:var(--r5)}.ribbon span:nth-child(6){background:var(--r6)}.ribbon span:nth-child(7){background:var(--r7)}
 
-/* HERO */
-header.hero{background:linear-gradient(160deg,#241a16,#0f0b09);color:#efe7da;position:relative;overflow:hidden}
-.hero-in{max-width:1180px;margin:0 auto;padding:54px 28px 40px;display:flex;gap:34px;align-items:center}
-.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,6vw,68px);line-height:.98;margin:0 0 8px;letter-spacing:-.01em}
+header.hero{position:relative;color:#f0e3d6;
+  background:linear-gradient(155deg,#9c0b0a 0%, #2a0d0b 45%, #120605 100%);}
+header.hero::after{content:"";position:absolute;inset:0;opacity:.06;pointer-events:none;}
+.hero-in{position:relative;max-width:1180px;margin:0 auto;padding:58px 28px 42px}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(42px,6.4vw,72px);line-height:.98;margin:0 0 10px;letter-spacing:-.01em}
 .hero h1 em{font-style:italic;color:var(--gold)}
-.hero p.sub{font-size:18px;color:#cdbfae;margin:0 0 22px;max-width:46ch}
-.hero .meta{font-family:var(--sans);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
-.falu{flex:0 0 150px}
-.search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:11px 14px;max-width:420px}
+.hero p.sub{font-size:18px;color:#d8c6b4;margin:0 0 22px;max-width:52ch}
+.hero .meta{font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 16px}
+.search{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(214,180,150,.28);border-radius:10px;padding:11px 14px;max-width:440px}
 .search input{flex:1;background:none;border:0;color:#fff;font-size:15px;font-family:var(--sans);outline:none}
-.search input::placeholder{color:#b6a895}
-.search svg{flex:0 0 18px;opacity:.7}
+.search input::placeholder{color:#b9a690}
+.search svg{flex:0 0 18px}
 #count{font-size:12.5px;color:var(--gold);margin-top:8px;min-height:1em}
 
-/* LAYOUT */
 .wrap{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:230px 1fr;gap:40px;align-items:start}
 nav.toc{position:sticky;top:18px;padding:26px 0;align-self:start}
 nav.toc ol{list-style:none;margin:0;padding:0;counter-reset:s}
 nav.toc li{counter-increment:s}
-nav.toc a{display:block;padding:7px 12px 7px 0;color:var(--muted);text-decoration:none;font-size:14px;border-left:2px solid transparent;padding-left:14px;transition:.15s}
+nav.toc a{display:block;color:var(--muted);text-decoration:none;font-size:14px;border-left:2px solid transparent;padding:7px 12px 7px 14px;transition:.15s}
 nav.toc a::before{content:counter(s,decimal-leading-zero);color:var(--gold);font-family:var(--serif);font-size:12px;margin-right:9px}
 nav.toc a:hover{color:var(--bordeaux)}
 nav.toc a.active{color:var(--bordeaux);border-left-color:var(--bordeaux);font-weight:600}
 main{padding:30px 0 80px;min-width:0}
 
-/* SECTIONS */
-article.section{margin:0 0 46px;scroll-margin-top:18px}
-article.section>h2{font-family:var(--serif);font-weight:700;font-size:30px;color:var(--bordeaux);margin:0 0 4px;letter-spacing:-.01em}
-article.section>.eyebrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 14px;display:flex;align-items:center;gap:8px}
+article.section{margin:0 0 50px;scroll-margin-top:18px}
+article.section>h2{font-family:var(--serif);font-weight:700;font-size:31px;color:var(--bordeaux);margin:0 0 4px;letter-spacing:-.01em}
+article.section>.eyebrow{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin:0 0 16px;display:flex;align-items:center;gap:8px}
 article.section>.eyebrow::after{content:"";height:1px;flex:1;background:var(--rule)}
-h3.sub{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--ink);margin:26px 0 8px}
-p{margin:0 0 12px}
+h3.sub{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--ink);margin:28px 0 9px}
+p{margin:0 0 13px}
 ul{margin:0 0 14px;padding-left:20px}
 li{margin:3px 0}
 .note{background:var(--paper2);border:1px solid var(--rule);border-left:3px solid var(--gold);border-radius:6px;padding:11px 15px;font-size:14.5px;color:var(--muted);margin:0 0 16px}
 code{background:#eee7dc;padding:1px 5px;border-radius:4px;font-size:13px}
 
-/* KV */
-dl.kv{margin:0 0 16px;border-top:1px solid var(--rule)}
-.kv-row{display:grid;grid-template-columns:minmax(150px,230px) 1fr;gap:16px;padding:9px 4px;border-bottom:1px solid var(--rule)}
+figure.fig{background:var(--paper2);border:1px solid var(--rule);border-radius:12px;overflow:hidden;box-shadow:0 6px 22px rgba(40,20,15,.10);margin:8px 0 18px}
+figure.fig img{display:block;width:100%;max-height:430px;object-fit:cover;background:#efe9df}
+figure.fig figcaption{font-size:12.5px;color:var(--muted);padding:10px 14px;line-height:1.45;border-top:2px solid var(--gold)}
+figure.fig .cred{display:block;margin-top:3px;color:#a89a89;font-style:italic;font-size:11.5px}
+figure.fig.fig-center{margin-left:auto;margin-right:auto;max-width:460px}
+figure.fig.fig-wide{margin:14px auto;max-width:780px}
+figure.fig.fig-right{float:right;width:320px;margin:6px 0 16px 28px}
+figure.fig.fig-left{float:left;width:320px;margin:6px 28px 16px 0}
+figure.fig.fig-right img,figure.fig.fig-left img{max-height:320px}
+h3.sub{clear:both}
+article.section::after{content:"";display:block;clear:both}
+@media(max-width:680px){figure.fig.fig-right,figure.fig.fig-left{float:none;width:auto!important;margin:8px 0 18px}}
+.imgrow{display:flex;gap:16px;flex-wrap:wrap;margin:16px 0 22px;clear:both;justify-content:center}
+.imgrow figure.fig{flex:1 1 160px;max-width:220px;margin:0;box-shadow:none}
+.imgrow figure.fig img{max-height:150px;object-fit:contain;padding:18px;background:#fff}
+.imgrow figure.fig figcaption{text-align:center;border-top:1px solid var(--rule);font-weight:500}
+
+dl.kv{margin:0 0 16px;border-top:1px solid var(--rule);clear:both}
+.kv-row{display:grid;grid-template-columns:minmax(160px,240px) 1fr;gap:16px;padding:9px 4px;border-bottom:1px solid var(--rule)}
 .kv-row dt{font-weight:600;color:var(--bordeaux-deep)}
-.kv-row dd{margin:0;color:var(--text)}
+.kv-row dd{margin:0}
 @media(max-width:560px){.kv-row{grid-template-columns:1fr;gap:2px}}
 
-/* TABLES */
-.tablewrap{overflow-x:auto;margin:0 0 18px;border:1px solid var(--rule);border-radius:8px}
+.tablewrap{overflow-x:auto;margin:0 0 18px;border:1px solid var(--rule);border-radius:8px;clear:both}
 table{border-collapse:collapse;width:100%;font-size:14px}
-thead th{background:var(--bordeaux);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:13px;position:sticky;top:0}
+thead th{background:var(--bordeaux);color:#fff;text-align:left;padding:9px 11px;font-weight:600;font-size:13px}
 tbody td{padding:8px 11px;border-top:1px solid var(--rule);vertical-align:top}
 tbody tr:nth-child(even){background:var(--paper2)}
 td.c0{font-weight:600;color:var(--bordeaux-deep);white-space:nowrap}
 .tablewrap.wide table{min-width:760px}
 
-/* ACCORDION */
-.accordion{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--paper2)}
+.accordion{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:var(--paper2);clear:both}
 details.acc{border-bottom:1px solid var(--rule)}
 details.acc:last-child{border-bottom:0}
 details.acc>summary{list-style:none;cursor:pointer;padding:12px 16px;display:flex;flex-direction:column;gap:2px}
 details.acc>summary::-webkit-details-marker{display:none}
 details.acc>summary:hover{background:#f0ebe2}
 .acc-t{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--bordeaux);position:relative;padding-left:20px}
-.acc-t::before{content:"▸";position:absolute;left:0;color:var(--gold);transition:.15s;font-size:13px;top:3px}
+.acc-t::before{content:"\25B8";position:absolute;left:0;color:var(--gold);transition:.15s;font-size:13px;top:3px}
 details.acc[open] .acc-t::before{transform:rotate(90deg)}
 .acc-s{font-size:13.5px;color:var(--muted);padding-left:20px}
 .acc-body{padding:4px 18px 18px}
 .acc-body h3.sub{font-size:16px;margin:14px 0 5px}
 
 .hidden{display:none!important}
-footer{background:var(--ink);color:#b6a895;font-size:13px;text-align:center;padding:26px 20px}
-footer .ribbon{margin:-26px -20px 20px}
+footer{background:linear-gradient(0deg,#0e0504,#1c0b0a);color:#c7b4a2;font-size:13px;text-align:center;padding:30px 20px}
+footer .ribbon{margin:-30px -20px 22px}
 
 @media(max-width:880px){
   .wrap{grid-template-columns:1fr;gap:0}
@@ -102,8 +113,7 @@ footer .ribbon{margin:-26px -20px 20px}
   nav.toc ol{display:flex;gap:4px}
   nav.toc a{white-space:nowrap;border-left:0;border-bottom:2px solid transparent;padding:6px 10px}
   nav.toc a.active{border-left:0;border-bottom-color:var(--bordeaux)}
-  .hero-in{flex-direction:column;align-items:flex-start;gap:18px;padding:38px 22px 30px}
-  .falu{flex:none}
+  .hero-in{padding:40px 22px 32px}
 }
 </style>
 </head>
@@ -111,28 +121,14 @@ footer .ribbon{margin:-26px -20px 20px}
 <div class="ribbon"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 <header class="hero">
   <div class="hero-in">
-    <div class="falu" aria-hidden="true">
-      <svg viewBox="0 0 150 120" width="150" height="120" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="75" cy="92" rx="60" ry="15" fill="#000" opacity=".35"/>
-        <path d="M18 80 Q75 18 132 80 Q120 70 75 70 Q30 70 18 80Z" fill="#15100e"/>
-        <path d="M18 80 Q75 64 132 80 Q132 92 75 96 Q18 92 18 80Z" fill="#241a16"/>
-        <rect x="18" y="79" width="114" height="7" rx="3" fill="#7B2D26"/>
-        <circle cx="98" cy="55" r="4.4" fill="#a9842f"/>
-        <circle cx="82" cy="48" r="3.4" fill="#c9a227"/>
-        <circle cx="62" cy="47" r="3" fill="#2e7d5b"/>
-        <path d="M112 36 l3 7 8 .6 -6 5.2 2 7.8 -7-4.3 -7 4.3 2-7.8 -6-5.2 8-.6z" fill="#c9a227"/>
-      </svg>
-    </div>
-    <div>
-      <p class="meta" id="meta"></p>
-      <h1 id="title"></h1>
-      <p class="sub" id="subtitle"></p>
-      <label class="search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#cdbfae" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input id="q" type="search" placeholder="Rechercher (ville, insigne, terme…)" autocomplete="off" aria-label="Rechercher dans l'archive">
-      </label>
-      <div id="count" aria-live="polite"></div>
-    </div>
+    <p class="meta" id="meta"></p>
+    <h1 id="title"></h1>
+    <p class="sub" id="subtitle"></p>
+    <label class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#d8b48c" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="Rechercher (ville, insigne, terme...)" autocomplete="off" aria-label="Rechercher dans l'archive">
+    </label>
+    <div id="count" aria-live="polite"></div>
   </div>
 </header>
 
@@ -148,8 +144,7 @@ footer .ribbon{margin:-26px -20px 20px}
 
 <script>window.FALUCHE_DATA = {
   "title": "La Faluche",
-  "subtitle": "Archive du folklore faluchard — histoire, insignes, villes, lexique",
-  "updated": "Compilation 2026",
+  "subtitle": "Archive du folklore faluchard — Histoire, insignes, villes...",
   "sections": [
     {
       "id": "apropos",
@@ -157,7 +152,7 @@ footer .ribbon{margin:-26px -20px 20px}
       "blocks": [
         {
           "t": "p",
-          "html": "Cette archive rassemble l'ensemble du travail documentaire mené sur la faluche : récit historique, édition diachronique, catalogue d'insignes, particularités des villes et lexique. Elle est conçue pour être hébergée sur GitHub Pages et facilement modifiable — tout le contenu se trouve dans le fichier <code>data.js</code>."
+          "html": "Cette archive rassemble l'ensemble du travail documentaire mené sur la faluche : récit historique, édition diachronique, catalogue d'insignes, particularités des villes et lexique."
         },
         {
           "t": "note",
@@ -168,14 +163,27 @@ footer .ribbon{margin:-26px -20px 20px}
     {
       "id": "histoire",
       "title": "Histoire",
+      "intro": "Des fêtes de Bologne au renouveau contemporain, l'histoire d'une coiffe qui a failli se perdre — et que les travaux de Guy Daniel, Manuel Segura et des Grands Archivistes ont permis de reconstituer.",
       "blocks": [
+        {
+          "t": "h3",
+          "text": "Une histoire qui a failli se perdre"
+        },
+        {
+          "t": "p",
+          "html": "Le folklore faluchard naît du béret, la coiffe. Mais l'histoire de cette coiffe n'a rien d'un long fleuve tranquille : transmise d'abord oralement, malmenée par 2 guerres mondiales puis reniée après Mai 68, elle a bien failli disparaître, au point que pendant près d'un siècle son origine bolognaise ne fut qu'une hypothèse parmi d'autres. Ce sont les recherches de Guy Daniel, dans sa thèse de médecine soutenue à Lille en 1990, qui ont redonné une assise historique à ces origines ; l'étude de Manuel Segura (<em>De l'origine du béret ou les tribulations d'une galette pas comme les autres</em>, 2012) et les travaux de Pierre Blaignon-Perbet, dit « Scatman », les ont ensuite précisées et corrigées. Le récit qui suit s'appuie sur cette tradition de recherche, telle que l'ont synthétisée les Grands Archivistes de la Faluche."
+        },
         {
           "t": "h3",
           "text": "Le monde étudiant de la fin du XIXe siècle"
         },
         {
           "t": "p",
-          "html": "Au sortir de la défaite de 1870, un sursaut traverse la jeunesse universitaire. Les lois de 1883-1884 autorisent les associations : les Associations générales d'étudiants (AGE) se structurent ville par ville. La plus médiatisée est l'« A » de Paris (vers 1884-1885). En 1884, un article injurieux du <em>Cri du peuple</em> provoque des manifestations d'où naît l'« A » ; ses premiers présidents sont Boureau puis Delcambre, sous le patronage du recteur Gérard et du professeur Lavisse."
+          "html": "Au sortir de la guerre franco-prussienne de 1870, perdue par la France avec l'Alsace-Lorraine, un sursaut d'orgueil traverse la jeunesse universitaire, particulièrement à Paris. La IIIe République, par les lois de 1883-1884 sur les associations et les syndicats, autorise officiellement des groupements étudiants dont certains existaient déjà. Les Associations générales d'étudiants (AGE) se structurent alors ville par ville, sur le modèle des clubs britanniques : on y débat, on y philosophe, on y organise bals, galas et œuvres de bienfaisance. La plus grande et la plus médiatisée est l'Association générale des étudiants de Paris, fondée vers 1884-1885 et vite surnommée « l'A ». Très tôt, ces associations généralistes se déclinent en corporations de filière — lettres, santé, sciences — et donnent naissance à des fédérations nationales, dont l'UNAGEF, future UNEF. À ce stade, le béret n'est encore qu'un lien vestimentaire entre étudiants : ni code, ni insignes sur le velours."
+        },
+        {
+          "t": "p",
+          "html": "L'étincelle est presque fortuite. En 1884, un article du <em>Cri du peuple</em> raille l'étudiant — réduit à « une indécence de babouin greffée sur une bêtise de rhinocéros » — et déclenche manifestations et bagarres. C'est dans les réunions qui suivent que se constitue l'« A », avec pour noyau quelques élèves de l'école de médecine. Présidée par Boureau puis par Delcambre — souvent tenu pour son véritable fondateur —, elle reçoit le patronage du recteur Gérard et la présidence d'honneur de l'historien Ernest Lavisse."
         },
         {
           "t": "h3",
@@ -183,73 +191,211 @@ footer .ribbon{margin:-26px -20px 20px}
         },
         {
           "t": "p",
-          "html": "En juin 1888, l'Université de Bologne fête ses huit cents ans ; une délégation française (six Parisiens, deux Marseillais) y représente l'« A ». On lui offre l'<em>orsina</em>, petit bonnet de velours, porté le seul temps du voyage. Contrairement à la légende du code, le béret n'a pas été rapporté de Bologne : Guy Daniel a fixé la date de 1888, mais Segura (2012) et « Scatman » ont montré que l'orsina n'a fait qu'inspirer l'idée — le béret est une invention française."
+          "html": "Le code affirme traditionnellement que le béret fut « ramené de Bologne en juin 1888 » par une délégation française jalouse des coiffes italiennes, belges et allemandes. La réalité est plus subtile. En juin 1888, l'Université de Bologne fête ses huit cents ans et se voit reconnue comme la plus ancienne université du monde. L'« A » de Paris y envoie une délégation — six Parisiens, auxquels « Scatman » ajoute deux Marseillais — dans le sillage de Lavisse, membre honoraire de l'association et témoin privilégié des fêtes. Le contexte est tendu : la fièvre boulangiste échauffe les esprits et des étudiants allemands de Heidelberg et de Strasbourg sont présents, si bien que les délégués français endossent un rôle quasi diplomatique."
         },
         {
           "t": "p",
-          "html": "Le récit de Lavisse est éloquent : arrivée le dimanche 10 juin 1888, les Français en simple chapeau face aux Allemands à plumets et rapières, accueil délirant (drapeau embrassé, chevaux dételés), le roi Humbert Ier saluant la bannière française. Ces fêtes masquaient une manœuvre politique de Crispi (anniversaire de la libération de 1859, statue de Victor-Emmanuel)."
+          "html": "Le récit qu'en laisse Lavisse est éloquent. La délégation parisienne entre en gare de Bologne le dimanche 10 juin 1888 vers cinq heures, en simple chapeau et petit veston, là où les Allemands paradent en bonnets de velours à plumets et longues rapières. Mais le drapeau tricolore frappé des armes de l'Université de Paris suffit à déclencher l'enthousiasme : les Bolonais en embrassent la hampe, crient « Vive la France ! » et dételent les chevaux pour tirer eux-mêmes la voiture française. Le lendemain, à l'entrée du roi Humbert Ier, c'est la bannière française qui ouvre le cortège, le président de l'« A », M. Chaumeton, ayant été salué par le souverain en personne."
+        },
+        {
+          "t": "p",
+          "html": "Ces fêtes éclatantes masquaient une habile manœuvre politique. L'année exacte de fondation de l'université restant incertaine, c'est le président du Conseil italien Francesco Crispi qui en fixa la date, en la calant sur deux anniversaires chargés de sens : la libération de Bologne en 1859 et l'inauguration d'une statue de Victor-Emmanuel II. L'objectif était de réconcilier une ville de tradition républicaine avec la monarchie de la maison de Savoie, et d'afficher l'unité italienne retrouvée. Les festivités universitaires servaient ainsi une démonstration nationale et dynastique soigneusement orchestrée."
+        },
+        {
+          "t": "p",
+          "html": "Se sentant « pauvres » dans leurs habits sombres, les Français se voient offrir par leurs hôtes l'<em>orsina</em> : un petit bonnet de soie ou de velours, décliné en couleurs selon la discipline et inspiré de représentations médiévales d'escholiers. Mais ils ne le portent que le temps du voyage, et seuls les membres de la délégation le conservent, en souvenir. C'est ici que la recherche corrige la légende : Lavisse, dans <em>Études et étudiants</em> (1890), n'évoque qu'une fois ces « petits bonnets de soie des étudiants bolonais », et pour le seul temps du séjour. Ce n'est qu'en 1934 qu'Henri Bourrelier établira, dans <em>La vie du Quartier latin</em>, un lien direct — et erroné — entre la faluche et Bologne, en l'illustrant de gravures tardives. Aucune source d'époque ne décrit à Bologne une coiffe ressemblant à la faluche : l'orsina a inspiré l'idée d'un signe distinctif, mais le béret estudiantin est une invention française."
         },
         {
           "t": "h3",
           "text": "La naissance française du béret (1888-1889)"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel%20Tower%201889-03-12.jpg",
+          "alt": "La Tour Eiffel en construction, mars 1889",
+          "caption": "La Tour Eiffel en mars 1889 : c'est le jour de son inauguration, le 31 mars 1889, que l'« A » de Paris fixa le modèle définitif du béret étudiant.",
+          "credit": "Wikimedia Commons",
+          "align": "right",
+          "width": 300
+        },
+        {
           "t": "p",
-          "html": "Le béret de 1888 « restaure » un ancien béret rouge de l'étudiant bohème (années 1830-1870). Le 20 décembre 1888, l'« A » officialise au théâtre Beaumarchais un béret violet à liseré de faculté ; première apparition au Quartier latin le 15 janvier 1889. Après la « bérétomanie » et l'arrêté préfectoral du 9 février, le modèle définitif est fixé le 31 mars 1889 (velours noir, ruban bleu-rouge de Paris, écusson et palmes), jour de l'inauguration de la Tour Eiffel."
+          "html": "La délégation rentre par étapes — villes italiennes, puis Marseille, Aix, Lyon —, accueillie partout en ambassadrice de la jeunesse universitaire ; sur son passage germe l'idée de créer des AGE pour imiter Paris. Elle arrive dans la capitale le 25 juin 1888 et défile en grand monôme depuis la gare de Lyon, où l'étudiant en médecine E. Corbin tire publiquement la leçon de la rencontre. Le béret qui s'annonce n'est d'ailleurs pas tout à fait une nouveauté : plus d'une vingtaine de sources, des années 1830 à 1870, évoquent déjà un « béret rouge » porté par l'étudiant bohème du Quartier latin, signe de sa fibre républicaine — on le retrouve chez Gavarni, dans la <em>Physiologie de l'étudiant</em> (1841) et jusque dans une chanson attribuée au futur ministre Charles Lepère. La presse de 1889 parlera moins d'une création que d'une « restauration » de l'antique béret estudiantin."
+        },
+        {
+          "t": "p",
+          "html": "Après l'été, l'idée d'une coiffe commune mûrit. Le jeudi 20 décembre 1888, au théâtre Beaumarchais, l'« A » officialise le béret. Il est alors violet (« drap d'archevêque »), orné d'un liseré dont la couleur indique la faculté : jaune pour les lettres, rouge pour le droit, grenat pour la médecine, vermillon pour les sciences, vert pour la pharmacie. Le béret apparaît pour la première fois au Quartier latin le lundi 15 janvier 1889, lors d'un monôme."
+        },
+        {
+          "t": "p",
+          "html": "Le succès est immédiat et incontrôlable. Moqué par une partie de la presse, le béret est aussitôt copié par d'autres corporations — collégiens, garçons de café, employés des postes — et, mêlé aux manifestations anti-boulangistes, se voit même cantonné au seul Quartier latin par un arrêté du préfet de police du 9 février 1889. Pour ne pas se le faire confisquer, l'« A » dépose le modèle et en réserve le port à ses adhérents. On envisage un temps de l'abandonner au profit d'une simple rosette ; mais l'association choisit de résister. Réunie au Paradis Latin le 17 mars, elle convoque une cinquantaine de chapeliers, et le dimanche 31 mars 1889 — jour de l'inauguration de la Tour Eiffel — arrête le modèle définitif : un béret de velours noir, un ruban de soie mi-bleu mi-rouge aux couleurs de Paris, un écusson aux armes de la ville surmonté des palmes académiques, le tout tenu par des passants. En un peu plus de trois mois, tout est déjà pensé : forme, matière, circulaire, rubans et écussons."
+        },
+        {
+          "t": "h3",
+          "text": "Le blason de Paris, premier écusson de la faluche"
+        },
+        {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Grandes%20Armes%20de%20Paris.svg",
+          "alt": "Grandes armes de la ville de Paris",
+          "caption": "Les grandes armes de Paris : « De gueules à la nef équipée d'argent voguant sur des ondes du même ; au chef d'azur semé de fleurs de lys d'or. »",
+          "credit": "Wikimedia Commons (CC BY-SA)",
+          "align": "left",
+          "width": 250
+        },
+        {
+          "t": "p",
+          "html": "Premier écusson cousu sur la faluche, le blason de Paris mérite qu'on s'y arrête. Sa version complète se blasonne ainsi : <em>« De gueules à la nef antique équipée d'argent voguant sur une onde du même ; au chef d'azur semé de fleurs de lys d'or, l'écu sommé d'une couronne murale à quatre tours d'or, portant la devise </em>Fluctuat nec mergitur<em>, accosté de deux branches de sinople — chêne et laurier — liées de gueules, auxquelles sont appendues l'étoile de la Légion d'honneur, la croix de la Libération et la croix de guerre. »</em> En lecture héraldique, le chef se lit en dernier, car il fut ajouté après la création du blason."
+        },
+        {
+          "t": "p",
+          "html": "Les couleurs racontent l'histoire de la ville. Le bleu et le rouge sont ceux du chaperon qu'Étienne Marcel, prévôt des marchands, fit porter à ses partisans lorsqu'il se révolta contre le dauphin Charles (futur Charles V) en 1358, dans la lutte pour le contrôle de Paris. Le bleu renvoie aussi à la Seine et à la couleur de la Vierge et des saintes qui lui sont rattachées — dont sainte Geneviève, patronne de Paris, qui avait prédit que les Huns n'atteindraient pas la ville et qu'il ne fallait pas fuir : la nef est l'un de ses attributs. Le rouge évoque enfin le sang de saint Denis, premier évêque de Paris, décapité et remontant, selon la légende, de Montmartre vers la future basilique. La nef d'argent, elle, rappelle la puissante corporation des Nautes, les marchands de l'eau qui firent la fortune de Paris."
+        },
+        {
+          "t": "p",
+          "html": "Le chef d'azur semé de fleurs de lys est un ajout de Charles V : après la mort d'Étienne Marcel, le roi entendait renforcer son emprise sur la ville, rendre hommage à la dynastie capétienne et invoquer la Sainte Trinité. La couronne murale qui somme l'écu porte quatre tours, marque d'une ville fortifiée. La confusion fréquente entre quatre et cinq tours vient de Napoléon Ier, qui voulut distinguer les villes (trois tours), les chefs-lieux (quatre) et les capitales (cinq) ; mais la lecture héraldique parisienne, déjà fixée à quatre tours, a été conservée — d'où des versions à cinq tours que l'on rencontre parfois."
+        },
+        {
+          "t": "p",
+          "html": "Le blason a connu de nombreuses métamorphoses avant d'être stabilisé. Fixé une première fois en 1412, il est remplacé en 1792 par les couleurs de Lafayette et Bailly ; en 1811, les fleurs de lys cèdent la place à des abeilles impériales et une déesse Isis est placée à la proue de la nef ; en 1817, la Restauration rétablit les fleurs de lys et transforme la modeste nef en navire de haut bord ; en 1848, le chef fleurdelisé devient un semé d'étoiles et la nef prend l'allure d'un bateau-lavoir, alors répandu sur la Seine ; en 1853, sous le Second Empire, Napoléon III rétablit le chef fleurdelisé de France. Après la guerre de 1870, Edgar Quinet aurait même suggéré d'ajouter un pigeon, en hommage aux services rendus par les pigeons voyageurs durant le siège de Paris. En 1924, les fleurs de lys sont transformées en piques de grilles, la nef paraît sombrer et la figuration des ondes est interrompue vers la pointe — c'est de cette maladresse que vient l'eau peinte en bleu, et non en argent comme le veut l'héraldique. Enfin, l'arrêté préfectoral du 20 juin 1942 entérine les travaux de la commission d'héraldique urbaine de la Seine, qui reprend en le modernisant le sceau de 1412 ; le décret du 20 août 1949 fixe le blason dans la forme qu'on lui connaît."
+        },
+        {
+          "t": "p",
+          "html": "La devise <em>Fluctuat nec mergitur</em> — « il est battu par les flots mais ne sombre pas » — rappelle les inondations répétées auxquelles la capitale a survécu. Elle est plus récente qu'on ne le croit : jusqu'au XVe siècle, le sceau de Paris portait simplement la légende <em>Sigillum mercatorum aquæ Parisius</em> (« sceau des marchands de l'eau de Paris »), et la formule, qui apparaît sur quelques jetons municipaux dès la fin du XVIe siècle, n'était alors qu'une devise parmi d'autres. C'est le baron Haussmann, préfet de la Seine, qui en fait la devise officielle de la ville le 24 novembre 1853."
+        },
+        {
+          "t": "p",
+          "html": "Sous l'écu enfin, trois décorations décernées à la Ville de Paris. Au centre, la croix de la Légion d'honneur, remise par le président Émile Loubet à l'occasion de l'Exposition universelle et validée par les décrets des 9 octobre 1900 et 27 mars 1901. La croix de guerre 1914-1918, décernée sous la présidence de Raymond Poincaré par Georges Clemenceau, par citation à l'ordre de l'armée du 28 juillet 1919 puis décret du 14 février 1924. Et la croix de la Libération, décernée par le général de Gaulle (décret du 24 mars 1945) puis incorporée aux armoiries par le président Vincent Auriol, dont le décret du 20 août 1949 arrête l'ensemble. Le blason est accosté de deux rameaux : le chêne, symbole de la stabilité et de la résistance de Paris face aux assauts, et le laurier, de ses victoires et de son rayonnement. À côté de la lecture héraldique, stricte, circulent des lectures plus libres mais bien vivantes — le rouge du feu de la Commune ou du sang versé en 1870 et en 1945, ou la « cinquième tour perdue » au titre du déshonneur de l'Occupation : autant d'anecdotes qui ont leur place, à condition de ne pas les confondre avec le blasonnement officiel."
         },
         {
           "t": "h3",
           "text": "La diffusion en province (1889-1891)"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Au%20Quartier%20Latin%20Mi-Car%C3%AAme%201896.jpg",
+          "alt": "Au Quartier latin, Mi-Carême 1896",
+          "caption": "Au Quartier latin pendant la Mi-Carême, en 1896 : la coiffe étudiante est déjà partout dans les cortèges.",
+          "credit": "Wikimedia Commons",
+          "align": "right",
+          "width": 330
+        },
+        {
           "t": "p",
-          "html": "Aix officialise sa coiffe le 16 février 1889 ; Montpellier choisit début 1889 la toque à crevés (hommage à Rabelais), conservée jusqu'à aujourd'hui ; Lyon (lion brodé), Toulouse, Nancy, Bordeaux suivent. Les insignes et l'étoile annuelle viennent de Gand (Belgique), vers 1900. Le mot « faluche » (galette, en patois lillois) s'impose dans les années 1930."
+          "html": "Soutenues par les autorités universitaires, les AGE de province se constituent à leur tour et adoptent une coiffe, souvent en la distinguant de celle de Paris. Aix officialise son béret le 16 février 1889 ; Toulouse le porte à la même époque et y ajoute une rosette d'étudiant ; Lyon l'orne d'un lion brodé dès août 1889 ; Bordeaux opte pour trois croissants de lune entrelacés ; Nancy adopte un béret au blason de la ville en cannetille."
+        },
+        {
+          "t": "p",
+          "html": "Pour accueillir les étudiants d'Europe lors du sixième centenaire de leur université (22-25 mai 1890), les Montpelliérains refusent le béret parisien et choisissent, dès le début de 1889, une coiffe rappelant la barrette — la toque de docteur médiévale que l'on voit sur les portraits de Rabelais. C'est la fameuse faluche à crevés, conservée jusqu'à aujourd'hui par Montpellier et, par filiation, par Nîmes. Le récit de ces fêtes, présidées par le président de la République Sadi Carnot qui remit solennellement son drapeau à l'AGE de Montpellier, confirme cette adoption précoce : une photographie instantanée prise lors de l'excursion à Aigues-Mortes, le 26 mai, montre déjà des Montpelliérains coiffés de la faluche à crevés aux côtés de camarades portant la faluche à fond plein — toutes de grande taille et, à l'époque, vierges d'insignes et de rubans."
+        },
+        {
+          "t": "p",
+          "html": "La symbolique des insignes, elle, ne vient pas de France mais de Belgique. À Gand, dès 1873, les étudiants distinguent leurs casquettes par des insignes brodés de fil doré, plus tard estampés — un usage emprunté à l'armée ; l'étoile marquant les années d'études y est attestée vers 1900. Par les liens étroits entre Lillois et Belges, ces pratiques gagnent la France et se généralisent sur les bérets dans les années 1920."
         },
         {
           "t": "h3",
           "text": "L'âge d'or international : Corda Fratres et l'UNEF"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Affiche%20pour%20les%20F%C3%AAtes%20du%20Congr%C3%A8s%20de%201907%20de%20la%20Corda%20Fratres%20%C3%A0%20Bordeaux.JPEG",
+          "alt": "Affiche du congrès de la Corda Fratres à Bordeaux, 1907",
+          "caption": "Affiche des fêtes du 5e congrès de la Corda Fratres à Bordeaux (1907), la fédération internationale des étudiants.",
+          "credit": "Wikimedia Commons",
+          "align": "right",
+          "width": 280
+        },
+        {
           "t": "p",
-          "html": "Dès le 10 août 1889, une conférence à Paris lance une fédération internationale des étudiants, qui devient la <em>Corda Fratres</em> (1898), forte de dizaines de milliers de membres sur cinq continents (français langue officielle ; 2e congrès à Paris en 1900, présidé en faluche ; 5e à Bordeaux en 1907). La même année 1907, Bordeaux, Dijon, Lille et Lyon fondent l'UNAGEF à Lille (ancêtre de l'UNEF) ; Paris les rejoint en 1909. Structure associative, le droit syndical (1884) étant réservé aux salariés."
+          "html": "Dès le 10 août 1889, une conférence tenue à Paris lance l'idée d'une fédération internationale des étudiants, qui prend corps en 1898 sous le nom de <em>Corda Fratres</em> : forte de dizaines de milliers de membres sur cinq continents, elle a le français pour langue officielle, tient son 2e congrès à Paris en 1900 — présidé en faluche — et son 5e à Bordeaux en 1907. La même année 1907, les Associations générales de Bordeaux, Dijon, Lille et Lyon fondent l'UNAGEF à Lille, ancêtre de l'UNEF ; Paris ne les rejoint qu'en 1909. Le mouvement étudiant prend alors une forme associative au sens de la loi de 1901, faute de pouvoir invoquer le droit syndical, réservé depuis 1884 aux seuls salariés."
         },
         {
           "t": "h3",
           "text": "Strasbourg et l'Alsace (1909)"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Arriv%C3%A9e%20des%20%C3%A9tudiants%20de%20Strasbourg%20%C3%A0%20Paris%20en%201919.jpg",
+          "alt": "Arrivée des étudiants de Strasbourg à Paris en 1919",
+          "caption": "Arrivée des étudiants de Strasbourg à Paris en 1919 : à la Libération de l'Alsace, ce sont eux qui réaffichent les premiers la faluche.",
+          "credit": "Wikimedia Commons",
+          "align": "left",
+          "width": 360
+        },
+        {
           "t": "p",
-          "html": "L'Alsace étant allemande, des pharmaciens alsaciens (H2S) rapportent en 1909 la faluche de Nancy, en signe de francophilie — d'où les passants strasbourgeois. À la Libération de 1918, ce sont eux qui réaffichent les premiers la faluche."
+          "html": "L'Alsace étant allemande depuis 1871, l'Université de Strasbourg, devenue Kaiser-Wilhelm-Universität, est soumise aux folklores germaniques. En 1909, lors d'un congrès de pharmaciens tenu à Nancy en marge du 3e congrès de l'UNEF, des étudiants alsaciens francophiles de l'association H2S reçoivent en cadeau une faluche commandée au chapelier nancéien. Ils la rapportent en Alsace en signe de ralliement aux idées françaises, au péril de leur liberté — son port y étant interdit sous l'Empire allemand. C'est de Nancy que Strasbourg tient ses fameux passants. À la libération de 1918, ce sont ces mêmes étudiants qui, les premiers, réaffichent la faluche, symbole du retour de l'Alsace à la France."
         },
         {
           "t": "h3",
-          "text": "Les deux guerres mondiales"
+          "text": "La Première Guerre mondiale et l'entre-deux-guerres"
         },
         {
           "t": "p",
-          "html": "1914-1918 décime la jeunesse étudiante ; la faluche hérite des insignes militaires de spécialité. Après la crise de 1929, elle renaît au cinquantenaire (avril 1938, semaine de liesse au Quartier latin). Le 11 novembre 1940, étudiants et lycéens manifestent à Paris ; l'Université de Strasbourg, repliée à Clermont-Ferrand, subit la rafle du 25 novembre 1943 (≈130 déportés)."
+          "html": "La mobilisation générale du 2 août 1914 décime la jeunesse étudiante : on estime qu'un étudiant sur deux n'est pas revenu du front, et l'insouciance d'avant-guerre disparaît. De ce conflit, la faluche hérite toutefois ses premiers véritables insignes : les anciens combattants y reprennent les insignes de spécialité et de régiment de l'armée, auxquels on prête peu à peu des significations plus légères. La coiffe renaît dans les Années folles, portée par une génération qui n'a pas connu les tranchées ; la multiplication des disciplines — la psychologie freudienne, les sciences éclatées en biologie, physique, géologie — impose de nouveaux emblèmes. La crise de 1929 fait toutefois reculer le folklore : jugée « ringarde » et marque d'aisance bourgeoise, la faluche ne survit plus que dans les cercles associatifs. Le sursaut vient du cinquantenaire : en avril 1938, un charivari étudiant se mue en une semaine de liesse dans le Quartier latin, largement couverte par la presse, et l'on prend l'habitude d'en fêter l'anniversaire, encore en 1939 et même en 1940."
         },
         {
           "t": "h3",
-          "text": "Charte de Grenoble, Mai 68 et renouveau"
+          "text": "La Seconde Guerre mondiale"
         },
         {
           "t": "p",
-          "html": "La Charte de Grenoble (24 avril 1946) définit l'étudiant comme « un jeune travailleur intellectuel » ; le premier code écrit paraît la même année (AFGES). Mai 68 rejette la faluche, qui ne survit que dans les filières corporatistes et devient une « tradition » (article 0 : apolitique, asyndicale, aconfessionnelle). Le renouveau vient des Basochards de Poitiers et des canulars de « Didier Ier » (1976-79), puis de la fusion des codes à Lille (1976), du centenaire de Reims (1988) et des États Généraux de Dijon (1989)."
+          "html": "Le 11 novembre 1940, à l'appel des lycéens d'Henri-IV, étudiants et lycéens manifestent à Paris pour déposer une gerbe en forme de croix de Lorraine sur la tombe du Soldat inconnu ; l'occupant ouvre le feu et procède à des arrestations et des déportations. Le drame se concentre surtout autour de l'Université de Strasbourg, repliée à Clermont-Ferrand dès 1939. Majoritairement hostile au IIIe Reich, elle devient l'un des berceaux de la Résistance. Après plusieurs offensives allemandes, la rafle du 25 novembre 1943 frappe l'université clermontoise : sur quelque 1 200 personnes rassemblées, environ 130 sont déportées (la plaque commémorative fait état de 139 disparus). Beaucoup d'étudiants ont payé de leur vie leur attachement à la France libre — c'est cette mémoire que perpétue aujourd'hui encore le « ruban du souvenir » des faluchards strasbourgeois."
         },
         {
           "t": "h3",
-          "text": "Le code : de l'oral à l'écrit"
+          "text": "L'après-guerre et la Charte de Grenoble (1946)"
         },
         {
           "t": "p",
-          "html": "Longtemps oral, le code est transcrit dans les années 1960 (code toulousain du <em>Midi Étudiant</em>, mars 1966 ; code lillois du <em>MIL</em>, 1975-76), puis fondu en une synthèse nationale le 8 mars 1976 (base toulousaine). Certaines formules ont traversé les décennies : l'interdiction de « transformer la faluche en comptoir de quincaillerie » (1966) est devenue « une succursale de Monoprix » (article III, 2023), et l'article IV est resté identique. La rédaction actuelle (135e, Belfort 2023) compte une trentaine de filières, intègre la réforme PASS/LAS et réduit le bac à un simple Ɣ."
+          "html": "La guerre a montré combien tout pouvait s'effacer : on prend acte que « les écrits restent ». Le premier code écrit connu paraît en 1946 dans le journal de l'AFGES, l'association fédérative générale des étudiants de Strasbourg. La même année, le 35e congrès de l'UNEF, réuni à Grenoble, adopte la Charte de Grenoble (24 avril 1946), texte fondateur qui définit l'étudiant comme « un jeune travailleur intellectuel » doté de droits et de devoirs, et fait de lui un acteur — et non un simple spectateur — de la vie universitaire."
+        },
+        {
+          "t": "h3",
+          "text": "Mai 68 : la fracture"
+        },
+        {
+          "t": "p",
+          "html": "Les années 1960 marquent un point de rupture. Dans le climat contestataire de Mai 68, la jeunesse se politise massivement, souvent à l'extrême gauche, et rejette la faluche comme un symbole « passéiste » ; des heurts opposent même faluchards corporatistes, syndicalistes et faluchards de droite. La coiffe disparaît des amphithéâtres et ne survit que dans les filières longues et fortement corporatistes — médecine, pharmacie, droit. De cette crise naît un changement de statut décisif : la faluche cesse d'être « l'uniforme de l'étudiant » pour devenir « une tradition du monde étudiant ». C'est de là que vient l'affirmation de l'article 0 — la faluche est apolitique, asyndicale et aconfessionnelle — et la rivalité durable avec les organisations syndicales, qui rejettent ce chapeau d'un autre temps."
+        },
+        {
+          "t": "h3",
+          "text": "Le renouveau (années 1970-1980)"
+        },
+        {
+          "t": "p",
+          "html": "Le retour de la faluche vient d'où on ne l'attendait pas : non des faluchards eux-mêmes, mais des Basochards de Poitiers, confrérie d'étudiants en droit. Autour de « Didier Ier », élu roi du Royaume de Basoche en 1976, une bande de joyeux lurons multiplie les canulars retentissants entre 1976 et 1979 — jusqu'à se faire inviter au sacre de l'empereur Bokassa ou à visiter l'Élysée de nuit —, remettant la coiffe et le monde étudiant sous les projecteurs. La résurrection proprement dite est ensuite l'œuvre d'étudiants en médecine, pharmacie et sciences, et passe par trois jalons : en 1976 à Lille, la fusion des codes corporatistes existants, le code toulousain (le plus complet) servant de base ; en 1988 à Reims, le centenaire de la Faluche — premier congrès-anniversaire, demeuré mémorable et tenu secret par ses participants — et un nouveau code intégrant les particularités montpelliéraines ; en 1989 à Dijon, les États Généraux de la Faluche, qui officialisent la fonction de Grand Maître sur le modèle lillois et amorcent la création de la FAGE (en remerciement, Dijon obtient ses rubans de velours). Le mouvement se prolonge en 1990 à Lille, par une Convention nationale, puis par un congrès-anniversaire chaque année dans une ville différente."
+        },
+        {
+          "t": "h3",
+          "text": "Le code de la faluche : de l'oral à l'écrit"
+        },
+        {
+          "t": "p",
+          "html": "Pendant longtemps, la faluche n'a pas eu de code écrit : la coutume se transmettait oralement, et les Maîtres d'avant-guerre n'en connaissaient aucun. Quelques principes suffisaient — couleur du bandeau selon la discipline, insignes selon la faculté, étoiles dorées ou argentées pour les années. Les premières transcriptions datent des années 1960, avec deux codes dominants : un code toulousain, paru dans le <em>Midi Étudiant</em> en mars 1966, rédigé en articles à la manière d'un code de droit, et un code lillois, paru dans le journal <em>MIL</em> en 1975-1976, reconstitué auprès du commerçant qui vendait les faluches aux Lillois. Des codes lyonnais et strasbourgeois ont aussi existé ; Montpellier, qui n'avait qu'un seul fabricant, n'a laissé aucun code écrit."
+        },
+        {
+          "t": "p",
+          "html": "Le 8 mars 1976, à Lille, ces traditions sont fondues en une synthèse fondée sur le code toulousain, jugé le plus complet : elle réserve le velours aux disciplines de santé et le satin aux autres, fait passer au bleu le ruban accessoire de la première étoile, et fait adopter à la médecine le caducée (l'ancienne tête de mort sur fémurs devenant l'emblème de la première année commune). En décembre 1986, à Toulouse, le code précise pour la première fois la date de création de la faluche, introduit la notion de Grand Maître et se veut national en intégrant la faluche montpelliéraine. La rédaction du centenaire (Reims, 1988), plus lisible, s'imposera ensuite, et la Convention nationale de Lille du 23 juin 1990 ouvrira la coiffe à de nouvelles filières."
+        },
+        {
+          "t": "p",
+          "html": "L'analyse comparée des rédactions successives, menée par Isabelle Fayemendy, montre une coiffe vivante. Le code de 1966 (dix articles, onze filières) ne décrit guère que l'emblème de discipline, les étoiles, les palmes et la lettre du bac ; les insignes y sont encore rares. Celui du centenaire de 1988 (dix-sept articles, quatorze filières) intègre le code montpelliérain et le rôle du Grand Maître, code les lettres du bac de A à T et voit « exploser » les insignes du velours — cochon, bouteilles, chameau, pendu, lime, potager. La version de 1998 (neuf articles, vingt-huit filières) simplifie l'ensemble, introduit les initiales et la quille et ouvre largement les filières (sage-femme, STAPS, IUT, œnologie). Celle de 2009 (dix-sept articles, vingt-trois filières) ajoute un court historique, distingue nettement velours et circulaire, prévoit le bac international et le drapeau pour une année à l'étranger, et crée des insignes liés au respect du code — pachyderme, singe, mammouth. Certaines formules ont, elles, traversé le siècle : l'interdiction de faire de la faluche « une succursale de Monoprix » (article III) et l'article IV, « assez larges pour permettre toute fantaisie, assez strictes pour réaliser l'uniformité ». La rédaction actuelle (135e anniversaire, Belfort 2023) compte une trentaine de filières, intègre la réforme PASS/LAS et réduit le bac général à un simple Ɣ."
+        },
+        {
+          "t": "h3",
+          "text": "Fabricants, et le nom « faluche »"
+        },
+        {
+          "t": "p",
+          "html": "La faluche n'a jamais eu de fabricant unique, et la géographie des chapeliers explique en partie la diversité des coutures : la maison Groff réalise à la main les fonds « crevés » de Montpellier ; la maison Legrand, à Tours, fournit les carabins et potards tourangeaux ainsi que les Rémois ; la maison Ball, à Strasbourg, livre des faluches doublées à passants ; la chapellerie Jean, à Roubaix, produit la « lilloise » — mécanisée, doublée et bordée de cuir, la mieux adaptée au potager comme au budget étudiant. Les insignes, longtemps affaire d'artisans, ont surtout été émaillés par la maison Delande puis estampés, depuis 1925, par la maison Mourgeon, encore aujourd'hui la principale source. Quant au mot lui-même, il vient du patois du Nord, où la « faluche » désigne une galette : comme « galette » était déjà partout le surnom familier du béret, les Lillois l'ont naturellement appliqué au leur. Le terme s'impose dans les années 1930, à la faveur des congrès de l'UNEF ; et ce n'est qu'après la Seconde Guerre mondiale que la forme se stabilise dans toutes les villes, à deux exceptions fièrement conservées : les crevés de Montpellier et les passants de Strasbourg."
         }
       ]
     },
     {
       "id": "diachronie",
       "title": "Chronologie & code",
+      "intro": "Une lecture dans le temps : la chronologie datée des grands jalons, puis la concordance du code (apparition, évolution et disparition de ses éléments).",
       "blocks": [
         {
           "t": "h3",
@@ -301,22 +447,22 @@ footer .ribbon{margin:-26px -20px 20px}
             [
               "10 août 1889",
               "Conférence lançant une fédération internationale des étudiants.",
-              "faluche.info"
+              "Faluche.info"
             ],
             [
               "1898",
               "Fondation de la Corda Fratres.",
-              "faluche.info"
+              "Faluche.info"
             ],
             [
               "1907",
               "Fondation de l'UNAGEF à Lille ; 5e congrès Corda Fratres à Bordeaux.",
-              "faluche.info"
+              "Faluche.info"
             ],
             [
               "1909",
               "Paris rejoint l'UNAGEF ; la faluche arrive en Alsace.",
-              "faluche.info ; codes"
+              "Faluche.info ; codes"
             ],
             [
               "1921-1922",
@@ -324,12 +470,12 @@ footer .ribbon{margin:-26px -20px 20px}
               "Codes de ville"
             ],
             [
-              "juil. 1933",
+              "Juil. 1933",
               "Demi-millénaire de Poitiers ; le « poireau » désigne une décoration, non le potager.",
               "Segura (corr.)"
             ],
             [
-              "avril 1938",
+              "Avril 1938",
               "Cinquantenaire : semaine de liesse au Quartier latin.",
               "Archivistes"
             ],
@@ -349,17 +495,17 @@ footer .ribbon{margin:-26px -20px 20px}
               "Archivistes"
             ],
             [
-              "mai 1968",
+              "Mai 1968",
               "La faluche, d'uniforme à tradition ; article 0.",
               "Archivistes"
             ],
             [
-              "mars 1966",
+              "Mars 1966",
               "Code toulousain (Midi Étudiant), premier code structuré.",
               "Segura"
             ],
             [
-              "fin années 1960",
+              "Fin années 1960",
               "Code carabin toulousain : article IX = potager.",
               "Segura"
             ],
@@ -369,7 +515,7 @@ footer .ribbon{margin:-26px -20px 20px}
               "Guy Daniel"
             ],
             [
-              "déc. 1986",
+              "Déc. 1986",
               "Code de Toulouse : notion de GM, intégration de Montpellier.",
               "Guy Daniel"
             ],
@@ -422,7 +568,7 @@ footer .ribbon{margin:-26px -20px 20px}
             ],
             [
               "Étoile",
-              "vers 1900",
+              "Vers 1900",
               "Empruntée à Gand → dorée/argentée ; moivre (récent).",
               "Guy Daniel"
             ],
@@ -434,7 +580,7 @@ footer .ribbon{margin:-26px -20px 20px}
             ],
             [
               "Potager (art. IX)",
-              "fin 1960s",
+              "Fin 1960s",
               "« Pas de capote, pas de carotte » ; retiré dans plusieurs villes.",
               "Segura ; code 135"
             ],
@@ -446,20 +592,20 @@ footer .ribbon{margin:-26px -20px 20px}
             ],
             [
               "Lime « insulte au GM »",
-              "code national",
+              "Code national",
               "Retirée ; reclassée en insigne sexuel.",
-              "code 135"
+              "Code 135"
             ],
             [
               "Article III",
               "1966",
-              "« comptoir de quincaillerie » → « succursale de Monoprix ».",
+              "« Comptoir de quincaillerie » → « succursale de Monoprix ».",
               "Segura ; code 135"
             ],
             [
               "Article IV",
               "1966",
-              "« assez larges… assez strictes… » — inchangé.",
+              "« Assez larges… assez strictes… » — inchangé.",
               "Segura ; code 135"
             ],
             [
@@ -470,7 +616,7 @@ footer .ribbon{margin:-26px -20px 20px}
             ],
             [
               "Pachy/singe/mammouth",
-              "vers 2009",
+              "Vers 2009",
               "Insignes de comportement ; mammouth national = prérogatives de GM.",
               "Fayemendy"
             ]
@@ -481,10 +627,24 @@ footer .ribbon{margin:-26px -20px 20px}
     {
       "id": "insignes",
       "title": "Insignes",
+      "intro": "La faluche se lit comme un blason vivant : chaque insigne a une place (le circulaire pour le cursus, le velours pour la vie étudiante, la doublure pour le potager) et un sens, qui peut varier d'une ville à l'autre.",
       "blocks": [
+        {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Faluche%20d'%C3%A9tudiant%20en%20m%C3%A9decine%20des%20ann%C3%A9es%201950%2C%20ayant%20appartenu%20au%20docteur%20Paul%20Miniac%20(1927-1995)..JPG",
+          "alt": "Faluche d'étudiant en médecine des années 1950, couverte d'insignes",
+          "caption": "Faluche d'un étudiant en médecine des années 1950 (ayant appartenu au docteur Paul Miniac) : circulaire de discipline, étoiles, rubans et insignes du velours.",
+          "credit": "Wikimedia Commons",
+          "align": "center",
+          "width": 430
+        },
         {
           "t": "h3",
           "text": "Couleurs & emblèmes de discipline"
+        },
+        {
+          "t": "p",
+          "html": "Le circulaire — le ruban qui fait le tour du bandeau — est en velours pour les filières de santé et en satin pour les autres, dans des couleurs inspirées des toges doctorales. Chaque discipline y appose son emblème. Voici les principaux selon le code national 135 (2023) :"
         },
         {
           "t": "table",
@@ -620,7 +780,7 @@ footer .ribbon{margin:-26px -20px 20px}
               "Lyre"
             ],
             [
-              "Œnologie",
+              "ŒNologie",
               "Satin saumon",
               "Grappe de raisin"
             ],
@@ -654,23 +814,88 @@ footer .ribbon{margin:-26px -20px 20px}
         },
         {
           "t": "h3",
-          "text": "Les trois « caducées »"
+          "text": "Les six types de faluche"
+        },
+        {
+          "t": "p",
+          "html": "Au-delà des couleurs, le code reconnaît six formes de coiffe, qui se distinguent par leur confection ou l'organisation du velours plutôt que par la couture."
         },
         {
           "t": "kv",
           "items": [
             [
-              "Bâton d'Asclépios (médecine)",
-              "un seul serpent (la couleuvre d'Esculape) sur un bâton d'olivier, souvent surmonté du miroir de la prudence et de palmes. Vrai symbole médical français (sceau de Montpellier, 1605). Ce n'est pas un « caducée » au sens strict."
+              "Lilloise (dite « nationale »)",
+              "La plus répandue : circulaire rigide, renforcé de plastique et gainé de cuir. C'est la forme de référence du code."
             ],
             [
-              "Caducée d'Hermès/Mercure (commerce, éco, kiné)",
-              "le seul vrai caducée : deux serpents affrontés + un vol (ailes). Aux États-Unis, il représente — à tort — la médecine."
+              "Tourangelle",
+              "L'exact opposé de la lilloise : circulaire souple. Portée notamment par les membres de l'Ordre du Vénéré Bitard."
             ],
             [
-              "Coupe d'Hygie (pharmacie)",
-              "une coupe où s'enroule un serpent. Hygie, fille d'Asclépios, déesse de la santé (d'où « hygiène »). Attribut officiel des pharmaciens depuis 1942."
+              "Montpelliéraine",
+              "Velours plus large et quatre crevés de satin à la couleur de la discipline, reliés par un bouton au centre. Décidés par l'AGEM en 1889, réservés à Montpellier (plus ancienne université de France, en hommage à Rabelais). Crevés : médecine 4 bordeaux, pharmacie 4 verts, dentaire 2 bordeaux + 2 violets, paramédical 4 roses. La légende dit la toque de Rabelais déchirée en quatre dans une rixe — ou son sang l'ayant marquée —, et certains y voient la croix occitane."
+            ],
+            [
+              "Alsacienne (strasbourgeoise)",
+              "Circulaire maintenu par six passants, interprétés comme les vestiges des premières faluches, les six côtés d'un bock, les six cépages ou les six régions d'Alsace, ou encore les barreaux d'une prison sous l'occupation allemande."
+            ],
+            [
+              "Perpignanaise",
+              "Circulaire maintenu par cinq passants (héritage strasbourgeois)."
+            ],
+            [
+              "Marseillaise",
+              "Réputée pour son velours beaucoup plus large que la faluche nationale."
             ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Les trois « caducées »"
+        },
+        {
+          "t": "p",
+          "html": "Trois emblèmes voisins ornent la coiffe et prêtent souvent à confusion : ils renvoient en réalité à des divinités antiques distinctes et à des filières différentes."
+        },
+        {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Asclepius%20Louvre%20engraving%20c1860.jpg",
+          "alt": "Asclépios, gravure",
+          "caption": "Asclépios (Esculape), dieu de la médecine, appuyé sur son bâton entouré d'un serpent.",
+          "credit": "Wikimedia Commons",
+          "align": "left",
+          "width": 230
+        },
+        {
+          "t": "p",
+          "html": "<strong>Le bâton d'Asclépios (médecine).</strong> L'emblème des carabins n'est pas, à proprement parler, un « caducée » : c'est un long bâton d'olivier autour duquel s'enroule un <em>unique</em> serpent. Asclépios (Esculape chez les Romains), fils d'Apollon et de la mortelle Coronis, fut élevé par le centaure Chiron, qui lui enseigna la médecine, les drogues et la chirurgie ; devenu si habile qu'il ressuscitait les morts, il fut foudroyé par Zeus pour cette hérésie avant d'être élevé au rang de dieu. Le serpent figuré est la couleuvre d'Esculape (<em>Zamenis longissimus</em>), élevée dans les temples de guérison comme Épidaure — grande, inoffensive, parfois albinos, et redoutable dératiseur à l'époque des grandes épidémies. En France, le bâton d'Asclépios représente le corps médical depuis le sceau de l'Université de Montpellier (1605) ; on le surmonte souvent du miroir de la prudence (en écho au <em>primum non nocere</em>) et de palmes d'olivier (Asclépios) et de laurier (Apollon)."
+        },
+        {
+          "t": "p",
+          "html": "<strong>Le caducée d'Hermès (commerce, économie, kinésithérapie).</strong> C'est le seul véritable caducée : un bâton d'or où s'enroulent <em>deux</em> serpents affrontés, surmonté d'un vol (deux ailes). Il appartient à Hermès (Mercure), messager des dieux, dieu de l'éloquence, des voyageurs et des marchands… mais aussi des voleurs — si bien que le commerçant et le brigand priaient le même dieu. Marque des ambassadeurs, il orne la tribune de l'Assemblée nationale. Choisi pour le commerce et l'économie, il s'est étendu à la kinésithérapie par méconnaissance des symboles ; aux États-Unis, c'est lui qui représente — à tort — la médecine."
+        },
+        {
+          "t": "p",
+          "html": "<strong>La coupe d'Hygie (pharmacie).</strong> Une coupe autour de laquelle s'enroule un serpent dont la tête s'incurve vers le calice, comme pour s'y abreuver. Hygie, fille d'Asclépios et sœur de Panacée, est la déesse de la santé et de la propreté — son nom a donné le mot « hygiène ». Là où son père incarne la médecine magique, elle personnifie la connaissance des remèdes et la salubrité. C'est l'attribut officiel des pharmaciens français depuis 1942, en usage depuis 1820."
+        },
+        {
+          "t": "imgrow",
+          "items": [
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Rod%20of%20Asclepius2.svg",
+              "alt": "Bâton d'Asclépios",
+              "caption": "Bâton d'Asclépios (médecine)"
+            },
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Caduceus.svg",
+              "alt": "Caducée de Mercure",
+              "caption": "Caducée de Mercure (commerce, éco, kiné)"
+            },
+            {
+              "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Bowl%20of%20Hygieia.svg",
+              "alt": "Coupe d'Hygie",
+              "caption": "Coupe d'Hygie (pharmacie)"
+            }
           ]
         },
         {
@@ -678,35 +903,55 @@ footer .ribbon{margin:-26px -20px 20px}
           "text": "Cursus, années & examens"
         },
         {
+          "t": "p",
+          "html": "Sur le circulaire se lit tout le parcours universitaire — un véritable curriculum brodé."
+        },
+        {
           "t": "kv",
           "items": [
             [
               "Baccalauréat",
-              "Ɣ (bac général), lettre/initiales (autres), « i » (international)."
+              "Ɣ pour un bac général ; lettre ou initiales pour les séries technologiques et professionnelles ; « i » pour un bac international, « C » pour un capacitaire, « DAEU » pour le diplôme équivalent."
             ],
             [
               "Étoile",
-              "une par année : dorée (réussie), argentée (redoublée) ; première étoile sur moivre bleu (public) ou blanc (privé)."
+              "une par année d'études : dorée pour une année réussie, argentée pour une année redoublée (5/2, 7/2…)."
+            ],
+            [
+              "Moivre",
+              "petit ruban sur lequel se pose la première étoile : bleu pour une faculté d'État, blanc pour un établissement privé ou confessionnel."
             ],
             [
               "Zéro",
-              "année blanche, sabbatique ou de césure."
+              "année blanche, sabbatique ou de césure (à ne pas confondre avec un redoublement)."
             ],
             [
               "Palmes",
-              "simple (fin de cycle), double croisée de lauriers (diplôme), large (major)."
+              "simple palme en fin de cycle sans diplôme ; double palme croisée de lauriers pour chaque diplôme obtenu ; large palme pour le major de promotion."
             ],
             [
               "Tête de vache",
-              "échec en 1re session rattrapé en septembre."
+              "échec en première session d'examens, rattrapé en septembre."
             ],
             [
-              "Tête de mort (ruban)",
-              "abandon ou réorientation."
+              "Tête de mort (sur le ruban)",
+              "abandon ou réorientation d'une discipline."
+            ],
+            [
+              "Lettres « e » et « a »",
+              "« e » pour une année validée par équivalence (remplace l'étoile) ; « a » sous l'étoile pour une année en alternance."
+            ],
+            [
+              "Drapeau",
+              "placé sous l'étoile lorsqu'une partie de l'année s'est déroulée à l'étranger."
             ],
             [
               "Quille",
-              "service militaire ou civique ; Abeille : cursus exemplaire."
+              "pend du ruban à l'endroit du cursus où le service militaire ou civique a été effectué."
+            ],
+            [
+              "Abeille",
+              "récompense un cursus exemplaire."
             ]
           ]
         },
@@ -715,39 +960,55 @@ footer .ribbon{margin:-26px -20px 20px}
           "text": "Velours : passions & armes personnelles"
         },
         {
+          "t": "p",
+          "html": "Sur le velours noir figurent les rubans (ville, association, province), la devise et les « armes personnelles » qui disent les goûts, les amours et les travers de chacun."
+        },
+        {
           "t": "kv",
           "items": [
             [
               "Chameau",
-              "endroit = célibataire ; envers = cœur pris."
+              "à l'endroit : célibataire ; à l'envers : cœur pris (« l'antichambre du mariage »)."
             ],
             [
               "Cochon",
-              "endroit = non intégré ; envers = intégré."
+              "à l'endroit : n'a pas été intégré ; à l'envers : a été intégré."
             ],
             [
               "Pendu",
-              "marié ou pacsé."
+              "marié ou pacsé ; Feuille de vigne : perte de la virginité."
             ],
             [
-              "Feuille de vigne",
-              "perte de la virginité ; Nounours : gros dormeur."
+              "Nounours",
+              "gros dormeur ; Chouette : oiseau de nuit."
             ],
             [
-              "Chope / fourchette / grappe",
-              "amour de la bière / de la table / du bon vin."
+              "Chope de bière / Fourchette / Grappe de raisin",
+              "amour respectivement de la bière, des plaisirs de la table et du bon vin."
+            ],
+            [
+              "Casque de Périclès",
+              "amour de l'Histoire ; Globe sur ruban vert : engagement écologique."
+            ],
+            [
+              "Étoile & foudre",
+              "amour des nouvelles technologies et de l'informatique ; Appareil photo : amour de la photographie."
+            ],
+            [
+              "Lyre / Plume / Palette vernie / Masque",
+              "amour des arts musicaux, littéraires, plastiques, et de la scène ou du cinéma."
             ],
             [
               "Sphinx",
-              "polyglotte ; Casque de Périclès : amour de l'Histoire."
-            ],
-            [
-              "Lyre / plume / palette / masque",
-              "arts musicaux / littéraires / plastiques / de la scène."
+              "polyglotte (langue des signes incluse)."
             ],
             [
               "Épi de blé",
-              "radin ; croisé d'une faucille : chanceux aux examens."
+              "radin ; croisé d'une faucille : chanceux aux examens ; Fer à cheval : chanceux."
+            ],
+            [
+              "Bacchus troué",
+              "personne abstème (qui ne boit pas d'alcool)."
             ]
           ]
         },
@@ -760,31 +1021,35 @@ footer .ribbon{margin:-26px -20px 20px}
           "items": [
             [
               "Anneaux olympiques",
-              "compétitions sportives."
+              "participation à des compétitions sportives régionales ou nationales."
             ],
             [
               "Bacchus",
-              "« dignité dans l'ivresse » ; difficile à obtenir, facile à perdre."
+              "« dignité dans l'ivresse » : rester respectueux et lucide, savoir gérer une crise malgré l'alcool. Difficile à obtenir, facile à perdre."
             ],
             [
               "Bouteille de Bordeaux",
-              "une « cuite » — pas un blâme ; le devient si danger."
+              "marque une « cuite » survenue en faluche — ce n'est pas un blâme ; elle ne le devient (avec Bacchus troué et abstinence) que si l'excès a créé un danger."
             ],
             [
-              "Cor de chasse / Poule",
-              "« choppe » régulièrement / drague mais respecte."
+              "Chouette (décernée)",
+              "faluchard actif la nuit qui assure malgré tout sa présence en cours."
             ],
             [
-              "Pachyderme",
-              "humour ou comportement lourds."
+              "Coq / Cor de chasse",
+              "sait se faire respecter en haussant la voix / « choppe » régulièrement en contexte faluchard."
+            ],
+            [
+              "Pachyderme / Poule",
+              "humour ou comportement lourds / drague tout ce qui bouge, mais avec respect."
             ],
             [
               "Sous-troué",
-              "nuit au poste, sans condamnation."
+              "a passé une nuit au poste de police en contexte étudiant, sans condamnation."
             ],
             [
               "Volant",
-              "raccompagnateur sobre (coupé si l'on a bu)."
+              "raccompagnateur de fin de soirée, sous condition de sobriété absolue (coupé en cas d'accident responsable)."
             ]
           ]
         },
@@ -814,19 +1079,23 @@ footer .ribbon{margin:-26px -20px 20px}
           "items": [
             [
               "Clé de sol",
-              "chante bien / anime les soirées (examen en cantum)."
+              "chante bien ou anime les soirées par les paillardes ; examen en cantum (5 à 10 chants) devant d'autres clés de sol."
             ],
             [
               "Mammouth",
-              "maîtrise du folklore (rare) ; le mammouth national a des prérogatives de GM."
-            ],
-            [
-              "Hache",
-              "« fait de guerre » (emprunt d'un panneau, avec rachat)."
+              "maîtrise approfondie du folklore (rare : 1 à 2 par ville). Le mammouth national, décerné sur dossier par au moins cinq villes, confère des prérogatives proches de celles d'un Grand Maître."
             ],
             [
               "Fourchette sur ruban bleu",
-              "après un repas complet jugé."
+              "décernée après un repas complet préparé par le faluchard (recette, présentation, goût)."
+            ],
+            [
+              "Hache",
+              "« fait de guerre » : emprunt habile et de courte durée d'un objet à une autre ville, suivi d'un rachat ; les dégradations gratuites ne sont pas récompensées."
+            ],
+            [
+              "Abeille associative",
+              "sur témoignage et demande du bureau de l'association concernée."
             ]
           ]
         },
@@ -856,6 +1125,10 @@ footer .ribbon{margin:-26px -20px 20px}
           "text": "Le potager"
         },
         {
+          "t": "p",
+          "html": "Le potager, à l'intérieur de la coiffe, regroupe les insignes-légumes des aventures intimes, décernés avec témoignages et en présence des faluchards concernés."
+        },
+        {
           "t": "kv",
           "items": [
             [
@@ -874,38 +1147,54 @@ footer .ribbon{margin:-26px -20px 20px}
         },
         {
           "t": "note",
-          "html": "Règles : insigne noirci en cas d'exhibition ; pas de potager pour un couple officiel ; « pas de capote, pas de carotte »."
+          "html": "Règles : insigne noirci en cas d'exhibition (gel du potager) ; pas de potager pour un couple en relation officielle ; rappel sanitaire — « pas de capote, pas de carotte »."
         },
         {
           "t": "h3",
           "text": "Insignes autrefois décernés"
         },
         {
+          "t": "p",
+          "html": "Beaucoup d'insignes ont été retirés du code national car leurs sens, souvent péjoratifs, contredisaient le principe selon lequel « la faluche doit s'enorgueillir de nouvelles richesses ». Certains restent décernés par habitude."
+        },
+        {
           "t": "kv",
           "items": [
             [
               "Chauve-souris / Ciseaux",
-              "nuit blanche associative / faluche bien cousue."
+              "nuit blanche pour motif associatif / faluche cousue avec brio, sans reprise."
             ],
             [
               "Cocotte en papier",
               "(blâme) grand sécheur de cours."
             ],
             [
-              "Comète",
-              "tombé avant minuit ; Cupidon : fiancé (remplaçait le chameau)."
+              "Comète / Cupidon",
+              "tombé avant minuit / fiancé (pouvait être placé sans GM, remplaçait le chameau)."
             ],
             [
               "Fraise",
-              "femme enceinte (totem d'immunité) ; Globe : globe-trotteur."
+              "femme enceinte ; servait de « totem d'immunité » contre l'alcool et la fumée."
             ],
             [
-              "Parapluie",
-              "(blâme) a vomi sur ou dans sa faluche."
+              "Double fourchette croisée / Épi de blé",
+              "(blâmes) « mange comme un porc » / radin et taxeur."
             ],
             [
-              "Tête de sphinx",
-              "polyglotte ; I/X/W : dagobit simple/double/multiple ; Zéro : a vomi avant minuit."
+              "Globe",
+              "globe-trotteur (au moins cinq pays pour motif étudiant)."
+            ],
+            [
+              "Lime / épingle à nourrice",
+              "ancien « insulte au Grand Maître » — retiré, jugé contraire à l'esprit de la faluche."
+            ],
+            [
+              "Parapluie / Tête de sphinx",
+              "(blâme) a vomi sur ou dans sa faluche / polyglotte (3 à 5 langues)."
+            ],
+            [
+              "I / X / W",
+              "participation à un dagobit (simple, double, multiple) ; Zéro : a vomi avant minuit."
             ]
           ]
         },
@@ -4463,30 +4752,62 @@ footer .ribbon{margin:-26px -20px 20px}
     {
       "id": "folklore",
       "title": "Figures & folklore",
+      "intro": "Les figures tutélaires invoquées dans le serment, et l'origine de la plus intime des traditions, le potager.",
       "blocks": [
+        {
+          "t": "p",
+          "html": "Trois figures reviennent sans cesse dans les codes, les serments et les insignes : un écrivain-médecin, un dieu du vin et un roi de la bière. Elles incarnent l'esprit faluchard — le savoir allié à la convivialité."
+        },
         {
           "t": "h3",
           "text": "François Rabelais (vers 1494-1553)"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Francois%20Rabelais%20-%20Portrait.jpg",
+          "alt": "Portrait de François Rabelais",
+          "caption": "François Rabelais, moine, médecin et écrivain : la figure tutélaire du folklore faluchard.",
+          "credit": "Wikimedia Commons",
+          "align": "right",
+          "width": 240
+        },
+        {
           "t": "p",
-          "html": "Moine, médecin (Montpellier 1530, Hôtel-Dieu de Lyon), humaniste, auteur de <em>Pantagruel</em> et <em>Gargantua</em> sous l'anagramme Alcofribas Nasier. Il incarne l'esprit faluchard : savoir, convivialité, vin et paillardise. De lui vient « le quart d'heure de Rabelais »."
+          "html": "Né près de Chinon, Rabelais fut tour à tour moine, prêtre séculier, puis médecin : il s'inscrit à la faculté de Montpellier en 1530 et devient médecin de l'Hôtel-Dieu de Lyon. Humaniste, il publie <em>Pantagruel</em> (1532) puis <em>Gargantua</em> (1534) sous l'anagramme d'Alcofribas Nasier — aussitôt condamnés par la Sorbonne. Théologien, juriste, médecin, homme de lettres et bon vivant, il incarne à lui seul l'esprit faluchard : le savoir, la convivialité, le goût du vin et de la table, le rire et la paillardise. On lui doit l'expression « le quart d'heure de Rabelais »."
         },
         {
           "t": "h3",
           "text": "Bacchus (Dionysos)"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Dionysus%20bacchus-Kunsthistorisches%20Museum.jpg",
+          "alt": "Statue de Dionysos (Bacchus)",
+          "caption": "Dionysos (Bacchus), dieu du vin, de la fête et du théâtre.",
+          "credit": "Wikimedia Commons",
+          "align": "right",
+          "width": 260
+        },
+        {
           "t": "p",
-          "html": "Fils de Jupiter et de Sémélé, dieu du vin et des festivités. Son insigne récompense la « dignité dans l'ivresse »."
+          "html": "Fils de Jupiter et de la mortelle Sémélé, Bacchus connaît une « double naissance » : Sémélé foudroyée, Zeus recoud l'enfant dans sa cuisse jusqu'au terme. Élevé loin de la colère de Junon, il parcourt le monde en enseignant la culture de la vigne, entouré de son cortège (le thiase) de ménades et de satyres. Dieu du vin, de la vigne, de la fête et de l'extase, il est aussi le dieu du théâtre — c'est de son culte que naît la tragédie grecque. Cette double nature, joie partagée et débordement, en fait le patron naturel du folklore festif. Dans la Faluche, il donne son nom à l'insigne qui récompense la « dignité dans l'ivresse » : savoir garder lucidité et tenue malgré l'alcool. Difficile à mériter, il est facile à perdre."
         },
         {
           "t": "h3",
           "text": "Gambrinus"
         },
         {
+          "t": "img",
+          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Hans%20Makart%20-%20Gambrinus%20-%20Study%20for%20the%20Decorative%20Panel%20-%20O%201173%20-%20Slovak%20National%20Gallery.jpg",
+          "alt": "Gambrinus, roi de la bière (étude de Hans Makart)",
+          "caption": "Gambrinus, roi mythique de Flandre et de Brabant, patron des brasseurs (étude de Hans Makart).",
+          "credit": "Wikimedia Commons",
+          "align": "left",
+          "width": 340
+        },
+        {
           "t": "p",
-          "html": "Roi mythique de Flandre, patron des amateurs de bière, invoqué dans le serment du faluchard aux côtés de Rabelais et Bacchus."
+          "html": "Roi mythique de Flandre et de Brabant — souvent identifié à Jean Ier de Brabant ou au légendaire Gambrivius —, Gambrinus passe pour avoir inventé ou perfectionné le brassage de la bière. L'iconographie populaire le représente couronné, une chope à la main, parfois assis à califourchon sur un tonneau. Patron des brasseurs et des amateurs de bière, il forme avec Bacchus le couple du vin et du houblon. C'est pourquoi il est invoqué, aux côtés de Rabelais et de Bacchus, dans le serment du faluchard — la trinité du savoir, du vin et de la bière."
         },
         {
           "t": "h3",
@@ -4494,138 +4815,7 @@ footer .ribbon{margin:-26px -20px 20px}
         },
         {
           "t": "p",
-          "html": "La tradition relie le potager aux « logeuses » : la soupe à base de pommes de terre (absentes du potager), les autres légumes apportés par les étudiants, qui codaient leurs aventures par un légume. On a longtemps cité un passage de la revue <em>Scapin</em> (1933) comme plus ancienne trace, mais Segura l'a corrigé : le « poireau » y désigne une décoration (palmes académiques), non l'insigne intime. La codification du potager est plus tardive (code carabin toulousain, fin des années 1960)."
-        }
-      ]
-    },
-    {
-      "id": "lexique",
-      "title": "Lexique",
-      "blocks": [
-        {
-          "t": "kv",
-          "items": [
-            [
-              "AGE / AGEP",
-              "Association générale des étudiants (de Paris), à l'origine du port de la faluche."
-            ],
-            [
-              "Article 0",
-              "« Le Grand Maître a toujours raison » (et, quand il a tort, voir l'article 0)."
-            ],
-            [
-              "Baptême",
-              "Cérémonie d'intronisation du faluchard (formes variables selon les villes)."
-            ],
-            [
-              "Bitard",
-              "Animal mythique des escholiers de Poitiers ; membre de l'Ordre du Vénéré Bitard."
-            ],
-            [
-              "Cantum",
-              "Moment de chant, en particulier de paillardes."
-            ],
-            [
-              "Carabin",
-              "Étudiant en médecine."
-            ],
-            [
-              "Circulaire",
-              "Ruban à la couleur de la discipline faisant le tour du bandeau ; porte le cursus."
-            ],
-            [
-              "Crit",
-              "Critérium : rencontre festive et compétitive entre villes."
-            ],
-            [
-              "Croix",
-              "Médaille du dignitaire (GM, GC) ; par métonymie, le dignitaire."
-            ],
-            [
-              "Dagobit",
-              "Rite collectif festif, variable selon les villes."
-            ],
-            [
-              "Enterrement",
-              "Cérémonie de fin de vie étudiante falucharde."
-            ],
-            [
-              "Extés",
-              "Personnes présentes sans être faluchardes."
-            ],
-            [
-              "Faliban",
-              "Faluchard psychorigide sur le code (mot-valise faluchard + taliban)."
-            ],
-            [
-              "Faluché / Faluchard",
-              "Le faluché a reçu la faluche ; le faluchard en vit l'esprit et le code."
-            ],
-            [
-              "Fillot",
-              "Faluchard parrainé par un aîné."
-            ],
-            [
-              "GC / GM",
-              "Grand Chambellan / Grand Maître (dignitaires)."
-            ],
-            [
-              "Grand Alchimiste",
-              "Prépare le breuvage rituel (« La Mixture », « jus de faluche »)."
-            ],
-            [
-              "Honoris causæ",
-              "Faluche d'honneur remise à un non-étudiant méritant."
-            ],
-            [
-              "Impétrant",
-              "Candidat au baptême (« piou » à Albi, « néo » à Valence, « minot » à Toulon)."
-            ],
-            [
-              "Marrain / parrain",
-              "Aînés accompagnant le filleul (jargon : « marrain », « parraine »)."
-            ],
-            [
-              "Moivre",
-              "Petit ruban sous la première étoile : bleu (public), blanc (privé)."
-            ],
-            [
-              "Moldus",
-              "Non-faluchards (emprunt à Harry Potter)."
-            ],
-            [
-              "Monôme",
-              "Cortège festif d'étudiants à travers la ville."
-            ],
-            [
-              "Ordre",
-              "Confrérie festive (Bitard, Basoche, Chevaliers Niçois, Tétine Sublime…)."
-            ],
-            [
-              "Padawan",
-              "Jeune faluchard en apprentissage."
-            ],
-            [
-              "Penne",
-              "Coiffe estudiantine belge, cousine de la faluche."
-            ],
-            [
-              "Potager",
-              "Doublure de la faluche où se placent les insignes-légumes."
-            ],
-            [
-              "Sec",
-              "Boire son verre d'un trait (cul-sec)."
-            ],
-            [
-              "Serment",
-              "Engagement invoquant Rabelais, Bacchus et Gambrinus."
-            ],
-            [
-              "TVA",
-              "À Strasbourg, Très Vénérables Anciens : remplacent les GM."
-            ]
-          ]
+          "html": "La tradition relie le potager aux « logeuses » chez qui les étudiants étaient hébergés : elles préparaient la soupe du soir, à base de pommes de terre (ce qui expliquerait leur absence du potager), tandis que les étudiants apportaient les autres légumes — carottes, poireaux, navets. Ne pouvant évoquer leurs aventures à table, ils auraient pris l'habitude de les coder par un légume. On a longtemps cité un passage de la revue <em>Scapin</em> (juillet 1933) comme plus ancienne trace écrite, mais Manuel Segura a corrigé cette lecture : le « poireau » y désigne le surnom familier d'une décoration officielle (les palmes académiques), non l'insigne intime. La codification du potager est en réalité plus tardive : on la trouve, sous l'article IX, dans le code carabin toulousain de la fin des années 1960."
         }
       ]
     },
@@ -4653,66 +4843,75 @@ footer .ribbon{margin:-26px -20px 20px}
 <script>
 (function(){
   var D = window.FALUCHE_DATA || {sections:[]};
-  function esc(s){return s;}
+  function img(b){
+    var al = b.align || "center";
+    var w = b.width || 0;
+    var st = "";
+    if(w){ st = (al==="left"||al==="right") ? " style=\"width:"+w+"px\"" : " style=\"max-width:"+w+"px\""; }
+    return "<figure class=\"fig fig-"+al+" searchable\""+st+"><img loading=\"lazy\" src=\""+b.src+"\" alt=\""+(b.alt||"")+"\" onerror=\"var f=this.closest('.fig'); if(f){f.style.display='none';}\"><figcaption>"+(b.caption||"")+(b.credit?" <span class=\"cred\">"+b.credit+"</span>":"")+"</figcaption></figure>";
+  }
+  function galleryFig(it){
+    return "<figure class=\"fig searchable\"><img loading=\"lazy\" src=\""+it.src+"\" alt=\""+(it.alt||"")+"\" onerror=\"var f=this.closest('.fig'); if(f){f.style.display='none';}\"><figcaption>"+(it.caption||"")+"</figcaption></figure>";
+  }
   function block(b, inAcc){
     var sc = inAcc ? "" : " searchable";
     switch(b.t){
-      case "p":    return '<p class="'+sc.trim()+'">'+b.html+'</p>';
-      case "h3":   return '<h3 class="sub">'+b.text+'</h3>';
-      case "note": return '<div class="note'+sc+'">'+b.html+'</div>';
-      case "list": return '<ul>'+b.items.map(function(i){return '<li class="'+sc.trim()+'">'+i+'</li>';}).join('')+'</ul>';
-      case "kv":   return '<dl class="kv">'+b.items.map(function(p){return '<div class="kv-row'+sc+'"><dt>'+p[0]+'</dt><dd>'+p[1]+'</dd></div>';}).join('')+'</dl>';
-      case "table":return '<div class="tablewrap'+(b.wide?' wide':'')+'"><table><thead><tr>'+b.head.map(function(h){return '<th>'+h+'</th>';}).join('')+'</tr></thead><tbody>'+
-                   b.rows.map(function(r){return '<tr class="'+sc.trim()+'">'+r.map(function(c,k){return '<td'+(k===0?' class="c0"':'')+'>'+c+'</td>';}).join('')+'</tr>';}).join('')+'</tbody></table></div>';
-      case "accordion": return '<div class="accordion">'+b.items.map(function(it){
-                   return '<details class="acc searchable"><summary><span class="acc-t">'+it.title+'</span>'+(it.sub?'<span class="acc-s">'+it.sub+'</span>':'')+'</summary><div class="acc-body">'+it.blocks.map(function(bb){return block(bb,true);}).join('')+'</div></details>';}).join('')+'</div>';
-      default: return '';
+      case "p":    return "<p class=\""+sc.trim()+"\">"+b.html+"</p>";
+      case "h3":   return "<h3 class=\"sub\">"+b.text+"</h3>";
+      case "note": return "<div class=\"note"+sc+"\">"+b.html+"</div>";
+      case "img":  return img(b);
+      case "imgrow": return "<div class=\"imgrow\">"+b.items.map(galleryFig).join("")+"</div>";
+      case "list": return "<ul>"+b.items.map(function(i){return "<li class=\""+sc.trim()+"\">"+i+"</li>";}).join("")+"</ul>";
+      case "kv":   return "<dl class=\"kv\">"+b.items.map(function(p){return "<div class=\"kv-row"+sc+"\"><dt>"+p[0]+"</dt><dd>"+p[1]+"</dd></div>";}).join("")+"</dl>";
+      case "table":return "<div class=\"tablewrap"+(b.wide?" wide":"")+"\"><table><thead><tr>"+b.head.map(function(h){return "<th>"+h+"</th>";}).join("")+"</tr></thead><tbody>"+
+                   b.rows.map(function(r){return "<tr class=\""+sc.trim()+"\">"+r.map(function(c,k){return "<td"+(k===0?" class=\"c0\"":"")+">"+c+"</td>";}).join("")+"</tr>";}).join("")+"</tbody></table></div>";
+      case "accordion": return "<div class=\"accordion\">"+b.items.map(function(it){
+                   return "<details class=\"acc searchable\"><summary><span class=\"acc-t\">"+it.title+"</span>"+(it.sub?"<span class=\"acc-s\">"+it.sub+"</span>":"")+"</summary><div class=\"acc-body\">"+it.blocks.map(function(bb){return block(bb,true);}).join("")+"</div></details>";}).join("")+"</div>";
+      default: return "";
     }
   }
-  // header
-  document.getElementById('title').innerHTML = D.title || '';
-  document.getElementById('subtitle').textContent = D.subtitle || '';
-  document.getElementById('meta').textContent = D.updated || '';
-  document.title = (D.title||'')+' — archive';
-  // nav + sections
-  var nav = document.getElementById('nav'), main = document.getElementById('main');
-  D.sections.forEach(function(s){
-    nav.insertAdjacentHTML('beforeend','<li><a href="#'+s.id+'">'+s.title+'</a></li>');
-    var html = '<article class="section" id="'+s.id+'"><div class="eyebrow">Section</div><h2>'+s.title+'</h2>'+
-               (s.intro?'<p class="searchable">'+s.intro+'</p>':'')+ s.blocks.map(function(b){return block(b,false);}).join('') +'</article>';
-    main.insertAdjacentHTML('beforeend', html);
+  document.getElementById("title").innerHTML = D.title || "";
+  document.getElementById("subtitle").textContent = D.subtitle || "";
+  document.getElementById("meta").textContent = D.updated || "";
+  document.title = (D.title||"")+" — archive";
+  var nav = document.getElementById("nav"), main = document.getElementById("main");
+  (D.sections||[]).forEach(function(s){
+    nav.insertAdjacentHTML("beforeend","<li><a href=\"#"+s.id+"\">"+s.title+"</a></li>");
+    var html = "<article class=\"section\" id=\""+s.id+"\"><div class=\"eyebrow\">Section</div><h2>"+s.title+"</h2>"+
+               (s.intro?"<p class=\"searchable\">"+s.intro+"</p>":"")+ (s.blocks||[]).map(function(b){return block(b,false);}).join("") +"</article>";
+    main.insertAdjacentHTML("beforeend", html);
   });
-  document.getElementById('foot').innerHTML = (D.title||'')+' · archive documentaire · '+(D.updated||'')+' — contenu éditable dans le bloc de données en tête de fichier.';
+  document.getElementById("foot").innerHTML = (D.title||"")+" &middot; archive documentaire &middot; "+(D.updated||"")+" — contenu editable dans data.js.";
 
-  // search
-  var q = document.getElementById('q'), count = document.getElementById('count');
-  function norm(s){return (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');}
+  var q = document.getElementById("q"), count = document.getElementById("count");
+  function norm(s){return (s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
   function run(){
     var v = norm(q.value.trim()); var total=0;
-    document.querySelectorAll('article.section').forEach(function(sec){
+    document.querySelectorAll("article.section").forEach(function(sec){
       var hit=false;
-      sec.querySelectorAll('.searchable').forEach(function(n){
-        var m = v==='' || norm(n.textContent).indexOf(v)>-1;
-        n.classList.toggle('hidden', !m);
+      sec.querySelectorAll(".searchable").forEach(function(n){
+        var m = v==="" || norm(n.textContent).indexOf(v)>-1;
+        n.classList.toggle("hidden", !m);
         if(m){hit=true; total++;}
-        if(n.classList.contains('acc')){ n.open = (v!=='' && m); }
+        if(n.classList.contains("acc")){ n.open = (v!=="" && m); }
       });
-      sec.classList.toggle('hidden', v!=='' && !hit);
-      var link = document.querySelector('nav.toc a[href="#'+sec.id+'"]');
-      if(link) link.parentElement.classList.toggle('hidden', v!=='' && !hit);
+      sec.classList.toggle("hidden", v!=="" && !hit);
+      var link = document.querySelector("nav.toc a[href='#"+sec.id+"']");
+      if(link) link.parentElement.classList.toggle("hidden", v!=="" && !hit);
     });
-    count.textContent = v==='' ? '' : (total ? total+' résultat'+(total>1?'s':'') : 'Aucun résultat');
+    count.textContent = v==="" ? "" : (total ? total+" resultat"+(total>1?"s":"") : "Aucun resultat");
   }
-  q.addEventListener('input', run);
+  q.addEventListener("input", run);
 
-  // scrollspy
-  var links = [].slice.call(document.querySelectorAll('nav.toc a'));
-  var obs = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if(e.isIntersecting){
-      links.forEach(function(l){l.classList.toggle('active', l.getAttribute('href')==='#'+e.target.id);});
-    }});
-  },{rootMargin:'-20% 0px -70% 0px'});
-  document.querySelectorAll('article.section').forEach(function(s){obs.observe(s);});
+  var links = [].slice.call(document.querySelectorAll("nav.toc a"));
+  if("IntersectionObserver" in window){
+    var obs = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){
+        links.forEach(function(l){l.classList.toggle("active", l.getAttribute("href")==="#"+e.target.id);});
+      }});
+    },{rootMargin:"-20% 0px -70% 0px"});
+    document.querySelectorAll("article.section").forEach(function(s){obs.observe(s);});
+  }
 })();
 </script>
 </body>
