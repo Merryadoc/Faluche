@@ -115,6 +115,17 @@ footer .ribbon{margin:-30px -20px 22px}
   nav.toc a.active{border-left:0;border-bottom-color:var(--bordeaux)}
   .hero-in{padding:40px 22px 32px}
 }
+.vmodal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;background:rgba(22,10,9,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);padding:20px}
+.vmodal.open{display:flex}
+.vcard{position:relative;background:var(--paper2);color:var(--text);width:min(1000px,100%);max-height:86vh;overflow:auto;border:1px solid var(--rule);border-top:4px solid var(--bordeaux);border-radius:14px;box-shadow:0 24px 70px rgba(22,10,9,.4);padding:26px 28px 30px;-webkit-overflow-scrolling:touch}
+.vcard-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.vcard h2{font-family:var(--serif);color:var(--bordeaux);font-size:30px;margin:4px 0 16px;line-height:1.05}
+.vclose{position:absolute;top:12px;right:14px;width:34px;height:34px;border:1px solid var(--rule);background:#fff;border-radius:50%;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.vclose:hover{background:var(--bordeaux);color:#fff;border-color:var(--bordeaux)}
+.vcard .vsub{font-family:var(--serif);color:var(--bordeaux-deep);font-size:18px;margin:18px 0 6px;padding-top:14px;border-top:1px solid var(--rule)}
+.vcard .vsub:first-of-type{border-top:0;padding-top:0;margin-top:2px}
+.vcard .vsubtitle{color:var(--muted);font-style:italic;margin:0 0 10px}
+@media(max-width:640px){.vcard{padding:20px 18px 24px;max-height:90vh}.vcard h2{font-size:24px}}
 </style>
 </head>
 <body>
@@ -152,7 +163,7 @@ footer .ribbon{margin:-30px -20px 22px}
       "blocks": [
         {
           "t": "p",
-          "html": "Cette archive rassemble l'ensemble du travail documentaire mené sur la faluche : récit historique, édition diachronique, catalogue d'insignes, particularités des villes et lexique."
+          "html": "Cette archive rassemble l'ensemble du travail documentaire mené sur la faluche : récit historique, chronologie, catalogue d'insignes, particularités des villes, folklore et anecdotes."
         },
         {
           "t": "note",
@@ -170,7 +181,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le folklore faluchard naît de la coiffe, mais l'histoire de ce béret n'a rien d'un long fleuve tranquille : transmise d'abord oralement, malmenée par 2 guerres mondiales puis reniée après Mai 68, elle a bien failli disparaître, au point que pendant près d'un siècle son origine bolognaise ne fut qu'une hypothèse parmi d'autres. Ce sont les recherches de Guy Daniel, dans sa thèse de médecine soutenue à Lille en 1990, qui ont redonné une assise historique à ces origines ; l'étude de Manuel Segura (<em>De l'origine du béret ou les tribulations d'une galette pas comme les autres</em>, 2012) et les travaux de Pierre Blaignon-Perbet, dit « Scatman », les ont ensuite précisées et corrigées. Le récit qui suit s'appuie sur cette tradition de recherche, telle que l'ont synthétisée les Grands Archivistes de la Faluche."
+          "html": "Le folklore faluchard naît de la coiffe, mais l'histoire de ce béret n'a rien d'un long fleuve tranquille : transmise d'abord oralement, malmenée par 2 guerres mondiales puis reniée après Mai 68, elle a bien failli disparaître, au point que pendant près d'un siècle son origine bolognaise ne fut qu'une hypothèse parmi d'autres. Ce sont les recherches de Guy Daniel, dans sa thèse de médecine soutenue à Lille en 1990, qui ont redonné une assise historique à ces origines ; l'étude de Manuel Segura (<em>De l'origine du béret ou les tribulations d'une galette pas comme les autres</em>, 2012) et les travaux de Pierre Blaignon-Perbet, dit « Scatman », les ont ensuite précisées et corrigées. Le récit qui suit s'appuie sur cette tradition de recherche, telle que l'ont synthétisée les Archivistes de la Faluche."
         },
         {
           "t": "h3",
@@ -178,7 +189,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Au sortir de la guerre franco-prussienne de 1870, perdue par la France avec l'Alsace-Lorraine, un sursaut d'orgueil traverse la jeunesse universitaire, particulièrement à Paris. La IIIe République, par les lois de 1883-1884 sur les associations et les syndicats, autorise officiellement des groupements étudiants dont certains existaient déjà. Les Associations Générales d'Etudiants (AGE) se structurent alors ville par ville, sur le modèle des clubs britanniques : on y débat, on y philosophe et on organise bals, galas et œuvres de bienfaisance. La plus grande et la plus médiatisée est l'Association générale des étudiants de Paris, fondée vers 1884-1885 et vite surnommée « l'A ». Très tôt, ces associations généralistes se déclinent en corporations de filière et donnent naissance à des fédérations nationales, dont l'UNAGEF, future UNEF."
+          "html": "Au sortir de la guerre franco-prussienne de 1870 perdue par la France, un sursaut d'orgueil traverse la jeunesse universitaire. La IIIe République, par les lois de 1883-1884 sur les associations et les syndicats, autorise officiellement des groupements étudiants dont certains existaient déjà. La doyenne est lorraine avec le Cercle des étudiants de Nancy, né en 1877, terreau de la future AGEN, bientôt imitée par Bordeaux (1880), Lille (1881), Dijon (1882), puis Paris, Caen, Rennes et, jusqu'en Algérie française avec Alger (l'AGEA, 1885). Ces Associations Générales d'Étudiants (AGE) se structurent ville par ville sur le modèle des clubs britanniques : on y débat, on y philosophe, on y organise bals, galas et œuvres de bienfaisance. La plus grande et la plus médiatisée reste l'Association générale des étudiants de Paris, fondée vers 1884-1885 et vite surnommée « l'A ». Très tôt, ces associations généralistes se déclinent en corporations de filière et donnent naissance à des fédérations nationales, dont l'UNAGEF puis l'UNEF — dont le principe sera précisément proposé par les délégués lorrains au congrès de Marseille, en 1906."
         },
         {
           "t": "p",
@@ -190,19 +201,19 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le code affirme traditionnellement que le béret fut « ramené de Bologne en juin 1888 » par une délégation française jalouse des coiffes italiennes, belges et allemandes. La réalité est plus subtile. En juin 1888, l'Université de Bologne fête ses huit cents ans et se voit reconnue comme la plus ancienne université du monde. L'« A » de Paris y envoie une délégation — six Parisiens, auxquels « Scatman » ajoute deux Marseillais — dans le sillage de Lavisse, membre honoraire de l'association et témoin privilégié des fêtes."
-        },
-        {
-          "t": "p",
           "html": "Entre 1886 et 1889, la France s'enflamme pour le général Georges Boulanger, éphémère ministre de la Guerre que sa posture martiale et ouvertement anti-allemande a rendu très populaire. Surnommé « général Revanche », il cristallise le désir de revanche contre l'Allemagne. C'est dans cet air de revanche que la délégation parisienne croise à Bologne les étudiants de Heidelberg et de Strasbourg — alors ville allemande : l'enthousiasme des Bolonais pour le drapeau français, embrassé aux cris de « Vive la France ! », y prend une portée politique qui déborde de loin la simple fête universitaire."
         },
         {
           "t": "p",
-          "html": "Le récit qu'en laisse Lavisse est éloquent. La délégation parisienne entre en gare de Bologne le dimanche 10 juin 1888 vers cinq heures, en simple chapeau et petit veston, là où les Allemands paradent en bonnets de velours à plumets et longues rapières. Mais le drapeau tricolore frappé des armes de l'Université de Paris suffit à déclencher l'enthousiasme : les Bolonais en embrassent la hampe, crient « Vive la France ! » et dételent les chevaux pour tirer eux-mêmes la voiture française. Le lendemain, à l'entrée du roi Humbert Ier, c'est la bannière française qui ouvre le cortège, le président de l'« A », M. Chaumeton, ayant été salué par le souverain en personne."
+          "html": "Le code affirme traditionnellement que le béret fut « ramené de Bologne en juin 1888 » par une délégation française jalouse des coiffes italiennes, belges et allemandes. La réalité est plus subtile. En juin 1888, l'Université de Bologne fête ses huit cents ans et se voit reconnue comme la plus ancienne université du monde. Des délégations de toute l'Europe y défilent dans une profusion de costumes : capes et larges rubans, chapeaux ornés d'une cuillère des <em>tunas</em> espagnoles, casquettes, uniformes et longs sabres des <em>Burschenschaften</em> allemandes. L'« A » de Paris y envoie une délégation de six Parisiens -Chaumeton (chef de la délégation, président de l'« A »), Chandebois, Stœber, Bernard, Franck et Demolon- et auxquels « Scatman » ajoute deux Marseillais, dans le sillage de E.Lavisse, témoin privilégié des fêtes."
         },
         {
           "t": "p",
-          "html": "Se sentant « pauvres » dans leurs habits sombres, les Français se voient offrir par leurs hôtes l'<em>orsina</em> : un petit bonnet de soie ou de velours, décliné en couleurs selon la discipline et inspiré de représentations médiévales d'escholiers. Mais ils ne le portent que le temps du voyage, et seuls les membres de la délégation le conservent, en souvenir."
+          "html": "Le récit qu'en laisse Lavisse est éloquent. La délégation parisienne entre en gare de Bologne le dimanche 10 juin 1888 vers cinq heures, en simple chapeau et petit veston au sautoir tricolore, là où les Allemands paradent en bonnets de velours à plumets et longues rapières. Mais le drapeau tricolore frappé des armes de l'Université de Paris suffit à déclencher l'enthousiasme : les Bolonais en embrassent la hampe, crient « Vive la France ! » et dételent les chevaux pour tirer eux-mêmes la voiture française. Le lendemain, à l'entrée du roi Humbert Ier, c'est la bannière française qui ouvre le cortège, le président de l'« A », M. Chaumeton, ayant été salué par le souverain en personne."
+        },
+        {
+          "t": "p",
+          "html": "Se sentant « pauvres » dans leurs habits sombres, les Français se voient offrir par leurs hôtes l'<em>orsina</em> : un petit bonnet de soie ou de velours, décliné en couleurs selon la discipline et inspiré de représentations médiévales d'escholiers. Mais ils ne le portent que le temps du voyage, et seuls les membres de la délégation le conservent, en souvenir. De ces mêmes fêtes naissent deux folklores jumeaux : sur la suggestion de Carducci, les Italiens fondent la <em>Goliardia</em> — qui adoptera bientôt la <em>feluca</em>, héritière de l'orsina — tandis que les Français, eux, créeront la Faluche. L'idée d'une coiffe distinctive est rapportée à Paris ; la Faluche, elle, reste à inventer."
         },
         {
           "t": "h3",
@@ -219,7 +230,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "La délégation rentre par étapes depuis l'Italien passant par Marseille, Aix et Lyon. Partout elle est accueillie en ambassadrice de la jeunesse universitaire ; sur son passage germe l'idée de créer des AGE pour imiter Paris. Elle arrive dans la capitale le 25 juin 1888 et défile en grand monôme depuis la gare de Lyon. Le béret qui s'annonce n'est d'ailleurs pas tout à fait une nouveauté : plus d'une vingtaine de sources, des années 1830 à 1870, évoquent déjà un « béret rouge » porté par l'étudiant bohème du Quartier latin, signe de sa fibre républicaine. La presse de 1889 parlera moins d'une création que d'une « restauration » de l'antique béret estudiantin."
+          "html": "La délégation rentre par étapes depuis l'Italie : passant par Marseille, Aix et Lyon. Partout elle est accueillie en ambassadrice de la jeunesse universitaire et sur son passage germe l'idée de créer des AGE pour imiter Paris. Elle arrive dans la capitale le 25 juin 1888 et défile en grand monôme depuis la gare de Lyon. Le béret qui s'annonce n'est d'ailleurs pas tout à fait une nouveauté : plus d'une vingtaine de sources, des années 1830 à 1870, évoquent déjà un « béret rouge » porté par l'étudiant bohème du Quartier latin, signe de sa fibre républicaine. La presse de 1889 parlera moins d'une création que d'une « restauration » de l'antique béret estudiantin."
         },
         {
           "t": "p",
@@ -227,49 +238,40 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le succès est immédiat et incontrôlable. Moqué par une partie de la presse, le béret est aussitôt copié par d'autres corporations et, mêlé aux manifestations anti-boulangistes, se voit même cantonné au seul Quartier latin par un arrêté du préfet de police du 9 février 1889. Pour ne pas se le faire confisquer, l'« A » dépose le modèle et en réserve le port à ses adhérents. On envisage un temps de l'abandonner au profit d'une simple rosette mais l'association choisit de résister. Réunie au Paradis Latin le 17 mars, elle convoque une cinquantaine de chapeliers, et le dimanche 31 mars 1889 — jour de l'inauguration de la Tour Eiffel — arrête le modèle définitif : un béret de velours noir, un ruban de soie mi-bleu mi-rouge aux couleurs de Paris, un écusson aux armes de la ville surmonté des palmes académiques, le tout tenu par des passants."
+          "html": "Le succès est immédiat et incontrôlable. Moqué par une partie de la presse, le béret est aussitôt copié par d'autres corporations et, mêlé aux manifestations anti-boulangistes, se voit même cantonné au seul Quartier latin par un arrêté du préfet de police. Pour ne pas se le faire confisquer, l'« A » dépose le modèle et en réserve le port à ses adhérents. On envisage un temps de l'abandonner au profit d'une simple rosette mais l'association choisit de résister. Réunie au Paradis Latin le 17 mars, elle convoque une cinquantaine de chapeliers, et le dimanche 31 mars 1889 — jour de l'inauguration de la Tour Eiffel — arrête le modèle définitif : un béret de velours noir, un ruban de soie mi-bleu mi-rouge aux couleurs de Paris, un écusson aux armes de la ville surmonté des palmes académiques, le tout tenu par des passants. Au vu de leur histoire semblable, la Faluche et la Tour Eiffel sont souvent considérée comme des <em>soeurs jumelles</em>."
         },
         {
           "t": "h3",
           "text": "La diffusion en province (1889-1891)"
         },
         {
-          "t": "img",
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Au%20Quartier%20Latin%20Mi-Car%C3%AAme%201896.jpg",
-          "alt": "Au Quartier latin, Mi-Carême 1896",
-          "caption": "Au Quartier latin pendant la Mi-Carême, en 1896 : la coiffe étudiante est déjà partout dans les cortèges.",
-          "credit": "Wikimedia Commons",
-          "align": "right",
-          "width": 330
-        },
-        {
           "t": "p",
           "html": "Soutenues par les autorités universitaires, les AGE de province se constituent à leur tour et adoptent une coiffe, souvent en la distinguant de celle de Paris. Aix officialise son béret le 16 février 1889 ; Toulouse le porte à la même époque et y ajoute une rosette d'étudiant ; Lyon l'orne d'un lion brodé dès août 1889 ; Bordeaux opte pour trois croissants de lune entrelacés ; Nancy adopte un béret au blason de la ville en cannetille."
         },
-        {
-          "t": "p",
-          "html": "Pour accueillir les étudiants d'Europe lors du sixième centenaire de leur université (22-25 mai 1890), les Montpelliérains refusent le béret parisien et choisissent, dès le début de 1889, une coiffe rappelant la barrette — la toque de docteur médiévale que l'on voit sur les portraits de Rabelais. C'est la fameuse faluche à crevés, conservée jusqu'à aujourd'hui par Montpellier et, par filiation, par Nîmes. Le récit de ces fêtes, présidées par le président de la République Sadi Carnot qui remit solennellement son drapeau à l'AGE de Montpellier, confirme cette adoption précoce : une photographie instantanée prise lors de l'excursion à Aigues-Mortes, le 26 mai, montre déjà des Montpelliérains coiffés de la faluche à crevés aux côtés de camarades portant la faluche à fond plein — toutes de grande taille et, à l'époque, vierges d'insignes et de rubans."
+         {
+          "t": "img",
+          "src": "1.jpg",
+          "alt": "Excursion à Aigues-Mortes 26 mai 1890",
+          "caption": "Départs des bateaux de Palavas pour Aigues Mortes d’après photographie instantanée de M.Zalesky, étudiant en médecine. Parue dans le VIème centenaire de l’Université de Montpellier par H. Rouzaud.",
+          "credit": "Cliché service photographie, bibliothèque nationale",
+          "align": "left",
+          "width": 300
         },
         {
           "t": "p",
-          "html": "La symbolique des insignes, elle, ne vient pas de France mais de Belgique. À Gand, dès 1873, les étudiants distinguent leurs casquettes par des insignes brodés de fil doré, plus tard estampés — un usage emprunté à l'armée ; l'étoile marquant les années d'études y est attestée vers 1900. Par les liens étroits entre Lillois et Belges, ces pratiques gagnent la France et se généralisent sur les bérets dans les années 1920. Quant au mot lui-même, il vient du patois du Nord, où la « faluche » désigne une galette : comme « galette » était déjà partout le surnom familier du béret, les Lillois l'ont naturellement appliqué au leur. Le terme s'impose dans les années 1930, à la faveur des congrès de l'UNEF ; et ce n'est qu'après la Seconde Guerre mondiale que la forme se stabilise dans toutes les villes, à deux exceptions fièrement conservées : les crevés de Montpellier et les passants de Strasbourg."
+          "html": "Réunis pour l'inauguration de la nouvelle Sorbonne en août 89, les étudiants parisiens sont invités au VIe sixième centenaire de l'université de Montpellier (22-25 mai 1890). Les Montpelliérains refusent le béret parisien et choisissent, dès le début de 1889, une coiffe rappelant la barrette — toque médiévale de docteur que l'on voit sur les portraits de Rabelais. C'est la fameuse faluche à crevés, conservée jusqu'à aujourd'hui par Montpellier et, par filiation, par Nîmes. Le récit de ces fêtes, présidées par le président de la République Sadi Carnot qui remit solennellement son drapeau à l'AGE de Montpellier, confirme cette adoption précoce."
+        },
+        {
+          "t": "p",
+          "html": "La symbolique des insignes, elle, ne vient pas de France mais de Belgique. À Gand, dès 1873, les étudiants distinguent leurs casquettes par des insignes brodés de fil doré, plus tard estampés — un usage emprunté à l'armée ; l'étoile marquant les années d'études y est attestée vers 1900. Par les liens étroits entre Lillois et Belges, ces pratiques gagnent la France et se généralisent sur les bérets dans les années 1920. Quant au mot lui-même, il vient du patois du Nord, où la « faluche » désigne une galette : comme « galette » était déjà partout le surnom familier du béret, les Lillois l'ont naturellement appliqué au leur. Le terme s'impose dans les années 1930, à la faveur des congrès de l'UNEF mais ce n'est qu'après la Seconde Guerre mondiale que la forme se stabilise dans toutes les villes"
         },
         {
           "t": "h3",
           "text": "L'âge d'or international : Corda Fratres et l'UNEF"
         },
         {
-          "t": "img",
-          "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Affiche%20pour%20les%20F%C3%AAtes%20du%20Congr%C3%A8s%20de%201907%20de%20la%20Corda%20Fratres%20%C3%A0%20Bordeaux.JPEG",
-          "alt": "Affiche du congrès de la Corda Fratres à Bordeaux, 1907",
-          "caption": "Affiche des fêtes du 5e congrès de la Corda Fratres à Bordeaux (1907), la fédération internationale des étudiants.",
-          "credit": "Wikimedia Commons",
-          "align": "right",
-          "width": 280
-        },
-        {
           "t": "p",
-          "html": "Dès le 10 août 1889, une conférence tenue à Paris lance l'idée d'une fédération internationale des étudiants, qui prend corps en 1898 sous le nom de <em>Corda Fratres</em> : forte de dizaines de milliers de membres sur cinq continents, elle a le français pour langue officielle, tient son 2e congrès à Paris en 1900 — présidé en faluche — et son 5e à Bordeaux en 1907. La même année 1907, les Associations générales de Bordeaux, Dijon, Lille et Lyon fondent l'UNAGEF à Lille, ancêtre de l'UNEF ; Paris ne les rejoint qu'en 1909. Le mouvement étudiant prend alors une forme associative au sens de la loi de 1901, faute de pouvoir invoquer le droit syndical, réservé depuis 1884 aux seuls salariés."
+          "html": "Dès le 10 août 1889, une conférence tenue à Paris lance l'idée d'une fédération internationale des étudiants, qui prend corps en 1898 sous le nom de <em>Corda Fratres</em>. Forte de dizaines de milliers de membres sur cinq continents, elle a le français pour langue officielle et tient son 2e congrès à Paris en 1900 — présidé en faluche — et son 5e à Bordeaux en 1907. En 1907, les Associations générales de Bordeaux, Dijon, Lille et Lyon fondent l'UNAGEF à Lille, ancêtre de l'UNEF ; Paris ne les rejoint qu'en 1909. Le mouvement étudiant prend alors une forme associative au sens de la loi de 1901, faute de pouvoir invoquer le droit syndical réservé depuis 1884 aux seuls salariés."
         },
         {
           "t": "h3",
@@ -286,15 +288,27 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "L'Alsace étant allemande depuis 1871, l'Université de Strasbourg, devenue Kaiser-Wilhelm-Universität, est soumise aux folklores germaniques. En 1909, lors d'un congrès de pharmaciens tenu à Nancy en marge du 3e congrès de l'UNEF, des étudiants alsaciens francophiles de l'association H2S reçoivent en cadeau une faluche commandée au chapelier nancéien. Ils la rapportent en Alsace en signe de ralliement aux idées françaises, au péril de leur liberté — son port y étant interdit sous l'Empire allemand. C'est de Nancy que Strasbourg tient ses fameux passants. À la libération de 1918, ce sont ces mêmes étudiants qui, les premiers, réaffichent la faluche, symbole du retour de l'Alsace à la France."
+          "html": "L'Alsace étant allemande depuis 1871, l'Université de Strasbourg, devenue Kaiser-Wilhelm-Universität, est soumise aux folklores germaniques. En 1909, lors d'un congrès de pharmaciens tenu à Nancy en marge du 3e congrès de l'UNEF, des étudiants alsaciens francophiles de l'association H2S reçoivent en cadeau une faluche commandée au chapelier nancéien. Ils la rapportent en Alsace en signe de ralliement aux idées françaises, au péril de leur liberté. C'est donc de Nancy que Strasbourg tient ses fameux passants. À la libération de 1918, ce sont ces mêmes étudiants qui, les premiers, réaffichent la faluche, symbole du retour de l'Alsace à la France. L'année suivante, une délégation strasbourgeoise vient à Paris et les faluchards parisiens l'accueillent à la gare de l'Est par une manifestation patriotique solennelle, drapeaux en tête."
         },
         {
           "t": "h3",
-          "text": "La Première Guerre mondiale et l'entre-deux-guerres"
+          "text": "La Première Guerre mondiale"
         },
         {
           "t": "p",
-          "html": "La mobilisation générale du 2 août 1914 décime la jeunesse étudiante : on estime qu'un étudiant sur deux n'est pas revenu du front, et l'insouciance d'avant-guerre disparaît. De ce conflit, la faluche hérite toutefois ses premiers véritables insignes : les anciens combattants y reprennent les insignes de spécialité et de régiment de l'armée, auxquels on prête peu à peu des significations plus légères. La coiffe renaît dans les Années folles, portée par une génération qui n'a pas connu les tranchées ; la multiplication des disciplines impose de nouveaux emblèmes. La crise de 1929 fait toutefois reculer le folklore : jugée « ringarde » et marque d'aisance bourgeoise, la faluche ne survit plus que dans les cercles associatifs. Le sursaut vient du cinquantenaire : en avril 1938, un charivari étudiant se mue en une semaine de liesse dans le Quartier latin, largement couverte par la presse, et l'on prend l'habitude d'en fêter l'anniversaire, encore en 1939 et même en 1940."
+          "html": "La mobilisation générale du 2 août 1914 décime la jeunesse étudiante : on estime qu'un étudiant sur deux n'est pas revenu du front, et l'insouciance d'avant-guerre disparaît avec lui. De ce conflit, la faluche hérite toutefois ses premiers véritables insignes : les anciens combattants y reprennent les insignes de spécialité et de régiment de l'armée, auxquels on prêtera peu à peu des significations plus légères."
+        },
+        {
+          "t": "h3",
+          "text": "L'entre-deux-guerres : des Années folles à la veille du conflit"
+        },
+        {
+          "t": "p",
+          "html": "La coiffe renaît dans les Années folles, portée par une génération qui n'a pas connu les tranchées. Dès 1920, la Reine des étudiants de Paris, escortée de faluchards, est reçue à l'Élysée le jeudi de la Mi-Carême, et la multiplication des disciplines impose de nouveaux emblèmes. La crise de 1929 fait toutefois reculer le folklore : jugée « ringarde » et marque d'aisance bourgeoise, la faluche ne survit plus guère que dans les cercles associatifs, où elle se montre aussi solidaire. Au début des années 1930, frappés par la misère ambiante, des faluchards parisiens ouvrent une soupe populaire pour les chômeurs."
+        },
+        {
+          "t": "p",
+          "html": "Le sursaut vient du cinquantenaire. En avril 1938, un charivari étudiant se mue en une « semaine de la faluche » dans le Quartier latin, largement couverte par la presse, et l'on prend l'habitude d'en fêter l'anniversaire, encore en 1939. Cet été-là, une délégation franco-belge embarque même sur le paquebot <em>De-Grasse</em> pour un « congrès flottant » à destination du congrès Pax Romana, aux États-Unis. La guerre, déclarée le 2 septembre 1939, met fin à ces réjouissances."
         },
         {
           "t": "h3",
@@ -302,7 +316,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le 11 novembre 1940, à l'appel des lycéens d'Henri-IV, étudiants et lycéens manifestent à Paris pour déposer une gerbe en forme de croix de Lorraine sur la tombe du Soldat inconnu ; l'occupant ouvre le feu et procède à des arrestations et des déportations. Le drame se concentre surtout autour de l'Université de Strasbourg, repliée à Clermont-Ferrand dès 1939. Majoritairement hostile au IIIe Reich, elle devient l'un des berceaux de la Résistance. Après plusieurs offensives allemandes, la rafle du 25 novembre 1943 frappe l'université clermontoise : sur quelque 1 200 personnes rassemblées, environ 130 sont déportées (la plaque commémorative fait état de 139 disparus). Beaucoup d'étudiants ont payé de leur vie leur attachement à la France libre — c'est cette mémoire que perpétue aujourd'hui encore le « ruban du souvenir » des faluchards strasbourgeois."
+          "html": "Apolitique, la faluche parvient d'abord à se montrer encore publiquement sous l'Occupation mais le folklore bascule vite dans la Résistance. Le 11 novembre 1940, à l'appel des lycéens d'Henri-IV, étudiants et lycéens manifestent à Paris pour déposer une gerbe en forme de croix de Lorraine sur la tombe du Soldat inconnu : c'est la première manifestation publique contre l'occupant qui ce jour là ouvrit le feu et procèda à des arrestations et des déportations. Le port de la faluche n'est alors plus toléré que le jour de la Saint-Nicolas (6 décembre) qui deviendra en mémoire de la résistance, le jour national du port de la Faluche. L'Université de Strasbourg, repliée à Clermont-Ferrand dès 1939 et majoritairement hostile au IIIe Reich, devient l'un des berceaux de la Résistance. Après plusieurs offensives allemandes, la rafle du 25 novembre 1943 frappe l'université clermontoise : sur quelque 1 200 personnes rassemblées, 139 sont déportées dont les croix Strasbougeoises qui n'ont donc jamais été transmises, ce qui explique leur absence encore aujourd'hui, remplacées par des Très Vénérables Anciens. Beaucoup d'étudiants ont payé de leur vie leur attachement à la France libre : c'est cette mémoire que perpétue aujourd'hui encore le « ruban du souvenir » des faluchards strasbourgeois."
         },
         {
           "t": "h3",
@@ -318,7 +332,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Les années 1960 marquent un point de rupture. Dans le climat contestataire de Mai 68, la jeunesse se politise massivement, souvent à l'extrême gauche, et rejette la faluche comme un symbole « passéiste » ; des heurts opposent même faluchards corporatistes, syndicalistes et faluchards de droite. La coiffe disparaît des amphithéâtres et ne survit que dans les filières longues et fortement corporatistes telles que la médecine, la pharmacie et le droit. De cette crise naît un changement de statut décisif : la faluche cesse d'être « l'uniforme de l'étudiant » pour devenir « une tradition du monde étudiant »."
+          "html": "Les années 1960 marquent un point de rupture : dans le climat contestataire de Mai 68, la jeunesse se politise massivement, souvent à l'extrême gauche, et rejette la faluche comme un symbole « passéiste ». Des heurts opposent même faluchards corporatistes et syndicalistes aux faluchards de droite. La coiffe disparaît des amphithéâtres et ne survit que dans les filières longues et fortement corporatistes telles que la médecine, la pharmacie et le droit. De cette crise naît un changement de statut décisif : la faluche cesse d'être « l'uniforme de l'étudiant » pour devenir « une tradition du monde étudiant »."
         },
         {
           "t": "h3",
@@ -334,15 +348,15 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Pendant longtemps, la faluche n'a pas eu de code écrit : la coutume se transmettait oralement. Quelques principes suffisaient — couleur du bandeau selon la discipline, insignes selon la faculté, étoiles dorées ou argentées pour les années. Les premières transcriptions datent des années 1960, avec deux codes dominants : un code toulousain, paru dans le <em>Midi Étudiant</em> en mars 1966, rédigé en articles à la manière d'un code de droit, et un code lillois, paru dans le journal <em>MIL</em> en 1975-1976, reconstitué auprès du commerçant qui vendait les faluches aux Lillois. Des codes lyonnais et strasbourgeois ont aussi existé ; Montpellier, qui n'avait qu'un seul fabricant, n'a laissé aucun code écrit."
+          "html": "Pendant longtemps, la faluche n'a pas eu de code écrit : la coutume se transmettait oralement. Quelques principes suffisaient. Les premières transcriptions datent des années 1960, avec deux codes dominants : un code toulousain, paru dans le <em>Midi Étudiant</em> en mars 1966, rédigé en articles à la manière d'un code de droit, et un code lillois, paru dans le journal <em>MIL</em> en 1975-1976, reconstitué auprès du commerçant qui vendait les faluches aux Lillois. Des codes lyonnais et strasbourgeois ont aussi existé ; Montpellier, qui n'avait qu'un seul fabricant, n'a laissé aucun code écrit."
         },
         {
           "t": "p",
-          "html": "Le 8 mars 1976, à Lille, ces traditions sont fondues en une synthèse fondée sur le code toulousain, jugé le plus complet : elle réserve le velours aux disciplines de santé et le satin aux autres, fait passer au bleu le ruban accessoire de la première étoile, et fait adopter à la médecine le caducée (l'ancienne tête de mort sur fémurs devenant l'emblème de la première année commune). En décembre 1986, à Toulouse, le code précise pour la première fois la date de création de la faluche, introduit la notion de Grand Maître et se veut national en intégrant la faluche montpelliéraine. La rédaction du centenaire à Reims, plus lisible, s'imposera ensuite."
+          "html": "Le 8 mars 1976, à Lille, ces traditions sont fondues en une synthèse basée sur le code toulousain, jugé le plus complet : elle réserve le velours aux disciplines de santé et le satin aux autres, fait adopter à la médecine le caducée — l'ancienne tête de mort sur fémurs devenant l'emblème de la première année commune — et fait passer au bleu le ruban accessoire de la première étoile — Auparavant rouge et blanc (couleur des facs catholiques) car seules les facultés de Lille en avait besoin pour se distinguer. En décembre 1986, à Toulouse, le code précise pour la première fois la date de création de la faluche, introduit la notion de Grand Maître et se veut national en intégrant la faluche montpelliéraine. La rédaction du centenaire à Reims, plus lisible, s'imposera ensuite."
         },
         {
           "t": "p",
-          "html": "L'analyse comparée des rédactions successives, menée par Isabelle Fayemendy, montre une coiffe vivante. Le code de 1966 ne décrit guère que l'emblème de discipline, les étoiles, les palmes et la lettre du bac ; les insignes y sont encore rares. Celui du centenaire de 1988 intègre le code montpelliérain et le rôle du Grand Maître, code les lettres du bac de A à T et voit « exploser » les insignes du velours — cochon, bouteilles, chameau, pendu, lime, potager. La version de 1998 simplifie l'ensemble, introduit les initiales et la quille et ouvre largement les filières (sage-femme, STAPS, IUT, œnologie). Celle de 2009 ajoute un court historique, distingue nettement velours et circulaire, prévoit le bac international et le drapeau pour une année à l'étranger, et crée des insignes liés au respect du code — pachyderme, singe, mammouth."
+          "html": "L'analyse comparée des rédactions successives, menée par Isabelle Fayemendy, montre une coiffe vivante. Le code de 1966 ne décrit guère que l'emblème de discipline, les étoiles, les palmes et la lettre du bac ; les insignes y sont encore rares. Celui du centenaire de 1988 intègre le code montpelliérain et le rôle du Grand Maître, code les lettres du bac de A à T et voit « exploser » les insignes du velours. La version de 1998 simplifie l'ensemble, introduit les initiales et la quille et ouvre largement les filières. Celle de 2009 ajoute un court historique, distingue nettement velours et circulaire, prévoit le bac international et le drapeau pour une année à l'étranger, et crée des insignes liés au respect du code — singe, mammouth."
         },
         {
           "t": "h3",
@@ -367,11 +381,11 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Sa version complète se blasonne ainsi : <em>« De gueules à la nef antique équipée d'argent voguant sur une onde du même ; au chef d'azur semé de fleurs de lys d'or, l'écu sommé d'une couronne murale à quatre tours d'or, portant la devise </em>Fluctuat nec mergitur<em>, accosté de deux branches de sinople — chêne et laurier — liées de gueules, auxquelles sont appendues l'étoile de la Légion d'honneur, la croix de la Libération et la croix de guerre. »</em> En lecture héraldique, le chef se lit en dernier, car il fut ajouté après la création du blason."
+          "html": "Sa version complète se blasonne ainsi : <em>« De gueules à la nef d'argent voguant sur une onde du même ; au chef d'azur semé de fleurs de lys d'or, l'écu sommé d'une couronne murale à quatre tours d'or, portant la devise </em>Fluctuat nec mergitur<em>, accosté de deux branches de sinople — chêne et laurier — liées de gueules, auxquelles sont appendues l'étoile de la Légion d'honneur, la croix de la Libération et la croix de guerre. »</em> En lecture héraldique, le chef se lit en dernier, car il fut ajouté après la création du blason."
         },
         {
           "t": "p",
-          "html": "Les couleurs racontent l'histoire de la ville. Le bleu et le rouge sont ceux du chaperon qu'Étienne Marcel, prévôt des marchands, fit porter à ses partisans lorsqu'il se révolta contre le dauphin Charles (futur Charles V) en 1358, dans la lutte pour le contrôle de Paris. Le bleu renvoie aussi à la Seine et à la couleur de la Vierge et des saintes qui lui sont rattachées — dont sainte Geneviève, patronne de Paris, qui avait prédit que les Huns n'atteindraient pas la ville et qu'il ne fallait pas fuir : la nef est l'un de ses attributs. Le rouge évoque enfin le sang de saint Denis, premier évêque de Paris, décapité et remontant, selon la légende, de Montmartre vers la future basilique. La nef d'argent, elle, rappelle la puissante corporation des Nautes, les marchands de l'eau qui firent la fortune de Paris."
+          "html": "Les couleurs racontent l'histoire de la ville. Le bleu et le rouge sont ceux du chaperon qu'Étienne Marcel, prévôt des marchands, fit porter à ses partisans lorsqu'il se révolta contre le dauphin Charles (futur Charles V) en 1358, dans la lutte pour le contrôle de Paris. Le bleu renvoie aussi à la Seine et à la couleur de la Vierge et des saintes qui lui sont rattachées et notamment sainte Geneviève, patronne de Paris, qui avait prédit que les Huns n'atteindraient pas la ville et qu'il ne fallait pas fuir — la nef est également l'un de ses attributs. Le rouge évoque enfin le sang de saint Denis, premier évêque de Paris, décapité et remontant, selon la légende, de Montmartre vers la future basilique. La nef d'argent, elle, rappelle la puissante corporation des Nautes, les marchands de l'eau qui firent la fortune de Paris."
         },
         {
           "t": "p",
@@ -379,21 +393,21 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le blason a connu de nombreuses métamorphoses avant d'être stabilisé. Fixé une première fois en 1412, il est remplacé en 1792 par les couleurs de Lafayette et Bailly ; en 1811, les fleurs de lys cèdent la place à des abeilles impériales et une déesse Isis est placée à la proue de la nef ; en 1817, la Restauration rétablit les fleurs de lys et transforme la modeste nef en navire de haut bord ; en 1848, le chef fleurdelisé devient un semé d'étoiles et la nef prend l'allure d'un bateau-lavoir, alors répandu sur la Seine ; en 1853, sous le Second Empire, Napoléon III rétablit le chef fleurdelisé de France. Après la guerre de 1870, Edgar Quinet aurait même suggéré d'ajouter un pigeon, en hommage aux services rendus par les pigeons voyageurs durant le siège de Paris. En 1924, les fleurs de lys sont transformées en piques de grilles, la nef paraît sombrer et la figuration des ondes est interrompue vers la pointe — c'est de cette maladresse que vient l'eau peinte en bleu, et non en argent comme le veut l'héraldique. Enfin, l'arrêté préfectoral du 20 juin 1942 entérine les travaux de la commission d'héraldique urbaine de la Seine, qui reprend en le modernisant le sceau de 1412 ; le décret du 20 août 1949 fixe le blason dans la forme qu'on lui connaît."
+          "html": "Le blason a connu de nombreuses métamorphoses avant d'être stabilisé. Fixé une première fois en 1412, il est remplacé en 1792 par les couleurs de Lafayette et Bailly ; en 1811, les fleurs de lys cèdent la place aux abeilles impériales et une déesse Isis est placée à la proue de la nef ; en 1817, la Restauration rétablit les fleurs de lys et transforme la modeste nef en navire de haut bord ; en 1848, le chef fleurdelisé devient un semé d'étoiles et la nef prend l'allure d'un bateau-lavoir, alors répandu sur la Seine ; en 1853, sous le Second Empire, Napoléon III rétablit le chef fleurdelisé de France. Après la guerre de 1870, Edgar Quinet aurait même suggéré d'ajouter un pigeon, en hommage aux services rendus par les pigeons voyageurs durant le siège de Paris — l'idée restera encore longtemps avec leurs services rendus lors des deux guerres mondiales. En 1924, les fleurs de lys sont transformées en piques de grilles, la nef paraît sombrer et la figuration des ondes est interrompue vers la pointe — c'est de cette maladresse que vient l'eau peinte en bleu, et non en argent comme le veut l'héraldique. Enfin, l'arrêté préfectoral du 20 juin 1942 entérine les travaux de la commission d'héraldique urbaine de la Seine, qui reprend en le modernisant le sceau de 1412 ; le décret du 20 août 1949 fixe le blason dans la forme qu'on lui connaît."
         },
         {
           "t": "p",
-          "html": "La devise <em>Fluctuat nec mergitur</em> — « il est battu par les flots mais ne sombre pas » — rappelle les inondations répétées auxquelles la capitale a survécu. Elle est plus récente qu'on ne le croit : jusqu'au XVe siècle, le sceau de Paris portait simplement la légende <em>Sigillum mercatorum aquæ Parisius</em> (« sceau des marchands de l'eau de Paris »), et la formule, qui apparaît sur quelques jetons municipaux dès la fin du XVIe siècle, n'était alors qu'une devise parmi d'autres. C'est le baron Haussmann, préfet de la Seine, qui en fait la devise officielle de la ville le 24 novembre 1853."
+          "html": "La devise <em>Fluctuat nec mergitur</em> — « Battue par les flots mais ne sombre pas » — rappelle les inondations, les guerres et les sièges répétés auxquelles la capitale a survécu. Elle est plus récente qu'on ne le croit : jusqu'au XVe siècle, le sceau de Paris portait simplement la légende <em>Sigillum mercatorum aquæ Parisius</em> (« sceau des marchands de l'eau de Paris »), et la formule, qui apparaît sur quelques jetons municipaux dès la fin du XVIe siècle, n'était alors qu'une devise parmi d'autres. C'est le baron Haussmann, préfet de la Seine, qui en fait la devise officielle de la ville le 24 novembre 1853."
         },
         {
           "t": "p",
-          "html": "Sous l'écu enfin, trois décorations décernées à la Ville de Paris. Au centre, la croix de la Légion d'honneur, remise par le président Émile Loubet à l'occasion de l'Exposition universelle et validée par les décrets des 9 octobre 1900 et 27 mars 1901. La croix de guerre 1914-1918, décernée sous la présidence de Raymond Poincaré par Georges Clemenceau, par citation à l'ordre de l'armée du 28 juillet 1919 puis décret du 14 février 1924. Et la croix de la Libération, décernée par le général de Gaulle (décret du 24 mars 1945) puis incorporée aux armoiries par le président Vincent Auriol, dont le décret du 20 août 1949 arrête l'ensemble. Le blason est accosté de deux rameaux : le chêne, symbole de la stabilité et de la résistance de Paris face aux assauts, et le laurier, de ses victoires et de son rayonnement. À côté de la lecture héraldique, stricte, circulent des lectures plus libres mais bien vivantes — le rouge du feu de la Commune ou du sang versé en 1870 et en 1945, ou la « cinquième tour perdue » au titre du déshonneur de l'Occupation : autant d'anecdotes qui ont leur place, à condition de ne pas les confondre avec le blasonnement officiel."
+          "html": "Sous l'écu enfin, trois décorations décernées à la Ville de Paris. Au centre, la croix de la Légion d'honneur, remise par le président Émile Loubet à l'occasion de l'Exposition universelle et validée par les décrets des 9 octobre 1900 et 27 mars 1901. La croix de guerre 1914-1918, décernée sous la présidence de Raymond Poincaré par Georges Cémenceau, par citation à l'ordre de l'armée du 28 juillet 1919 puis décret du 14 février 1924. Et la croix de la Libération, décernée par le général de Gaulle (décret du 24 mars 1945) puis incorporée aux armoiries par le président Vincent Auriol, dont le décret du 20 août 1949 arrête l'ensemble du blason. Le blason est accosté de deux rameaux : le chêne, symbole de la stabilité et de la résistance de Paris face aux assauts, et le laurier, de ses victoires et de son rayonnement, le tout rappelant le symbole des sciences que Paris à fait rayonner tout au long de son histoire. À côté de la lecture héraldique, stricte, circulent des lectures plus libres mais bien vivantes — le rouge du feu de la Commune ou du sang versé en 1870 et en 1945, ou la « cinquième tour perdue » au titre de la fuite à Varenne ou du déshonneur de l'Occupation."
         }
       ]
     },
     {
       "id": "diachronie",
-      "title": "Chronologie & code",
+      "title": "Code",
       "blocks": [
         {
           "t": "h3",
@@ -401,21 +415,21 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le code national est refondu chaque année lors de la réunion des croix ; la rédaction en vigueur est celle du <strong>137<sup>e</sup> anniversaire</strong>. En voici les dix-sept articles, présentés les uns à la suite des autres (résumés fidèles ; les grandes tables — disciplines, types de faluche, insignes — sont détaillées dans la section <em>Insignes</em>)."
+          "html": "Le code national est refondu chaque année lors de la réunion des croix ; la rédaction en vigueur est celle du <strong>137<sup>e</sup> anniversaire</strong>. En voici les dix-sept articles."
         },
         {
           "t": "kv",
           "items": [
             [
               "Article I — Définition & origine",
-              "La Faluche est une tradition des étudiants de France et se veut leur folklore le plus représentatif ; l'appartenance est symbolisée par le port du béret, « créé par et pour eux ». L'idée naît au retour du voyage d'une délégation d'étudiants français aux fêtes du VIII<sup>e</sup> centenaire de l'Université de Bologne (juin 1888). Le béret est créé à l'initiative de l'Association générale des étudiants de Paris et officialisé par elle le 20 décembre 1888, au théâtre Beaumarchais."
+              "La Faluche est une tradition des étudiants de France et se veut leur folklore le plus représentatif ; l'appartenance est symbolisée par le port du béret, « créé par et pour eux ». L'idée naît au retour du voyage d'une délégation d'étudiants français aux fêtes du VIII<sup>e</sup> centenaire de l'Université de Bologne en juin 1888. Le béret est créé à l'initiative de l'Association générale des étudiants de Paris et officialisé par elle le 20 décembre 1888, au théâtre Beaumarchais."
             ],
             [
-              "Article II — Port et neutralité",
-              "La faluche se porte aujourd'hui dans certaines facultés et écoles, de façon habituelle ou exceptionnelle, lors de manifestations estudiantines. <strong>On ne l'enlève pas, même devant un professeur — sauf s'il a rang de recteur.</strong> Elle ne se réclame d'aucune appartenance politique, religieuse ou syndicale."
+              "Article II — Neutralité",
+              "La faluche se porte aujourd'hui dans certaines facultés et écoles, de façon habituelle ou exceptionnelle, lors de manifestations estudiantines. <strong>On ne l'enlève pas, même devant un professeur sauf s'il a rang de recteur ou un titre international.</strong> Elle ne se réclame d'aucune appartenance politique, religieuse ou syndicale."
             ],
             [
-              "Article III — « Pas une succursale de Monoprix »",
+              "Article III — Respect de sa faluche",
               "« Escholier, il est interdit de faire de la faluche une succursale de Monoprix. » Elle doit être le parchemin qui s'enorgueillit toujours de nouvelles richesses de l'histoire de l'étudiant ; à ce titre, un Grand Maître peut faire retirer un insigne qu'il juge non représentatif."
             ],
             [
@@ -423,55 +437,55 @@ footer .ribbon{margin:-30px -20px 22px}
               "L'étudiant se conforme à des dispositions « assez larges pour permettre toute fantaisie, assez strictes pour réaliser l'uniformité ». (Formule inchangée depuis le code toulousain de 1966.)"
             ],
             [
-              "Article V — Les deux parties",
+              "Article V — Parties",
               "La faluche comporte deux parties : le <strong>ruban circulaire</strong>, qui porte le cursus estudiantin, et le <strong>velours noir</strong>, qui porte rubans et insignes."
             ],
             [
               "Article VI — Le circulaire",
-              "Le circulaire est à la couleur de la discipline principale ; pour une double inscription, un ruban plus mince aux couleurs de la discipline annexe se place au bord supérieur. Les couleurs nationales s'inspirent des toges doctorales et professorales (voir la table des disciplines, section <em>Insignes</em>)."
+              "Le circulaire est à la couleur de la discipline principale ; pour une double inscription, un ruban plus mince aux couleurs de la discipline annexe se place au bord supérieur. Les couleurs nationales s'inspirent des toges doctorales et professorales."
             ],
             [
-              "Article VII — Le cursus sur le circulaire",
-              "Y figurent le baccalauréat (Ɣ pour le bac général, lettres ou initiales sinon), l'emblème de la discipline, puis tout le parcours : une étoile dorée par année réussie, argentée pour un redoublement (5/2, 7/2), zéro pour une année blanche, moivre sous la première étoile (bleu public / blanc privé), palmes de diplôme, tête de vache (échec rattrapé), tête de mort (abandon), drapeau (année à l'étranger), quille (service), abeille (cursus exemplaire), et un moivre noir en cas de perte ou de vol de la faluche."
+              "Article VII — Le cursus",
+              "Y figurent le baccalauréat, l'emblème de la discipline, puis tout le parcours et un moivre noir en cas de perte ou de vol de la faluche."
             ],
             [
               "Article VIII — Le velours",
-              "Le velours peut porter les insignes (associations, événements estudiantins en matériaux nobles, villes de séjour, établissements, clubs), la devise (en toute langue, du frontal à l'occipital), les armes personnelles (goûts, amours, travers), les insignes décernables et les insignes sexuels (voir section <em>Insignes</em>)."
+              "Le velours peut porter les rubans (associations, événements estudiantins en matériaux nobles, villes de séjour, établissements, clubs), la devise (en toute langue, du frontal à l'occipital), les armes personnelles (goûts, amours, travers) et les insignes."
             ],
             [
-              "Article IX — La garde",
+              "Article IX — La Faux",
               "Lors d'une garde assurée par un étudiant en santé, tout « passage de vie à trépas » d'un patient est marqué d'une <strong>unique faux</strong> placée sur le velours noir."
             ],
             [
               "Article X — Les rubans supérieurs",
-              "De gauche à droite, du frontal à l'occipital : ruban de ville de faculté (surmonté de l'écusson), ruban d'association, rubans de représentation des élus (sur pendentif jaune), puis rubans de province et de ville de naissance. (Détail dans la section <em>Insignes</em>.)"
+              "De gauche à droite, du frontal à l'occipital : ruban de ville de faculté (surmonté de l'écusson), ruban d'association, rubans de représentation des élus (sur pendentif jaune), puis rubans de province et de ville de naissance."
             ],
             [
               "Article XI — Les six types de faluche",
-              "Le code reconnaît six confections : alsacienne (six passants), lilloise dite « nationale » (circulaire rigide), marseillaise (velours large), montpelliéraine (quatre crevés, 1889), perpignanaise (cinq passants) et tourangelle (circulaire souple). (Détail dans la section <em>Insignes</em>.)"
+              "Le code reconnaît six confections : alsacienne (six passants), lilloise dite « nationale » (circulaire rigide), marseillaise (velours large), montpelliéraine (quatre crevés, 1889), perpignanaise (cinq passants) et tourangelle (circulaire souple)."
             ],
             [
               "Article XII — Le potager",
-              "Tout acte « accompli en bonne et due forme » se code par un légume placé à l'intérieur de la faluche : carotte (rapport), poireau (fellation), sodomie (ex-« navet »), betterave (cunnilingus) ; deux légumes croisés en X pour un dépucelage. Le tout sous le contrôle des anciens, qui veillent notamment à ce que l'étudiant « soit sorti couvert »."
+              "Tout acte « accompli en bonne et due forme » se code par un légume placé à l'intérieur de la faluche ; deux légumes croisés en X pour un dépucelage. Le tout sous le contrôle des anciens, qui veillent notamment à ce que l'étudiant « soit sorti couvert » et que le rapport se soit passé dans le respect de chacun."
             ],
             [
-              "Article XIII — Grand Maître & Grand Chambellan",
-              "Chaque faculté, école ou ville élit un Grand Maître, garant des traditions, qui veille aux baptêmes et fait élire son successeur. Sa distinction est une croix au mérite émaillée de blanc, sur ruban à la couleur et à la matière de la discipline ou de la ville ; lui seul décerne le Bacchus, l'abeille, le coq, etc. Des Grands Chambellans (croix non émaillée) l'assistent."
+              "Article XIII — Les Croix",
+              "Chaque faculté, école ou ville élit un Grand Maître, garant des traditions, qui veille aux baptêmes et fait élire son successeur. Sa distinction est une croix au mérite émaillée de blanc, sur ruban à la couleur et à la matière de la discipline ou de la ville ; lui seul décerne et des Grands Chambellans (croix non émaillée) l'assistent."
             ],
             [
               "Article XIV — Le baptême",
-              "Toute faluche doit être baptisée par un Grand Maître (ou un de ses représentants légitimes) de la filière ou de la ville, sous l'œil attentif des anciens."
+              "Toute faluche doit être baptisée par un Grand Maître ou un de ses représentants légitimes de la filière ou de la ville, sous l'œil attentif des anciens."
             ],
             [
               "Article XV — Le port en cérémonie",
-              "La faluche se porte dans toutes les cérémonies : repas, soirées, sorties estudiantines, etc."
+              "La faluche se porte dans toutes les cérémonies"
             ],
             [
-              "Article XVI — Potager & faluche d'autrui",
+              "Article XVI — Faluche d'autrui",
               "Quiconque demande à voir le potager (l'intérieur d'une faluche) devra « en passer par les armes », au lieu, jour et heure choisis par les protagonistes. De même, toute personne portant une faluche qui n'est pas la sienne devra subir une épreuve choisie par le propriétaire."
             ],
             [
-              "Article XVII — Probité & sanctions",
+              "Article XVII — Sanctions",
               "La faluche est le parchemin de son récipiendaire, « humble ambassadeur » de la communauté. Tout comportement jetant l'opprobre sur celle-ci est sanctionné ; <strong>l'ivresse n'est pas une circonstance atténuante</strong> ; et tout étudiant surpris à baptiser sans porter lui-même de faluche est considéré comme impétrant — et encourt les « pires sévices »."
             ]
           ]
@@ -626,7 +640,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "La réunion des croix se tient chaque année lors de l'anniversaire de la faluche pour faire évoluer le code, condensé des pratiques locales. Une décision adoptée ne se défait que par un nouveau vote, une décision rejetée ne se représente pas (sauf évolution majeure de la société) ; sauf à Montpellier et Strasbourg, qui conservent un code traditionnel, ces décisions font loi. Quelques jalons datés (le numéro renvoie à l'anniversaire) :"
+          "html": "La réunion des croix se tient chaque année lors de l'anniversaire de la faluche pour faire évoluer le code, condensé des pratiques locales. Une décision adoptée ne se défait que par un nouveau vote, une décision rejetée ne se représente pas, sauf évolution majeure de la société. Pour toutes les faluches qui se basent dessus, ces décisions font loi :"
         },
         {
           "t": "table",
@@ -699,13 +713,13 @@ footer .ribbon{margin:-30px -20px 22px}
     {
       "id": "insignes",
       "title": "Insignes",
-      "intro": "La faluche se lit comme un blason vivant : chaque insigne a une place (le circulaire pour le cursus, le velours pour la vie étudiante, la doublure pour le potager) et un sens, qui peut varier d'une ville à l'autre.",
+      "intro": "La faluche se lit comme un blason vivant : chaque insigne a une place et un sens, qui peut varier d'une ville à l'autre.",
       "blocks": [
         {
           "t": "img",
           "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Faluche%20d'%C3%A9tudiant%20en%20m%C3%A9decine%20des%20ann%C3%A9es%201950%2C%20ayant%20appartenu%20au%20docteur%20Paul%20Miniac%20(1927-1995)..JPG",
-          "alt": "Faluche d'étudiant en médecine des années 1950, couverte d'insignes",
-          "caption": "Faluche d'un étudiant en médecine des années 1950 (ayant appartenu au docteur Paul Miniac) : circulaire de discipline, étoiles, rubans et insignes du velours.",
+          "alt": "Faluche d'étudiant en médecine des années 1950",
+          "caption": "Faluche d'un étudiant en médecine des années 1950 (ayant appartenu au docteur Paul Miniac)",
           "credit": "Wikimedia Commons",
           "align": "center",
           "width": 430
@@ -716,7 +730,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "Le circulaire — le ruban qui fait le tour du bandeau — est en velours pour les filières de santé et en satin pour les autres, dans des couleurs inspirées des toges doctorales. Chaque discipline y appose son emblème. Voici les principaux selon le code national 135 (2023) :"
+          "html": "Le circulaire est en velours pour les filières de santé et en satin pour les autres, dans des couleurs inspirées des toges doctorales. Chaque discipline y appose son emblème. Voici les principaux selon le code national 135 (2023) :"
         },
         {
           "t": "table",
@@ -729,7 +743,7 @@ footer .ribbon{margin:-30px -20px 22px}
             [
               "Médecine",
               "Velours rouge",
-              "Bâton d'Asclépios (dit « caducée »)"
+              "Bâton d'Asclépios (dit « caducée de médecine »)"
             ],
             [
               "Chirurgie dentaire",
@@ -739,7 +753,7 @@ footer .ribbon{margin:-30px -20px 22px}
             [
               "Pharmacie",
               "Velours vert",
-              "Coupe d'Hygie (« caducée » de pharmacie)"
+              "Coupe d'Hygie (dit « caducée de pharmacie »)"
             ],
             [
               "Préparateur en pharmacie",
@@ -886,6 +900,55 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "h3",
+          "text": "Origines & légendes des couleurs et emblèmes"
+        },
+        {
+          "t": "p",
+          "html": "Les couleurs de circulaire s'inspirent des toges doctorales, mais chaque filière a brodé autour de la sienne sa propre légende. La plupart relèvent du mythe."
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Rouge (médecine) & vert (pharmacie)",
+              "Ces couleurs auraient été imposées par Napoléon afin de distinguer d'un coup d'œil les deux corps de métier sur le champ de bataille (décret du 7 fructidor an VIII). Une rumeur veut que la pharmacie ait d'abord porté le violet des « sciences pharmaceutiques »."
+            ],
+            [
+              "Ancien emblème des pharmaciens",
+              "Avant la coupe d'Hygie, la pharmacie arborait un chameau-rocher-palmier, figurant les trois règnes : animal, minéral et végétal."
+            ],
+            [
+              "Jaune (lettres)",
+              "La légende veut que Napoléon, trompé par un littéraire, ait attribué aux lettres le jaune, couleur traditionnellement prêtée aux cocus."
+            ],
+            [
+              "Violet (sciences)",
+              "Deux explications circulent : la couleur du permanganate de potassium, qui « retouche » toutes les taches, ou le violet papal, symbole de noblesse et de richesse, les études scientifiques ayant longtemps été réservées aux familles aisées."
+            ],
+            [
+              "Bleu & noir (ingénieurs)",
+              "Circulaire commun aux faluchards et aux traditions belges. Les premiers « ingénieurs » auraient été les mineurs chargés de l'aération des galeries : le bleu pour le ciel (en haut), le noir pour la mine (en bas). L'insigne étoile et foudre vient des télécommunications de l'armée."
+            ],
+            [
+              "Blanc (IUT, BUT, BTS)",
+              "Ces filières réunissant toutes les disciplines, leur couleur est donc le blanc."
+            ],
+            [
+              "Parapluie (Sciences po)",
+              "Héritier des duels au sabre que pratiquaient jadis les étudiants : ceux-ci interdits, le parapluie en a pris la place."
+            ],
+            [
+              "Grenouille (sociologie)",
+              "Allusion à l'apologue de la grenouille : jetée dans l'eau bouillante elle s'enfuit, mais plongée dans l'eau qui chauffe lentement elle se laisse ébouillanter."
+            ],
+            [
+              "Satin saumon (œnologie)",
+              "Couleur obtenue en mélangeant les 3 types de vins. C'est également un plat qui s'accorde bien avec tout type de vin"
+            ]
+          ]
+        },
+        {
+          "t": "h3",
           "text": "Les six types de faluche"
         },
         {
@@ -905,21 +968,29 @@ footer .ribbon{margin:-30px -20px 22px}
             ],
             [
               "Montpelliéraine",
-              "Velours plus large et quatre crevés de satin à la couleur de la discipline, reliés par un bouton au centre. Décidés par l'AGEM en 1889, réservés à Montpellier (plus ancienne université de France, en hommage à Rabelais). Crevés : médecine 4 bordeaux, pharmacie 4 verts, dentaire 2 bordeaux + 2 violets, paramédical 4 roses. La légende dit la toque de Rabelais déchirée en quatre dans une rixe — ou son sang l'ayant marquée —, et certains y voient la croix occitane."
+              "Velours plus large et quatre crevés de satin à la couleur de la discipline, reliés par un bouton au centre. Décidés par l'AGEM en 1889, réservés à Montpellier en hommage à Rabelais. La légende raconte que la toque de Rabelais aurait été déchirée en quatre dans une rixe — ou que son sang l'aurait marqué ainsi. Certains y voient la croix occitane. L'explication historique est tout autre : le crevé — fente d'étoffe parfois doublée d'un tissu contrastant — naît d'un épisode guerrier, lorsque des lansquenets suisses, vainqueurs de Charles le Téméraire près de Nancy en 1477, garnirent les déchirures de leurs pourpoints du riche brocart pris aux vaincus. Devenue une folie vestimentaire au XVI<sup>e</sup> siècle, cette mode gardait valeur d'attribut guerrier et de blessure emblématique (Bailleux & Remaury, <em>Modes et vêtements</em>, Gallimard)."
             ],
             [
               "Alsacienne (strasbourgeoise)",
-              "Circulaire maintenu par six passants, interprétés comme les vestiges des premières faluches, les six côtés d'un bock, les six cépages ou les six régions d'Alsace, ou encore les barreaux d'une prison sous l'occupation allemande."
+              "Circulaire maintenu par six passants, interprétés comme les vestiges des premières faluches. Six pour les six côtés d'un bock, les six cépages ou régions d'Alsace, ou encore les barreaux d'une prison sous l'occupation allemande."
             ],
             [
               "Perpignanaise",
-              "Circulaire maintenu par cinq passants (héritage strasbourgeois)."
+              "Circulaire maintenu par cinq passants (héritage strasbourgeois), potentiellement en référence à la strucuture Vauban des murailles de la ville."
             ],
             [
               "Marseillaise",
-              "Réputée pour son velours beaucoup plus large que la faluche nationale."
+              "Velours beaucoup plus large que la faluche nationale."
             ]
           ]
+        },
+        {
+          "t": "h3",
+          "text": "Le pompon"
+        },
+        {
+          "t": "p",
+          "html": "Certaines villes ajoutent à la faluche un pompon, généralement rouge. Il signale une ville où la Marine nationale — « La Royale » — avait un port d'attache. On le rencontre notamment à Brest, Toulon, Rochefort, Nantes et au Havre, par reprise d'une tradition abandonnée par Rouen. Nantes le porterait « normalement » en noir, en mémoire de la traite négrière ; Bordeaux, longtemps port de la marine anglaise, n'en arbore aucun. Deux exceptions sortent de la logique maritime : Clermont-Ferrand, où le pompon rose distingue le grand voyageur venu de la campagne lointaine, et Strasbourg, où un pompon pendant possède une signification propre au folklore local."
         },
         {
           "t": "h3",
@@ -940,15 +1011,15 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "<strong>Le bâton d'Asclépios (médecine).</strong> L'emblème des carabins n'est pas, à proprement parler, un « caducée » : c'est un long bâton d'olivier autour duquel s'enroule un <em>unique</em> serpent. Asclépios (Esculape chez les Romains), fils d'Apollon et de la mortelle Coronis, fut élevé par le centaure Chiron, qui lui enseigna la médecine, les drogues et la chirurgie ; devenu si habile qu'il ressuscitait les morts, il fut foudroyé par Zeus pour cette hérésie avant d'être élevé au rang de dieu. Le serpent figuré est la couleuvre d'Esculape (<em>Zamenis longissimus</em>), élevée dans les temples de guérison comme Épidaure — grande, inoffensive, parfois albinos, et redoutable dératiseur à l'époque des grandes épidémies. En France, le bâton d'Asclépios représente le corps médical depuis le sceau de l'Université de Montpellier (1605) ; on le surmonte souvent du miroir de la prudence (en écho au <em>primum non nocere</em>) et de palmes d'olivier (Asclépios) et de laurier (Apollon)."
+          "html": "<strong>Le caducée de Médecine :</strong> L'emblème des carabins n'est pas, à proprement parler, un « caducée » : c'est un long bâton d'olivier autour duquel s'enroule un <em>unique</em> serpent. Asclépios (Esculape chez les Romains), fils d'Apollon et de la mortelle Coronis, fut élevé par le centaure Chiron, qui lui enseigna la médecine, les drogues et la chirurgie ; devenu si habile qu'il ressuscitait les morts, il fut foudroyé par Zeus pour cette hérésie avant d'être élevé au rang de dieu. Le serpent figuré est la couleuvre d'Esculape (<em>Zamenis longissimus</em>), élevée dans les temples de guérison comme Épidaure — grande, inoffensive, parfois albinos et redoutable dératiseur à l'époque des grandes épidémies. En France, le bâton d'Asclépios représente le corps médical depuis le sceau de l'Université de Montpellier (1605) ; on le surmonte souvent du miroir de la prudence (en écho au <em>primum non nocere</em>) et de palmes d'olivier pour Asclépios, et de laurier pour Apollon."
         },
         {
           "t": "p",
-          "html": "<strong>Le caducée d'Hermès (commerce, économie, kinésithérapie).</strong> C'est le seul véritable caducée : un bâton d'or où s'enroulent <em>deux</em> serpents affrontés, surmonté d'un vol (deux ailes). Il appartient à Hermès (Mercure), messager des dieux, dieu de l'éloquence, des voyageurs et des marchands… mais aussi des voleurs — si bien que le commerçant et le brigand priaient le même dieu. Marque des ambassadeurs, il orne la tribune de l'Assemblée nationale. Choisi pour le commerce et l'économie, il s'est étendu à la kinésithérapie par méconnaissance des symboles ; aux États-Unis, c'est lui qui représente — à tort — la médecine."
+          "html": "<strong>Le caducée de Pharmacie.</strong> C'est une coupe dite d'Hygie autour de laquelle s'enroule un serpent dont la tête s'incurve vers le calice, comme pour s'y abreuver. Hygie, fille d'Asclépios et sœur de Panacée, est la déesse de la santé et de la propreté. Là où son père incarne la médecine magique, elle personnifie la connaissance des remèdes et la salubrité. Le serpent représente l'idée du <em>pharmakôn</em> : ambivalance du poison et de l'antidote.  C'est l'attribut officiel des pharmaciens français depuis 1942."
         },
         {
           "t": "p",
-          "html": "<strong>La coupe d'Hygie (pharmacie).</strong> Une coupe autour de laquelle s'enroule un serpent dont la tête s'incurve vers le calice, comme pour s'y abreuver. Hygie, fille d'Asclépios et sœur de Panacée, est la déesse de la santé et de la propreté — son nom a donné le mot « hygiène ». Là où son père incarne la médecine magique, elle personnifie la connaissance des remèdes et la salubrité. C'est l'attribut officiel des pharmaciens français depuis 1942, en usage depuis 1820."
+          "html": "<strong>Le caducée d'Hermès.</strong> C'est le seul véritable caducée : un bâton d'or où s'enroulent <em>deux</em> serpents affrontés, surmonté de deux ailes. Il appartient à Hermès (Mercure), messager des dieux, dieu de l'éloquence, des voyageurs et des marchands… mais aussi des voleurs. Marque des ambassadeurs, il orne la tribune de l'Assemblée nationale. Choisi pour le commerce et l'économie, il s'est étendu à la kinésithérapie par méconnaissance des symboles ; aux États-Unis, c'est lui qui représente la médecine."
         },
         {
           "t": "imgrow",
@@ -991,27 +1062,27 @@ footer .ribbon{margin:-30px -20px 22px}
             ],
             [
               "Étoile",
-              "une par année d'études : dorée pour une année réussie, argentée pour une année redoublée (5/2, 7/2…)."
+              "Une par année d'études : dorée pour une année réussie, argentée pour une année redoublée."
             ],
             [
               "Moivre",
-              "petit ruban sur lequel se pose la première étoile : bleu pour une faculté d'État, blanc pour un établissement privé ou confessionnel."
+              "Petit ruban sur lequel se pose la première étoile : Bleu pour une faculté d'État, blanc pour un établissement privé ou confessionnel. A l'origine Blanc et Rouge (couleur des facultés catholiques) pour différencier les 2 universités Lillois, le bleu à remplacé le rouge lorsque le circulaire est devenu de cette couleur pour la médecine."
             ],
             [
               "Zéro",
-              "année blanche, sabbatique ou de césure (à ne pas confondre avec un redoublement)."
+              "Année blanche, sabbatique ou de césure (à ne pas confondre avec un redoublement)."
             ],
             [
               "Palmes",
-              "simple palme en fin de cycle sans diplôme ; double palme croisée de lauriers pour chaque diplôme obtenu ; large palme pour le major de promotion."
+              "Simple palme en fin de cycle sans diplôme ; Double palme croisée de lauriers pour chaque diplôme obtenu ; Large palme pour le major de promotion."
             ],
             [
               "Tête de vache",
-              "échec en première session d'examens, rattrapé en septembre."
+              "Echec en première session d'examens, rattrapé en seconde session."
             ],
             [
               "Tête de mort (sur le ruban)",
-              "abandon ou réorientation d'une discipline."
+              "Abandon d'une discipline."
             ],
             [
               "Lettres « e » et « a »",
@@ -1019,15 +1090,15 @@ footer .ribbon{margin:-30px -20px 22px}
             ],
             [
               "Drapeau",
-              "placé sous l'étoile lorsqu'une partie de l'année s'est déroulée à l'étranger."
+              "Placé sous l'étoile lorsqu'une partie de l'année s'est déroulée à l'étranger."
             ],
             [
               "Quille",
-              "pend du ruban à l'endroit du cursus où le service militaire ou civique a été effectué."
+              "Pend du ruban à l'endroit du cursus où le service militaire ou civique a été effectué."
             ],
             [
               "Abeille",
-              "récompense un cursus exemplaire."
+              "Récompense un cursus exemplaire."
             ]
           ]
         },
@@ -1048,59 +1119,83 @@ footer .ribbon{margin:-30px -20px 22px}
           "rows": [
             [
               "Chameau",
-              "à l'endroit : célibataire ; à l'envers : cœur pris (« l'antichambre du mariage »)."
+              "A l'endroit : Traversée du désert en solitaire (célibataire) ; à l'envers : « cœur pris dans l'antichambre du mariage » (en couple)."
             ],
             [
               "Cochon",
-              "à l'endroit : n'a pas été intégré ; à l'envers : a été intégré."
+              "A l'endroit : A intégré ; à l'envers : a été intégré."
             ],
             [
               "Pendu",
-              "marié ou pacsé ; Feuille de vigne : perte de la virginité."
+              "Marié ou pacsé."
+            ],
+            [
+              "Feuille de vigne",
+                "Perte de la virginité en tant que faluchard."
             ],
             [
               "Nounours",
-              "gros dormeur ; Chouette : oiseau de nuit."
+              "Gros dormeur."
             ],
             [
-              "Chope de bière / Fourchette / Grappe de raisin",
-              "amour respectivement de la bière, des plaisirs de la table et du bon vin."
+              "Chouette",
+            "Oiseau de nuit."
+            ],
+            [
+              "Chope de bière",
+            "Amour de la bière (bonne si à l'endroit, mauvaise si à l'envers)"
+            ],
+            [
+              "Fourchette",
+            "Amour de arts de la table"
+            ],
+            [
+              "Fourchette croisées",
+            "Bouffe comme un porc"
+            ],
+            [
+              "Grappe de raisin",
+            "Amour du vin (bon si à l'endroit, mauvais si à l'envers)"
             ],
             [
               "Casque de Périclès",
-              "amour de l'Histoire ; Globe sur ruban vert : engagement écologique."
+              "amour de l'Histoire"
             ],
             [
               "Étoile & foudre",
-              "amour des nouvelles technologies et de l'informatique ; Appareil photo : amour de la photographie."
+              "Amour des nouvelles technologies et de l'informatique."
             ],
             [
-              "Lyre / Plume / Palette vernie / Masque",
-              "amour des arts musicaux, littéraires, plastiques, et de la scène ou du cinéma."
+            "Appareil photo",
+            "Amour de la photographie."
+            ],
+            [
+              "Lyre / Plume / Palette vernie / Masque / Clap de cinéma / Danseuse",
+              "Amour des arts musicaux, littéraires, plastiques, de la scène, du cinéma et de la danse."
             ],
             [
               "Sphinx",
-              "polyglotte (langue des signes incluse)."
+              "Polyglotte (langue des signes incluse)."
             ],
             [
               "Épi de blé",
-              "radin ; croisé d'une faucille : chanceux aux examens ; Fer à cheval : chanceux."
+            "Radin ; Croisé d'une faucille : chanceux aux examens."
+            ],
+            [
+             "Fer à cheval",
+            "Chanceux ; Croisé d'un zéro : malchanceux."
             ],
             [
               "Bacchus troué",
-              "personne abstème (qui ne boit pas d'alcool)."
+              "Personne abstème (qui ne boit pas d'alcool)."
+            ],
+            [
+              "Anneaux olympiques",
+              "Participation à des compétitions sportives régionales ou nationales."
             ],
             [
               "Épervier",
-              "amour des grands espaces."
-            ],
-            [
-              "Appareil photo",
-              "amour de la photographie."
-            ],
-            [
-              "Fer à cheval",
-              "chanceux ; Épi de blé croisé d'une faucille : chanceux aux examens."
+              "Amour des grands espaces."
             ]
           ],
           "wide": true
@@ -1165,7 +1260,7 @@ footer .ribbon{margin:-30px -20px 22px}
               "Normandie"
             ],
             [
-              "Hermine (ou pic d'hermine)",
+              "Hermine",
               "Bretagne"
             ],
             [
@@ -1201,7 +1296,7 @@ footer .ribbon{margin:-30px -20px 22px}
         },
         {
           "t": "p",
-          "html": "L'engagement dans les conseils se lit sur un ruban jaune dont l'extrémité occipitale reste libre, où s'accrochent par mandat des insignes de représentation :"
+          "html": "L'engagement dans les conseils se lit sur un ruban jaune dont l'extrémité occipitale reste libre et tombe traditionnellement sur le cœur. On y accroche par mandat des insignes de représentation :"
         },
         {
           "t": "table",
@@ -1212,27 +1307,27 @@ footer .ribbon{margin:-30px -20px 22px}
           "rows": [
             [
               "Grenouille",
-              "argentée pour un élu au conseil d'UFR, dorée pour un élu au conseil d'université."
+              "Argentée pour un élu au conseil d'UFR, dorée pour un élu au conseil d'université."
             ],
             [
               "Tortue",
-              "argentée pour un élu au CROUS, dorée pour un élu au CNOUS."
+              "Argentée pour un élu au CROUS, dorée pour un élu au CNOUS."
             ],
             [
               "Étoile",
-              "dorée pour un vice-président étudiant (VPE) d'université, dorée sur ruban rouge pour le VPE du CROUS, argentée pour le VPE d'UFR ou de CA hors université."
+              "Dorée pour un vice-président étudiant (VPE) d'université, dorée sur ruban rouge pour le VPE du CROUS, argentée pour le VPE d'UFR ou de CA hors université."
             ],
             [
               "Glaive & balance",
-              "pour les élus au conseil disciplinaire."
+              "Elus au conseil disciplinaire."
             ],
             [
               "Initiales",
-              "pour les autres conseils (CNESER, OVE, COMUE…)."
+              "Autres conseils (CNESER, OVE, COMUE…)."
             ],
             [
               "Ruban tricolore",
-              "pour les responsables nationaux : filet blanc de chaque côté (bureau), bande blanche (président) ; couleurs de l'Europe ou de l'ONU pour les mandats européen et international."
+              "Responsables nationaux : filet blanc de chaque côté (bureau), bande blanche (président) ; couleurs de l'Europe ou de l'ONU pour les mandats européen et international."
             ]
           ],
           "wide": true
@@ -1249,44 +1344,44 @@ footer .ribbon{margin:-30px -20px 22px}
           ],
           "rows": [
             [
-              "Anneaux olympiques",
-              "participation à des compétitions sportives régionales ou nationales."
-            ],
-            [
               "Bacchus",
-              "« dignité dans l'ivresse » : rester respectueux et lucide, savoir gérer une crise malgré l'alcool. Difficile à obtenir, facile à perdre."
+              "« Dignité dans l'ivresse » : rester respectueux et lucide, savoir gérer une crise malgré l'alcool. Difficile à obtenir, facile à perdre."
             ],
             [
               "Bouteille de Bordeaux",
-              "« cuite » certifiée survenue en faluche — ce n'est pas un blâme (avec un coefficient multiplicateur en cas de récidive) ; elle ne le devient, avec Bacchus troué et abstinence, que si l'excès a créé un danger."
+              "« Cuite » certifiée survenue en faluche — ce n'est pas un blâme (avec un coefficient multiplicateur en cas de récidive) ; elle ne le devient, avec Bacchus troué et abstinence, que si l'excès a créé un danger."
             ],
             [
-              "Chouette (décernée)",
-              "faluchard actif la nuit qui assure malgré tout sa présence en cours."
+              "Coq",
+              "Grande gueule sachant l'ouvrir"
             ],
             [
-              "Coq / Cor de chasse",
-              "Coq : grande gueule sachant se faire respecter ; Cor de chasse : grand charmeur devant l'éternel."
+                "Cor de chasse",
+                "Grand chasseur devant l'éternel."
             ],
             [
-              "Pachyderme / Poule",
-              "Pachyderme : personne lourde ; Poule : personne très chaude."
+              "Pachyderme",
+              "Personne lourde"
+            ],
+            [ 
+             "Poule",
+             "Personne très chaude."
             ],
             [
-              "Sous-troué",
-              "a passé une nuit au poste de police en contexte étudiant, sans condamnation."
+              "Sou-troué",
+              "A passé une nuit au poste de police en contexte étudiant, sans condamnation."
             ],
             [
               "Volant",
-              "raccompagnateur de fin de soirée, sous condition de sobriété absolue (coupé en cas d'accident responsable)."
+              "Raccompagnateur de fin de soirée, sous condition de sobriété absolue (retiré en cas d'accident responsable)."
             ],
             [
               "Tortue",
-              "grand hébergeur de faluchards."
+              "Grand hébergeur de faluchards."
             ],
             [
               "Entonnoir",
-              "personne rendue abstème par décision des croix (à distinguer du Bacchus troué, abstinence volontaire)."
+              "Personne rendue abstème par décision des croix."
             ],
             [
               "Parapluie ouvert / fermé",
@@ -1308,11 +1403,11 @@ footer .ribbon{margin:-30px -20px 22px}
           "rows": [
             [
               "Bouteille de champagne",
-              "coma éthylique (+ abstinence, Bacchus troué)."
+              "Coma éthylique certifié. Adjonction d'un bacchus troué avec en exposant le nombre de mois d'abstinence requis par les croix."
             ],
             [
               "Singe",
-              "a trop insisté pour un insigne → gel de faluche."
+              "Quémandeur d'insignes. Retrait de tout les insignes de la faluche et gel pendant un temps donné."
             ]
          ],
           "wide": true
@@ -1363,10 +1458,6 @@ footer .ribbon{margin:-30px -20px 22px}
           ],
           "rows": [
             [
-              "Épée",
-              "Fin baiseur."
-            ],
-            [
               "Flèche",
               "Ejaculateur précoce."
             ],
@@ -1377,6 +1468,10 @@ footer .ribbon{margin:-30px -20px 22px}
             [
               "Lime",
               "Acte laborieux et difficile."
+            ],
+            [
+              "Épée",
+              "Fin baiseur."
             ],
             [
               "Pensée (Orchidée)",
@@ -1409,12 +1504,20 @@ footer .ribbon{margin:-30px -20px 22px}
               "Cunnilungus."
             ],
             [
+              "Tomate",
+              "Cunnilungus menstrué."
+            ],
+            [
               "Navet",
-              "Rapport anal ; deux légumes croisés : dépucelage."
+              "Rapport anal."
+            ],
+            [
+              "Choux-fleur",
+              "Partouze."
             ],
             [
               "Poireau",
-              "fellation (inversé à Bourg-en-Bresse ; Asperge à Limoges)."
+              "Fellation (inversé à Bourg-en-Bresse ; Asperge à Limoges)."
             ]
           ],
           "wide": true
@@ -1439,36 +1542,94 @@ footer .ribbon{margin:-30px -20px 22px}
           ],
           "rows": [
             [
-              "Chauve-souris / Ciseaux",
-              "nuit blanche pour motif associatif / faluche cousue avec brio, sans reprise."
+              "Ciseaux",
+              "Faluche cousue avec brio, sans reprise."
+            ],
+            [
+              "Chauve-souris",
+              "Nuits blanches pour motif associatif."
+            ],
+            [
+              "Entonnoir",
+              "A l'endroit : ringard, à l'envers : petite caisse."
             ],
             [
               "Cocotte en papier",
-              "(blâme) grand sécheur de cours."
+              "(blâme) Grand sécheur de cours."
             ],
             [
-              "Comète / Cupidon",
-              "tombé avant minuit / fiancé (pouvait être placé sans GM, remplaçait le chameau)."
+              "Comète",
+              "Tombé avant minuit"
+            ],
+            [
+             "Cupidon",
+            "Fiancé (remplaçait le chameau)."
             ],
             [
               "Fraise",
-              "femme enceinte ; servait de « totem d'immunité » contre l'alcool et la fumée."
+              "Femme enceinte ; servait de « totem d'immunité » contre l'alcool et la fumée."
             ],
             [
-              "Double fourchette croisée / Épi de blé",
-              "(blâmes) « mange comme un porc » / radin et taxeur."
+              "Épi de blé",
+              "Radin et taxeur."
             ],
             [
               "Globe",
-              "globe-trotteur (au moins cinq pays pour motif étudiant)."
+              "Globe-trotteur (au moins cinq pays pour motif étudiant)."
             ],
             [
-              "Lime / épingle à nourrice",
-              "ancien « insulte au Grand Maître » — retiré, jugé contraire à l'esprit de la faluche."
+              "Lime & épingle à nourrice",
+              "Ancien « insulte au Grand Maître » — retiré, jugé contraire à l'esprit de la faluche."
             ],
             [
               "I / X / W",
-              "participation à un dagobit (simple, double, multiple) ; Zéro : a vomi avant minuit."
+              "Participation à un dagobit (simple, double, multiple)"
+            ],
+            [
+            "Zéro",
+             "A vomi avant minuit."
+            ]
+          ],
+          "wide": true
+        },
+        {
+          "t": "h3",
+          "text": "Origines de quelques insignes"
+        },
+        {
+          "t": "p",
+          "html": "Derrière bien des insignes se cache une origine militaire, professionnelle ou linguistique, parfois oubliée."
+        },
+        {
+          "t": "table",
+          "head": [
+            "Insigne",
+            "Origine"
+          ],
+          "rows": [
+            [
+              "Sabot",
+              "Renvoie à l'afflux de jeunes Bretons à Paris à la fin du XIX<sup>e</sup> siècle (exode rural), souvent domestiques ou employés de cafés et chaussés de sabots."
+            ],
+            [
+              "Volant",
+              "À l'origine, insigne des conducteurs d'élite de l'armée."
+            ],
+            [
+              "Sphinx",
+              "Reprend l'insigne du brevet de traducteur des interprètes militaires."
+            ],
+            [
+              "Pendu",
+              "De l'expression « avoir la corde au cou »."
+            ],
+            [
+              "Chameau",
+              "C'est en réalité un dromadaire (une seule bosse)."
+            ],
+            [
+              "Tortue",
+              "Pour la lenteur réputée du CROUS."
             ]
           ],
           "wide": true
@@ -1538,6 +1699,15 @@ footer .ribbon{margin:-30px -20px 22px}
       "id": "villes",
       "title": "Particularités par ville",
       "blocks": [
+        {
+          "t": "p",
+          "html": "Les communautés faluchardes essaiment dans toute la France universitaire, du Nord à la Corse. La carte ci-dessous situe les villes dont les particularités sont détaillées plus bas ; chaque tradition locale s'y rattache à un point du territoire."
+        },
+{
+          "t": "svg",
+          "svg": "<svg viewBox='0 0 732 637' xmlns='http://www.w3.org/2000/svg' style='width:100%;height:auto;display:block' role='group' aria-label='Carte cliquable des villes faluchardes'><style>.fm-land{fill:#efe7d8;stroke:#b9966b;stroke-width:1;stroke-linejoin:round}.fm-city{fill:#7B2D26;stroke:#fbf7f0;stroke-width:1;transition:fill .12s,r .12s}.fm-lbl{font-family:Inter,system-ui,sans-serif;font-size:9.2px;fill:#3a2f28;font-weight:500;transition:fill .12s,font-weight .12s}.fm-cpt{cursor:pointer}.fm-hit{fill:transparent;pointer-events:all}.fm-cpt:hover .fm-city,.fm-cpt:focus .fm-city{fill:#a9842f;r:5}.fm-cpt:hover .fm-lbl,.fm-cpt:focus .fm-lbl{fill:#7B2D26;font-weight:700}.fm-cpt:focus{outline:none}</style><path class='fm-land' d='M522.4 245.0 L 521.5 245.5 L 520.3 245.9 L 519.2 245.5 L 518.2 245.2 L 516.9 245.2 L 516.3 246.6 L 516.8 247.9 L 515.8 248.4 L 515.1 249.3 L 514.4 250.4 L 513.5 251.0 L 513.0 252.3 L 512.0 252.9 L 511.7 254.2 L 512.7 253.9 L 513.6 254.1 L 514.6 253.9 L 515.6 253.8 L 516.6 253.6 L 517.5 253.0 L 518.5 253.6 L 519.2 254.6 L 518.8 255.9 L 517.6 256.0 L 517.3 257.4 L 516.2 257.8 L 515.2 258.0 L 514.7 259.2 L 514.7 260.6 L 514.2 261.8 L 513.2 262.6 L 512.3 263.3 L 511.5 264.3 L 510.6 265.1 L 510.3 266.4 L 509.4 267.2 L 508.6 268.0 L 507.6 268.4 L 506.6 268.8 L 506.1 270.0 L 505.1 270.5 L 504.3 271.3 L 504.6 272.7 L 503.9 273.7 L 502.9 274.0 L 502.1 274.7 L 501.5 275.8 L 500.6 276.5 L 499.5 276.5 L 498.7 277.1 L 497.6 277.5 L 496.6 277.7 L 495.4 277.6 L 494.5 278.5 L 493.9 279.5 L 493.0 280.3 L 493.8 282.1 L 494.0 283.8 L 493.9 285.2 L 493.1 286.3 L 492.6 287.6 L 493.8 289.1 L 492.9 290.4 L 492.1 291.2 L 491.1 291.5 L 490.4 292.6 L 489.5 293.3 L 488.6 294.0 L 487.3 294.6 L 486.4 295.0 L 485.7 296.0 L 484.6 296.9 L 483.8 297.8 L 482.8 298.5 L 481.9 299.4 L 481.0 300.2 L 479.9 301.1 L 479.0 302.1 L 480.1 303.3 L 480.9 304.0 L 480.4 305.1 L 479.4 305.7 L 478.6 307.2 L 477.9 308.5 L 477.4 309.7 L 477.4 311.3 L 478.4 312.5 L 479.8 313.6 L 480.6 314.4 L 481.5 315.0 L 480.8 316.2 L 480.1 317.2 L 479.3 318.4 L 479.0 319.7 L 479.2 321.3 L 478.9 322.9 L 477.9 322.5 L 476.9 322.5 L 476.2 323.4 L 475.0 323.4 L 474.1 323.9 L 473.2 324.4 L 473.5 325.9 L 473.4 327.4 L 472.8 328.5 L 472.4 329.8 L 473.4 329.3 L 474.3 328.8 L 475.2 328.9 L 476.2 329.0 L 477.3 328.4 L 478.3 328.5 L 479.3 328.9 L 480.2 328.7 L 481.4 328.0 L 482.3 327.4 L 482.8 326.1 L 483.7 325.4 L 484.7 325.0 L 485.6 324.5 L 486.5 324.0 L 487.3 322.9 L 486.8 321.8 L 485.7 322.3 L 484.9 321.4 L 484.6 320.1 L 485.0 318.4 L 485.6 317.1 L 486.2 316.0 L 487.0 315.3 L 488.1 314.8 L 489.1 315.0 L 489.9 316.4 L 490.8 316.7 L 491.7 315.7 L 492.6 315.5 L 493.7 314.9 L 494.6 314.4 L 495.2 313.1 L 496.3 312.7 L 497.4 313.3 L 498.4 313.1 L 499.3 312.9 L 500.3 312.8 L 501.2 312.7 L 502.2 312.7 L 503.2 312.5 L 504.2 312.5 L 505.2 312.6 L 506.2 312.8 L 507.1 313.2 L 508.1 313.5 L 508.1 314.9 L 507.1 315.4 L 507.5 316.7 L 508.2 317.6 L 509.2 318.2 L 509.8 319.2 L 510.9 319.7 L 510.9 321.2 L 510.2 322.3 L 509.3 323.3 L 508.8 324.5 L 508.8 326.0 L 508.3 327.3 L 508.1 328.8 L 508.9 329.6 L 510.0 329.5 L 510.9 329.9 L 512.1 330.0 L 512.2 331.4 L 512.1 332.8 L 511.5 334.1 L 512.2 335.0 L 513.1 334.3 L 514.1 333.6 L 514.8 334.6 L 515.3 335.8 L 516.1 336.6 L 516.7 337.7 L 517.5 338.5 L 517.6 340.1 L 518.5 340.7 L 518.7 342.2 L 517.8 342.8 L 517.1 343.8 L 516.8 345.2 L 515.9 345.8 L 515.0 346.2 L 514.2 347.1 L 513.3 347.4 L 512.2 347.2 L 511.3 347.9 L 510.2 347.5 L 509.3 347.7 L 508.7 348.8 L 508.9 350.3 L 508.4 351.5 L 508.6 352.9 L 508.8 354.3 L 509.4 355.6 L 510.2 356.3 L 511.1 357.1 L 512.1 357.4 L 512.9 358.1 L 513.5 359.2 L 514.6 359.2 L 515.6 359.0 L 516.5 359.7 L 516.2 361.0 L 516.0 362.5 L 516.6 363.8 L 516.5 365.1 L 516.5 366.6 L 516.9 368.2 L 517.8 368.7 L 518.8 368.6 L 518.9 370.1 L 520.0 370.1 L 521.0 370.3 L 521.5 371.7 L 522.4 372.8 L 523.4 373.2 L 524.3 374.0 L 524.3 375.5 L 523.6 376.5 L 523.0 377.6 L 522.6 378.9 L 521.6 379.1 L 522.0 380.6 L 522.6 381.7 L 522.5 383.1 L 521.9 384.2 L 521.0 385.0 L 520.3 385.9 L 519.4 385.8 L 518.3 385.7 L 517.2 385.9 L 516.0 386.4 L 515.3 387.3 L 514.6 388.4 L 513.6 388.9 L 512.4 388.9 L 512.2 390.3 L 511.4 391.0 L 510.5 391.4 L 509.6 390.7 L 508.8 390.1 L 507.8 389.8 L 506.9 389.6 L 506.1 390.5 L 505.1 390.7 L 504.0 390.6 L 503.0 391.2 L 502.2 392.0 L 501.2 392.2 L 501.5 393.7 L 502.1 394.8 L 502.4 396.2 L 502.8 397.5 L 503.7 398.0 L 504.8 398.0 L 505.8 398.3 L 506.3 399.5 L 506.5 400.9 L 506.6 402.4 L 506.2 404.1 L 506.7 405.3 L 507.6 405.8 L 508.5 406.7 L 509.4 407.4 L 510.3 407.9 L 511.3 408.6 L 512.3 408.6 L 513.3 408.7 L 513.9 407.7 L 514.8 408.2 L 515.8 408.8 L 516.9 409.0 L 517.7 410.1 L 517.4 411.4 L 517.4 412.8 L 517.9 413.9 L 517.9 415.3 L 518.5 416.4 L 519.5 416.9 L 520.0 418.2 L 519.2 418.8 L 518.2 418.3 L 517.2 418.5 L 516.2 418.6 L 515.3 419.1 L 514.8 420.3 L 515.0 421.7 L 514.8 423.1 L 514.1 424.1 L 514.0 425.6 L 513.3 426.5 L 512.3 426.7 L 511.4 427.4 L 510.6 428.3 L 510.8 429.7 L 511.6 430.8 L 512.3 431.8 L 513.0 432.7 L 513.8 433.6 L 514.7 434.4 L 513.7 434.8 L 512.7 435.0 L 512.4 436.4 L 512.5 437.8 L 513.0 439.0 L 513.6 440.0 L 514.4 440.9 L 515.2 441.8 L 515.7 442.9 L 516.6 443.6 L 516.8 445.2 L 517.2 446.4 L 518.2 446.7 L 519.3 446.8 L 520.3 446.6 L 521.1 447.3 L 522.1 447.8 L 522.9 448.5 L 523.8 448.1 L 524.7 448.7 L 525.5 449.5 L 526.2 450.5 L 527.1 450.2 L 527.7 451.3 L 528.7 452.0 L 529.6 452.0 L 530.6 452.1 L 531.6 452.0 L 532.0 453.2 L 532.9 453.5 L 534.0 453.6 L 535.0 454.0 L 535.8 453.0 L 536.8 453.0 L 537.8 452.5 L 538.7 452.2 L 539.7 451.8 L 540.7 451.8 L 541.7 451.6 L 542.9 451.7 L 543.7 450.8 L 544.6 450.0 L 545.6 450.0 L 545.5 451.5 L 545.3 452.8 L 546.0 453.9 L 546.8 455.1 L 547.3 456.3 L 546.9 457.6 L 546.1 458.6 L 545.2 459.1 L 545.3 460.5 L 544.9 461.8 L 544.2 462.7 L 543.3 463.4 L 542.4 463.5 L 541.5 464.1 L 541.2 465.4 L 540.8 466.8 L 540.0 467.5 L 539.0 467.9 L 538.2 468.8 L 538.1 470.2 L 538.6 471.3 L 538.9 472.6 L 539.4 473.9 L 538.6 474.5 L 537.7 475.4 L 536.7 475.9 L 535.8 476.3 L 535.0 476.9 L 534.4 478.1 L 533.4 478.0 L 532.4 478.1 L 531.5 478.6 L 531.1 480.0 L 530.4 479.0 L 529.9 480.3 L 529.0 479.8 L 528.1 479.8 L 527.1 480.2 L 526.6 481.3 L 526.0 482.3 L 524.8 482.0 L 523.7 482.2 L 523.0 483.1 L 522.4 484.5 L 522.2 485.9 L 522.4 487.4 L 523.0 488.5 L 522.0 489.0 L 521.8 487.7 L 520.5 487.4 L 519.6 488.2 L 518.7 489.1 L 517.7 488.7 L 516.6 488.7 L 515.7 488.9 L 514.7 489.8 L 514.2 491.1 L 515.0 491.9 L 514.2 492.7 L 513.7 494.0 L 513.1 495.0 L 512.3 496.1 L 511.3 496.1 L 510.8 497.2 L 509.8 496.9 L 508.8 497.1 L 507.8 497.3 L 506.9 496.6 L 505.8 497.1 L 505.3 498.3 L 504.8 499.6 L 504.8 501.1 L 503.8 501.5 L 502.9 501.8 L 502.9 503.3 L 501.9 503.6 L 501.0 503.9 L 500.2 504.7 L 499.2 505.3 L 499.8 506.3 L 500.8 506.2 L 501.7 505.7 L 502.6 506.2 L 503.5 505.7 L 503.4 507.1 L 502.5 507.9 L 502.6 509.5 L 502.1 510.7 L 501.5 511.8 L 500.7 512.7 L 500.0 511.9 L 499.2 511.1 L 498.2 510.9 L 497.1 511.5 L 496.4 512.5 L 495.5 513.1 L 494.5 513.0 L 493.5 513.1 L 492.4 513.2 L 491.4 513.4 L 490.5 513.9 L 489.8 514.7 L 489.6 516.1 L 488.8 517.1 L 487.9 516.4 L 487.0 516.0 L 486.1 515.3 L 485.0 515.3 L 484.1 515.6 L 483.1 515.4 L 482.1 515.9 L 481.3 516.7 L 480.8 517.9 L 480.6 519.4 L 481.5 520.4 L 480.6 521.0 L 479.6 520.4 L 478.7 520.6 L 479.7 519.9 L 479.8 518.5 L 479.1 517.4 L 477.9 517.2 L 477.0 517.4 L 475.8 517.7 L 475.1 516.6 L 474.2 516.1 L 473.3 515.9 L 472.3 516.0 L 471.4 516.1 L 470.9 514.9 L 470.0 515.5 L 470.4 516.8 L 471.1 517.8 L 472.1 517.7 L 471.1 518.2 L 470.1 518.0 L 469.1 518.1 L 468.4 519.0 L 467.4 519.6 L 466.5 519.0 L 465.6 518.3 L 466.0 517.0 L 466.2 515.6 L 465.2 515.5 L 464.3 515.4 L 464.8 514.2 L 463.9 514.2 L 462.9 514.1 L 462.0 513.6 L 460.9 513.1 L 461.1 511.8 L 460.1 511.5 L 459.2 511.0 L 458.2 511.0 L 457.5 511.9 L 456.4 512.1 L 455.4 511.2 L 455.0 509.9 L 454.0 509.7 L 453.0 510.2 L 452.1 509.9 L 451.2 509.5 L 450.2 509.8 L 449.2 509.7 L 448.2 509.5 L 447.1 509.8 L 446.2 509.4 L 446.6 508.2 L 447.5 507.4 L 447.4 506.1 L 446.5 505.3 L 447.3 504.5 L 447.1 503.1 L 446.3 502.1 L 445.8 501.0 L 444.7 500.3 L 443.8 500.7 L 442.9 501.4 L 442.0 502.0 L 441.0 502.3 L 440.0 502.1 L 439.1 501.9 L 438.2 502.3 L 437.1 502.3 L 435.9 502.3 L 434.8 502.3 L 433.9 502.6 L 433.0 502.0 L 432.6 500.8 L 431.9 499.6 L 431.2 498.7 L 430.5 497.7 L 430.3 496.4 L 429.2 496.1 L 428.2 496.0 L 427.3 496.8 L 426.4 496.4 L 425.7 494.9 L 426.1 496.6 L 425.1 496.8 L 424.3 496.1 L 425.7 497.8 L 424.6 498.0 L 426.1 498.5 L 425.2 498.9 L 424.3 499.4 L 425.3 499.4 L 426.1 500.1 L 427.1 499.8 L 427.9 499.0 L 427.2 500.2 L 426.4 501.1 L 425.4 502.0 L 424.5 502.2 L 423.2 501.4 L 422.0 501.1 L 420.4 500.9 L 419.4 501.0 L 418.3 501.1 L 417.3 501.2 L 416.4 501.0 L 415.1 500.7 L 413.9 500.4 L 413.0 499.6 L 413.5 498.3 L 414.2 497.3 L 413.8 496.0 L 412.9 495.2 L 411.6 494.7 L 410.4 494.4 L 409.1 494.4 L 408.0 494.5 L 407.0 494.9 L 406.1 495.0 L 404.9 494.6 L 403.9 494.6 L 402.9 494.5 L 401.7 494.4 L 400.7 494.3 L 399.7 494.3 L 398.6 494.1 L 397.3 493.9 L 396.2 493.5 L 395.3 493.1 L 394.4 492.4 L 394.2 491.1 L 394.9 490.1 L 394.2 488.8 L 393.2 488.4 L 392.3 488.3 L 391.1 488.2 L 390.2 488.3 L 388.8 488.7 L 387.9 489.2 L 386.8 489.7 L 385.9 490.2 L 384.7 490.9 L 383.7 491.7 L 382.6 492.6 L 381.7 493.6 L 381.0 494.6 L 379.9 495.6 L 379.0 496.1 L 377.4 496.8 L 376.8 498.0 L 375.8 498.4 L 374.9 498.3 L 373.9 498.8 L 372.7 499.9 L 371.7 501.1 L 370.6 502.3 L 369.9 503.3 L 369.0 504.3 L 368.4 505.4 L 367.0 505.6 L 365.9 505.3 L 365.0 504.8 L 363.7 504.8 L 362.8 505.0 L 361.6 505.6 L 360.7 506.2 L 359.6 506.9 L 358.8 507.6 L 357.9 508.2 L 357.0 509.0 L 356.1 509.9 L 355.3 510.7 L 354.5 511.7 L 353.6 512.8 L 352.8 513.9 L 351.9 515.4 L 351.2 516.4 L 350.6 517.6 L 350.0 519.0 L 349.4 520.4 L 349.0 521.9 L 348.6 523.2 L 348.3 524.5 L 348.0 525.8 L 348.5 527.1 L 348.7 528.6 L 348.5 530.2 L 348.3 531.7 L 348.1 533.1 L 348.0 534.5 L 348.0 536.2 L 347.9 537.6 L 348.0 539.1 L 348.0 540.8 L 347.8 542.7 L 347.8 544.6 L 348.1 545.9 L 348.2 547.3 L 348.3 548.7 L 348.4 550.3 L 349.2 551.2 L 350.1 551.8 L 351.2 552.1 L 352.3 552.4 L 352.0 553.7 L 352.7 554.8 L 353.2 555.9 L 353.9 557.0 L 352.9 557.3 L 351.9 557.4 L 350.9 557.6 L 349.9 557.9 L 349.2 557.0 L 348.3 556.0 L 347.7 554.9 L 346.6 555.3 L 345.6 555.1 L 344.6 555.0 L 343.7 554.8 L 343.1 555.9 L 342.1 555.9 L 341.1 555.6 L 340.2 556.2 L 339.2 556.3 L 338.4 557.3 L 337.8 558.4 L 336.8 558.8 L 336.0 558.0 L 335.0 558.0 L 334.1 558.5 L 333.2 559.1 L 332.4 559.9 L 331.5 560.4 L 331.9 561.6 L 332.5 562.7 L 331.6 563.1 L 330.7 562.9 L 329.7 562.8 L 328.7 562.3 L 327.6 562.2 L 326.9 563.3 L 326.0 563.6 L 325.0 563.0 L 324.0 562.9 L 323.3 561.8 L 322.4 561.1 L 322.0 559.9 L 321.0 560.0 L 320.0 559.5 L 319.1 559.4 L 318.3 558.5 L 317.4 558.3 L 316.4 558.1 L 315.3 557.4 L 314.3 557.6 L 313.2 557.9 L 312.3 558.5 L 311.3 558.3 L 310.4 558.1 L 309.4 558.6 L 308.8 559.8 L 308.0 560.9 L 307.3 561.9 L 306.4 562.1 L 305.2 562.1 L 304.3 562.8 L 303.5 562.0 L 302.6 561.3 L 302.0 560.1 L 301.8 558.6 L 301.2 557.4 L 300.8 556.2 L 299.8 556.6 L 298.8 556.5 L 298.0 555.5 L 297.1 555.1 L 296.3 554.4 L 295.4 554.0 L 294.3 554.2 L 293.3 553.9 L 292.2 553.8 L 292.0 552.5 L 292.4 551.2 L 293.0 549.5 L 293.9 549.3 L 293.2 548.3 L 292.3 547.9 L 292.5 546.5 L 291.5 546.3 L 290.6 545.8 L 289.5 545.9 L 288.3 545.5 L 287.1 545.6 L 286.0 545.1 L 285.3 544.2 L 284.2 543.9 L 283.3 544.2 L 282.4 544.4 L 281.4 544.4 L 281.3 545.9 L 280.5 547.1 L 279.5 546.8 L 279.0 545.6 L 278.7 544.3 L 278.0 543.0 L 277.5 541.7 L 276.6 541.4 L 276.3 540.0 L 275.3 539.6 L 274.3 539.9 L 273.3 540.0 L 272.4 540.1 L 271.4 539.6 L 270.5 539.7 L 269.4 539.9 L 268.5 540.5 L 267.5 540.0 L 266.7 539.3 L 266.7 537.9 L 265.8 537.0 L 265.0 536.4 L 263.9 536.0 L 262.9 536.0 L 262.0 535.7 L 260.9 535.6 L 260.0 535.1 L 258.8 534.8 L 258.0 535.5 L 257.1 535.0 L 256.3 534.2 L 255.1 533.6 L 254.1 533.2 L 253.2 532.6 L 252.2 532.5 L 251.1 532.5 L 249.9 531.9 L 249.0 531.3 L 248.1 531.4 L 247.1 532.1 L 247.0 533.5 L 246.8 534.9 L 246.0 535.8 L 246.2 537.2 L 246.7 538.4 L 247.4 539.5 L 247.1 541.0 L 246.2 541.5 L 245.2 541.3 L 244.2 541.1 L 243.2 541.3 L 242.2 541.1 L 241.2 541.1 L 240.2 541.5 L 239.1 541.1 L 238.1 541.4 L 237.0 541.7 L 235.8 541.3 L 235.2 540.2 L 234.2 539.8 L 233.2 540.2 L 232.3 540.7 L 232.0 542.0 L 231.1 542.6 L 230.3 541.9 L 229.7 540.8 L 229.0 539.9 L 228.1 540.0 L 227.2 539.2 L 226.3 538.8 L 225.3 539.3 L 224.2 539.7 L 223.4 540.4 L 222.3 540.0 L 221.4 540.8 L 220.5 541.3 L 219.5 540.9 L 218.6 541.7 L 217.6 541.9 L 216.6 541.6 L 215.7 541.0 L 215.0 540.0 L 213.9 539.8 L 213.4 538.5 L 212.8 537.4 L 212.0 536.7 L 211.8 535.3 L 210.8 535.8 L 209.9 535.1 L 208.9 534.8 L 208.2 533.8 L 207.3 533.5 L 206.3 532.6 L 205.4 532.3 L 204.4 532.8 L 203.4 532.9 L 202.7 534.0 L 201.9 534.8 L 201.0 534.4 L 199.9 535.0 L 198.9 534.6 L 198.0 534.1 L 197.1 533.2 L 196.3 533.9 L 195.8 535.4 L 194.9 536.3 L 194.1 535.5 L 193.2 534.7 L 192.7 533.5 L 192.0 532.5 L 191.3 531.6 L 190.2 530.9 L 189.6 529.8 L 188.6 530.0 L 187.6 529.3 L 187.1 528.1 L 187.1 526.6 L 186.7 525.2 L 185.8 524.5 L 184.7 524.8 L 183.9 525.5 L 182.7 525.4 L 181.7 525.6 L 180.7 525.3 L 179.7 524.8 L 178.8 525.4 L 177.8 525.2 L 176.8 524.8 L 175.9 524.0 L 175.2 523.0 L 174.2 522.8 L 173.1 522.8 L 172.1 522.3 L 171.2 521.4 L 170.1 521.9 L 169.4 520.9 L 168.5 520.3 L 167.2 519.8 L 166.2 519.2 L 165.2 519.9 L 164.3 519.5 L 163.5 518.6 L 162.6 518.1 L 163.1 516.7 L 163.9 515.7 L 162.9 515.5 L 161.8 515.8 L 161.1 516.8 L 161.1 518.4 L 160.9 519.9 L 160.1 520.6 L 157.0 519.7 L 156.3 518.6 L 155.7 517.6 L 156.2 516.5 L 157.1 515.6 L 157.9 514.7 L 158.0 513.4 L 158.6 512.3 L 159.1 511.1 L 159.4 509.7 L 159.7 508.4 L 159.5 507.0 L 158.7 506.1 L 157.5 506.1 L 156.6 505.9 L 155.6 505.6 L 154.7 505.1 L 153.8 504.4 L 152.8 504.6 L 151.7 504.8 L 151.7 506.2 L 150.8 507.0 L 149.8 507.0 L 149.2 505.9 L 149.0 504.4 L 148.0 503.4 L 146.9 503.4 L 145.9 503.5 L 144.9 504.1 L 144.2 503.0 L 143.7 501.5 L 142.7 501.3 L 142.3 500.2 L 143.3 499.4 L 144.2 499.1 L 145.3 498.6 L 146.4 498.2 L 147.4 498.6 L 148.0 497.5 L 149.0 497.1 L 149.8 496.2 L 150.4 495.2 L 151.0 494.1 L 151.6 493.0 L 152.3 492.1 L 153.0 490.9 L 153.5 489.7 L 154.2 488.3 L 154.8 487.3 L 155.5 485.8 L 156.2 484.3 L 156.7 483.0 L 156.9 481.5 L 157.0 480.0 L 157.2 478.6 L 157.5 477.3 L 157.8 475.5 L 158.1 474.2 L 158.4 472.7 L 158.7 471.2 L 159.1 469.9 L 159.4 468.2 L 159.7 466.8 L 159.9 465.4 L 160.3 463.5 L 160.6 461.8 L 160.9 460.5 L 161.1 459.0 L 161.4 457.7 L 161.7 456.1 L 161.9 454.8 L 162.2 453.4 L 162.5 451.8 L 162.7 450.4 L 162.9 448.6 L 163.1 447.0 L 163.4 445.5 L 163.6 444.1 L 163.7 442.7 L 164.0 441.2 L 164.1 439.8 L 164.3 438.2 L 164.5 436.8 L 164.6 435.4 L 164.8 433.9 L 164.9 432.4 L 165.1 430.8 L 165.1 429.4 L 164.7 427.9 L 165.3 426.7 L 165.9 425.6 L 166.7 424.0 L 167.1 422.6 L 167.2 421.2 L 168.1 420.0 L 169.1 420.1 L 169.4 421.5 L 170.3 421.0 L 171.3 421.3 L 172.3 421.5 L 173.2 421.1 L 174.2 420.7 L 175.2 420.9 L 174.7 419.3 L 173.7 418.8 L 172.8 418.0 L 173.8 418.3 L 173.2 417.2 L 172.4 416.4 L 171.7 415.5 L 170.7 415.1 L 169.9 414.2 L 168.9 413.2 L 168.2 414.1 L 167.8 415.4 L 167.1 416.4 L 166.2 417.3 L 165.8 418.6 L 165.6 420.2 L 165.3 421.6 L 164.7 420.1 L 164.9 418.4 L 165.0 417.0 L 165.3 415.4 L 165.5 413.7 L 165.8 411.8 L 166.0 410.1 L 166.2 408.3 L 166.4 406.4 L 166.6 404.6 L 166.7 403.2 L 166.9 401.6 L 167.0 400.2 L 167.2 398.6 L 167.3 397.1 L 167.5 395.4 L 167.6 394.0 L 167.7 392.4 L 167.8 390.9 L 168.0 389.4 L 168.1 388.1 L 168.3 386.3 L 168.4 384.8 L 168.6 383.4 L 168.8 381.7 L 168.9 380.0 L 169.0 378.5 L 169.0 376.9 L 168.9 375.5 L 168.9 374.0 L 169.2 372.6 L 169.3 371.2 L 169.2 369.6 L 169.7 368.4 L 170.4 367.3 L 171.1 366.4 L 171.6 365.2 L 172.5 364.4 L 174.7 363.9 L 176.1 363.7 L 175.9 362.3 L 175.1 361.2 L 174.1 361.2 L 173.1 360.6 L 172.2 360.0 L 171.2 359.6 L 170.2 358.8 L 169.3 358.0 L 168.3 357.5 L 167.4 356.7 L 166.4 356.4 L 166.7 357.8 L 165.9 357.1 L 165.7 355.8 L 165.5 353.3 L 165.4 351.8 L 165.9 350.7 L 166.9 350.2 L 167.9 350.6 L 168.8 350.0 L 169.8 350.1 L 169.8 348.6 L 169.2 347.5 L 168.5 346.6 L 169.4 346.2 L 170.4 346.4 L 171.4 345.7 L 171.9 344.5 L 172.6 343.4 L 172.5 341.8 L 171.7 341.2 L 172.7 340.8 L 172.2 339.4 L 171.6 338.3 L 170.7 337.6 L 171.6 338.0 L 172.6 337.9 L 173.5 337.3 L 173.2 335.9 L 172.9 334.6 L 172.0 334.3 L 171.8 332.9 L 171.3 331.7 L 170.3 331.4 L 170.4 330.0 L 169.5 329.7 L 168.5 329.1 L 167.8 328.2 L 166.8 328.5 L 165.8 328.1 L 166.4 327.0 L 167.1 326.0 L 167.3 324.5 L 168.3 324.0 L 169.1 323.1 L 169.8 322.1 L 170.7 321.6 L 170.7 320.0 L 170.4 318.7 L 169.3 318.0 L 168.1 318.0 L 167.1 318.2 L 167.0 319.8 L 167.0 321.2 L 166.1 320.6 L 165.3 319.8 L 164.0 318.8 L 163.2 317.8 L 163.2 319.3 L 164.1 319.8 L 163.1 319.8 L 162.5 318.7 L 161.9 317.3 L 161.1 316.5 L 160.2 316.2 L 158.9 316.6 L 157.7 316.2 L 156.6 316.7 L 155.7 316.3 L 155.2 314.7 L 154.6 313.4 L 153.6 312.7 L 152.5 312.5 L 151.3 312.5 L 150.4 312.3 L 149.3 312.2 L 148.4 311.8 L 147.5 310.8 L 146.5 310.4 L 145.5 309.8 L 144.5 309.1 L 143.6 308.4 L 142.7 307.4 L 141.7 307.5 L 141.0 306.6 L 140.7 305.1 L 140.3 303.7 L 139.9 302.3 L 139.5 300.9 L 138.9 299.7 L 138.1 298.7 L 137.3 297.8 L 136.7 296.6 L 136.0 295.6 L 135.2 294.8 L 134.3 294.6 L 133.9 293.3 L 133.0 292.3 L 132.2 291.5 L 131.4 290.7 L 130.5 289.7 L 129.6 289.1 L 128.5 288.4 L 127.6 287.7 L 127.0 286.6 L 126.9 284.5 L 126.5 283.0 L 127.5 282.7 L 128.5 282.2 L 128.7 280.9 L 129.5 280.2 L 130.3 279.3 L 131.2 278.1 L 131.6 276.6 L 132.3 275.3 L 133.2 274.9 L 133.7 273.6 L 133.0 272.4 L 132.0 271.6 L 131.2 270.8 L 130.4 270.1 L 129.4 269.6 L 128.4 269.2 L 127.3 269.2 L 126.3 268.9 L 125.4 268.5 L 124.3 268.3 L 123.3 267.9 L 123.6 266.5 L 124.6 266.2 L 125.5 266.4 L 126.2 265.1 L 126.4 263.6 L 125.9 262.3 L 125.9 260.7 L 125.4 259.0 L 124.4 259.3 L 123.6 260.1 L 122.6 260.2 L 121.8 261.1 L 120.8 261.4 L 119.7 261.0 L 118.8 260.4 L 118.0 259.3 L 117.1 258.8 L 116.2 258.7 L 115.2 259.0 L 114.5 260.0 L 113.5 259.4 L 112.5 259.1 L 111.6 258.7 L 110.6 258.3 L 111.4 257.4 L 111.7 255.8 L 111.2 254.5 L 110.5 253.5 L 109.5 253.2 L 110.4 252.4 L 111.3 251.5 L 112.2 251.1 L 113.0 250.4 L 114.0 250.6 L 113.9 249.3 L 113.2 248.3 L 112.2 248.4 L 112.3 247.0 L 111.8 245.6 L 113.0 245.8 L 113.9 245.7 L 115.0 245.6 L 114.1 245.1 L 113.0 244.4 L 112.0 244.1 L 111.1 243.6 L 110.1 243.7 L 109.1 244.3 L 108.1 244.1 L 107.2 244.5 L 106.2 244.9 L 107.1 244.5 L 108.1 243.8 L 109.0 243.2 L 108.9 241.8 L 108.1 242.6 L 107.3 243.2 L 106.7 242.0 L 106.4 243.3 L 105.5 242.8 L 104.6 242.5 L 105.4 243.2 L 106.4 243.7 L 105.4 244.1 L 104.5 244.9 L 103.5 245.2 L 102.4 244.8 L 101.5 245.2 L 100.4 245.4 L 99.4 245.8 L 98.5 246.0 L 97.6 245.6 L 97.0 244.5 L 96.1 243.4 L 95.1 242.8 L 94.2 242.4 L 94.9 241.3 L 95.8 241.9 L 96.6 242.8 L 97.5 242.4 L 98.4 241.9 L 99.5 242.1 L 100.4 242.8 L 101.5 242.5 L 102.1 241.4 L 102.7 240.3 L 103.5 239.6 L 103.9 238.3 L 103.3 237.2 L 102.8 236.1 L 102.9 237.4 L 103.4 238.5 L 102.5 239.5 L 101.7 238.7 L 100.8 238.1 L 99.9 237.6 L 100.9 237.8 L 101.9 238.2 L 101.1 237.5 L 100.1 237.0 L 99.3 236.3 L 99.9 237.4 L 99.0 237.9 L 97.9 238.1 L 97.0 237.9 L 96.1 238.6 L 95.1 239.0 L 95.4 240.3 L 94.4 240.0 L 93.6 239.0 L 92.6 238.6 L 93.2 237.5 L 92.3 237.3 L 91.9 236.0 L 92.2 237.6 L 92.0 238.9 L 92.4 240.3 L 93.2 241.0 L 92.2 241.4 L 91.5 240.4 L 90.7 239.6 L 91.0 240.9 L 90.0 240.7 L 89.5 239.5 L 89.7 241.0 L 88.9 240.2 L 88.0 240.8 L 86.9 241.1 L 86.0 240.6 L 85.3 239.4 L 85.2 240.9 L 84.8 242.3 L 85.0 243.7 L 85.4 245.0 L 86.1 246.1 L 86.9 247.0 L 86.0 246.8 L 85.1 246.7 L 84.3 245.9 L 84.0 244.5 L 84.5 243.0 L 84.6 241.5 L 84.4 239.9 L 83.8 238.8 L 82.9 238.2 L 82.1 237.6 L 81.5 236.5 L 81.7 235.0 L 82.5 234.2 L 83.5 234.1 L 84.2 233.1 L 83.3 233.1 L 84.2 232.6 L 85.1 231.8 L 86.1 231.8 L 85.1 231.1 L 84.1 231.7 L 84.4 230.4 L 83.5 230.9 L 82.6 230.5 L 83.3 231.4 L 83.1 232.8 L 82.0 232.9 L 81.9 234.3 L 81.5 235.6 L 80.1 235.2 L 79.2 234.4 L 78.0 233.6 L 76.9 233.3 L 75.8 233.2 L 76.8 233.0 L 78.1 233.6 L 77.4 232.6 L 76.4 232.4 L 75.3 232.7 L 75.7 231.3 L 76.6 230.7 L 77.5 229.9 L 77.9 228.5 L 78.5 227.2 L 78.1 228.5 L 77.2 229.0 L 76.4 230.0 L 75.5 229.3 L 74.8 228.4 L 74.4 227.2 L 74.0 225.7 L 74.2 227.1 L 74.7 228.3 L 75.3 229.3 L 75.3 230.9 L 74.8 232.0 L 74.0 232.8 L 72.9 232.7 L 72.0 232.8 L 71.0 233.0 L 70.2 232.2 L 69.4 231.3 L 68.9 229.9 L 68.1 228.9 L 68.1 227.5 L 68.2 226.0 L 67.5 225.0 L 68.2 223.9 L 67.4 223.0 L 68.0 224.0 L 67.4 225.2 L 68.1 226.2 L 68.0 227.6 L 67.6 228.9 L 66.6 228.8 L 65.6 228.7 L 64.6 228.5 L 63.5 228.4 L 62.5 228.0 L 61.6 228.2 L 60.7 227.5 L 59.7 226.8 L 60.4 226.0 L 61.4 225.5 L 62.4 225.4 L 61.4 225.3 L 60.4 225.7 L 59.6 226.4 L 58.8 225.6 L 58.6 224.2 L 58.7 225.5 L 58.7 227.0 L 57.6 227.3 L 56.6 227.3 L 55.6 226.9 L 54.5 227.1 L 53.7 226.2 L 52.8 225.2 L 52.0 224.2 L 52.7 223.1 L 51.7 223.6 L 51.5 222.3 L 50.6 221.6 L 49.9 220.7 L 49.0 220.7 L 48.3 221.7 L 48.7 223.1 L 47.6 223.6 L 46.6 223.6 L 45.4 223.3 L 44.3 222.9 L 45.3 223.1 L 44.5 222.3 L 43.5 222.6 L 43.0 221.5 L 42.2 220.6 L 41.9 219.2 L 42.8 218.7 L 43.6 217.9 L 44.6 218.2 L 43.5 217.8 L 43.8 216.4 L 42.9 215.8 L 43.1 217.1 L 42.9 218.6 L 41.9 218.9 L 41.6 220.3 L 40.7 220.8 L 41.9 220.8 L 42.7 221.6 L 42.2 222.9 L 41.3 223.4 L 40.6 224.3 L 40.6 222.9 L 39.8 222.0 L 38.9 222.5 L 39.7 223.4 L 40.3 224.6 L 40.8 225.8 L 40.1 226.6 L 39.0 226.7 L 38.0 227.1 L 37.0 227.2 L 36.0 227.2 L 35.1 226.7 L 34.1 226.8 L 33.0 226.8 L 32.1 226.9 L 31.6 225.6 L 32.6 225.1 L 33.1 224.0 L 32.8 222.6 L 32.4 221.2 L 31.8 219.8 L 31.1 218.6 L 30.4 217.7 L 29.8 216.6 L 28.9 216.0 L 28.0 215.3 L 27.0 214.6 L 26.1 214.1 L 25.2 213.8 L 25.1 212.4 L 26.2 212.2 L 25.1 212.2 L 24.8 213.6 L 24.0 214.3 L 23.0 214.1 L 22.1 213.4 L 21.1 213.0 L 20.1 213.0 L 19.2 212.8 L 18.2 212.6 L 17.2 212.3 L 16.3 212.0 L 17.3 211.8 L 17.4 210.4 L 18.5 210.6 L 19.4 210.1 L 20.4 210.2 L 21.4 210.2 L 22.3 209.7 L 23.3 209.3 L 24.2 209.6 L 25.2 208.9 L 26.1 208.9 L 27.1 209.0 L 28.0 208.3 L 28.9 208.3 L 29.9 207.9 L 30.9 207.9 L 31.8 207.6 L 32.8 208.0 L 33.6 208.7 L 34.6 208.7 L 35.5 208.2 L 35.8 206.8 L 36.2 205.4 L 35.3 204.7 L 35.3 203.1 L 34.5 202.2 L 33.6 201.6 L 32.6 201.7 L 31.7 200.9 L 30.7 200.8 L 29.7 200.3 L 28.7 199.9 L 27.7 199.7 L 26.7 199.9 L 26.1 201.3 L 25.8 202.5 L 24.9 203.2 L 24.1 203.9 L 24.4 202.6 L 24.1 201.2 L 23.5 200.1 L 24.4 199.6 L 24.0 198.4 L 23.0 198.9 L 22.1 198.3 L 21.5 197.3 L 22.6 197.1 L 23.6 197.0 L 23.5 195.6 L 23.5 194.0 L 24.4 193.5 L 24.6 194.9 L 24.3 196.2 L 25.3 196.7 L 25.9 195.7 L 26.3 197.0 L 27.4 196.8 L 28.3 196.4 L 29.3 196.4 L 30.3 197.2 L 31.3 197.4 L 32.3 197.2 L 33.2 196.8 L 34.2 196.4 L 35.2 196.0 L 36.3 196.1 L 35.5 197.1 L 36.4 197.8 L 37.3 198.7 L 38.2 198.8 L 39.2 199.3 L 40.2 199.2 L 41.2 199.3 L 42.1 199.8 L 43.0 199.3 L 42.8 200.8 L 43.3 199.4 L 42.3 199.4 L 41.4 199.1 L 40.3 199.0 L 39.4 199.0 L 38.3 198.3 L 37.3 198.2 L 36.4 197.5 L 37.4 196.8 L 38.5 196.5 L 39.5 196.4 L 38.6 196.1 L 37.7 195.7 L 36.6 195.3 L 37.3 194.3 L 36.3 194.7 L 35.4 195.2 L 34.4 195.0 L 35.0 193.9 L 35.9 193.2 L 36.6 192.4 L 35.6 192.4 L 34.7 193.2 L 33.8 193.5 L 34.2 192.3 L 33.3 192.9 L 32.4 193.0 L 31.9 194.3 L 30.9 194.4 L 30.0 193.7 L 29.1 194.2 L 28.9 192.8 L 29.6 191.8 L 30.4 191.2 L 31.3 190.4 L 32.3 189.8 L 33.3 189.5 L 34.1 188.9 L 35.0 188.3 L 35.9 187.5 L 35.0 188.1 L 34.1 188.6 L 33.1 189.2 L 32.1 189.3 L 31.2 189.9 L 30.1 190.0 L 29.2 190.8 L 28.2 190.6 L 27.0 190.9 L 25.7 191.8 L 24.8 192.3 L 23.8 192.4 L 22.8 193.0 L 21.9 193.6 L 20.9 193.4 L 20.0 193.0 L 19.0 192.5 L 18.0 192.8 L 17.5 194.0 L 16.5 193.9 L 15.5 194.2 L 14.9 192.9 L 15.9 192.2 L 14.8 192.0 L 15.3 190.9 L 14.8 189.6 L 14.0 188.9 L 14.4 187.6 L 14.8 186.4 L 15.6 185.5 L 16.6 185.3 L 15.6 185.3 L 14.9 184.3 L 15.2 183.0 L 15.4 181.7 L 16.1 180.7 L 17.0 180.0 L 18.0 180.1 L 18.7 179.1 L 19.8 179.2 L 20.8 178.9 L 21.8 179.1 L 22.6 179.8 L 23.6 179.9 L 24.6 180.2 L 25.7 180.3 L 24.6 179.9 L 23.6 179.8 L 22.7 179.2 L 21.8 178.7 L 22.0 177.4 L 23.0 177.8 L 24.1 177.7 L 25.1 177.7 L 26.1 178.2 L 26.9 178.9 L 26.1 178.1 L 25.1 177.6 L 24.2 177.1 L 23.7 175.9 L 24.8 175.9 L 25.6 175.3 L 26.5 176.1 L 27.6 175.9 L 28.6 175.2 L 29.5 174.9 L 30.5 175.1 L 29.5 174.5 L 30.4 174.1 L 31.3 173.7 L 32.3 173.1 L 33.2 172.7 L 34.1 173.3 L 35.1 173.4 L 34.6 174.5 L 35.6 174.8 L 36.6 174.3 L 37.7 174.3 L 38.7 174.4 L 38.9 173.0 L 39.8 172.3 L 40.7 172.0 L 41.7 171.7 L 42.7 171.7 L 43.7 171.6 L 44.7 172.1 L 45.4 173.0 L 45.5 171.5 L 46.3 170.7 L 47.3 170.3 L 48.2 169.7 L 49.2 169.8 L 49.0 171.1 L 49.2 172.5 L 49.9 173.5 L 50.0 174.9 L 49.8 176.3 L 50.5 177.4 L 50.0 176.1 L 50.0 174.6 L 50.8 173.9 L 51.4 172.9 L 52.4 173.0 L 52.2 174.4 L 53.1 175.0 L 54.0 175.8 L 53.6 177.0 L 54.4 175.8 L 55.4 175.6 L 54.4 175.5 L 54.0 174.2 L 54.4 172.8 L 54.7 171.4 L 55.7 170.5 L 56.7 170.9 L 57.7 170.8 L 58.7 170.7 L 59.7 170.9 L 60.5 171.8 L 61.5 172.1 L 62.5 171.4 L 63.0 172.7 L 62.4 173.8 L 63.3 173.1 L 64.1 172.2 L 65.0 173.1 L 66.1 172.8 L 65.7 171.5 L 65.6 170.1 L 66.5 169.5 L 67.1 168.4 L 66.3 167.6 L 65.6 166.6 L 66.2 165.5 L 67.2 165.3 L 67.5 164.0 L 68.3 163.2 L 69.4 163.3 L 70.4 163.4 L 71.4 164.0 L 71.9 165.2 L 73.0 165.1 L 74.0 164.8 L 74.7 164.0 L 75.8 163.5 L 76.8 162.7 L 77.8 163.0 L 78.7 162.4 L 79.6 162.1 L 80.4 161.3 L 81.4 161.5 L 81.2 162.9 L 81.7 164.1 L 81.0 165.1 L 81.8 164.4 L 82.3 163.1 L 83.2 162.3 L 84.2 161.8 L 85.1 161.1 L 86.2 160.9 L 87.2 160.2 L 86.3 160.9 L 87.2 161.4 L 86.7 162.5 L 86.8 163.9 L 86.3 165.0 L 85.9 166.3 L 85.2 167.3 L 86.2 167.0 L 86.6 165.8 L 86.9 164.4 L 87.7 163.7 L 88.7 164.0 L 89.7 163.7 L 90.2 164.8 L 89.4 165.6 L 88.5 166.0 L 89.6 166.1 L 90.3 167.2 L 91.3 167.4 L 92.3 167.3 L 93.2 167.7 L 93.2 169.1 L 93.6 170.5 L 94.4 171.2 L 95.5 171.8 L 96.1 172.9 L 97.0 173.2 L 97.8 173.9 L 98.1 175.3 L 98.3 176.6 L 98.7 177.9 L 99.7 178.3 L 100.5 179.4 L 101.6 179.8 L 102.6 180.2 L 102.4 181.5 L 103.1 182.6 L 103.7 183.7 L 104.3 182.4 L 105.2 182.0 L 106.3 182.0 L 106.8 180.8 L 107.6 180.0 L 108.4 179.3 L 109.1 178.4 L 110.0 177.6 L 111.0 177.4 L 112.0 176.9 L 113.0 176.0 L 112.4 174.9 L 113.3 174.4 L 114.3 174.3 L 115.2 174.8 L 116.2 174.8 L 117.2 174.1 L 118.2 173.6 L 119.1 172.9 L 120.1 173.1 L 120.0 174.6 L 119.4 175.7 L 120.3 176.1 L 121.3 175.2 L 122.2 174.7 L 122.8 176.0 L 123.5 177.1 L 124.2 178.2 L 124.9 177.3 L 125.2 178.6 L 126.2 178.5 L 126.1 177.0 L 127.0 176.2 L 127.8 177.2 L 127.2 176.0 L 128.1 175.1 L 129.1 175.3 L 130.0 174.9 L 131.0 175.1 L 131.9 175.9 L 132.1 177.3 L 132.9 178.1 L 132.8 179.5 L 133.7 180.4 L 134.2 181.6 L 133.8 182.9 L 133.1 183.9 L 134.0 183.5 L 134.4 182.2 L 135.3 182.4 L 134.6 181.3 L 134.1 180.1 L 133.8 178.7 L 134.8 178.9 L 134.1 177.9 L 133.1 177.8 L 132.6 176.6 L 132.2 175.3 L 132.7 174.1 L 133.6 173.4 L 134.1 172.2 L 135.1 172.3 L 135.8 171.3 L 136.7 171.7 L 137.8 171.4 L 138.8 171.2 L 139.7 170.7 L 139.9 172.1 L 139.2 173.2 L 138.7 174.4 L 139.1 175.7 L 139.9 176.5 L 141.3 176.9 L 142.3 177.1 L 143.3 177.2 L 144.7 177.0 L 145.9 177.0 L 147.0 176.7 L 148.1 176.6 L 149.3 176.3 L 150.3 176.1 L 151.4 175.8 L 152.6 175.5 L 153.7 175.7 L 154.7 176.1 L 155.6 176.2 L 156.6 176.0 L 157.5 175.3 L 158.4 174.8 L 159.4 174.9 L 160.4 175.3 L 159.7 174.3 L 158.7 174.0 L 159.3 172.8 L 158.2 173.0 L 157.2 173.5 L 156.3 172.9 L 155.4 172.3 L 154.4 172.1 L 153.8 171.0 L 153.3 169.6 L 152.4 169.2 L 151.5 168.6 L 151.5 167.0 L 151.5 165.2 L 151.3 163.7 L 150.5 162.9 L 151.0 161.7 L 151.4 159.7 L 151.6 158.0 L 152.2 156.8 L 151.9 158.1 L 152.6 157.1 L 151.8 156.1 L 151.8 154.6 L 151.9 153.1 L 152.1 151.8 L 152.8 150.6 L 153.7 151.2 L 152.9 150.3 L 151.9 150.5 L 151.2 151.5 L 150.2 150.4 L 150.3 148.7 L 149.8 147.4 L 149.9 146.0 L 150.4 144.6 L 150.3 142.8 L 150.1 141.2 L 149.9 139.8 L 150.8 139.2 L 149.8 138.4 L 149.1 139.6 L 148.2 138.6 L 147.7 137.0 L 146.9 135.6 L 146.2 134.3 L 145.6 133.0 L 146.5 132.6 L 145.5 132.5 L 144.5 132.1 L 143.8 131.1 L 143.0 130.2 L 142.0 129.9 L 141.1 129.3 L 140.7 128.0 L 140.7 126.6 L 140.6 125.2 L 140.0 123.7 L 139.7 122.4 L 139.0 121.2 L 138.2 120.7 L 138.4 119.2 L 139.3 118.5 L 139.9 117.3 L 139.9 115.5 L 139.5 113.8 L 138.9 112.6 L 137.9 112.1 L 137.0 111.7 L 136.0 111.3 L 135.8 109.9 L 135.4 108.5 L 136.3 107.9 L 137.3 108.3 L 138.1 109.3 L 139.0 108.7 L 140.0 108.9 L 140.5 110.1 L 141.6 110.4 L 142.6 110.7 L 143.5 110.9 L 144.7 111.0 L 145.7 111.4 L 146.8 111.3 L 147.8 112.2 L 148.8 112.0 L 149.5 113.1 L 150.2 112.0 L 151.2 112.4 L 152.2 112.4 L 153.1 112.4 L 154.1 112.0 L 155.0 111.5 L 155.6 110.4 L 156.5 110.1 L 157.4 109.6 L 158.5 109.4 L 159.6 109.2 L 160.9 109.5 L 161.9 109.7 L 163.0 110.0 L 164.0 109.9 L 164.5 111.1 L 165.2 112.1 L 165.8 113.6 L 166.0 115.0 L 165.0 115.0 L 164.4 116.2 L 164.2 117.6 L 163.5 116.6 L 162.8 117.6 L 162.6 118.9 L 163.1 120.1 L 163.8 121.2 L 164.5 122.4 L 165.4 123.6 L 166.3 124.7 L 167.2 125.7 L 168.0 126.6 L 168.6 127.7 L 168.7 129.1 L 169.2 130.4 L 170.7 130.8 L 171.4 129.9 L 172.2 129.0 L 173.1 128.7 L 174.3 128.8 L 175.4 128.3 L 176.5 128.4 L 177.4 128.3 L 178.4 128.4 L 179.3 128.8 L 180.2 129.5 L 181.3 130.1 L 182.5 130.5 L 183.7 130.8 L 184.7 130.9 L 185.7 131.1 L 186.8 131.3 L 187.9 131.4 L 189.0 131.4 L 190.0 131.4 L 191.2 131.5 L 192.3 131.8 L 193.4 131.7 L 194.6 131.4 L 195.6 131.5 L 196.9 131.6 L 197.9 131.8 L 198.9 132.0 L 200.0 132.1 L 201.2 132.2 L 202.7 132.7 L 203.8 133.3 L 204.6 133.9 L 205.5 134.4 L 206.7 134.7 L 207.8 134.9 L 208.8 135.4 L 209.7 135.1 L 210.9 135.1 L 212.0 135.0 L 213.2 134.7 L 214.2 134.4 L 215.1 134.0 L 216.1 133.7 L 217.3 133.1 L 218.4 132.7 L 219.6 131.8 L 220.7 131.0 L 221.6 130.2 L 222.3 129.3 L 223.2 128.4 L 224.1 127.9 L 225.2 127.5 L 226.2 127.2 L 227.3 126.7 L 228.2 126.4 L 229.4 126.4 L 230.5 126.3 L 231.5 126.2 L 232.7 126.0 L 231.4 124.9 L 230.1 124.8 L 229.1 125.1 L 228.1 125.0 L 226.6 124.9 L 224.9 124.4 L 223.6 124.2 L 222.8 123.4 L 222.3 122.1 L 221.4 121.5 L 221.5 120.1 L 222.1 118.7 L 222.7 117.5 L 223.3 116.1 L 224.0 115.1 L 224.6 113.8 L 224.9 112.5 L 225.3 111.1 L 226.1 109.8 L 227.0 109.1 L 227.9 108.5 L 228.8 108.3 L 229.8 107.8 L 230.8 107.3 L 231.8 107.1 L 232.8 106.7 L 233.8 106.0 L 234.7 105.3 L 235.7 104.8 L 236.7 104.3 L 237.7 103.7 L 238.6 103.2 L 239.6 102.5 L 240.7 101.9 L 241.5 101.2 L 242.4 100.6 L 243.3 100.2 L 244.3 100.0 L 245.3 99.7 L 246.4 99.4 L 247.6 99.2 L 248.7 98.9 L 249.7 99.1 L 250.8 99.0 L 251.8 98.9 L 252.9 98.4 L 253.9 97.9 L 255.0 97.7 L 256.3 97.4 L 257.4 97.0 L 258.6 96.5 L 259.7 96.1 L 260.6 96.2 L 261.9 96.3 L 262.8 96.0 L 263.9 95.7 L 264.9 95.0 L 265.9 94.8 L 267.0 94.3 L 267.9 93.8 L 268.9 93.2 L 269.8 92.8 L 270.8 92.0 L 271.8 91.2 L 272.7 90.3 L 273.8 89.3 L 274.8 88.6 L 275.7 87.9 L 276.6 87.4 L 277.6 86.6 L 278.6 86.0 L 279.5 85.4 L 280.3 84.4 L 280.8 83.1 L 281.2 81.9 L 281.6 80.5 L 282.4 79.2 L 283.5 78.4 L 284.4 77.9 L 285.4 78.7 L 286.3 79.6 L 287.2 79.3 L 288.3 79.6 L 289.2 80.0 L 290.2 79.8 L 289.5 78.6 L 288.8 77.8 L 287.7 78.0 L 287.0 76.9 L 286.3 75.8 L 285.0 75.4 L 284.2 74.3 L 284.1 72.9 L 284.3 71.3 L 284.5 69.8 L 285.2 68.7 L 287.2 68.9 L 288.2 69.4 L 287.7 68.2 L 286.7 67.8 L 285.7 67.7 L 285.0 66.8 L 285.1 65.2 L 285.4 63.7 L 285.6 61.6 L 285.7 59.3 L 286.0 58.0 L 286.9 58.6 L 288.0 59.6 L 289.1 59.9 L 288.2 59.5 L 287.5 58.2 L 286.7 57.3 L 285.8 56.4 L 285.7 55.0 L 285.7 53.6 L 285.6 52.2 L 285.5 50.8 L 285.2 49.5 L 285.0 48.1 L 285.5 47.0 L 286.5 46.3 L 286.4 44.9 L 286.9 43.4 L 286.8 42.0 L 286.4 40.7 L 285.9 39.0 L 285.8 37.6 L 286.8 37.4 L 287.8 37.2 L 288.8 36.7 L 289.7 35.9 L 290.4 34.9 L 291.3 34.0 L 292.5 33.1 L 293.5 32.7 L 295.0 32.1 L 296.0 31.9 L 297.0 31.5 L 298.0 31.4 L 299.0 31.2 L 299.9 30.6 L 300.9 30.3 L 302.2 30.3 L 303.4 29.9 L 304.6 29.8 L 305.6 29.6 L 306.6 29.1 L 307.5 29.1 L 308.7 29.8 L 309.1 28.5 L 310.0 27.7 L 311.3 28.5 L 311.9 27.3 L 311.0 26.8 L 312.0 27.0 L 313.0 27.5 L 314.4 27.0 L 315.5 26.6 L 316.9 26.3 L 318.0 26.0 L 319.2 26.2 L 320.2 26.4 L 321.5 26.1 L 322.6 25.8 L 323.5 25.4 L 324.7 25.0 L 326.0 24.4 L 327.0 24.0 L 327.5 25.1 L 327.8 26.6 L 328.2 28.2 L 328.5 29.7 L 329.6 30.0 L 330.0 31.3 L 330.5 32.5 L 329.9 33.6 L 329.0 34.4 L 329.5 35.6 L 329.7 37.0 L 329.4 38.3 L 330.0 39.5 L 330.6 40.7 L 331.6 41.0 L 332.5 40.7 L 333.7 41.0 L 334.6 42.1 L 335.3 42.9 L 336.2 43.6 L 336.7 44.7 L 337.2 45.9 L 338.0 46.7 L 339.0 46.8 L 340.0 46.8 L 340.8 47.8 L 341.8 48.1 L 343.0 47.8 L 343.3 46.5 L 343.7 45.2 L 344.7 44.7 L 345.7 44.4 L 346.8 43.7 L 347.9 43.6 L 348.9 43.0 L 349.9 43.5 L 350.8 42.9 L 351.8 42.6 L 352.8 42.4 L 353.3 43.6 L 354.1 44.7 L 354.8 45.8 L 355.2 47.1 L 356.4 47.2 L 357.2 47.8 L 357.5 49.3 L 356.6 49.9 L 357.0 51.2 L 357.3 52.5 L 357.9 53.8 L 358.1 55.3 L 358.5 56.5 L 358.2 57.9 L 359.0 58.9 L 360.0 59.1 L 360.9 59.8 L 361.8 60.1 L 362.8 60.7 L 363.7 60.4 L 364.9 59.7 L 365.8 59.0 L 366.8 58.4 L 367.8 58.5 L 367.9 59.8 L 368.9 60.6 L 369.9 60.4 L 370.9 60.5 L 371.9 60.7 L 372.8 61.2 L 373.5 62.2 L 374.4 62.8 L 374.9 64.1 L 374.9 65.4 L 375.0 66.8 L 374.4 68.1 L 374.8 69.5 L 375.3 70.7 L 375.9 71.8 L 377.0 72.3 L 377.4 71.1 L 377.9 69.8 L 378.8 69.6 L 379.7 69.3 L 380.7 69.2 L 381.7 69.4 L 382.7 69.4 L 383.5 70.3 L 384.6 70.9 L 386.5 70.2 L 387.6 69.5 L 388.7 69.6 L 389.7 69.4 L 390.7 70.1 L 391.7 70.7 L 392.3 71.7 L 393.3 72.0 L 394.2 72.8 L 394.3 74.3 L 395.0 75.2 L 396.0 75.1 L 395.3 74.1 L 396.2 73.4 L 397.1 74.2 L 398.0 74.6 L 398.0 76.0 L 397.0 76.5 L 396.3 77.6 L 395.5 78.2 L 395.6 79.6 L 395.6 80.9 L 394.8 81.8 L 395.1 83.2 L 396.0 82.8 L 397.4 82.8 L 397.4 84.4 L 398.1 85.4 L 398.8 86.6 L 397.8 87.6 L 396.9 88.1 L 395.9 88.1 L 395.1 89.2 L 395.1 90.6 L 395.9 91.4 L 395.1 92.4 L 396.1 92.5 L 397.1 93.0 L 397.9 93.8 L 398.9 93.7 L 399.8 93.4 L 400.9 93.3 L 402.1 93.0 L 403.1 93.4 L 404.2 94.0 L 405.2 93.9 L 406.2 94.3 L 407.1 94.6 L 408.0 95.0 L 409.2 94.4 L 410.3 94.3 L 411.3 94.2 L 412.1 93.0 L 413.0 93.0 L 413.8 92.1 L 414.8 92.0 L 415.7 91.9 L 416.7 91.6 L 417.7 91.3 L 418.2 90.1 L 418.5 88.8 L 418.2 87.4 L 418.4 86.1 L 419.3 85.2 L 420.4 84.5 L 421.2 83.6 L 421.9 82.5 L 423.0 82.0 L 424.0 80.7 L 424.8 81.6 L 425.8 81.7 L 426.8 82.5 L 426.1 83.4 L 426.1 84.9 L 424.9 85.2 L 424.8 86.6 L 423.9 87.1 L 424.4 88.2 L 424.0 89.5 L 423.8 90.9 L 423.4 92.1 L 422.7 93.0 L 423.4 93.9 L 424.4 94.3 L 425.4 94.8 L 426.3 95.8 L 426.3 97.2 L 426.1 98.6 L 425.3 99.4 L 425.5 100.9 L 426.1 102.1 L 425.6 103.4 L 426.7 104.1 L 427.7 104.3 L 428.7 104.2 L 429.6 103.4 L 430.6 103.4 L 431.6 103.7 L 432.5 104.8 L 433.5 105.3 L 434.5 105.8 L 435.6 105.7 L 436.3 106.7 L 436.8 107.8 L 437.5 108.8 L 438.5 108.7 L 438.7 110.0 L 439.8 109.9 L 440.8 110.3 L 441.9 110.3 L 442.8 109.9 L 443.7 110.5 L 444.5 111.3 L 445.5 112.1 L 444.9 113.4 L 444.9 115.1 L 446.0 114.8 L 446.8 114.1 L 447.7 114.5 L 448.7 115.1 L 449.7 115.8 L 450.3 117.6 L 450.7 119.0 L 451.4 119.9 L 450.7 120.8 L 451.4 121.7 L 452.4 121.5 L 453.6 121.4 L 454.7 121.0 L 455.5 120.2 L 456.4 120.5 L 457.3 121.2 L 458.1 119.9 L 459.0 119.0 L 460.0 118.8 L 461.0 119.1 L 462.0 119.4 L 463.0 119.3 L 463.9 118.8 L 464.8 118.3 L 465.7 118.9 L 466.5 119.6 L 467.7 120.1 L 467.9 121.4 L 468.7 121.9 L 469.7 122.1 L 470.7 121.9 L 471.7 121.9 L 472.7 122.4 L 473.1 123.7 L 473.5 125.0 L 474.6 124.9 L 475.5 124.7 L 476.5 124.1 L 477.6 124.2 L 478.5 124.8 L 479.0 123.6 L 479.6 122.6 L 480.6 122.5 L 481.5 121.5 L 482.6 121.6 L 483.5 121.3 L 484.4 121.1 L 485.4 121.5 L 486.3 122.4 L 487.1 123.2 L 488.1 123.5 L 489.0 124.0 L 490.0 124.4 L 491.0 124.1 L 491.9 123.7 L 493.0 124.0 L 494.1 124.0 L 495.0 124.9 L 495.9 125.3 L 497.0 125.9 L 497.8 126.7 L 497.2 127.9 L 498.1 128.6 L 499.2 129.0 L 499.8 130.2 L 498.9 130.8 L 499.0 132.2 L 499.9 133.3 L 500.8 134.1 L 501.7 134.9 L 502.8 135.5 L 502.4 136.9 L 503.4 137.1 L 503.7 138.5 L 504.4 139.3 L 505.4 140.0 L 504.6 141.1 L 505.3 142.3 L 506.4 142.5 L 507.4 142.4 L 508.5 142.8 L 509.4 143.3 L 510.4 143.1 L 510.9 141.8 L 510.6 140.5 L 510.7 139.2 L 511.9 139.7 L 512.8 139.5 L 513.7 139.0 L 514.6 139.7 L 515.6 139.9 L 516.5 140.3 L 517.3 141.2 L 518.3 141.0 L 518.1 142.5 L 518.6 143.7 L 518.8 145.2 L 519.7 145.7 L 520.5 144.8 L 520.4 143.4 L 521.4 143.2 L 522.3 144.0 L 523.0 145.0 L 524.0 144.8 L 525.0 144.9 L 526.0 145.0 L 526.9 144.8 L 528.2 145.2 L 529.3 145.6 L 530.1 144.7 L 530.9 143.8 L 532.0 143.9 L 532.6 142.8 L 533.5 141.9 L 534.4 141.7 L 535.5 141.5 L 536.2 142.5 L 537.3 142.3 L 538.1 143.2 L 538.1 144.5 L 538.9 145.4 L 539.4 146.8 L 540.4 147.5 L 541.5 147.8 L 542.5 147.6 L 543.3 148.2 L 543.8 149.3 L 544.9 149.7 L 545.9 149.7 L 546.9 149.3 L 548.1 149.3 L 549.1 149.9 L 550.0 149.2 L 551.0 148.8 L 552.1 149.5 L 552.9 150.1 L 553.8 150.7 L 554.6 149.9 L 555.7 150.0 L 556.6 149.4 L 557.7 150.0 L 558.5 150.9 L 559.4 151.0 L 560.3 151.5 L 561.3 151.8 L 562.1 152.4 L 563.1 153.2 L 564.2 153.6 L 565.1 153.8 L 566.0 154.2 L 567.1 154.1 L 568.0 154.8 L 569.0 154.2 L 568.2 155.2 L 567.4 156.2 L 566.4 157.8 L 565.6 159.1 L 564.9 160.5 L 564.2 162.8 L 563.8 164.1 L 563.0 165.2 L 562.0 165.8 L 561.0 165.7 L 560.5 167.0 L 559.4 167.6 L 558.5 167.6 L 558.1 169.3 L 557.5 170.4 L 556.0 172.2 L 555.1 173.3 L 553.9 174.2 L 552.9 174.6 L 552.4 175.8 L 551.2 177.9 L 551.1 179.3 L 551.1 181.1 L 551.3 182.5 L 550.5 183.6 L 549.6 184.2 L 549.5 185.9 L 549.1 187.4 L 548.6 188.7 L 548.1 190.2 L 548.3 192.0 L 548.6 193.7 L 547.9 194.9 L 546.9 195.4 L 546.3 196.6 L 545.9 198.6 L 545.5 200.2 L 544.6 201.4 L 543.9 202.6 L 543.3 203.6 L 542.5 204.6 L 542.4 206.0 L 541.6 206.8 L 541.6 208.2 L 541.2 209.6 L 541.3 210.9 L 541.1 212.3 L 542.3 213.7 L 543.0 214.7 L 543.4 216.1 L 542.8 217.3 L 542.0 218.2 L 541.7 219.6 L 541.5 221.1 L 540.6 221.8 L 540.9 223.3 L 540.4 225.1 L 539.9 226.7 L 539.5 228.0 L 539.9 229.5 L 540.2 231.0 L 538.8 232.7 L 539.0 234.4 L 539.6 235.7 L 540.5 236.5 L 541.2 237.4 L 541.9 238.5 L 541.9 240.0 L 540.9 240.5 L 539.9 241.7 L 539.0 242.4 L 538.1 243.0 L 539.2 243.2 L 538.5 244.3 L 538.3 245.6 L 537.4 246.4 L 536.4 245.9 L 535.4 245.3 L 534.8 246.4 L 535.9 246.6 L 535.2 247.7 L 534.5 248.8 L 533.6 249.2 L 532.6 249.3 L 531.6 249.1 L 530.6 249.0 L 529.5 249.2 L 528.5 249.6 L 527.6 250.0 L 526.8 249.0 L 525.9 249.1 L 524.6 248.8 L 524.5 247.4 L 525.0 246.0 L 524.0 245.9 L 522.8 245.1 L 522.4 245.0 Z M619.3 592.9 L 619.4 594.3 L 619.2 595.8 L 619.2 597.3 L 619.6 598.6 L 619.5 600.0 L 619.4 601.4 L 619.2 602.8 L 618.3 603.6 L 618.4 605.0 L 618.0 606.4 L 617.1 606.5 L 617.3 607.8 L 616.3 607.6 L 615.3 607.1 L 614.7 608.2 L 614.2 609.5 L 615.2 609.3 L 616.1 608.6 L 617.0 609.2 L 617.0 610.6 L 616.2 611.3 L 615.3 612.0 L 614.6 612.9 L 614.2 614.2 L 614.3 615.5 L 613.9 616.8 L 613.1 617.7 L 612.2 618.4 L 611.8 619.7 L 612.8 619.7 L 612.6 621.1 L 612.0 622.1 L 611.4 623.2 L 610.4 623.3 L 609.6 622.5 L 608.6 622.0 L 607.7 621.6 L 606.6 621.5 L 606.7 620.1 L 607.2 619.0 L 606.3 618.5 L 605.3 618.6 L 605.1 617.2 L 604.0 617.6 L 603.0 617.0 L 602.1 616.3 L 601.2 616.3 L 600.4 615.5 L 599.3 615.3 L 598.4 614.5 L 597.4 614.6 L 596.8 613.5 L 595.9 613.9 L 595.8 612.4 L 594.8 612.2 L 594.0 611.5 L 593.0 611.1 L 593.3 609.6 L 593.2 608.2 L 593.4 606.8 L 594.5 607.0 L 595.4 606.4 L 596.3 605.8 L 597.0 604.9 L 597.8 604.0 L 597.1 603.0 L 596.1 602.8 L 595.1 602.6 L 594.2 601.8 L 593.3 602.6 L 592.4 601.9 L 593.0 600.7 L 592.0 600.3 L 591.1 600.7 L 590.2 601.2 L 589.4 600.2 L 588.4 600.1 L 589.2 599.3 L 590.1 598.6 L 590.5 597.3 L 591.1 596.2 L 592.1 595.9 L 592.8 594.8 L 592.1 593.8 L 593.1 593.4 L 592.9 592.0 L 593.6 591.0 L 593.3 589.5 L 592.5 588.7 L 591.3 588.3 L 590.7 589.4 L 589.7 589.8 L 588.7 589.9 L 587.7 589.9 L 586.6 589.9 L 585.7 590.5 L 585.8 589.0 L 585.4 587.7 L 584.7 586.5 L 585.7 585.9 L 586.6 586.2 L 587.6 585.7 L 587.5 584.3 L 588.0 583.2 L 588.9 582.5 L 589.9 582.4 L 590.7 581.6 L 591.0 580.3 L 590.2 579.7 L 589.7 578.4 L 589.2 577.1 L 588.3 577.6 L 587.3 577.1 L 586.4 576.6 L 585.5 575.9 L 584.5 576.2 L 584.5 574.8 L 583.5 575.1 L 584.3 574.4 L 583.5 573.7 L 584.5 573.1 L 584.3 571.8 L 583.7 570.6 L 582.9 569.9 L 583.8 569.4 L 584.7 569.1 L 585.7 568.6 L 586.6 568.6 L 587.6 568.2 L 588.7 568.0 L 588.4 566.7 L 587.6 565.7 L 586.7 565.4 L 585.7 565.1 L 586.3 563.7 L 585.7 562.6 L 584.7 562.5 L 584.0 563.4 L 583.0 562.8 L 582.8 561.5 L 583.8 561.4 L 584.5 560.4 L 585.5 560.2 L 585.5 558.8 L 586.4 558.3 L 587.3 558.7 L 587.8 557.5 L 587.9 556.0 L 587.2 554.9 L 587.8 553.9 L 587.9 552.4 L 589.0 552.2 L 590.1 551.9 L 590.1 550.4 L 590.1 549.0 L 591.2 549.2 L 592.1 549.9 L 593.2 549.8 L 593.8 548.8 L 594.0 547.4 L 595.0 547.1 L 595.9 546.5 L 596.8 546.4 L 597.5 545.5 L 598.6 545.1 L 599.4 544.6 L 600.4 545.0 L 601.4 544.8 L 602.3 544.5 L 603.3 544.1 L 604.4 543.7 L 604.4 542.2 L 605.3 541.3 L 605.8 540.1 L 606.7 539.5 L 607.8 539.2 L 608.8 538.9 L 609.7 539.2 L 610.7 539.5 L 611.6 538.8 L 612.3 539.8 L 613.1 540.7 L 613.9 541.4 L 614.4 542.6 L 615.4 541.8 L 615.9 540.7 L 616.5 539.6 L 616.8 538.1 L 616.7 536.7 L 616.8 535.2 L 616.1 534.1 L 615.5 533.0 L 615.9 531.8 L 616.7 530.8 L 616.1 529.8 L 616.2 528.4 L 617.1 527.7 L 617.3 526.3 L 617.0 525.0 L 616.8 523.6 L 617.3 522.3 L 618.2 522.1 L 619.2 522.0 L 620.2 521.8 L 621.0 522.6 L 621.8 523.3 L 621.6 524.7 L 621.9 526.0 L 622.3 527.3 L 622.3 528.7 L 622.5 530.0 L 622.7 531.4 L 622.9 532.8 L 623.0 534.4 L 622.8 535.7 L 622.2 536.9 L 621.9 538.2 L 621.7 539.5 L 621.5 541.0 L 621.2 542.3 L 621.4 543.8 L 622.0 544.9 L 622.7 546.1 L 623.4 547.2 L 624.2 548.2 L 624.7 549.5 L 624.9 551.1 L 624.8 552.6 L 624.7 554.0 L 625.0 555.3 L 625.2 556.8 L 625.3 558.2 L 625.0 559.6 L 624.8 561.3 L 625.0 562.7 L 625.4 564.1 L 625.7 565.6 L 626.0 567.0 L 625.8 568.6 L 625.7 570.3 L 625.9 571.8 L 625.8 573.3 L 625.8 575.1 L 625.8 576.6 L 625.5 577.9 L 624.7 578.9 L 624.0 580.1 L 623.3 581.2 L 622.7 582.3 L 622.1 583.4 L 621.3 584.4 L 620.6 585.4 L 619.9 586.6 L 619.7 587.9 L 619.7 589.4 L 619.3 590.7 L 619.1 592.1 L 619.3 592.9 Z'/><g class='fm-cpt' data-city='Lille' role='button' tabindex='0' aria-label='Fiche de Lille'><circle cx='348.9' cy='52.3' r='8' class='fm-hit'/><circle cx='348.9' cy='52.3' r='3' class='fm-city'/><text x='353.9' y='55.3' text-anchor='start' class='fm-lbl'>Lille</text></g><g class='fm-cpt' data-city='Valenciennes' role='button' tabindex='0' aria-label='Fiche de Valenciennes'><circle cx='368.5' cy='68.9' r='8' class='fm-hit'/><circle cx='368.5' cy='68.9' r='3' class='fm-city'/><text x='373.5' y='71.9' text-anchor='start' class='fm-lbl'>Valenciennes</text></g><g class='fm-cpt' data-city='Amiens' role='button' tabindex='0' aria-label='Fiche de Amiens'><circle cx='316.5' cy='97.3' r='8' class='fm-hit'/><circle cx='316.5' cy='97.3' r='3' class='fm-city'/><text x='321.5' y='100.3' text-anchor='start' class='fm-lbl'>Amiens</text></g><g class='fm-cpt' data-city='Le Havre' role='button' tabindex='0' aria-label='Fiche de Le Havre'><circle cx='223.1' cy='122.6' r='8' class='fm-hit'/><circle cx='223.1' cy='122.6' r='3' class='fm-city'/><text x='228.1' y='125.6' text-anchor='start' class='fm-lbl'>Le Havre</text></g><g class='fm-cpt' data-city='Rouen' role='button' tabindex='0' aria-label='Fiche de Rouen'><circle cx='265.3' cy='125.6' r='8' class='fm-hit'/><circle cx='265.3' cy='125.6' r='3' class='fm-city'/><text x='270.3' y='136.6' text-anchor='start' class='fm-lbl'>Rouen</text></g><g class='fm-cpt' data-city='Reims' role='button' tabindex='0' aria-label='Fiche de Reims'><circle cx='390.2' cy='136.7' r='8' class='fm-hit'/><circle cx='390.2' cy='136.7' r='3' class='fm-city'/><text x='395.2' y='139.7' text-anchor='start' class='fm-lbl'>Reims</text></g><g class='fm-cpt' data-city='Caen' role='button' tabindex='0' aria-label='Fiche de Caen'><circle cx='202.6' cy='141.7' r='8' class='fm-hit'/><circle cx='202.6' cy='141.7' r='3' class='fm-city'/><text x='207.6' y='144.7' text-anchor='start' class='fm-lbl'>Caen</text></g><g class='fm-cpt' data-city='Metz' role='button' tabindex='0' aria-label='Fiche de Metz'><circle cx='481.9' cy='145.4' r='8' class='fm-hit'/><circle cx='481.9' cy='145.4' r='3' class='fm-city'/><text x='486.9' y='148.4' text-anchor='start' class='fm-lbl'>Metz</text></g><g class='fm-cpt' data-city='Paris' role='button' tabindex='0' aria-label='Fiche de Paris'><circle cx='318.6' cy='161.6' r='8' class='fm-hit'/><circle cx='318.6' cy='161.6' r='3' class='fm-city'/><text x='323.6' y='164.6' text-anchor='start' class='fm-lbl'>Paris</text></g><g class='fm-cpt' data-city='Créteil' role='button' tabindex='0' aria-label='Fiche de Créteil'><circle cx='323.3' cy='165.7' r='8' class='fm-hit'/><circle cx='323.3' cy='165.7' r='3' class='fm-city'/><text x='318.3' y='168.7' text-anchor='end' class='fm-lbl'>Créteil</text></g><g class='fm-cpt' data-city='Nancy' role='button' tabindex='0' aria-label='Fiche de Nancy'><circle cx='481.9' cy='171.9' r='8' class='fm-hit'/><circle cx='481.9' cy='171.9' r='3' class='fm-city'/><text x='486.9' y='174.9' text-anchor='start' class='fm-lbl'>Nancy</text></g><g class='fm-cpt' data-city='Strasbourg' role='button' tabindex='0' aria-label='Fiche de Strasbourg'><circle cx='548.9' cy='178.6' r='8' class='fm-hit'/><circle cx='548.9' cy='178.6' r='3' class='fm-city'/><text x='553.9' y='181.6' text-anchor='start' class='fm-lbl'>Strasbourg</text></g><g class='fm-cpt' data-city='Brest' role='button' tabindex='0' aria-label='Fiche de Brest'><circle cx='27.0' cy='190.3' r='8' class='fm-hit'/><circle cx='27.0' cy='190.3' r='3' class='fm-city'/><text x='32.0' y='193.3' text-anchor='start' class='fm-lbl'>Brest</text></g><g class='fm-cpt' data-city='Troyes' role='button' tabindex='0' aria-label='Fiche de Troyes'><circle cx='392.4' cy='195.9' r='8' class='fm-hit'/><circle cx='392.4' cy='195.9' r='3' class='fm-city'/><text x='397.4' y='198.9' text-anchor='start' class='fm-lbl'>Troyes</text></g><g class='fm-cpt' data-city='Rennes' role='button' tabindex='0' aria-label='Fiche de Rennes'><circle cx='146.8' cy='207.6' r='8' class='fm-hit'/><circle cx='146.8' cy='207.6' r='3' class='fm-city'/><text x='151.8' y='210.6' text-anchor='start' class='fm-lbl'>Rennes</text></g><g class='fm-cpt' data-city='Orléans' role='button' tabindex='0' aria-label='Fiche de Orléans'><circle cx='299.4' cy='220.5' r='8' class='fm-hit'/><circle cx='299.4' cy='220.5' r='3' class='fm-city'/><text x='304.4' y='223.5' text-anchor='start' class='fm-lbl'>Orléans</text></g><g class='fm-cpt' data-city='Belfort' role='button' tabindex='0' aria-label='Fiche de Belfort'><circle cx='510.9' cy='236.6' r='8' class='fm-hit'/><circle cx='510.9' cy='236.6' r='3' class='fm-city'/><text x='515.9' y='239.6' text-anchor='start' class='fm-lbl'>Belfort</text></g><g class='fm-cpt' data-city='Angers' role='button' tabindex='0' aria-label='Fiche de Angers'><circle cx='195.0' cy='247.0' r='8' class='fm-hit'/><circle cx='195.0' cy='247.0' r='3' class='fm-city'/><text x='200.0' y='250.0' text-anchor='start' class='fm-lbl'>Angers</text></g><g class='fm-cpt' data-city='Tours' role='button' tabindex='0' aria-label='Fiche de Tours'><circle cx='247.8' cy='252.0' r='8' class='fm-hit'/><circle cx='247.8' cy='252.0' r='3' class='fm-city'/><text x='252.8' y='255.0' text-anchor='start' class='fm-lbl'>Tours</text></g><g class='fm-cpt' data-city='Dijon' role='button' tabindex='0' aria-label='Fiche de Dijon'><circle cx='433.3' cy='256.3' r='8' class='fm-hit'/><circle cx='433.3' cy='256.3' r='3' class='fm-city'/><text x='438.3' y='259.3' text-anchor='start' class='fm-lbl'>Dijon</text></g><g class='fm-cpt' data-city='Besançon' role='button' tabindex='0' aria-label='Fiche de Besançon'><circle cx='475.1' cy='261.2' r='8' class='fm-hit'/><circle cx='475.1' cy='261.2' r='3' class='fm-city'/><text x='480.1' y='264.2' text-anchor='start' class='fm-lbl'>Besançon</text></g><g class='fm-cpt' data-city='Nantes' role='button' tabindex='0' aria-label='Fiche de Nantes'><circle cx='152.3' cy='262.5' r='8' class='fm-hit'/><circle cx='152.3' cy='262.5' r='3' class='fm-city'/><text x='157.3' y='265.5' text-anchor='start' class='fm-lbl'>Nantes</text></g><g class='fm-cpt' data-city='Poitiers' role='button' tabindex='0' aria-label='Fiche de Poitiers'><circle cx='232.9' cy='301.9' r='8' class='fm-hit'/><circle cx='232.9' cy='301.9' r='3' class='fm-city'/><text x='237.9' y='304.9' text-anchor='start' class='fm-lbl'>Poitiers</text></g><g class='fm-cpt' data-city='Bourg-en-Bresse' role='button' tabindex='0' aria-label='Fiche de Bourg-en-Bresse'><circle cx='441.4' cy='325.3' r='8' class='fm-hit'/><circle cx='441.4' cy='325.3' r='3' class='fm-city'/><text x='446.4' y='328.3' text-anchor='start' class='fm-lbl'>Bourg-en-Bresse</text></g><g class='fm-cpt' data-city='La Rochelle' role='button' tabindex='0' aria-label='Fiche de La Rochelle'><circle cx='169.4' cy='327.8' r='8' class='fm-hit'/><circle cx='169.4' cy='327.8' r='3' class='fm-city'/><text x='174.4' y='330.8' text-anchor='start' class='fm-lbl'>La Rochelle</text></g><g class='fm-cpt' data-city='Vichy' role='button' tabindex='0' aria-label='Fiche de Vichy'><circle cx='364.2' cy='329.6' r='8' class='fm-hit'/><circle cx='364.2' cy='329.6' r='3' class='fm-city'/><text x='369.2' y='332.6' text-anchor='start' class='fm-lbl'>Vichy</text></g><g class='fm-cpt' data-city='Limoges' role='button' tabindex='0' aria-label='Fiche de Limoges'><circle cx='272.1' cy='348.1' r='8' class='fm-hit'/><circle cx='272.1' cy='348.1' r='3' class='fm-city'/><text x='277.1' y='351.1' text-anchor='start' class='fm-lbl'>Limoges</text></g><g class='fm-cpt' data-city='Clermont-Ferrand' role='button' tabindex='0' aria-label='Fiche de Clermont-Ferrand'><circle cx='349.7' cy='351.2' r='8' class='fm-hit'/><circle cx='349.7' cy='351.2' r='3' class='fm-city'/><text x='354.7' y='354.2' text-anchor='start' class='fm-lbl'>Clermont-Ferrand</text></g><g class='fm-cpt' data-city='Lyon' role='button' tabindex='0' aria-label='Fiche de Lyon'><circle cx='424.8' cy='352.4' r='8' class='fm-hit'/><circle cx='424.8' cy='352.4' r='3' class='fm-city'/><text x='424.8' y='343.4' text-anchor='middle' class='fm-lbl'>Lyon</text></g><g class='fm-cpt' data-city='Chambéry' role='button' tabindex='0' aria-label='Fiche de Chambéry'><circle cx='470.8' cy='364.8' r='8' class='fm-hit'/><circle cx='470.8' cy='364.8' r='3' class='fm-city'/><text x='475.8' y='367.8' text-anchor='start' class='fm-lbl'>Chambéry</text></g><g class='fm-cpt' data-city='Saint-Étienne' role='button' tabindex='0' aria-label='Fiche de Saint-Étienne'><circle cx='405.6' cy='372.2' r='8' class='fm-hit'/><circle cx='405.6' cy='372.2' r='3' class='fm-city'/><text x='400.6' y='375.2' text-anchor='end' class='fm-lbl'>Saint-Étienne</text></g><g class='fm-cpt' data-city='Grenoble' role='button' tabindex='0' aria-label='Fiche de Grenoble'><circle cx='462.3' cy='387.6' r='8' class='fm-hit'/><circle cx='462.3' cy='387.6' r='3' class='fm-city'/><text x='467.3' y='390.6' text-anchor='start' class='fm-lbl'>Grenoble</text></g><g class='fm-cpt' data-city='Valence' role='button' tabindex='0' aria-label='Fiche de Valence'><circle cx='426.9' cy='403.6' r='8' class='fm-hit'/><circle cx='426.9' cy='403.6' r='3' class='fm-city'/><text x='431.9' y='406.6' text-anchor='start' class='fm-lbl'>Valence</text></g><g class='fm-cpt' data-city='Bordeaux' role='button' tabindex='0' aria-label='Fiche de Bordeaux'><circle cx='193.7' cy='409.1' r='8' class='fm-hit'/><circle cx='193.7' cy='409.1' r='3' class='fm-city'/><text x='198.7' y='412.1' text-anchor='start' class='fm-lbl'>Bordeaux</text></g><g class='fm-cpt' data-city='Avignon' role='button' tabindex='0' aria-label='Fiche de Avignon'><circle cx='423.5' cy='464.0' r='8' class='fm-hit'/><circle cx='423.5' cy='464.0' r='3' class='fm-city'/><text x='428.5' y='467.0' text-anchor='start' class='fm-lbl'>Avignon</text></g><g class='fm-cpt' data-city='Albi' role='button' tabindex='0' aria-label='Fiche de Albi'><circle cx='310.1' cy='465.2' r='8' class='fm-hit'/><circle cx='310.1' cy='465.2' r='3' class='fm-city'/><text x='315.1' y='468.2' text-anchor='start' class='fm-lbl'>Albi</text></g><g class='fm-cpt' data-city='Nîmes' role='button' tabindex='0' aria-label='Fiche de Nîmes'><circle cx='404.3' cy='470.8' r='8' class='fm-hit'/><circle cx='404.3' cy='470.8' r='3' class='fm-city'/><text x='399.3' y='473.8' text-anchor='end' class='fm-lbl'>Nîmes</text></g><g class='fm-cpt' data-city='Nice' role='button' tabindex='0' aria-label='Fiche de Nice'><circle cx='528.4' cy='479.4' r='8' class='fm-hit'/><circle cx='528.4' cy='479.4' r='3' class='fm-city'/><text x='533.4' y='482.4' text-anchor='start' class='fm-lbl'>Nice</text></g><g class='fm-cpt' data-city='Montpellier' role='button' tabindex='0' aria-label='Fiche de Montpellier'><circle cx='383.8' cy='485.0' r='8' class='fm-hit'/><circle cx='383.8' cy='485.0' r='3' class='fm-city'/><text x='388.8' y='488.0' text-anchor='start' class='fm-lbl'>Montpellier</text></g><g class='fm-cpt' data-city='Toulouse' role='button' tabindex='0' aria-label='Fiche de Toulouse'><circle cx='279.8' cy='485.6' r='8' class='fm-hit'/><circle cx='279.8' cy='485.6' r='3' class='fm-city'/><text x='284.8' y='488.6' text-anchor='start' class='fm-lbl'>Toulouse</text></g><g class='fm-cpt' data-city='Aix-en-Provence' role='button' tabindex='0' aria-label='Fiche de Aix-en-Provence'><circle cx='450.8' cy='489.9' r='8' class='fm-hit'/><circle cx='450.8' cy='489.9' r='3' class='fm-city'/><text x='455.8' y='492.9' text-anchor='start' class='fm-lbl'>Aix-en-Provence</text></g><g class='fm-cpt' data-city='Marseille' role='button' tabindex='0' aria-label='Fiche de Marseille'><circle cx='447.4' cy='504.1' r='8' class='fm-hit'/><circle cx='447.4' cy='504.1' r='3' class='fm-city'/><text x='452.4' y='507.1' text-anchor='start' class='fm-lbl'>Marseille</text></g><g class='fm-cpt' data-city='Pau' role='button' tabindex='0' aria-label='Fiche de Pau'><circle cx='202.6' cy='504.1' r='8' class='fm-hit'/><circle cx='202.6' cy='504.1' r='3' class='fm-city'/><text x='207.6' y='507.1' text-anchor='start' class='fm-lbl'>Pau</text></g><g class='fm-cpt' data-city='Toulon' role='button' tabindex='0' aria-label='Fiche de Toulon'><circle cx='471.3' cy='515.2' r='8' class='fm-hit'/><circle cx='471.3' cy='515.2' r='3' class='fm-city'/><text x='476.3' y='518.2' text-anchor='start' class='fm-lbl'>Toulon</text></g><g class='fm-cpt' data-city='Perpignan' role='button' tabindex='0' aria-label='Fiche de Perpignan'><circle cx='342.1' cy='541.0' r='8' class='fm-hit'/><circle cx='342.1' cy='541.0' r='3' class='fm-city'/><text x='347.1' y='544.0' text-anchor='start' class='fm-lbl'>Perpignan</text></g></svg>",
+    "caption": "Les villes faluchardes de France métropolitaine. Cliquez sur une ville pour ouvrir sa fiche. Projection équirectangulaire ; tracé du littoral d'après les données ouvertes France-GeoJSON."
+        },
         {
           "t": "accordion",
           "items": [
@@ -3966,6 +4136,10 @@ footer .ribbon{margin:-30px -20px 22px}
                     [
                       "Couture velours",
                       "proche de la couture grenobloise ; voilier sur ruban d'asso = paresse."
+                    ],
+                    [
+                      "Baptême",
+                      "la faluche y est baptisée au cidre."
                     ]
                   ]
                 },
@@ -4611,8 +4785,83 @@ footer .ribbon{margin:-30px -20px 22px}
       ]
     },
     {
+      "id": "gouvernance",
+      "title": "Gouvernance",
+      "intro": "La faluche n'a ni statuts ni hiérarchie nationale contraignante : c'est un folklore régi par l'usage, par les décisions prises en congrès et par une poignée de figures dont le rôle est de transmettre et d'arbitrer plutôt que de commander.",
+      "blocks": [
+        {
+          "t": "h3",
+          "text": "Les croix : Grand Maître et Grand Chambellan"
+        },
+        {
+          "t": "p",
+          "html": "Le <strong>Grand Maître (GM)</strong> se distingue par une croix émaillée — dérivée de la croix du mérite scolaire — qui pend à gauche de sa faluche tant qu'il est en fonction. Au terme de son mandat, il la transmet à son successeur et n'arbore plus, à droite, qu'un ruban de rappel à la couleur de sa filière, orné d'un soleil. Il est élu par sa communauté après profession de foi, pour un ou deux ans au plus afin de garantir le roulement (si tant est qu'il puisse transmettre sa croix) ; il ne peut être nommé directement par son prédécesseur, qui peut seulement le recommander. Garant de sa communauté, il officie les baptêmes, fait réciter le serment, veille à maintenir les traditions et l'intégrité nationale du folklore, et se doit d'être impartial et exemplaire — quitte à s'astreindre à la sobriété pour veiller au bien-être des siens."
+        },
+        {
+          "t": "p",
+          "html": "Responsable de l'image de la faluche, le GM peut décerner un blâme, voire imposer un retrait de faluche ; mais il n'est « ni avocat ni juge » et ne peut sanctionner qu'après preuves et jugement, sous peine de se voir lui-même retirer sa croix. Gardien des traditions, il modère la prolifération des insignes et des spécialités et veille à ce que les codes locaux ne rendent pas les faluches « illisibles d'une ville à l'autre », au nom du principe de « passeport interrégional et intergénérationnel » qu'est la faluche. Il siège à la réunion des croix et relaie, dans les deux sens, les décisions entre le national et sa communauté."
+        },
+        {
+          "t": "p",
+          "html": "Le <strong>Grand Chambellan (GC)</strong>, officialisé au 109<sup>e</sup> anniversaire et inscrit au code au 121<sup>e</sup>, se reconnaît à une croix non émaillée et, une fois son mandat terminé, à un ruban de rappel orné d'une lune. Il est l'assistant du GM, choisi pour des qualités proches des siennes puisqu'il peut le suppléer : il aide à organiser et officier les baptêmes, peut décerner certains insignes avec son accord et le conseille."
+        },
+        {
+          "t": "note",
+          "html": "Un rappel souvent fait : la « Lime pour insulte à GM » n'a jamais existé. « Un GM ne gagne pas le respect de ses faluchards à coups de punitions » ; là où cet insigne figure dans un code local, il peut être retiré."
+        },
+        {
+          "t": "h3",
+          "text": "Les parrains et marraines"
+        },
+        {
+          "t": "p",
+          "html": "L'impétrant choisit, parmi les faluchards avec qui il a noué une relation particulière, des parrains et marraines (PM) chargés de lui enseigner le code et les traditions, de le préparer et de l'accompagner. Un texte, « les dix commandements des PM » (attribué à Gala), en fixe les devoirs : connaître soi-même code et chansons, adapter le gage aux limites de son filleul, boire pour lui le soir du baptême, lui trouver un surnom, garder sa bouteille et son bouchon, dépuceler sa faluche, vérifier qu'elle est cousue selon le code national, l'encourager à sortir et veiller sur lui bien au-delà du baptême."
+        },
+        {
+          "t": "h3",
+          "text": "Les « Grands »"
+        },
+        {
+          "t": "p",
+          "html": "Au-delà des croix, chaque ville ou filière entretient ses titres honorifiques, les « Grands », souvent attachés à un ruban particulier. Ces titres, facétieux et locaux, varient d'une communauté à l'autre."
+        },
+        {
+          "t": "h3",
+          "text": "Les évêques et le Grand Vicaire"
+        },
+        {
+          "t": "p",
+          "html": "Le Grand Vicaire, basé à Paris, et les évêques forment une instance d'arbitrage et de cérémonie : reconnus pour leur empathie, ils règlent les conflits et célèbrent les mariages faluchards. La tradition comptait historiquement trois évêques « régnants » (Amiens, Dijon, Poitiers) ; elle en reconnaît aujourd'hui quatre, répartis sur le territoire — Poitiers, évêque du Sud et premier institué ; Amiens, évêque du Nord ; Strasbourg, évêque de l'Est septentrional ; Grenoble, évêque de l'Est méridional."
+        },
+        {
+          "t": "h3",
+          "text": "Le défaluchage"
+        },
+        {
+          "t": "p",
+          "html": "La sanction la plus grave est le retrait de faluche, ou défaluchage : l'interdiction de porter la coiffe, temporaire ou définitive, prononcée pour un manquement grave et après preuves. La prise physique de la faluche, en revanche, est illégale — c'est un vol de bien privé. Un faluchard défaluché ne peut être rebaptisé : le rebaptême n'est admis qu'après une perte matérielle de la faluche."
+        },
+        {
+          "t": "h3",
+          "text": "Les instances nationales"
+        },
+        {
+          "t": "p",
+          "html": "Faute de hiérarchie centrale, la coordination passe par le <strong>forum des croix</strong>, où les GM s'inscrivent et annoncent publiquement leurs décisions, et par la <strong>réunion des croix</strong> tenue lors des anniversaires de la faluche, où l'ensemble des croix et assimilés forme le « Très Grand Conseil ». Un <strong>GM national</strong>, porté par une croix sur ruban tricolore, exista du 100<sup>e</sup> anniversaire (Reims) au 106<sup>e</sup>."
+        },
+        {
+          "t": "p",
+          "html": "Au 106<sup>e</sup> (Toulouse, 1994), ce GM national fut remplacé par le <strong>Conseil des Grands Singes</strong>, instance de treize membres issus de filières et de régions diverses, gardiens des traditions et arbitres seulement consultatifs. Leur insigne — un singe sur ruban crème, au chiffre de l'anniversaire de leur élection symbolisant la masturbation mentale — tourne en dérision toute prétention. Le conseil fut toutefois abandonné après deux générations."
+        },
+        {
+          "t": "p",
+          "html": "Plus récemment, le <strong>Groupement des archivistes</strong>, acté au 131<sup>e</sup> anniversaire (2019), réunit des faluchards volontaires,pour collecter, trier et sécuriser la mémoire du folklore face à la prolifération de documents erronés. Travail bénévole, il ne donne droit à aucune distinction."
+        },
+      ]
+    },
+    {
       "id": "folklore",
-      "title": "Figures & folklore",
+      "title": "Folklore",
       "blocks": [
         {
           "t": "h3",
@@ -4719,8 +4968,222 @@ footer .ribbon{margin:-30px -20px 22px}
           "html": "La prolifération de ces ordres a fini par menacer la faluche elle-même : devenus parfois plus importants qu'elle, ils ont été interdits au niveau national lors du 106<sup>e</sup> anniversaire, à la suite de dérives — notamment des baptêmes prononcés par des ordres et non par des croix officielles (l'« épisode de la Rose Noire »). L'interdiction de principe demeure, comme celle de proclamer des « Grands Maîtres d'ordre » ou d'en arborer les croix, afin de garder claire la chaîne des responsabilités. Quelques-uns restent tolérés là où ils vivent en dehors de la faluche, tels les <strong>Grelot</strong> ou les <strong>Buffalo</strong> ; d'autres survivent localement : Grands Singes, Géraldines, Cartouchière, Pince-Fesses, Cyprinophiles, Piraterie falucharde..."
         },
         {
+          "t": "p",
+          "html": "Au-delà du Bitard et de la Basoche, le folklore a vu fleurir quantité d'ordres et de confréries facétieuses, le plus souvent locales. En voici un relevé documentaire — les plus problématiques étant rapportés sans complaisance."
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Les Charlottes",
+              "Faluchard·e·s arborant à l'arrière de la faluche un nœud noir, qui marque leur refus du potager. Ordre aujourd'hui quasiment éteint."
+            ],
+            [
+              "Comité international de la bonne ambiance (CIBA)",
+              "Créé à Paris le week-end du 6 janvier 2007 pour tisser des liens entre les folklores de la faluche, de la calotte et de la penne, par des rencontres régulières et conviviales ; son unique credo est la « booonne ambiance ». Un représentant suisse y fut intronisé au congrès suisse du 16 juillet 2016."
+            ],
+            [
+              "L'Ordre du Buffalo",
+              "Ses membres jurent de toujours boire de la « mauvaise main », sous peine de finir leur verre cul sec et d'implorer le pardon de Rabelais et de Bacchus. La pratique, d'origine vigneronne, fait de lui l'un des rares ordres tolérés, car il vit en dehors de la faluche."
+            ],
+            [
+              "L'Ordre du Grelot",
+              "Vieil ordre dont les membres jurent de ne plus boire d'eau en manifestation étudiante. Le « grelottage » a lieu en hiver, l'aspirant prêtant serment dans un point d'eau ; il porte ensuite un grelot au bout d'une tresse, qui lui est coupé s'il est surpris à boire de l'eau. Les Grands Greloteurs arborent trois grelots (deux dorés, un argenté) et une cordelette blanche. Régi par un code, c'est l'autre ordre toléré."
+            ],
+            [
+              "L'Ordre rabelaisien des Cyprinophiles (ORC)",
+              "Fondé à Montpellier le 10 juin 1994 par des faluchards refusant que la coiffe ne devienne « un vulgaire chapeau à pin's » ; il prône le respect des traditions, de la personne et de la table, dans le plus pur esprit rabelaisien. Ses membres portent un long ruban de velours noir à l'arrière de la faluche."
+            ],
+            [
+              "Les Défenseurs de la langue française (ODLF)",
+              "Fondé par des faluchards Lettres de Lyon, voué à la sauvegarde de la langue. À sa tête, le Commandeur porte en frontal-occipital un ruban jaune marqué « ODLF » surmonté de l'arme de son choix ; il intronise son successeur parmi les plus anciens faluchards Lettres de Lyon encore en études."
+            ],
+            [
+              "La Piraterie falucharde",
+              "Confrérie née à Toulouse et codifiée par le « Seigneur Pirate » Led'Zaphter. Organisée en équipages, elle se reconnaît à un fanion de satin noir frappé du pavillon de l'équipage ; ses rangs vont du Mousse au Seigneur Pirate (Maître Canonnier, Quartier-Maître, Capitaine…), chacun doté d'un insigne. Son code impose de piller plutôt que voler, d'aimer le rhum et de connaître au moins deux chants de mer. Non reconnue au niveau national."
+            ],
+            [
+              "La Meute",
+              "Non un ordre mais une filiation entre faluchards, née à Poitiers (autour de Bong) et implantée à Rouen par Mylood. Elle se transmet de parrain à filleul par une carotte sur capsule de bière blanche, portée en partie personnelle, et un foulard pendant à l'arrière dont la couleur marque la génération. Devise : « la Meute partage tout » ; l'impétrant y est appelé louveteau."
+            ],
+            [
+              "Les Grands Voyageurs",
+              "Ordre des faluchards amoureux du voyage, reconnaissables à une longue cape noire couverte des écussons des villes traversées (parfois disposés en carte de France). On y progresse de Mousse à Amiral, chaque région ayant son insigne propre — cigogne pour l'Alsace, hermine pour la Bretagne, cigale pour la Provence… Non reconnu au national."
+            ],
+            [
+              "Les Géraldines",
+              "Mouvement réunissant des faluchardes lassées d'entendre leurs homologues masculins « parler corpo », qui se retrouvent entre elles. Quasiment éteint, encore présent par exemple à Strasbourg."
+            ],
+            [
+              "L'Ordre des Minis",
+              "Réunit, à l'échelle nationale, les faluchards de moins d'1 m 65 et les faluchardes de moins d'1 m 60, signalés par un ruban bleu. Les « grands » peuvent y entrer, mais doivent s'agenouiller en présence d'un mini."
+            ],
+            [
+              "Les Grandes Targets",
+              "Reconnaissables à une croix faite d'un muselet de bouchon de champagne compressé, pendant de la faluche. Réputation sulfureuse."
+            ],
+            [
+              "Chat noir & Chat blanc",
+              "Deux ordres en guerre amicale : les Chats noirs, amateurs de bon vin, organisent des dégustations en événements faluchards ; les Chats blancs conchient cordialement les premiers et leur « piquette en cubi ». Non reconnus au national."
+            ],
+            [
+              "La Tétine sublime",
+              "Ordre toulousain « sérieux » — ruban jaune où pend une tétine — mentionné dès le n<sup>o</sup> 5 du <em>Midi Étudiant</em> (mars 1966)."
+            ],
+            [
+              "Le Cul sec",
+              "Ordre toulousain « paillard » — ruban lie-de-vin où pend un bouchon de champagne — attesté par la même source (<em>Midi Étudiant</em>, mars 1966)."
+            ],
+            [
+              "Le Désordre de la 8.6",
+              "Pure facétie créée le 19 mars 2016 lors du congrès faluchard de Nantes (le « BN »), et néanmoins validée en congrès — illustration de l'autodérision que les ordres revendiquent."
+            ],
+            [
+              "L'Ordre des Grosses Merdes (OGM)",
+              "Ordre autodérisoire regroupant les profils les plus « trash » des événements faluchards, grands buveurs finissant rarement bien."
+            ],
+            [
+              "L'Ordre de la Cartouchière",
+              "Créé à Caen en 2008, il affichait le potager en accrochant une cartouche après chaque « passage à l'acte » en événement étudiant. Sa connotation est devenue très péjorative à la suite de nombreux abus."
+            ],
+            [
+              "L'Ordre de la Jarretière",
+              "Apparu semble-t-il à Lyon, il réunissait des faluchardes ayant convenu de ne porter que jupes et bas. La condition d'entrée qu'on lui prêtait — un tour de poitrine minimal — illustre surtout le caractère daté de ce type d'ordre."
+            ],
+            [
+              "L'Ordre des Pince-Fesses (OPF)",
+              "Ses membres pinçaient la partie charnue des faluchards pour en « apprécier la fermeté » et décernaient à un homme par ville le titre de « cul de Béton ». Comme plusieurs ordres anciens fondés sur le corps d'autrui, il pose un problème évident de consentement et n'a plus qu'une valeur de témoignage."
+            ],
+            [
+              "L'Ordre des Mammologues",
+              "Originaire de la filière catholique de Lyon, il prétendait « déterminer » le tour de poitrine d'une falucharde après une manipulation le plus souvent non consentie. Il n'est mentionné ici qu'à titre strictement documentaire : la pratique relève de violences sexistes et sexuelles et ne saurait être valorisée."
+            ]
+          ]
+        },
+        {
           "t": "note",
           "html": "Les ordres se réclament eux-mêmes d'une « vaste blague » complémentaire de la faluche : leur intérêt est historique et festif, non statutaire."
+        },
+        {
+          "t": "h3",
+          "text": "Folklores étudiants voisins"
+        },
+        {
+          "t": "p",
+          "html": "La faluche n'est pas seule : partout en Europe, la jeunesse universitaire a forgé ses coiffes et ses ordres, souvent nés dans le même élan de la fin du XIX<sup>e</sup> siècle."
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "Belgique — penne & calotte",
+              "Les facultés laïques portent la <em>penne</em>, casquette à longue visière dont les étoiles marquent les années ; faute de code, son velours se garnit de tout et n'importe quoi. Les facultés catholiques portent la <em>calotte</em>, toque d'astrakan créée en 1895 par Edmond Carton de Wiart, sous la devise « Sans peur ni bravade » et régie par l'Ordre souverain de la Calotte."
+            ],
+            [
+              "Italie — feluca",
+              "Héritière de l'<em>orsina</em> de 1888, la <em>feluca</em> (ou <em>berretto goliardico</em>) rappelle le chapeau de Robin des Bois et change de couleur selon la faculté. Le rituel de la <em>matricola</em> en mouille la coiffe de vin rouge avant de la remodeler ; sa fleur de lys figure les trois divinités de la <em>goliardia</em> : Bacchus, le Tabac et Vénus."
+            ],
+            [
+              "Espagne — tunas",
+              "Groupes d'étudiants musiciens en habit noir du Siècle d'or, parcourant les villes pour financer leurs études ; leur cape se couvre des écussons des lieux visités et de rubans offerts en gage d'amour, et la cuillère des <em>sopistas</em> ou le tricorne complète le costume."
+            ],
+            [
+              "Autres pays",
+              "La Suisse arbore la <em>stella</em> de la Société de Belles-Lettres ; la Pologne, la <em>czapka</em> en forme de képi, recréée en 2009 après l'éclipse soviétique ; la Finlande, casquettes à longue cordelière et combinaisons colorées. À Bruxelles, l'<em>Alto</em> (1988) fut créée pour rapprocher pennes et calottes."
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "paillardes",
+      "title": "Paillardes",
+      "intro": "Le chant est l'âme des rassemblements faluchards. On désigne par « paillardes » l'ensemble de ce répertoire chanté et consigné dans un bréviaire.",
+      "blocks": [
+        {
+          "t": "h3",
+          "text": "Qu'est-ce qu'une paillarde ?"
+        },
+        {
+          "t": "p",
+          "html": "Le mot <em>paillarde</em> (de l'ancien français <em>paillard</em>, « celui qui couche sur la paille », d'où vagabond puis débauché) désigne, dans la culture estudiantine, une chanson grivoise et bachique reprise en chœur lors des réunions festives : un meneur lance les couplets, l'assemblée répond au refrain, souvent en ponctuant le chant de gages à boire. Le registre va du grivois au scatologique, mais le ressort essentiel reste la transgression rituelle et joyeuse, un exutoire codifié plus qu'une fin en soi. Selon le journaliste Bertrand Dicale, la paillarde française se distingue par une alliance singulière d'érudition et de grossièreté, mêlant haute culture et trivialité."
+        },
+        {
+          "t": "p",
+          "html": "Cette tonalité est un héritage des <em>goliards</em>, clercs et écoliers errants du Moyen Âge dont les chants latins, profanes et provocateurs, nous sont parvenus par des recueils comme les <em>Carmina Burana</em>. La veine se perpétue dans les universités, puis dans deux foyers majeurs : les <strong>salles de garde</strong> des hôpitaux, où les internes en médecine entretenaient un folklore grivois réputé, et les <strong>corporations étudiantes</strong>. La faluche en hérite directement. Les éditions du <em>Bréviaire du carabin</em> (Paris, 1950) ou des <em>Fleurs du mâle</em> (1922) font autorité pour les textes."
+        },
+        {
+          "t": "note",
+          "html": "Le mot « carabin », qui désigne l'étudiant en médecine, viendrait de la carabine des élèves de l'Hôpital militaire d'instruction de Strasbourg au XVIII<sup>e</sup> siècle ou de la ressemblance de leur uniforme avec celui des carabiniers italiens."
+        },
+        {
+          "t": "h3",
+          "text": "Le bréviaire"
+        },
+        {
+          "t": "p",
+          "html": "Dans l'usage faluchard, « paillardes » s'emploie au sens large pour tout le répertoire chanté. Un bréviaire mêle ainsi plusieurs strates : les paillardes proprement dites (grivoises, carabines), les <strong>chants à boire</strong> et bachiques, les <strong>chants de tradition et de corporation</strong> et même des <strong>chants régionaux ou solennels</strong> dépourvus de toute grivoiserie. Savoir animer une soirée et connaître son répertoire peut être récompensé par une, <strong>clé de sol</strong>, obtenue à l'issue d'un <em>cantum</em>, où le candidat interprète cinq à dix chants sous l'œil d'autres clé de sol. Le chant est ainsi à la fois ciment de cohésion et vecteur de transmission. Certaines paillardes peuvent revêtir un caractère très provocateur et c'est précisement le but d'une paillarde de chanter l'horrible pour s'en moquer. De plus, les chants tels que les paillardes et les contines étaient chantées lors des veillées et devaient permettre d'occuper tous les membres de la famille. Ainsi s'expliquent les différents niveaux de lecture que l'on peut retrouver dans les contes et contines ainsi que les messages transmis par ces chants. Avec notre regard actuel ces textes semblent très problématiques et le sont parfois mais c'est pourquoi il est important de connaître le contexte dans lequel ils ont été écrit et chanté pour les comprendres dans leur entiereté."
+        },
+        {
+          "t": "h3",
+          "text": "Quelques chansons emblématiques"
+        },
+        {
+          "t": "kv",
+          "items": [
+            [
+              "En descendant la rue Cuvier",
+              "Chanson du folklore carabin parisien. Elle dérive d'une chanson de marins de Toulon, <em>En descendant la rue d'Alger</em> (où se trouvent une rue d'Alger et l'hôpital maritime), que les carabins parisiens ont adaptée à leur géographie — la rue Cuvier longe le Jardin des plantes, près des facultés."
+            ],
+            [
+              "La Digue du cul",
+              "Chanson à répondre bâtie sur un récit grivois « en revenant de Nantes ».  Elle figure dans le recueil estudiantin <em>Les Fleurs du mâle</em> dès sa parution en 1922, et fut plus tard popularisée par Les Frères Jacques."
+            ],
+            [
+              "La Rirette (Jeanneton prend sa faucille)",
+              "Chanson à répondre en quatrains, contant la rencontre de Jeanneton et de quatre garçons qui s'en prennent tour à tour à la jeune fille. Le motif de Jeanneton apparaît dès 1614 dans un recueil de chansons ; la mélodie est parfois rattachée à Nicolas Dalayrac (<em>Les Deux Petits Savoyards</em>, 1789) et la chanson fut popularisée par Aristide Bruant vers 1890."
+            ],
+            [
+              "La Bourguignonne (Joyeux enfants de la Bourgogne)",
+              "Plutôt chant à boire que paillarde : une ode des vignerons bourguignons recueillie dans un manuscrit de 1712 (Hospices de Beaune), remise au goût du jour au XIX<sup>e</sup> siècle et chantée entre-deux-guerres au caveau des Oubliettes Rouges. Elle est très présente dans le répertoire faluchard, notamment en Bourgogne."
+            ],
+            [
+              "Les Filles de Camaret",
+              "Chanson traditionnelle grivoise de l'Ouest, attachée au port breton de Camaret-sur-Mer, dont elle raille la prétendue vertu des filles. Son origine est purement orale, mais son ancrage géographique et sa diffusion — jusque dans les recueils de chansons de marins — sont bien attestés."
+            ],
+            [
+              "Gaudeamus igitur",
+              "Hymne international des étudiants, en latin (sous-titré <em>De brevitate vitae</em>). Sur un thème médiéval de la brièveté de la vie, le texte est fixé en 1781 par Christian Wilhelm Kindleben ; il célèbre la jeunesse, l'<em>alma mater</em> et les maîtres. Il se chante encore aujourd'hui dans les cérémonies universitaires d'Europe."
+            ],
+            [
+              "Io Vivat",
+              "Chant estudiantin convivial, en latin macaronique, né dans la ville universitaire de Leyde (Leiden) à l'époque de la République batave, à la fin du XVIII<sup>e</sup> siècle. Diffusé dans tout le folklore étudiant européen, il accompagne banquets et guindailles."
+            ],
+            [
+              "Au 31 du mois d'août",
+              "Chant de marins français du XIX<sup>e</sup> siècle, inspiré d'un fait d'armes corsaire : la prise du <em>Kent</em>, indiaman britannique, par Robert Surcouf à bord de <em>La Confiance</em> (abordage du 7 octobre 1800, à l'embouchure du Gange), que la chanson transpose « au 31 du mois d'août » au large de Bordeaux."
+            ],
+            [
+              "Fanchon",
+              "Chanson de table attribuée à l'abbé Gabriel-Charles de Lattaignant — à qui l'on prête aussi <em>J'ai du bon tabac</em> — et généralement datée de 1757. Elle célèbre une joyeuse buveuse « baptisée avec du vin » et compte parmi les plus anciens chants conviviaux du répertoire. C'est une paillarde qui chante l'intégration peu importe le genre, idéal rabelaisien du vivre ensemble."
+            ],
+            [
+              "Chevaliers de la Table Ronde",
+              "Chanson à boire répandue dans toute la francophonie. Présente dans les livrets de colportage du XVIII<sup>e</sup> siècle, elle dérive d'un chant antérieur, <em>La Femme ivrogne</em>, transcrit en 1749 en patois de Bresse. Son couplet final — l'ivrogne demandant à être enterré dans la cave, « la tête sous le robinet » — est l'un des plus repris du folklore festif."
+            ]
+          ]
+        },
+        {
+          "t": "h3",
+          "text": "Le cas de La Strasbourgeoise"
+        },
+        {
+          "t": "p",
+          "html": "À côté des grivoiseries, le paillardier accueille des chants solennels comme <em>La Strasbourgeoise</em>. Ce n'est pas une paillarde grivoise mais un chant de la Revanche, composé après 1870 pour le café-concert (paroles de Gaston Villemer et Lucien Delormel, musique de Henri Natif) et d'abord publié en 1885 sous le titre <em>La Mendiante de Strasbourg</em>. Son but est alors purement politique, susciter l'émoi et faire monter un sursaut d'orgueil en France. Tombée dans l'oubli, elle réapparaît dans le répertoire militaire au début des années 2000. Si on la range parmi « les paillardes », c'est par extension du répertoire et par sa fonction rituelle : on l'entonne <em>a cappella</em>, debout, faluche à cœur. Sa reprise très solennelle dans le cadre faluchard tient plus de la satire militaire que du réel recueillement, la guerre de 1870 étant très lointaine et abstraite à l'heure actuelle. Elle prend un relief particulier dans la faluche alsacienne, où elle condense la mémoire de l'Alsace et de l'Université de Strasbourg repliée à Clermont-Ferrand pendant la Seconde Guerre mondiale. Libre à chacun d'en faire son interprétation, il reste important de comprendre le contexte de cette paillarde pour ne pas lui accorder une valeur qu'elle ne possède pas."
+        },
+        {
+          "t": "note",
+          "html": "Sources : article <em>Chanson paillarde</em> et notices associées (Wikipédia) ; <em>Le Bréviaire du carabin</em> (1950) ; M.-V. Gauthier, <em>Chanson, sociabilité et grivoiserie au XIX<sup>e</sup> siècle</em> (Aubier, 1992) ; pour <em>La Strasbourgeoise</em>, M. Schmidt, <em>Chansons de la Revanche et de la Grande Guerre</em> (Serpenoise, 1985). Conformément à l'esprit oral du folklore, les paroles ne sont pas reproduites."
         }
       ]
     },
@@ -4766,6 +5229,7 @@ footer .ribbon{margin:-30px -20px 22px}
       case "note": return "<div class=\"note"+sc+"\">"+b.html+"</div>";
       case "img":  return img(b);
       case "imgrow": return "<div class=\"imgrow\">"+b.items.map(galleryFig).join("")+"</div>";
+      case "svg":  return "<figure class='"+sc.trim()+"' style='margin:18px 0;border:1px solid var(--rule);border-radius:10px;background:var(--paper2);padding:14px 14px 10px'>"+b.svg+(b.caption?"<figcaption style='margin-top:8px;font-size:13px;color:var(--muted);text-align:center'>"+b.caption+"</figcaption>":"")+"</figure>";
       case "list": return "<ul>"+b.items.map(function(i){return "<li class=\""+sc.trim()+"\">"+i+"</li>";}).join("")+"</ul>";
       case "kv":   return "<dl class=\"kv\">"+b.items.map(function(p){return "<div class=\"kv-row"+sc+"\"><dt>"+p[0]+"</dt><dd>"+p[1]+"</dd></div>";}).join("")+"</dl>";
       case "table":return "<div class=\"tablewrap"+(b.wide?" wide":"")+"\"><table><thead><tr>"+b.head.map(function(h){return "<th>"+h+"</th>";}).join("")+"</tr></thead><tbody>"+
@@ -4817,6 +5281,62 @@ footer .ribbon{margin:-30px -20px 22px}
     },{rootMargin:"-20% 0px -70% 0px"});
     document.querySelectorAll("article.section").forEach(function(s){obs.observe(s);});
   }
+
+  /* --- Carte interactive : pancarte au clic sur une ville --- */
+  (function(){
+    var villes = (D.sections||[]).filter(function(s){return s.id==="villes";})[0];
+    var accBlock = villes && (villes.blocks||[]).filter(function(b){return b.t==="accordion";})[0];
+    if(!accBlock) return;
+    var items = accBlock.items || [];
+    var overlay = document.createElement("div");
+    overlay.className = "vmodal";
+    overlay.innerHTML = "<div class=\"vcard\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"vcard-t\" tabindex=\"-1\">"+
+      "<button class=\"vclose\" aria-label=\"Fermer\">\u00d7</button>"+
+      "<div class=\"vcard-eyebrow\">Ville falucharde</div><h2 id=\"vcard-t\"></h2>"+
+      "<div class=\"vcard-body\"></div></div>";
+    document.body.appendChild(overlay);
+    var card = overlay.querySelector(".vcard");
+    var titleEl = overlay.querySelector("#vcard-t");
+    var bodyEl = overlay.querySelector(".vcard-body");
+    function matches(name){
+      return items.filter(function(it){
+        return it.title===name || it.title.indexOf(name+" \u2014")===0 || it.title.indexOf(name+" (")===0;
+      });
+    }
+    function openCity(name){
+      var fiches = matches(name);
+      if(!fiches.length) return;
+      titleEl.textContent = name;
+      var multi = fiches.length>1, html="";
+      fiches.forEach(function(it){
+        if(multi){ html += "<h3 class=\"vsub\">"+it.title+"</h3>"; }
+        if(it.sub){ html += "<p class=\"vsubtitle\">"+it.sub+"</p>"; }
+        html += (it.blocks||[]).map(function(bb){return block(bb,true);}).join("");
+      });
+      bodyEl.innerHTML = html;
+      overlay.classList.add("open");
+      document.body.style.overflow = "hidden";
+      bodyEl.scrollTop = 0;
+      if(card.focus) card.focus();
+    }
+    function closeCity(){
+      overlay.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+    overlay.addEventListener("click", function(e){ if(e.target===overlay) closeCity(); });
+    overlay.querySelector(".vclose").addEventListener("click", closeCity);
+    document.addEventListener("keydown", function(e){ if(e.key==="Escape"||e.keyCode===27) closeCity(); });
+    document.addEventListener("click", function(e){
+      var g = e.target && e.target.closest ? e.target.closest("[data-city]") : null;
+      if(g){ e.preventDefault(); openCity(g.getAttribute("data-city")); }
+    });
+    document.addEventListener("keydown", function(e){
+      if(e.key==="Enter"||e.key===" "||e.keyCode===13||e.keyCode===32){
+        var el = document.activeElement;
+        if(el && el.getAttribute && el.getAttribute("data-city")){ e.preventDefault(); openCity(el.getAttribute("data-city")); }
+      }
+    });
+  })();
 })();
 </script>
 </body>
