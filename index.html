@@ -226,7 +226,7 @@ footer .ribbon{margin:-30px -20px 22px}
 
 <script>window.FALUCHE_DATA = {
   "title": "La Faluche",
-  "subtitle": "Archive du folklore faluchard — Histoire, insignes, villes...",
+  "subtitle": "Archives du folklore faluchard — Histoire, insignes, villes...",
   "sections": [
     {
       "id": "Intro",
@@ -5730,7 +5730,7 @@ footer .ribbon{margin:-30px -20px 22px}
   document.getElementById("title").innerHTML = D.title || "";
   document.getElementById("subtitle").textContent = D.subtitle || "";
   document.getElementById("meta").textContent = D.updated || "";
-  document.title = (D.title||"")+" — archive";
+  document.title = (D.title||"")+" — Archives";
   var nav = document.getElementById("nav"), main = document.getElementById("main");
   (D.sections||[]).forEach(function(s){
     nav.insertAdjacentHTML("beforeend","<li><a href=\"#"+s.id+"\">"+s.title+"</a></li>");
